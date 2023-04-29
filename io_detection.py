@@ -12,6 +12,12 @@ from PIL import Image
 import train_utils.transforms as T
 import math
 import time
+
+from pebble_segmentation_util import pebble_segmentation, create_full_frame_crop
+from pebble_util import updatePebbleLocation
+from digit_segmentation_util import digit_segmentation
+from crop_orientation_util import find_usable_crops
+from digit_detection_util import individual_digit_detection
 # ensure we are running on the correct gpu
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "6"  # (xxxx is your specific GPU ID)
@@ -27,6 +33,7 @@ class Video():
         self.activePebbles = []
         self.numOfPebbles = 0
         self.savedPebbles = []
+        self.transform = T.Compose([T.PILToTensor()])
 
         self.vidcap = cv2.VideoCapture(f'./videos/{filename}.MP4')
         self.frame_count = int(self.vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
@@ -50,8 +57,8 @@ class Video():
             os.mkdir(self.imgFolder)
 
         # calculate distance threshold based on 25% of max video dimension
-        distThreshold = int(0.25*max(self.width, self.height))
-        print('distThresh is:', distThreshold)
+        self.distThreshold = int(0.25*max(self.width, self.height))
+        print('distThresh is:', self.distThreshold)
 
     def removeInactive(self, frameNumber):
         # remove all inactive pebbles
@@ -68,10 +75,10 @@ class Video():
         # set active pebbles
         self.activePebbles = pebblesToKeep
 
-    def processNextFrame(self, frame, frameNumber):
+    def processNextFrame(self, frame, frameNumber, videoTime):
         og_frame = frame.copy()
-        # check if image has a pebble with threshold of 0.98
-        masks, boxes, pred_cls = get_prediction(image, .98)
+        # check if image has a pebble with confidence
+        masks, boxes, pred_cls = pebble_segmentation(frame)
         if masks is not None:
             # pebble detected, use most confident mask
             pebbleMask = masks[0]
@@ -81,38 +88,37 @@ class Video():
 
             # tag and update pebble data
             currentPebble, activePebbles, numOfPebbles = updatePebbleLocation(
-                pebbleBox, activePebbles, distThreshold, numOfPebbles, count)
+                pebbleBox, activePebbles, self.distThreshold, numOfPebbles, frameNumber, videoTime)
 
             # update pebble box
             currentPebble.addPebbleBox(pebbleBox)
 
             # focus on pebble area in video
-            pebbleDetectionCrop = create_full_frame_crop(
-                np.copy(image), pebbleMask)
+            pebbleDetectionCrop = create_full_frame_crop(frame, pebbleMask)
 
             # create into PIL image
             pebbleDetectionCrop = Image.fromarray(pebbleDetectionCrop)
-            pebbleDetectionCrop, _ = transform(pebbleDetectionCrop, None)
+            pebbleDetectionCrop, _ = self.transform(pebbleDetectionCrop, None)
 
             # now try to obtain digit crop
-            pebbleDigitsCrops, pebbleDigitBoxes = create_digit_crops(
-                group_digits_model, pebbleDetectionCrop)
+            pebbleDigitsCrops, pebbleDigitBoxes = digit_segmentation(
+                pebbleDetectionCrop)
 
             # see if digits were detected
             if pebbleDigitsCrops is not None:
                 # add first box
                 currentPebble.addDigitBoxes(pebbleDigitBoxes)
                 # rotate crops and only save usable ones
-                usablePebbleDigitsCrops = save_crops(
-                    pebbleDigitsCrops, rotations, orientationBarFolder)
+                usablePebbleDigitsCrops = find_usable_crops(
+                    pebbleDigitsCrops, frameNumber, self.imgFolder)
 
                 # now we try to predict on the usable digit crops
                 individual_digit_detection(
-                    usablePebbleDigitsCrops, imgFolder, transform, currentPebble)
+                    usablePebbleDigitsCrops, self.imgFolder, self.transform, currentPebble)
         # create frame based on current active pebbles
         frameWithData = addToFrame(og_frame, self, frameNumber, videoTime)
         # put frame into video
-        demVid.write(frameWithData)
+        self.processed_video.write(frameWithData)
 
 
 def addToFrame(frame, video, frameNumber, videoTime):
@@ -176,7 +182,6 @@ if inletVideo.frame_count != outletVideo.frame_count or inletVideo.fps != outlet
 num_frames = inletVideo.frame_count
 FPS = inletVideo.fps
 
-transform = T.Compose([T.PILToTensor()])
 start = time.time()
 
 
@@ -186,10 +191,10 @@ for frameNumber in range(num_frames):
     outletHasFrames, outletFrame = outletVideo.vidcap.read()
     if inletHasFrames and outletHasFrames:
         # process inlet frame
-        inletVideo.processNextFrame(inletFrame)
+        inletVideo.processNextFrame(inletFrame, frameNumber, videoTime)
 
         # process outlet frame
-        outletVideo.processNextFrame(outletFrame)
+        outletVideo.processNextFrame(outletFrame, frameNumber, videoTime)
     elif inletHasFrames or outletHasFrames:
         sys.exit('Videos are not in sync.')
     else:

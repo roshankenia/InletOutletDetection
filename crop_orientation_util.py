@@ -89,7 +89,7 @@ def get_prediction(img, confidence):
     img = torch.from_numpy(image_array)
 
     img = img.to(device)
-    pred = model([img])
+    pred = crop_orientation_model([img])
     # print('prediction:', pred)
     pred_score = list(pred[0]['scores'].detach().cpu().numpy())
     pred_t = [pred_score.index(x) for x in pred_score if x > confidence]
@@ -253,7 +253,7 @@ def rotate_im(image, angle):
     return image
 
 
-def save_crops(digits_crop, rotations, orientationBarFolder):
+def find_usable_crops(digits_crop, frameNumber, orientationBarFolder):
     useCrops = []
     rotations = [0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150,
                  165, 180, 195, 210, 225, 240, 255, 270, 285, 300, 315, 330, 345]
@@ -266,24 +266,12 @@ def save_crops(digits_crop, rotations, orientationBarFolder):
             # resize
             rotImg = cv2.resize(rotImg, (500, 500))
 
-            # rotImgCopy = rotImg.copy()
-            # # increase brightness of digits
-            # rotImg = brighten_digits(rotImg)
-
-            # gamma correct
-            # rotImg = gamma_correct(rotImg, 0.5)
-
-            # contrast stretch image
-            # rotImg = contrast_stretch(rotImg)
-
-            # rotImg = sharpen_digits(rotImg)
             # predict oritentation bar on rotation
             rotImgWithAnnot, use, bottomY = segment_bar_instance(rotImg.copy())
             # save oritentation bar image
-            cv2.imwrite(orientationBarFolder+"orientation_" + str(count) + "_digit_crop_" +
+            cv2.imwrite(orientationBarFolder+"orientation_" + str(frameNumber) + "_digit_crop_" +
                         str(c) + "_rot" + str(rotation)+".jpg", rotImgWithAnnot)
             if use:
-                # save both brightened and original
-                # useCrops.append((rotImgCopy, bottomY, count, c, rotation))
-                useCrops.append((rotImg, bottomY, count, c, rotation))
+                # save
+                useCrops.append((rotImg, bottomY, frameNumber, c, rotation))
     return useCrops

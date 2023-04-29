@@ -269,14 +269,13 @@ def crop_confusing_digits(img, boxes, labels, scores):
                 confusing_count += 1
 
 
-def showbbox(model, img, bottomY):
+def showbbox(img, bottomY):
     # the input images are tensors with values in [0, 1]
     # print("input image shape...:", type(img))
     image_array = img.numpy()
     image_array = np.array(normalize(image_array), dtype=np.float32)
     img = torch.from_numpy(image_array)
 
-    model.eval()
     with torch.no_grad():
         '''
         prediction is in the following format:
@@ -286,7 +285,7 @@ def showbbox(model, img, bottomY):
         'scores': tensor([1.0000, 1.0000], device='cuda:0')}]
         '''
 
-        prediction = model([img.to(device)])
+        prediction = digit_detection_model([img.to(device)])
 
     boxes = prediction[0]['boxes'].detach().cpu().numpy()
     labels = prediction[0]['labels'].detach().cpu().numpy()
@@ -431,19 +430,11 @@ def individual_digit_detection(useCrops, imgFolder, transform, currentPebble):
         rot_im, _ = transform(rot_im, None)
         # predict
         # print('Usable crop count, c, rotation:', count, c, rotation)
-        save_img, labels, scores = showbbox(
-            digit_detector, rot_im, bottomY)
+        save_img, labels, scores = showbbox(rot_im, bottomY)
         if save_img is not None:
             # save img
             cv2.imwrite(imgFolder + "pred_" + str(count) + "_digit_crop_" +
                         str(c) + "_rot" + str(rotation)+".jpg", save_img)
-            # hsvImage = cv2.cvtColor(save_img, cv2.COLOR_BGR2HSV)
-            # cv2.imwrite(imgFolder + "pred_" + str(count) + "_digit_crop_" +
-            #             str(c) + "_rot" + str(rotation)+"_hsv.jpg", hsvImage)
-
-            # labImage = cv2.cvtColor(save_img, cv2.COLOR_BGR2LAB)
-            # cv2.imwrite(imgFolder + "pred_" + str(count) + "_digit_crop_" +
-            #             str(c) + "_rot" + str(rotation)+"_lab.jpg", labImage)
 
             # add to pebbleDigits counts
             currentPebble.addDigits(labels, scores)

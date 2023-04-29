@@ -8,13 +8,7 @@ import torchvision
 import torchvision.transforms as VT
 import torch
 import matplotlib.pyplot as plt
-from PIL import Image
-import train_utils.transforms as T
-from prediction import get_number_prediction, showbbox
-from crop_orientation_util import segment_bar_instance
-from imageAugmentation import brighten_digits, sharpen_digits, contrast_stretch, gamma_correct
 import math
-import time
 # ensure we are running on the correct gpu
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "6"  # (xxxx is your specific GPU ID)
@@ -26,21 +20,23 @@ else:
 
 
 class Pebble():
-    def __init__(self, location, number, count):
+    def __init__(self, location, number, count, startTime):
         self.actualLocations = [location]
         self.number = number
         self.firstSeen = count
         self.lastSeen = count
-        self.startTime = time.time()
+        self.startTime = startTime
+        self.lastSeenTime = startTime
         self.digits = np.zeros((3, 10))
         self.currentPebbleBox = None
         self.currentDigitBoxes = None
 
         print('Pebble #'+str(self.number)+' has been created')
 
-    def addLocation(self, location, count):
+    def addLocation(self, location, frameNumber, videoTime):
         self.actualLocations.append(location)
-        self.lastSeen = count
+        self.lastSeen = frameNumber
+        self.lastSeenTime = videoTime
         # print('Pebble #'+str(self.number) +
         #       ' has been seen in frame '+str(self.lastSeen))
 
@@ -76,7 +72,7 @@ class Pebble():
         return classification
 
 
-def updatePebbleLocation(pebbleBox, pebbles, distThreshold, numOfPebbles, count):
+def updatePebbleLocation(pebbleBox, pebbles, distThreshold, numOfPebbles, frameNumber, videoTime):
     # calculate midpoint of box
     x_center = int((pebbleBox[0]+pebbleBox[2])/2)
     y_center = int((pebbleBox[1]+pebbleBox[3])/2)
@@ -93,11 +89,13 @@ def updatePebbleLocation(pebbleBox, pebbles, distThreshold, numOfPebbles, count)
             (math.pow((x_center-x_last), 2)+math.pow((y_center-y_last), 2)))
         if dist < distThreshold:
             # active pebble found, add location
-            pebbles[i].addLocation((x_center, y_center), count)
+            pebbles[i].addLocation((x_center, y_center),
+                                   frameNumber, videoTime)
             return pebbles[i], pebbles, numOfPebbles
     # if not found, need to create new pebble
     numOfPebbles += 1
-    newPebble = Pebble((x_center, y_center), numOfPebbles, count)
+    newPebble = Pebble((x_center, y_center), numOfPebbles,
+                       frameNumber, videoTime)
     # add to list
     pebbles.append(newPebble)
     # return new pebble

@@ -46,14 +46,14 @@ def normalize(arr):
     return arr
 
 
-def create_digit_crops(model, img):
+def digit_segmentation(img):
     # the input images are tensors with values in [0, 1]
     # print("input image shape...:", type(img))
     image_array = img.numpy()
     image_array = np.array(normalize(image_array), dtype=np.float32)
     img = torch.from_numpy(image_array)
 
-    model.eval()
+    digit_segmentation_model.eval()
     with torch.no_grad():
         '''
         prediction is in the following format:
@@ -63,7 +63,7 @@ def create_digit_crops(model, img):
         'scores': tensor([1.0000, 1.0000], device='cuda:0')}]
         '''
 
-        prediction = model([img.to(device)])
+        prediction = digit_segmentation_model([img.to(device)])
 
     # print(prediction)
 

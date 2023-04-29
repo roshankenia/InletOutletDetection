@@ -48,7 +48,7 @@ def get_coloured_mask(mask):
     return coloured_mask
 
 
-def get_prediction(img, confidence):
+def pebble_segmentation(img, confidence=0.98):
     """
     get_prediction
       parameters:
