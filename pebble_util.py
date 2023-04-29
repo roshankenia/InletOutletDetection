@@ -59,7 +59,7 @@ class Pebble():
         self.currentPebbleBox = None
         self.currentDigitBoxes = None
 
-    def obtain_final_classification(self):
+    def obtainFinalClassification(self):
         # check if no good prediction
         if np.sum(self.digits) == 0:
             return '???'

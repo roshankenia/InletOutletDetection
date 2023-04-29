@@ -68,7 +68,7 @@ class Video():
                 pebblesToKeep.append(pebble)
             else:
                 # save pebble to match between inlet and outlet
-                savePebble = (pebble.obtain_final_classification(),
+                savePebble = (pebble.obtainFinalClassification(),
                               str(pebble.lastSeenTime))
                 self.savedPebbles.append(savePebble)
 
@@ -186,6 +186,7 @@ start = time.time()
 
 
 for frameNumber in range(num_frames):
+    print('Processing frame #', frameNumber)
     videoTime = frameNumber/FPS
     inletHasFrames, inletFrame = inletVideo.vidcap.read()
     outletHasFrames, outletFrame = outletVideo.vidcap.read()
