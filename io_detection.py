@@ -177,15 +177,36 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
         cv2.putText(frame, 'Inlet Pebbles:', (750, 50),
                     cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), thickness=4)
         for i in range(len(inletSavedPebbles)):
-            text = ''+inletSavedPebbles[i][0]+', '+inletSavedPebbles[i][1]
-            cv2.putText(frame, text, (750, 50+35*(i+1)),
+            text = ''+inletSavedPebbles[i][0]+': '+inletSavedPebbles[i][1]
+            placeIndex = i % 4
+            place = None
+            if placeIndex == 0:
+                place = (750, 50+35*(i+2))
+            elif placeIndex == 1:
+                place = (950, 50+35*(i+1))
+            elif placeIndex == 2:
+                place = (750, 50+35*(i+2))
+            elif placeIndex == 3:
+                place = (950, 50+35*(i+1))
+
+            cv2.putText(frame, text, place,
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), thickness=4)
     # add in info about saved pebbles
     cv2.putText(frame, 'Pebble Last Seen:', (50, 50),
                 cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), thickness=4)
     for i in range(len(video.savedPebbles)):
-        text = ''+video.savedPebbles[i][0]+', '+video.savedPebbles[i][1]
-        cv2.putText(frame, text, (50, 50+35*(i+1)),
+        text = ''+video.savedPebbles[i][0]+': '+video.savedPebbles[i][1]
+        placeIndex = i % 4
+        place = None
+        if placeIndex == 0:
+            place = (750, 50+35*(i+2))
+        elif placeIndex == 1:
+            place = (950, 50+35*(i+1))
+        elif placeIndex == 2:
+            place = (750, 50+35*(i+2))
+        elif placeIndex == 3:
+            place = (950, 50+35*(i+1))
+        cv2.putText(frame, text, place,
                     cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), thickness=4)
 
     # add in time
