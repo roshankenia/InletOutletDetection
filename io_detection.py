@@ -155,8 +155,8 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                         int(((minCord[0]+maxCord[0])/2)-20), int(maxCord[1]))
 
                     # get coords based on boundary
-                    textX = int((bottomCenterCord[0] - textsize[0]) / 2)
-                    textY = int((bottomCenterCord[1] + textsize[1]) / 2)
+                    textX = int((bottomCenterCord[1] - textsize[0]) / 2)
+                    textY = int((bottomCenterCord[0] + textsize[1]) / 2)
 
                     cv2.putText(frame, predText,
                                 (textX, textY), cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 255, 255), thickness=3)
