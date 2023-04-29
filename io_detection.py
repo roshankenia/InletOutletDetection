@@ -69,13 +69,13 @@ class Video():
             else:
                 # save pebble to match between inlet and outlet
                 savePebble = (pebble.obtainFinalClassification(),
-                              str(pebble.lastSeenTime))
+                              str(round(pebble.lastSeenTime, 3)))
                 self.savedPebbles.append(savePebble)
 
         # set active pebbles
         self.activePebbles = pebblesToKeep
 
-    def processNextFrame(self, frame, frameNumber, videoTime):
+    def processNextFrame(self, frame, frameNumber, videoTime, inletSavedPebbles=None):
         og_frame = frame.copy()
         # check if image has a pebble with confidence
         masks, boxes, pred_cls = pebble_segmentation(frame)
@@ -116,12 +116,16 @@ class Video():
                 individual_digit_detection(
                     usablePebbleDigitsCrops, self.imgFolder, self.transform, currentPebble)
         # create frame based on current active pebbles
-        frameWithData = addToFrame(og_frame, self, frameNumber, videoTime)
+        if inletSavedPebbles is not None:
+            frameWithData = addToFrame(
+                og_frame, self, frameNumber, videoTime, inletSavedPebbles)
+        else:
+            frameWithData = addToFrame(og_frame, self, frameNumber, videoTime)
         # put frame into video
         self.processed_video.write(frameWithData)
 
 
-def addToFrame(frame, video, frameNumber, videoTime):
+def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
     height, width = frame.shape[:2]
     if len(video.activePebbles) > 0:
         # iterate through each active pebble and add their data in
@@ -157,13 +161,22 @@ def addToFrame(frame, video, frameNumber, videoTime):
                             frame, 'digits', minCord, cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), thickness=2)
                 # reset current boxes
                 pebble.resetBoxes()
+    if inletSavedPebbles is not None:
+        # add in info about inlet saved pebbles
+        cv2.putText(frame, 'Inlet Pebbles:', (200, 50),
+                    cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), thickness=4)
+        for i in range(len(inletSavedPebbles)):
+            text = ''+inletSavedPebbles[i][0]+', '+inletSavedPebbles[i][1]
+            cv2.putText(frame, text, (200, 50*(i+1)),
+                        cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), thickness=4)
     # add in info about saved pebbles
-    savedPebbleText = 'Pebble Times:'
-    for savedPebble in video.savedPebbles:
-        savedPebbleText += '\n'+savedPebble[0]+', '+savedPebble[1]
-    # add in saved pebble info
-    cv2.putText(frame, savedPebbleText, (50, 75),
-                cv2.FONT_HERSHEY_SIMPLEX, 3, (0, 255, 255), thickness=4)
+    cv2.putText(frame, 'Pebble Last Seen:', (50, 50),
+                cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), thickness=4)
+    for i in range(len(video.savedPebbles)):
+        text = ''+video.savedPebbles[i][0]+', '+video.savedPebbles[i][1]
+        cv2.putText(frame, text, (50, 50*(i+1)),
+                    cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), thickness=4)
+
     # add in time
     cv2.putText(frame, str(round(videoTime, 2))+'s', (width-200, height-75), cv2.FONT_HERSHEY_SIMPLEX,
                 2, (255, 255, 255), thickness=3)
@@ -195,7 +208,8 @@ for frameNumber in range(num_frames):
         inletVideo.processNextFrame(inletFrame, frameNumber, videoTime)
 
         # process outlet frame
-        outletVideo.processNextFrame(outletFrame, frameNumber, videoTime)
+        outletVideo.processNextFrame(
+            outletFrame, frameNumber, videoTime, inletVideo.savedPebbles)
     elif inletHasFrames or outletHasFrames:
         sys.exit('Videos are not in sync.')
     else:
