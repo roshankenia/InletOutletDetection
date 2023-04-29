@@ -163,18 +163,18 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                 pebble.resetBoxes()
     if inletSavedPebbles is not None:
         # add in info about inlet saved pebbles
-        cv2.putText(frame, 'Inlet Pebbles:', (200, 50),
+        cv2.putText(frame, 'Inlet Pebbles:', (1000, 50),
                     cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), thickness=4)
         for i in range(len(inletSavedPebbles)):
             text = ''+inletSavedPebbles[i][0]+', '+inletSavedPebbles[i][1]
-            cv2.putText(frame, text, (200, 50*(i+1)),
+            cv2.putText(frame, text, (750, 50*(i+2)),
                         cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), thickness=4)
     # add in info about saved pebbles
     cv2.putText(frame, 'Pebble Last Seen:', (50, 50),
                 cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), thickness=4)
     for i in range(len(video.savedPebbles)):
         text = ''+video.savedPebbles[i][0]+', '+video.savedPebbles[i][1]
-        cv2.putText(frame, text, (50, 50*(i+1)),
+        cv2.putText(frame, text, (50, 50*(i+2)),
                     cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), thickness=4)
 
     # add in time

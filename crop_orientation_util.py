@@ -269,8 +269,8 @@ def find_usable_crops(digits_crop, frameNumber, orientationBarFolder):
             # predict oritentation bar on rotation
             rotImgWithAnnot, use, bottomY = segment_bar_instance(rotImg.copy())
             # save oritentation bar image
-            cv2.imwrite(orientationBarFolder+"orientation_" + str(frameNumber) + "_digit_crop_" +
-                        str(c) + "_rot" + str(rotation)+".jpg", rotImgWithAnnot)
+            # cv2.imwrite(orientationBarFolder+"orientation_" + str(frameNumber) + "_digit_crop_" +
+            #             str(c) + "_rot" + str(rotation)+".jpg", rotImgWithAnnot)
             if use:
                 # save
                 useCrops.append((rotImg, bottomY, frameNumber, c, rotation))
