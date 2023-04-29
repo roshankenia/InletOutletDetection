@@ -145,21 +145,11 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                                 2, (0, 255, 0), thickness=2)
 
                     # put highest predicted digits in center
-                    predText = 'Pred: '+str(pebble.obtainFinalClassification())
-
-                    # get boundary of this text
-                    textsize = cv2.getTextSize(
-                        predText, cv2.FONT_HERSHEY_SIMPLEX, 4, 3)[0]
-
                     bottomCenterCord = (
-                        int(((minCord[0]+maxCord[0])/2)-20), int(maxCord[1]))
+                        int(((minCord[0]+maxCord[0])/2)-100), int(maxCord[1]))
 
-                    # get coords based on boundary
-                    textX = int((bottomCenterCord[1] - textsize[0]) / 2)
-                    textY = int((bottomCenterCord[0] + textsize[1]) / 2)
-
-                    cv2.putText(frame, predText,
-                                (textX, textY), cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 255, 255), thickness=3)
+                    cv2.putText(frame, 'Pred: '+str(pebble.obtainFinalClassification()),
+                                bottomCenterCord, cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 255, 255), thickness=3)
                 # add in digit detection area
                 if pebble.currentDigitBoxes is not None:
                     for digitBox in pebble.currentDigitBoxes:
@@ -181,13 +171,13 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
             placeIndex = i % 4
             place = None
             if placeIndex == 0:
-                place = (750, 50+35*(i+2))
+                place = (750, 50+35*(i+1))
             elif placeIndex == 1:
-                place = (950, 50+35*(i+1))
+                place = (1050, 50+35*(i))
             elif placeIndex == 2:
-                place = (750, 50+35*(i+2))
+                place = (750, 50+35*(i+1))
             elif placeIndex == 3:
-                place = (950, 50+35*(i+1))
+                place = (1050, 50+35*(i))
 
             cv2.putText(frame, text, place,
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), thickness=4)
@@ -199,13 +189,13 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
         placeIndex = i % 4
         place = None
         if placeIndex == 0:
-            place = (750, 50+35*(i+2))
+            place = (50, 50+35*(i+1))
         elif placeIndex == 1:
-            place = (950, 50+35*(i+1))
+            place = (350, 50+35*(i))
         elif placeIndex == 2:
-            place = (750, 50+35*(i+2))
+            place = (50, 50+35*(i+1))
         elif placeIndex == 3:
-            place = (950, 50+35*(i+1))
+            place = (350, 50+35*(i))
         cv2.putText(frame, text, place,
                     cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), thickness=4)
 
