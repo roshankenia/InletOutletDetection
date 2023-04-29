@@ -178,15 +178,15 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                     cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), thickness=4)
         for i in range(len(inletSavedPebbles)):
             text = ''+inletSavedPebbles[i][0]+', '+inletSavedPebbles[i][1]
-            cv2.putText(frame, text, (750, 50*(i+2)),
-                        cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), thickness=4)
+            cv2.putText(frame, text, (750, 50+35*(i+1)),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), thickness=4)
     # add in info about saved pebbles
     cv2.putText(frame, 'Pebble Last Seen:', (50, 50),
                 cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), thickness=4)
     for i in range(len(video.savedPebbles)):
         text = ''+video.savedPebbles[i][0]+', '+video.savedPebbles[i][1]
-        cv2.putText(frame, text, (50, 50*(i+2)),
-                    cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), thickness=4)
+        cv2.putText(frame, text, (50, 50+35*(i+1)),
+                    cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), thickness=4)
 
     # add in time
     cv2.putText(frame, str(round(videoTime, 2))+'s', (width-200, height-75), cv2.FONT_HERSHEY_SIMPLEX,
