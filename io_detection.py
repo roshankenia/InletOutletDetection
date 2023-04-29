@@ -87,8 +87,8 @@ class Video():
             pebbelPredClass = pred_cls[0]
 
             # tag and update pebble data
-            currentPebble, activePebbles, numOfPebbles = updatePebbleLocation(
-                pebbleBox, activePebbles, self.distThreshold, numOfPebbles, frameNumber, videoTime)
+            currentPebble, self.activePebbles, self.numOfPebbles = updatePebbleLocation(
+                pebbleBox, self.activePebbles, self.distThreshold, self.numOfPebbles, frameNumber, videoTime)
 
             # update pebble box
             currentPebble.addPebbleBox(pebbleBox)
