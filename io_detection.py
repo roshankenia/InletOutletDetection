@@ -171,9 +171,9 @@ def addToFrame(frame, video, frameNumber, videoTime):
 
 
 # create inlet video
-inletVideo = Video('Inlet Video')
+inletVideo = Video('S1060001')
 # create outlet video
-outletVideo = Video('Outlet Video')
+outletVideo = Video('S1060001')
 # ensure videos have same frame count and FPS
 if inletVideo.frame_count != outletVideo.frame_count or inletVideo.fps != outletVideo.fps:
     sys.exit('Videos are not in sync.')
