@@ -141,8 +141,8 @@ def addToFrame(frame, video, frameNumber, videoTime):
                                 2, (0, 255, 0), thickness=2)
 
                     # put highest predicted digits in center
-                    centerCord = (((minCord[0]+maxCord[0])/2)-20,
-                                  (minCord[1]+maxCord[1])/2)
+                    centerCord = (int(((minCord[0]+maxCord[0])/2)-20),
+                                  int((minCord[1]+maxCord[1])/2))
                     cv2.putText(frame, 'Pred: '+str(pebble.obtainFinalClassification()),
                                 centerCord, cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 255, 255), thickness=2)
                 # add in digit detection area
@@ -171,9 +171,9 @@ def addToFrame(frame, video, frameNumber, videoTime):
 
 
 # create inlet video
-inletVideo = Video('S1060001')
+inletVideo = Video('S1060001In')
 # create outlet video
-outletVideo = Video('S1060001')
+outletVideo = Video('S1060001Out')
 # ensure videos have same frame count and FPS
 if inletVideo.frame_count != outletVideo.frame_count or inletVideo.fps != outletVideo.fps:
     sys.exit('Videos are not in sync.')
