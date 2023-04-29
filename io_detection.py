@@ -162,7 +162,7 @@ def addToFrame(frame, video, frameNumber, videoTime):
     for savedPebble in video.savedPebbles:
         savedPebbleText += '\n'+savedPebble[0]+', '+savedPebble[1]
     # add in saved pebble info
-    cv2.putText(frame, savedPebble, (50, 75),
+    cv2.putText(frame, savedPebbleText, (50, 75),
                 cv2.FONT_HERSHEY_SIMPLEX, 3, (0, 255, 255), thickness=4)
     # add in time
     cv2.putText(frame, str(round(videoTime, 2))+'s', (width-200, height-75), cv2.FONT_HERSHEY_SIMPLEX,
