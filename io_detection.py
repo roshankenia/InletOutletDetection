@@ -146,7 +146,7 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
 
                     # put highest predicted digits in center
                     bottomCenterCord = (
-                        int(((minCord[0]+maxCord[0])/2)-100), int(maxCord[1]))
+                        int(((minCord[0]+maxCord[0])/2)-200), int(maxCord[1]))
 
                     cv2.putText(frame, 'Pred: '+str(pebble.obtainFinalClassification()),
                                 bottomCenterCord, cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 255, 255), thickness=3)
@@ -168,17 +168,11 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                     cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), thickness=4)
         for i in range(len(inletSavedPebbles)):
             text = ''+inletSavedPebbles[i][0]+': '+inletSavedPebbles[i][1]
-            placeIndex = i % 4
             place = None
-            if placeIndex == 0:
+            if i % 2 == 0:
                 place = (750, 50+35*(i+1))
-            elif placeIndex == 1:
+            else:
                 place = (1050, 50+35*(i))
-            elif placeIndex == 2:
-                place = (750, 50+35*(i+1))
-            elif placeIndex == 3:
-                place = (1050, 50+35*(i))
-
             cv2.putText(frame, text, place,
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), thickness=4)
     # add in info about saved pebbles
@@ -186,15 +180,10 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                 cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), thickness=4)
     for i in range(len(video.savedPebbles)):
         text = ''+video.savedPebbles[i][0]+': '+video.savedPebbles[i][1]
-        placeIndex = i % 4
         place = None
-        if placeIndex == 0:
+        if i % 2 == 0:
             place = (50, 50+35*(i+1))
-        elif placeIndex == 1:
-            place = (350, 50+35*(i))
-        elif placeIndex == 2:
-            place = (50, 50+35*(i+1))
-        elif placeIndex == 3:
+        else:
             place = (350, 50+35*(i))
         cv2.putText(frame, text, place,
                     cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), thickness=4)
