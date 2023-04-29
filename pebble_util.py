@@ -49,6 +49,12 @@ class Pebble():
         print('Pebble #'+str(self.number) +
               ' has updated digits '+str(self.digits))
 
+    def check_converge(self):
+        for position in range(len(self.digits)):
+            if np.max(self.digits[position]) < 10:
+                return False
+        return True
+
     def addPebbleBox(self, box):
         self.currentPebbleBox = box
 

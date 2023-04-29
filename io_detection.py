@@ -93,28 +93,31 @@ class Video():
             # update pebble box
             currentPebble.addPebbleBox(pebbleBox)
 
-            # focus on pebble area in video
-            pebbleDetectionCrop = create_full_frame_crop(frame, pebbleMask)
+            # check if converged already
+            if not currentPebble.check_converged():
+                # focus on pebble area in video
+                pebbleDetectionCrop = create_full_frame_crop(frame, pebbleMask)
 
-            # create into PIL image
-            pebbleDetectionCrop = Image.fromarray(pebbleDetectionCrop)
-            pebbleDetectionCrop, _ = self.transform(pebbleDetectionCrop, None)
+                # create into PIL image
+                pebbleDetectionCrop = Image.fromarray(pebbleDetectionCrop)
+                pebbleDetectionCrop, _ = self.transform(
+                    pebbleDetectionCrop, None)
 
-            # now try to obtain digit crop
-            pebbleDigitsCrops, pebbleDigitBoxes = digit_segmentation(
-                pebbleDetectionCrop)
+                # now try to obtain digit crop
+                pebbleDigitsCrops, pebbleDigitBoxes = digit_segmentation(
+                    pebbleDetectionCrop)
 
-            # see if digits were detected
-            if pebbleDigitsCrops is not None:
-                # add first box
-                currentPebble.addDigitBoxes(pebbleDigitBoxes)
-                # rotate crops and only save usable ones
-                usablePebbleDigitsCrops = find_usable_crops(
-                    pebbleDigitsCrops, frameNumber, self.imgFolder)
+                # see if digits were detected
+                if pebbleDigitsCrops is not None:
+                    # add first box
+                    currentPebble.addDigitBoxes(pebbleDigitBoxes)
+                    # rotate crops and only save usable ones
+                    usablePebbleDigitsCrops = find_usable_crops(
+                        pebbleDigitsCrops, frameNumber, self.imgFolder)
 
-                # now we try to predict on the usable digit crops
-                individual_digit_detection(
-                    usablePebbleDigitsCrops, self.imgFolder, self.transform, currentPebble)
+                    # now we try to predict on the usable digit crops
+                    individual_digit_detection(
+                        usablePebbleDigitsCrops, self.imgFolder, self.transform, currentPebble)
         # create frame based on current active pebbles
         if inletSavedPebbles is not None:
             frameWithData = addToFrame(
