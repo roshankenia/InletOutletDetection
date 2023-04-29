@@ -145,10 +145,21 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                                 2, (0, 255, 0), thickness=2)
 
                     # put highest predicted digits in center
-                    centerCord = (int(((minCord[0]+maxCord[0])/2)-20),
-                                  int((minCord[1]+maxCord[1])/2))
-                    cv2.putText(frame, 'Pred: '+str(pebble.obtainFinalClassification()),
-                                centerCord, cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 255, 255), thickness=2)
+                    predText = 'Pred: '+str(pebble.obtainFinalClassification())
+
+                    # get boundary of this text
+                    textsize = cv2.getTextSize(
+                        predText, cv2.FONT_HERSHEY_SIMPLEX, 4, 3)[0]
+
+                    bottomCenterCord = (
+                        int(((minCord[0]+maxCord[0])/2)-20), int(maxCord[1]))
+
+                    # get coords based on boundary
+                    textX = (bottomCenterCord[0] - textsize[0]) / 2
+                    textY = (bottomCenterCord[1] + textsize[1]) / 2
+
+                    cv2.putText(frame, predText,
+                                (textX, textY), cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 255, 255), thickness=3)
                 # add in digit detection area
                 if pebble.currentDigitBoxes is not None:
                     for digitBox in pebble.currentDigitBoxes:
@@ -163,7 +174,7 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                 pebble.resetBoxes()
     if inletSavedPebbles is not None:
         # add in info about inlet saved pebbles
-        cv2.putText(frame, 'Inlet Pebbles:', (1000, 50),
+        cv2.putText(frame, 'Inlet Pebbles:', (750, 50),
                     cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), thickness=4)
         for i in range(len(inletSavedPebbles)):
             text = ''+inletSavedPebbles[i][0]+', '+inletSavedPebbles[i][1]
