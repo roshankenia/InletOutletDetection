@@ -48,6 +48,24 @@ def get_coloured_mask(mask):
     return coloured_mask
 
 
+def normalize(arr):
+    """
+    Linear normalization
+    normalize the input array value into [0, 1]
+    http://en.wikipedia.org/wiki/Normalization_%28image_processing%29
+    """
+    arr = arr.astype('float')
+    # print("...arr shape", arr.shape)
+    # print("arr shape: ", arr.shape)
+    for i in range(3):
+        minval = arr[i, :, :].min()
+        maxval = arr[i, :, :].max()
+        if minval != maxval:
+            arr[i, :, :] -= minval
+            arr[i, :, :] /= (maxval-minval)
+    return arr
+
+
 def pebble_segmentation(img, confidence=0.98):
     """
     get_prediction
@@ -64,6 +82,11 @@ def pebble_segmentation(img, confidence=0.98):
     """
     transform = VT.Compose([VT.ToTensor()])
     img = transform(img)
+
+    # need to normalize first
+    image_array = img.numpy()
+    image_array = np.array(normalize(image_array), dtype=np.float32)
+    img = torch.from_numpy(image_array)
 
     img = img.to(device)
     pred = pebble_segmentation_model([img])
