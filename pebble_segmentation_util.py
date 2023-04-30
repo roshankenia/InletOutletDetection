@@ -93,7 +93,7 @@ def pebble_segmentation(img, confidence=0.98):
     pred_score = list(pred[0]['scores'].detach().cpu().numpy())
     pred_t = [pred_score.index(x) for x in pred_score if x > confidence]
     if len(pred_t) == 0:
-        return None, None, None
+        return None, None
     masks = (pred[0]['masks'] > 0.5).detach().cpu().numpy()
     masks = masks.reshape(-1, *masks.shape[-2:])
     # print(pred[0]['labels'].numpy().max())
