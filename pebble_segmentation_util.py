@@ -94,19 +94,14 @@ def pebble_segmentation(img, confidence=0.98):
     pred_t = [pred_score.index(x) for x in pred_score if x > confidence]
     if len(pred_t) == 0:
         return None, None, None
-    pred_t = pred_t[-1]
-    print('pred_t:', pred_t)
     masks = (pred[0]['masks'] > 0.5).detach().cpu().numpy()
     masks = masks.reshape(-1, *masks.shape[-2:])
     # print(pred[0]['labels'].numpy().max())
-    pred_class = [CLASS_NAMES[i]
-                  for i in list(pred[0]['labels'].cpu().numpy())]
-    pred_boxes = [[(int(i[0]), int(i[1])), (int(i[2]), int(i[3]))]
-                  for i in list(pred[0]['boxes'].detach().cpu().numpy())]
-    masks = masks[:pred_t+1]
-    pred_boxes = pred_boxes[:pred_t+1]
-    pred_class = pred_class[:pred_t+1]
-    return masks, pred_boxes, pred_class
+    pred_boxes = np.array([[(int(i[0]), int(i[1])), (int(i[2]), int(i[3]))]
+                           for i in list(pred[0]['boxes'].detach().cpu().numpy())])
+    masks = masks[pred_t]
+    pred_boxes = pred_boxes[pred_t]
+    return masks, pred_boxes
 
 
 def make_mask_image(img, masks, boxes, pred_cls, ind, rect_th=2, text_size=2, text_th=2):
