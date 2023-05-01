@@ -208,11 +208,6 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
 
 # create inlet video
 inletVideo = Video('S1060001In')
-# create outlet video
-outletVideo = Video('S1060001Out')
-# ensure videos have same frame count and FPS
-if inletVideo.frame_count != outletVideo.frame_count or inletVideo.fps != outletVideo.fps:
-    sys.exit('Videos are not in sync.')
 
 # set frames count and fps
 num_frames = inletVideo.frame_count
@@ -225,28 +220,18 @@ for frameNumber in range(num_frames):
     print('Processing frame #', frameNumber)
     videoTime = frameNumber/FPS
     inletHasFrames, inletFrame = inletVideo.vidcap.read()
-    outletHasFrames, outletFrame = outletVideo.vidcap.read()
-    if inletHasFrames and outletHasFrames:
+    if inletHasFrames:
         # process inlet frame
         inletVideo.processNextFrame(inletFrame, frameNumber, videoTime)
-
-        # process outlet frame
-        outletVideo.processNextFrame(
-            outletFrame, frameNumber, videoTime, inletVideo.savedPebbles)
-    elif inletHasFrames or outletHasFrames:
-        sys.exit('Videos are not in sync.')
     else:
         break
 
     inletVideo.removeInactive(frameNumber)
-    outletVideo.removeInactive(frameNumber)
 
 end = time.time()
 print('Total time elapsed:', (end-start))
 
 # When everything done, release the capture
 inletVideo.vidcap.release()
-outletVideo.vidcap.release()
 inletVideo.processed_video.release()
-outletVideo.processed_video.release()
 cv2.destroyAllWindows()
