@@ -93,7 +93,7 @@ def pebble_segmentation(img, confidence=0.98):
     """
 
     # adjust brightness of image
-    img = adjust_contrast_brightness(img, contrast=1.0, brightness=75)
+    img = adjust_contrast_brightness(img, contrast=1.0, brightness=123)
     transform = VT.Compose([VT.ToTensor()])
     img = transform(img)
 
