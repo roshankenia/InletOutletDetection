@@ -23,7 +23,7 @@ else:
 
 # set to evaluation mode
 pebble_segmentation_model = torch.load(
-    './saved_models/mask-rcnn-pebble.pt')
+    './saved_models/mask-rcnn-pebble-full-100.pt')
 pebble_segmentation_model.eval()
 CLASS_NAMES = ['__background__', 'pebble']
 device = torch.device(
@@ -97,10 +97,10 @@ def pebble_segmentation(img, confidence=0.98):
     transform = VT.Compose([VT.ToTensor()])
     img = transform(img)
 
-    # need to normalize first
-    image_array = img.numpy()
-    image_array = np.array(normalize(image_array), dtype=np.float32)
-    img = torch.from_numpy(image_array)
+    # # need to normalize first
+    # image_array = img.numpy()
+    # image_array = np.array(normalize(image_array), dtype=np.float32)
+    # img = torch.from_numpy(image_array)
 
     img = img.to(device)
     pred = pebble_segmentation_model([img])
