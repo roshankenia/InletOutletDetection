@@ -73,7 +73,11 @@ class Pebble():
         classification = ''
         for d in range(len(self.digits)):
             # take argmax of each position
-            classification += str(np.argmax(self.digits[d]))
+            maxPos = np.argmax(self.digits[d])
+            if self.digits[d][maxPos] == 0:
+                # no maximum for this position
+                return '???'
+            classification += str(maxPos)
 
         return classification
 

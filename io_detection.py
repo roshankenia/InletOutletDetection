@@ -68,9 +68,12 @@ class Video():
                 pebblesToKeep.append(pebble)
             else:
                 # save pebble to match between inlet and outlet
-                savePebble = (pebble.obtainFinalClassification(),
-                              str(round(pebble.lastSeenTime, 3)))
-                self.savedPebbles.append(savePebble)
+                finalClassification = pebble.obtainFinalClassification()
+                # save if only strong final classification
+                if finalClassification != '???':
+                    savePebble = (finalClassification, str(
+                        round(pebble.lastSeenTime, 3)))
+                    self.savedPebbles.append(savePebble)
 
         # set active pebbles
         self.activePebbles = pebblesToKeep
@@ -98,10 +101,6 @@ class Video():
                     # focus on pebble area in video
                     pebbleDetectionCrop = create_full_frame_crop(
                         frame, pebbleMask)
-
-                    # save crop
-                    cv2.imwrite(self.imgFolder + "pebble_" +
-                                str(frameNumber) + ".jpg", pebbleDetectionCrop)
 
                     # create into PIL image
                     pebbleDetectionCrop = Image.fromarray(pebbleDetectionCrop)
@@ -139,7 +138,8 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
         # iterate through each active pebble and add their data in
         for pebble in video.activePebbles:
             # check if detected this frame
-            if pebble.lastSeen == frameNumber:
+            currentClassification = pebble.obtainFinalClassification()
+            if pebble.lastSeen == frameNumber and currentClassification != '???':
                 # add in pebble detection area
                 if pebble.currentPebbleBox is not None:
                     minCord = (
@@ -156,7 +156,7 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                     bottomCenterCord = (
                         int(((minCord[0]+maxCord[0])/2)-200), int(maxCord[1]))
 
-                    cv2.putText(frame, 'Pred: '+str(pebble.obtainFinalClassification()),
+                    cv2.putText(frame, 'Pred: '+str(currentClassification),
                                 bottomCenterCord, cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 255, 255), thickness=3)
                 # add in digit detection area
                 if pebble.currentDigitBoxes is not None:

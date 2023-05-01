@@ -72,7 +72,7 @@ def no_overlap_pred(boxes, labels, scores):
 
 def get_number_from_pred(boxes, labels, scores, bottomY):
     # check if length is greater than three and if so select three most distinct
-    if len(labels) > 3:
+    if len(labels) >= 3:
         boxes, labels, scores = no_overlap_pred(boxes, labels, scores)
     # if only 2 or less predictions, not usable
     if len(labels) < 3:
