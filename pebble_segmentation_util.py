@@ -22,7 +22,7 @@ else:
     print('GPU is being properly used')
 
 # set to evaluation mode
-pebble_segmentation_model = torch.load('./saved_models/mask-rcnn-pebble.pt')
+pebble_segmentation_model = torch.load('./saved_models/mask-rcnn-pebble-full-100.pt')
 pebble_segmentation_model.eval()
 CLASS_NAMES = ['__background__', 'pebble']
 device = torch.device(
