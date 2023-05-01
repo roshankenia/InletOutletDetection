@@ -22,7 +22,8 @@ else:
     print('GPU is being properly used')
 
 # set to evaluation mode
-pebble_segmentation_model = torch.load('./saved_models/mask-rcnn-pebble-full-100.pt')
+pebble_segmentation_model = torch.load(
+    './saved_models/mask-rcnn-pebble-full-100.pt')
 pebble_segmentation_model.eval()
 CLASS_NAMES = ['__background__', 'pebble']
 device = torch.device(
@@ -66,6 +67,16 @@ def normalize(arr):
     return arr
 
 
+def adjust_contrast_brightness(img, contrast: float = 1.0, brightness: int = 0):
+    """
+    Adjusts contrast and brightness of an uint8 image.
+    contrast:   (0.0,  inf) with 1.0 leaving the contrast as is
+    brightness: [-255, 255] with 0 leaving the brightness as is
+    """
+    brightness += int(round(255*(1-contrast)/2))
+    return cv2.addWeighted(img, contrast, img, 0, brightness)
+
+
 def pebble_segmentation(img, confidence=0.98):
     """
     get_prediction
@@ -80,6 +91,9 @@ def pebble_segmentation(img, confidence=0.98):
           ie: eg. segment of cat is made 1 and rest of the image is made 0
 
     """
+
+    # adjust brightness of image
+    img = adjust_contrast_brightness(img, contrast=1.0, brightness=40)
     transform = VT.Compose([VT.ToTensor()])
     img = transform(img)
 
