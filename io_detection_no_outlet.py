@@ -102,6 +102,10 @@ class Video():
                     pebbleDetectionCrop = create_full_frame_crop(
                         frame, pebbleMask)
 
+                    # save img
+                    cv2.imwrite(self.imgFolder + "pebble_" +
+                                str(frameNumber) + ".jpg", pebbleDetectionCrop)
+
                     # create into PIL image
                     pebbleDetectionCrop = Image.fromarray(pebbleDetectionCrop)
                     pebbleDetectionCrop, _ = self.transform(
