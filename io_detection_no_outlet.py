@@ -47,7 +47,7 @@ def save_frame_and_mask(frame):
 
     # save mask
     # now create large background
-    mask = np.zeros((1920, 1080, 3), np.uint8)
+    mask = np.zeros((1080, 1920, 3), np.uint8)
     cv2.imwrite(mask_folder + "frame_" + str(c) + ".jpg", mask)
 
     c += 1
