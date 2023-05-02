@@ -129,6 +129,8 @@ class Video():
 
                     # save img
                     save_frame_and_mask(og_frame)
+                    cv2.imwrite(self.imgFolder + "pebble_" +
+                                str(frameNumber) + ".jpg", pebbleDetectionCrop)
 
                     # create into PIL image
                     pebbleDetectionCrop = Image.fromarray(pebbleDetectionCrop)
