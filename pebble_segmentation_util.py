@@ -97,10 +97,10 @@ def pebble_segmentation(img, confidence=0.98):
     transform = VT.Compose([VT.ToTensor()])
     img = transform(img)
 
-    # # need to normalize first
-    # image_array = img.numpy()
-    # image_array = np.array(normalize(image_array), dtype=np.float32)
-    # img = torch.from_numpy(image_array)
+    # need to normalize first
+    image_array = img.numpy()
+    image_array = np.array(normalize(image_array), dtype=np.float32)
+    img = torch.from_numpy(image_array)
 
     img = img.to(device)
     pred = pebble_segmentation_model([img])
