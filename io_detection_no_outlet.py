@@ -26,6 +26,31 @@ if not torch.cuda.is_available() or torch.cuda.device_count() != 1:
     sys.exit()
 else:
     print('GPU is being properly used')
+c = 7000
+
+
+def save_frame_and_mask(frame):
+    folder = f"./FrameFolder/"
+    if not os.path.isdir(folder):
+        os.mkdir(folder)
+    frame_folder = f"./FrameFolder/Frames/"
+    if not os.path.isdir(frame_folder):
+        os.mkdir(frame_folder)
+    mask_folder = f"./FrameFolder/Masks/"
+    if not os.path.isdir(mask_folder):
+        os.mkdir(mask_folder)
+
+    frame = cv2.resize(frame, (1920, 1080))
+    global c
+    # save img
+    cv2.imwrite(frame_folder + "frame_" + str(c) + ".jpg", frame)
+
+    # save mask
+    # now create large background
+    mask = np.zeros((1920, 1080, 3), np.uint8)
+    cv2.imwrite(mask_folder + "frame_" + str(c) + ".jpg", mask)
+
+    c += 1
 
 
 class Video():
@@ -103,8 +128,7 @@ class Video():
                         frame, pebbleMask)
 
                     # save img
-                    cv2.imwrite(self.imgFolder + "pebble_" +
-                                str(frameNumber) + ".jpg", pebbleDetectionCrop)
+                    save_frame_and_mask(og_frame)
 
                     # create into PIL image
                     pebbleDetectionCrop = Image.fromarray(pebbleDetectionCrop)
