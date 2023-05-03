@@ -31,7 +31,7 @@ device = torch.device(
 pebble_segmentation_model.to(device)
 
 
-def get_coloured_mask(mask):
+def get_coloured_mask(mask, pred_c):
     """
     random_colour_masks
       parameters:
@@ -39,12 +39,15 @@ def get_coloured_mask(mask):
       method:
         - the masks of each predicted object is given random colour for visualization
     """
-    colours = [[0, 255, 0], [0, 0, 255], [255, 0, 0], [0, 255, 255], [255, 255, 0], [
-        255, 0, 255], [80, 70, 180], [250, 80, 190], [245, 145, 50], [70, 150, 250], [50, 190, 190]]
+    colour = [[0, 0, 255]]
+    if pred_c == 'not pebble':
+        colour = [[255, 0, 0]]
+    # colours = [[0, 255, 0], [0, 0, 255], [255, 0, 0], [0, 255, 255], [255, 255, 0], [
+    #     255, 0, 255], [80, 70, 180], [250, 80, 190], [245, 145, 50], [70, 150, 250], [50, 190, 190]]
     r = np.zeros_like(mask).astype(np.uint8)
     g = np.zeros_like(mask).astype(np.uint8)
     b = np.zeros_like(mask).astype(np.uint8)
-    r[mask == 1], g[mask == 1], b[mask == 1] = colours[random.randrange(0, 10)]
+    r[mask == 1], g[mask == 1], b[mask == 1] = colour
     coloured_mask = np.stack([r, g, b], axis=2)
     return coloured_mask
 
@@ -127,7 +130,7 @@ pebNum = 0
 
 def make_mask_image(img, masks, boxes, pred_cls, rect_th=2, text_size=2, text_th=2):
     for i in range(len(masks)):
-        rgb_mask = get_coloured_mask(masks[i])
+        rgb_mask = get_coloured_mask(masks[i], pred_cls[i])
         img = cv2.addWeighted(img, 1, rgb_mask, 0.5, 0)
         cv2.rectangle(img, boxes[i][0], boxes[i][1],
                       color=(0, 255, 0), thickness=rect_th)
