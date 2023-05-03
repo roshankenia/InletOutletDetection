@@ -1,0 +1,5393 @@
+GPU is being properly used
+GPU is being properly used
+GPU is being properly used
+GPU is being properly used
+GPU is being properly used
+GPU is being properly used
+GPU is being properly used
+video S1060001In has 3870 frames with an fps of 29.97002997002997
+video dimensions width: 3840 height: 2160
+distThresh is: 960
+Processing frame # 0
+Pebble #1 has been created
+Processing frame # 1
+Processing frame # 2
+Processing frame # 3
+Processing frame # 4
+Processing frame # 5
+Pebble #1 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #1 has updated digits [[2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #1 has updated digits [[3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 3. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 6
+Pebble #1 has updated digits [[3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 3. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #1 has updated digits [[3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 3. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 7
+Pebble #1 has updated digits [[4. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 4. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 1. 0.]]
+Pebble #1 has updated digits [[5. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 5. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 1. 0.]]
+Processing frame # 8
+Processing frame # 9
+Processing frame # 10
+Processing frame # 11
+Processing frame # 12
+Processing frame # 13
+Pebble #1 has updated digits [[6. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 6. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 2. 0.]]
+Pebble #1 has updated digits [[7. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 7. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 3. 0.]]
+Processing frame # 14
+Pebble #1 has updated digits [[8. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 8. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 4. 0.]]
+Pebble #1 has updated digits [[9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 9. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 5. 0.]]
+Processing frame # 15
+Pebble #1 has updated digits [[10.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0. 10.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0.  6.  0.]]
+Pebble #1 has updated digits [[11.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0. 11.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0.  7.  0.]]
+Processing frame # 16
+Pebble #1 has updated digits [[12.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0. 12.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0.  8.  0.]]
+Pebble #1 has updated digits [[13.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0. 13.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0.  9.  0.]]
+Pebble #1 has updated digits [[14.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0. 14.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0. 10.  0.]]
+Processing frame # 17
+Processing frame # 18
+Processing frame # 19
+Processing frame # 20
+Processing frame # 21
+Processing frame # 22
+Processing frame # 23
+Processing frame # 24
+Processing frame # 25
+Processing frame # 26
+Processing frame # 27
+Processing frame # 28
+Processing frame # 29
+Processing frame # 30
+Processing frame # 31
+Processing frame # 32
+Processing frame # 33
+Processing frame # 34
+Processing frame # 35
+Processing frame # 36
+Processing frame # 37
+Processing frame # 38
+Processing frame # 39
+Processing frame # 40
+Processing frame # 41
+Processing frame # 42
+Processing frame # 43
+Processing frame # 44
+Processing frame # 45
+Processing frame # 46
+Processing frame # 47
+Processing frame # 48
+Processing frame # 49
+Processing frame # 50
+Processing frame # 51
+Processing frame # 52
+Processing frame # 53
+Processing frame # 54
+Processing frame # 55
+Processing frame # 56
+Processing frame # 57
+Processing frame # 58
+Processing frame # 59
+Processing frame # 60
+Processing frame # 61
+Processing frame # 62
+Processing frame # 63
+Processing frame # 64
+Processing frame # 65
+Processing frame # 66
+Processing frame # 67
+Processing frame # 68
+Processing frame # 69
+Processing frame # 70
+Processing frame # 71
+Processing frame # 72
+Processing frame # 73
+Processing frame # 74
+Processing frame # 75
+Processing frame # 76
+Processing frame # 77
+Processing frame # 78
+Processing frame # 79
+Processing frame # 80
+Processing frame # 81
+Processing frame # 82
+Processing frame # 83
+Processing frame # 84
+Processing frame # 85
+Processing frame # 86
+Processing frame # 87
+Processing frame # 88
+Processing frame # 89
+Processing frame # 90
+Processing frame # 91
+Processing frame # 92
+Processing frame # 93
+Processing frame # 94
+Processing frame # 95
+Processing frame # 96
+Processing frame # 97
+Processing frame # 98
+Processing frame # 99
+Processing frame # 100
+Processing frame # 101
+Processing frame # 102
+Processing frame # 103
+Processing frame # 104
+Processing frame # 105
+Processing frame # 106
+Processing frame # 107
+Processing frame # 108
+Processing frame # 109
+Processing frame # 110
+Processing frame # 111
+Processing frame # 112
+Processing frame # 113
+Processing frame # 114
+Processing frame # 115
+Processing frame # 116
+Processing frame # 117
+Processing frame # 118
+Processing frame # 119
+Processing frame # 120
+Processing frame # 121
+Processing frame # 122
+Processing frame # 123
+Processing frame # 124
+Processing frame # 125
+Processing frame # 126
+Processing frame # 127
+Processing frame # 128
+Processing frame # 129
+Processing frame # 130
+Processing frame # 131
+Processing frame # 132
+Processing frame # 133
+Processing frame # 134
+Processing frame # 135
+Processing frame # 136
+Processing frame # 137
+Processing frame # 138
+Processing frame # 139
+Processing frame # 140
+Processing frame # 141
+Processing frame # 142
+Processing frame # 143
+Processing frame # 144
+Processing frame # 145
+Processing frame # 146
+Processing frame # 147
+Processing frame # 148
+Processing frame # 149
+Processing frame # 150
+Processing frame # 151
+Processing frame # 152
+Processing frame # 153
+Processing frame # 154
+Processing frame # 155
+Processing frame # 156
+Processing frame # 157
+Processing frame # 158
+Processing frame # 159
+Processing frame # 160
+Processing frame # 161
+Processing frame # 162
+Processing frame # 163
+Processing frame # 164
+Processing frame # 165
+Processing frame # 166
+Processing frame # 167
+Processing frame # 168
+Processing frame # 169
+Processing frame # 170
+Processing frame # 171
+Processing frame # 172
+Processing frame # 173
+Processing frame # 174
+Processing frame # 175
+Processing frame # 176
+Processing frame # 177
+Pebble #2 has been created
+Processing frame # 178
+Processing frame # 179
+Processing frame # 180
+Processing frame # 181
+Processing frame # 182
+Processing frame # 183
+Processing frame # 184
+Processing frame # 185
+Processing frame # 186
+Pebble #2 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #2 has updated digits [[2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 1. 0. 0. 0.]]
+Processing frame # 187
+Pebble #2 has updated digits [[3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 1. 0. 0. 0.]]
+Pebble #2 has updated digits [[4. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 1. 0. 0. 0.]]
+Processing frame # 188
+Pebble #2 has updated digits [[5. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 2. 0. 0. 0.]]
+Pebble #2 has updated digits [[6. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 1. 0.]
+ [1. 0. 0. 0. 0. 0. 2. 0. 0. 0.]]
+Pebble #2 has updated digits [[7. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 2. 0.]
+ [1. 0. 0. 0. 0. 1. 2. 0. 0. 0.]]
+Processing frame # 189
+Pebble #2 has updated digits [[8. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 3. 0.]
+ [1. 0. 0. 0. 0. 1. 3. 0. 0. 0.]]
+Pebble #2 has updated digits [[9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 4. 0.]
+ [2. 0. 0. 0. 0. 1. 3. 0. 0. 0.]]
+Processing frame # 190
+Pebble #2 has updated digits [[10.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0.  5.  0.]
+ [ 2.  0.  0.  0.  0.  1.  3.  0.  0.  0.]]
+Pebble #2 has updated digits [[11.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0.  6.  0.]
+ [ 3.  0.  0.  0.  0.  1.  3.  0.  0.  0.]]
+Processing frame # 191
+Pebble #2 has updated digits [[12.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0.  7.  0.]
+ [ 3.  0.  0.  0.  0.  1.  3.  0.  0.  1.]]
+Processing frame # 192
+Pebble #2 has updated digits [[12.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0.  7.  0.]
+ [ 3.  0.  0.  0.  0.  1.  3.  0.  0.  1.]]
+Pebble #2 has updated digits [[13.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0.  8.  0.]
+ [ 3.  0.  0.  0.  0.  1.  3.  0.  0.  2.]]
+Processing frame # 193
+Pebble #2 has updated digits [[14.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0.  9.  0.]
+ [ 4.  0.  0.  0.  0.  1.  3.  0.  0.  2.]]
+Processing frame # 194
+Pebble #2 has updated digits [[14.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  0.  0.  0.  9.  0.]
+ [ 4.  0.  0.  0.  0.  1.  3.  0.  0.  2.]]
+Pebble #2 has updated digits [[15.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  1.  0.  0.  9.  0.]
+ [ 5.  0.  0.  0.  0.  1.  3.  0.  0.  2.]]
+Processing frame # 195
+Pebble #2 has updated digits [[16.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  1.  0.  0.  9.  0.]
+ [ 6.  0.  0.  0.  0.  1.  3.  0.  0.  2.]]
+Processing frame # 196
+Processing frame # 197
+Processing frame # 198
+Processing frame # 199
+Processing frame # 200
+Processing frame # 201
+Pebble #2 has updated digits [[17.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  1.  0.  0.  9.  0.]
+ [ 7.  0.  0.  0.  0.  1.  3.  0.  0.  2.]]
+Processing frame # 202
+Pebble #2 has updated digits [[17.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  1.  0.  0.  9.  0.]
+ [ 7.  0.  0.  0.  0.  1.  3.  0.  0.  2.]]
+Pebble #2 has updated digits [[18.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  1.  0.  0.  9.  1.]
+ [ 8.  0.  0.  0.  0.  1.  3.  0.  0.  2.]]
+Processing frame # 203
+Pebble #2 has updated digits [[19.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  1.  0.  0.  9.  1.]
+ [ 9.  0.  0.  0.  0.  1.  3.  0.  0.  2.]]
+Processing frame # 204
+Pebble #2 has updated digits [[20.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  1.  0.  0.  9.  1.]
+ [ 9.  0.  0.  0.  0.  1.  3.  0.  0.  2.]]
+Processing frame # 205
+Processing frame # 206
+Processing frame # 207
+Processing frame # 208
+Pebble #2 has updated digits [[20.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  1.  0.  0.  9.  1.]
+ [ 9.  0.  0.  0.  0.  1.  3.  0.  0.  2.]]
+Pebble #2 has updated digits [[20.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  1.  0.  0.  9.  1.]
+ [ 9.  0.  0.  0.  0.  1.  3.  0.  0.  2.]]
+Processing frame # 209
+Processing frame # 210
+Pebble #2 has updated digits [[21.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1.  0.  1.  0.  0. 10.  1.]
+ [10.  0.  0.  0.  0.  1.  3.  0.  0.  2.]]
+Processing frame # 211
+Processing frame # 212
+Processing frame # 213
+Processing frame # 214
+Processing frame # 215
+Processing frame # 216
+Processing frame # 217
+Processing frame # 218
+Processing frame # 219
+Processing frame # 220
+Processing frame # 221
+Processing frame # 222
+Processing frame # 223
+Processing frame # 224
+Processing frame # 225
+Processing frame # 226
+Processing frame # 227
+Processing frame # 228
+Processing frame # 229
+Processing frame # 230
+Processing frame # 231
+Processing frame # 232
+Processing frame # 233
+Processing frame # 234
+Processing frame # 235
+Processing frame # 236
+Processing frame # 237
+Processing frame # 238
+Processing frame # 239
+Processing frame # 240
+Processing frame # 241
+Processing frame # 242
+Processing frame # 243
+Processing frame # 244
+Processing frame # 245
+Processing frame # 246
+Processing frame # 247
+Processing frame # 248
+Processing frame # 249
+Processing frame # 250
+Processing frame # 251
+Processing frame # 252
+Processing frame # 253
+Processing frame # 254
+Processing frame # 255
+Processing frame # 256
+Processing frame # 257
+Processing frame # 258
+Processing frame # 259
+Processing frame # 260
+Processing frame # 261
+Processing frame # 262
+Processing frame # 263
+Processing frame # 264
+Processing frame # 265
+Processing frame # 266
+Processing frame # 267
+Processing frame # 268
+Processing frame # 269
+Processing frame # 270
+Processing frame # 271
+Processing frame # 272
+Processing frame # 273
+Processing frame # 274
+Processing frame # 275
+Processing frame # 276
+Processing frame # 277
+Processing frame # 278
+Processing frame # 279
+Processing frame # 280
+Processing frame # 281
+Processing frame # 282
+Processing frame # 283
+Processing frame # 284
+Processing frame # 285
+Processing frame # 286
+Processing frame # 287
+Processing frame # 288
+Processing frame # 289
+Processing frame # 290
+Processing frame # 291
+Processing frame # 292
+Processing frame # 293
+Processing frame # 294
+Processing frame # 295
+Processing frame # 296
+Processing frame # 297
+Processing frame # 298
+Processing frame # 299
+Processing frame # 300
+Processing frame # 301
+Processing frame # 302
+Processing frame # 303
+Processing frame # 304
+Processing frame # 305
+Processing frame # 306
+Processing frame # 307
+Processing frame # 308
+Processing frame # 309
+Processing frame # 310
+Processing frame # 311
+Processing frame # 312
+Processing frame # 313
+Processing frame # 314
+Processing frame # 315
+Processing frame # 316
+Processing frame # 317
+Processing frame # 318
+Processing frame # 319
+Processing frame # 320
+Processing frame # 321
+Pebble #3 has been created
+Processing frame # 322
+Processing frame # 323
+Processing frame # 324
+Processing frame # 325
+Processing frame # 326
+Processing frame # 327
+Processing frame # 328
+Processing frame # 329
+Processing frame # 330
+Processing frame # 331
+Processing frame # 332
+Processing frame # 333
+Processing frame # 334
+Processing frame # 335
+Processing frame # 336
+Processing frame # 337
+Processing frame # 338
+Processing frame # 339
+Processing frame # 340
+Processing frame # 341
+Processing frame # 342
+Processing frame # 343
+Pebble #3 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #3 has updated digits [[2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 2. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 344
+Pebble #3 has updated digits [[3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 3. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #3 has updated digits [[4. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [4. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 4. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 345
+Pebble #3 has updated digits [[5. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [5. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 5. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #3 has updated digits [[6. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [6. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 6. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 346
+Pebble #3 has updated digits [[7. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [7. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 7. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #3 has updated digits [[8. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [8. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 8. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 347
+Pebble #3 has updated digits [[9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 9. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 348
+Processing frame # 349
+Processing frame # 350
+Pebble #3 has updated digits [[9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 9. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #3 has updated digits [[9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 9. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 351
+Pebble #3 has updated digits [[9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 9. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 352
+Processing frame # 353
+Processing frame # 354
+Processing frame # 355
+Processing frame # 356
+Processing frame # 357
+Processing frame # 358
+Processing frame # 359
+Processing frame # 360
+Processing frame # 361
+Processing frame # 362
+Processing frame # 363
+Processing frame # 364
+Pebble #3 has updated digits [[ 9.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [10.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0. 10.  0.  0.  0.  0.  0.  0.  0.]]
+Pebble #3 has updated digits [[ 9.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [11.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0. 11.  0.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 365
+Pebble #3 has updated digits [[10.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [12.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0. 12.  0.  0.  0.  0.  0.  0.  0.]]
+Pebble #3 has updated digits [[11.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [13.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0. 13.  0.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 366
+Processing frame # 367
+Processing frame # 368
+Processing frame # 369
+Processing frame # 370
+Processing frame # 371
+Processing frame # 372
+Processing frame # 373
+Processing frame # 374
+Processing frame # 375
+Processing frame # 376
+Processing frame # 377
+Processing frame # 378
+Processing frame # 379
+Processing frame # 380
+Processing frame # 381
+Processing frame # 382
+Processing frame # 383
+Processing frame # 384
+Processing frame # 385
+Processing frame # 386
+Processing frame # 387
+Processing frame # 388
+Processing frame # 389
+Processing frame # 390
+Processing frame # 391
+Processing frame # 392
+Processing frame # 393
+Processing frame # 394
+Processing frame # 395
+Processing frame # 396
+Processing frame # 397
+Processing frame # 398
+Processing frame # 399
+Processing frame # 400
+Processing frame # 401
+Processing frame # 402
+Processing frame # 403
+Processing frame # 404
+Processing frame # 405
+Processing frame # 406
+Processing frame # 407
+Processing frame # 408
+Processing frame # 409
+Processing frame # 410
+Processing frame # 411
+Processing frame # 412
+Processing frame # 413
+Processing frame # 414
+Processing frame # 415
+Processing frame # 416
+Processing frame # 417
+Processing frame # 418
+Processing frame # 419
+Processing frame # 420
+Processing frame # 421
+Processing frame # 422
+Processing frame # 423
+Processing frame # 424
+Processing frame # 425
+Processing frame # 426
+Processing frame # 427
+Processing frame # 428
+Processing frame # 429
+Processing frame # 430
+Processing frame # 431
+Processing frame # 432
+Processing frame # 433
+Processing frame # 434
+Processing frame # 435
+Processing frame # 436
+Processing frame # 437
+Processing frame # 438
+Processing frame # 439
+Processing frame # 440
+Processing frame # 441
+Processing frame # 442
+Processing frame # 443
+Processing frame # 444
+Processing frame # 445
+Processing frame # 446
+Processing frame # 447
+Processing frame # 448
+Processing frame # 449
+Processing frame # 450
+Processing frame # 451
+Processing frame # 452
+Processing frame # 453
+Processing frame # 454
+Processing frame # 455
+Processing frame # 456
+Processing frame # 457
+Processing frame # 458
+Processing frame # 459
+Processing frame # 460
+Processing frame # 461
+Processing frame # 462
+Processing frame # 463
+Processing frame # 464
+Processing frame # 465
+Processing frame # 466
+Processing frame # 467
+Processing frame # 468
+Processing frame # 469
+Processing frame # 470
+Processing frame # 471
+Processing frame # 472
+Processing frame # 473
+Processing frame # 474
+Processing frame # 475
+Processing frame # 476
+Processing frame # 477
+Processing frame # 478
+Processing frame # 479
+Processing frame # 480
+Processing frame # 481
+Processing frame # 482
+Processing frame # 483
+Processing frame # 484
+Processing frame # 485
+Processing frame # 486
+Processing frame # 487
+Processing frame # 488
+Processing frame # 489
+Processing frame # 490
+Processing frame # 491
+Processing frame # 492
+Processing frame # 493
+Processing frame # 494
+Processing frame # 495
+Processing frame # 496
+Processing frame # 497
+Processing frame # 498
+Processing frame # 499
+Processing frame # 500
+Processing frame # 501
+Processing frame # 502
+Processing frame # 503
+Processing frame # 504
+Processing frame # 505
+Processing frame # 506
+Processing frame # 507
+Processing frame # 508
+Processing frame # 509
+Processing frame # 510
+Processing frame # 511
+Processing frame # 512
+Processing frame # 513
+Processing frame # 514
+Processing frame # 515
+Processing frame # 516
+Processing frame # 517
+Processing frame # 518
+Processing frame # 519
+Processing frame # 520
+Processing frame # 521
+Processing frame # 522
+Processing frame # 523
+Processing frame # 524
+Processing frame # 525
+Processing frame # 526
+Processing frame # 527
+Processing frame # 528
+Processing frame # 529
+Processing frame # 530
+Processing frame # 531
+Processing frame # 532
+Processing frame # 533
+Processing frame # 534
+Processing frame # 535
+Processing frame # 536
+Processing frame # 537
+Processing frame # 538
+Processing frame # 539
+Processing frame # 540
+Processing frame # 541
+Processing frame # 542
+Processing frame # 543
+Processing frame # 544
+Processing frame # 545
+Processing frame # 546
+Processing frame # 547
+Processing frame # 548
+Processing frame # 549
+Processing frame # 550
+Processing frame # 551
+Processing frame # 552
+Processing frame # 553
+Processing frame # 554
+Processing frame # 555
+Processing frame # 556
+Processing frame # 557
+Processing frame # 558
+Processing frame # 559
+Processing frame # 560
+Processing frame # 561
+Processing frame # 562
+Processing frame # 563
+Processing frame # 564
+Processing frame # 565
+Processing frame # 566
+Processing frame # 567
+Processing frame # 568
+Processing frame # 569
+Pebble #4 has been created
+Processing frame # 570
+Processing frame # 571
+Processing frame # 572
+Processing frame # 573
+Processing frame # 574
+Processing frame # 575
+Processing frame # 576
+Processing frame # 577
+Processing frame # 578
+Processing frame # 579
+Processing frame # 580
+Processing frame # 581
+Processing frame # 582
+Processing frame # 583
+Processing frame # 584
+Pebble #4 has updated digits [[0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 585
+Processing frame # 586
+Processing frame # 587
+Processing frame # 588
+Processing frame # 589
+Processing frame # 590
+Processing frame # 591
+Processing frame # 592
+Processing frame # 593
+Processing frame # 594
+Processing frame # 595
+Processing frame # 596
+Processing frame # 597
+Processing frame # 598
+Processing frame # 599
+Processing frame # 600
+Processing frame # 601
+Processing frame # 602
+Processing frame # 603
+Processing frame # 604
+Processing frame # 605
+Processing frame # 606
+Processing frame # 607
+Processing frame # 608
+Processing frame # 609
+Processing frame # 610
+Processing frame # 611
+Processing frame # 612
+Processing frame # 613
+Processing frame # 614
+Processing frame # 615
+Pebble #4 has updated digits [[0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 2. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 616
+Processing frame # 617
+Processing frame # 618
+Pebble #4 has updated digits [[0. 0. 1. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 2. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 0. 0. 0. 0. 0. 0.]]
+Pebble #4 has updated digits [[0. 0. 1. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 2. 0. 2. 0. 0. 0. 0. 0.]
+ [0. 0. 2. 1. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 619
+Pebble #4 has updated digits [[0. 0. 1. 2. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 2. 0. 3. 0. 0. 0. 0. 0.]
+ [0. 0. 2. 1. 0. 0. 0. 0. 0. 0.]]
+Pebble #4 has updated digits [[0. 0. 1. 2. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 2. 0. 3. 0. 0. 0. 0. 0.]
+ [0. 0. 2. 1. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 620
+Pebble #4 has updated digits [[0. 0. 1. 3. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 2. 0. 4. 0. 0. 0. 0. 0.]
+ [0. 0. 3. 1. 0. 0. 0. 0. 0. 0.]]
+Pebble #4 has updated digits [[0. 0. 1. 4. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 2. 0. 5. 0. 0. 0. 0. 0.]
+ [0. 0. 4. 1. 0. 0. 0. 0. 0. 0.]]
+Pebble #4 has updated digits [[0. 0. 1. 4. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 3. 0. 5. 0. 0. 0. 0. 0.]
+ [0. 0. 4. 1. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 621
+Pebble #4 has updated digits [[0. 0. 1. 5. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 3. 1. 5. 0. 0. 0. 0. 0.]
+ [0. 0. 5. 1. 0. 0. 0. 0. 0. 0.]]
+Pebble #4 has updated digits [[0. 0. 1. 6. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 3. 1. 6. 0. 0. 0. 0. 0.]
+ [0. 0. 6. 1. 0. 0. 0. 0. 0. 0.]]
+Pebble #4 has updated digits [[0. 0. 1. 7. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 3. 1. 7. 0. 0. 0. 0. 0.]
+ [0. 0. 7. 1. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 622
+Pebble #4 has updated digits [[0. 0. 1. 8. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 3. 1. 7. 0. 0. 0. 0. 0.]
+ [0. 0. 8. 1. 0. 0. 0. 0. 0. 0.]]
+Pebble #4 has updated digits [[0. 0. 1. 9. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 3. 1. 8. 0. 0. 0. 0. 0.]
+ [0. 0. 9. 1. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 623
+Pebble #4 has updated digits [[ 0.  0.  1. 10.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  3.  1.  8.  0.  0.  0.  0.  0.]
+ [ 0.  0.  9.  1.  0.  0.  0.  0.  0.  0.]]
+Pebble #4 has updated digits [[ 0.  0.  1. 11.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  3.  1.  8.  0.  0.  0.  0.  0.]
+ [ 0.  0.  9.  1.  0.  0.  0.  0.  0.  0.]]
+Pebble #4 has updated digits [[ 0.  0.  1. 12.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  3.  1.  9.  0.  0.  0.  0.  0.]
+ [ 0.  0. 10.  1.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 624
+Pebble #4 has updated digits [[ 0.  0.  1. 12.  0.  0.  0.  0.  0.  0.]
+ [ 0.  1.  3.  1.  9.  0.  0.  0.  0.  0.]
+ [ 0.  0. 11.  1.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 625
+Processing frame # 626
+Processing frame # 627
+Processing frame # 628
+Processing frame # 629
+Pebble #4 has updated digits [[ 0.  0.  1. 12.  0.  0.  0.  0.  0.  0.]
+ [ 0.  1.  3.  1.  9.  0.  0.  0.  0.  0.]
+ [ 0.  0. 11.  1.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 630
+Processing frame # 631
+Processing frame # 632
+Processing frame # 633
+Processing frame # 634
+Processing frame # 635
+Pebble #4 has updated digits [[ 0.  0.  1. 13.  0.  0.  0.  0.  0.  0.]
+ [ 0.  1.  3.  1. 10.  0.  0.  0.  0.  0.]
+ [ 0.  0. 12.  1.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 636
+Processing frame # 637
+Processing frame # 638
+Processing frame # 639
+Processing frame # 640
+Processing frame # 641
+Processing frame # 642
+Processing frame # 643
+Processing frame # 644
+Processing frame # 645
+Processing frame # 646
+Processing frame # 647
+Processing frame # 648
+Processing frame # 649
+Processing frame # 650
+Processing frame # 651
+Processing frame # 652
+Processing frame # 653
+Processing frame # 654
+Processing frame # 655
+Processing frame # 656
+Processing frame # 657
+Processing frame # 658
+Processing frame # 659
+Processing frame # 660
+Processing frame # 661
+Processing frame # 662
+Processing frame # 663
+Processing frame # 664
+Processing frame # 665
+Processing frame # 666
+Processing frame # 667
+Processing frame # 668
+Processing frame # 669
+Processing frame # 670
+Processing frame # 671
+Processing frame # 672
+Processing frame # 673
+Processing frame # 674
+Processing frame # 675
+Processing frame # 676
+Processing frame # 677
+Processing frame # 678
+Processing frame # 679
+Processing frame # 680
+Processing frame # 681
+Processing frame # 682
+Processing frame # 683
+Processing frame # 684
+Processing frame # 685
+Processing frame # 686
+Processing frame # 687
+Processing frame # 688
+Processing frame # 689
+Processing frame # 690
+Processing frame # 691
+Processing frame # 692
+Processing frame # 693
+Processing frame # 694
+Processing frame # 695
+Processing frame # 696
+Processing frame # 697
+Processing frame # 698
+Processing frame # 699
+Processing frame # 700
+Processing frame # 701
+Processing frame # 702
+Processing frame # 703
+Processing frame # 704
+Processing frame # 705
+Processing frame # 706
+Processing frame # 707
+Processing frame # 708
+Processing frame # 709
+Processing frame # 710
+Processing frame # 711
+Processing frame # 712
+Processing frame # 713
+Processing frame # 714
+Processing frame # 715
+Processing frame # 716
+Processing frame # 717
+Processing frame # 718
+Processing frame # 719
+Processing frame # 720
+Processing frame # 721
+Processing frame # 722
+Processing frame # 723
+Processing frame # 724
+Processing frame # 725
+Processing frame # 726
+Processing frame # 727
+Processing frame # 728
+Processing frame # 729
+Processing frame # 730
+Processing frame # 731
+Processing frame # 732
+Processing frame # 733
+Processing frame # 734
+Processing frame # 735
+Processing frame # 736
+Processing frame # 737
+Processing frame # 738
+Processing frame # 739
+Processing frame # 740
+Processing frame # 741
+Processing frame # 742
+Processing frame # 743
+Processing frame # 744
+Processing frame # 745
+Processing frame # 746
+Processing frame # 747
+Processing frame # 748
+Processing frame # 749
+Processing frame # 750
+Processing frame # 751
+Processing frame # 752
+Processing frame # 753
+Processing frame # 754
+Processing frame # 755
+Processing frame # 756
+Processing frame # 757
+Processing frame # 758
+Processing frame # 759
+Processing frame # 760
+Processing frame # 761
+Processing frame # 762
+Processing frame # 763
+Processing frame # 764
+Processing frame # 765
+Processing frame # 766
+Processing frame # 767
+Processing frame # 768
+Processing frame # 769
+Processing frame # 770
+Processing frame # 771
+Processing frame # 772
+Processing frame # 773
+Processing frame # 774
+Processing frame # 775
+Processing frame # 776
+Processing frame # 777
+Processing frame # 778
+Processing frame # 779
+Processing frame # 780
+Processing frame # 781
+Processing frame # 782
+Pebble #5 has been created
+Processing frame # 783
+Processing frame # 784
+Processing frame # 785
+Processing frame # 786
+Processing frame # 787
+Processing frame # 788
+Processing frame # 789
+Processing frame # 790
+Processing frame # 791
+Processing frame # 792
+Processing frame # 793
+Processing frame # 794
+Processing frame # 795
+Processing frame # 796
+Pebble #5 has updated digits [[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]]
+Pebble #5 has updated digits [[0. 0. 0. 2. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 1. 0. 0. 0. 0. 0.]]
+Pebble #5 has updated digits [[0. 0. 0. 3. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 2. 0. 1. 0. 0. 0. 0. 0.]]
+Processing frame # 797
+Pebble #5 has updated digits [[0. 0. 0. 4. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 3. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 2. 0. 2. 0. 0. 0. 0. 0.]]
+Pebble #5 has updated digits [[0. 0. 0. 5. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 4. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 3. 0. 2. 0. 0. 0. 0. 0.]]
+Processing frame # 798
+Pebble #5 has updated digits [[0. 0. 0. 6. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 5. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 3. 0. 3. 0. 0. 0. 0. 0.]]
+Processing frame # 799
+Pebble #5 has updated digits [[0. 0. 0. 7. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 5. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 3. 0. 4. 0. 0. 0. 0. 0.]]
+Processing frame # 800
+Pebble #5 has updated digits [[0. 0. 0. 8. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 5. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 3. 0. 5. 0. 0. 0. 0. 0.]]
+Pebble #5 has updated digits [[0. 0. 0. 9. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 5. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 3. 0. 6. 0. 0. 0. 0. 0.]]
+Processing frame # 801
+Processing frame # 802
+Processing frame # 803
+Processing frame # 804
+Processing frame # 805
+Processing frame # 806
+Processing frame # 807
+Pebble #5 has updated digits [[0. 0. 0. 9. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 6. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 3. 0. 7. 0. 0. 0. 0. 0.]]
+Processing frame # 808
+Processing frame # 809
+Processing frame # 810
+Pebble #5 has updated digits [[0. 0. 0. 9. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 6. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 3. 0. 7. 0. 0. 0. 0. 0.]]
+Processing frame # 811
+Processing frame # 812
+Processing frame # 813
+Processing frame # 814
+Processing frame # 815
+Processing frame # 816
+Pebble #5 has updated digits [[0. 0. 0. 9. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 7. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 3. 0. 8. 0. 0. 0. 0. 0.]]
+Pebble #5 has updated digits [[0. 0. 1. 9. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 8. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 3. 0. 9. 0. 0. 0. 0. 0.]]
+Pebble #5 has updated digits [[ 0.  0.  2.  9.  1.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  8.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0.  3.  0. 10.  0.  0.  0.  0.  0.]]
+Processing frame # 817
+Processing frame # 818
+Processing frame # 819
+Pebble #5 has updated digits [[ 0.  0.  2. 10.  1.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  9.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0.  3.  1. 10.  0.  0.  0.  0.  0.]]
+Pebble #5 has updated digits [[ 0.  0.  2. 11.  1.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0. 10.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0.  3.  1. 11.  0.  0.  0.  0.  0.]]
+Processing frame # 820
+Processing frame # 821
+Processing frame # 822
+Processing frame # 823
+Processing frame # 824
+Processing frame # 825
+Processing frame # 826
+Processing frame # 827
+Processing frame # 828
+Processing frame # 829
+Processing frame # 830
+Processing frame # 831
+Processing frame # 832
+Processing frame # 833
+Processing frame # 834
+Processing frame # 835
+Processing frame # 836
+Processing frame # 837
+Processing frame # 838
+Processing frame # 839
+Processing frame # 840
+Processing frame # 841
+Processing frame # 842
+Processing frame # 843
+Processing frame # 844
+Processing frame # 845
+Processing frame # 846
+Processing frame # 847
+Processing frame # 848
+Processing frame # 849
+Processing frame # 850
+Processing frame # 851
+Processing frame # 852
+Processing frame # 853
+Processing frame # 854
+Processing frame # 855
+Processing frame # 856
+Processing frame # 857
+Processing frame # 858
+Processing frame # 859
+Processing frame # 860
+Processing frame # 861
+Processing frame # 862
+Processing frame # 863
+Processing frame # 864
+Processing frame # 865
+Processing frame # 866
+Processing frame # 867
+Processing frame # 868
+Processing frame # 869
+Processing frame # 870
+Processing frame # 871
+Processing frame # 872
+Processing frame # 873
+Processing frame # 874
+Processing frame # 875
+Processing frame # 876
+Processing frame # 877
+Processing frame # 878
+Processing frame # 879
+Processing frame # 880
+Processing frame # 881
+Processing frame # 882
+Processing frame # 883
+Processing frame # 884
+Processing frame # 885
+Processing frame # 886
+Processing frame # 887
+Processing frame # 888
+Processing frame # 889
+Processing frame # 890
+Processing frame # 891
+Processing frame # 892
+Processing frame # 893
+Processing frame # 894
+Processing frame # 895
+Processing frame # 896
+Processing frame # 897
+Processing frame # 898
+Processing frame # 899
+Processing frame # 900
+Processing frame # 901
+Processing frame # 902
+Processing frame # 903
+Processing frame # 904
+Processing frame # 905
+Processing frame # 906
+Processing frame # 907
+Processing frame # 908
+Processing frame # 909
+Processing frame # 910
+Processing frame # 911
+Processing frame # 912
+Processing frame # 913
+Processing frame # 914
+Processing frame # 915
+Processing frame # 916
+Processing frame # 917
+Processing frame # 918
+Processing frame # 919
+Processing frame # 920
+Processing frame # 921
+Processing frame # 922
+Processing frame # 923
+Processing frame # 924
+Processing frame # 925
+Processing frame # 926
+Processing frame # 927
+Processing frame # 928
+Processing frame # 929
+Processing frame # 930
+Processing frame # 931
+Processing frame # 932
+Processing frame # 933
+Processing frame # 934
+Processing frame # 935
+Processing frame # 936
+Processing frame # 937
+Processing frame # 938
+Processing frame # 939
+Pebble #6 has been created
+Processing frame # 940
+Processing frame # 941
+Processing frame # 942
+Processing frame # 943
+Processing frame # 944
+Processing frame # 945
+Processing frame # 946
+Processing frame # 947
+Processing frame # 948
+Processing frame # 949
+Processing frame # 950
+Processing frame # 951
+Processing frame # 952
+Processing frame # 953
+Processing frame # 954
+Processing frame # 955
+Processing frame # 956
+Processing frame # 957
+Processing frame # 958
+Processing frame # 959
+Processing frame # 960
+Processing frame # 961
+Processing frame # 962
+Processing frame # 963
+Processing frame # 964
+Processing frame # 965
+Processing frame # 966
+Pebble #6 has updated digits [[0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 1. 0. 0. 0.]]
+Pebble #6 has updated digits [[0. 1. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 1. 0. 0. 0.]]
+Processing frame # 967
+Pebble #6 has updated digits [[0. 2. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 1. 0. 0. 1.]]
+Pebble #6 has updated digits [[0. 2. 0. 0. 0. 0. 0. 2. 0. 0.]
+ [4. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 1. 0. 0. 1.]]
+Processing frame # 968
+Pebble #6 has updated digits [[0. 3. 0. 0. 0. 0. 0. 2. 0. 0.]
+ [5. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 1. 0. 0. 1.]]
+Pebble #6 has updated digits [[0. 3. 0. 0. 0. 0. 0. 3. 0. 0.]
+ [6. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 1. 0. 0. 1.]]
+Processing frame # 969
+Pebble #6 has updated digits [[0. 4. 0. 0. 0. 0. 0. 3. 0. 0.]
+ [7. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 1. 0. 0. 1.]]
+Pebble #6 has updated digits [[0. 4. 0. 0. 0. 0. 0. 3. 0. 0.]
+ [8. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 1. 0. 0. 1.]]
+Processing frame # 970
+Pebble #6 has updated digits [[0. 5. 0. 0. 0. 0. 0. 3. 0. 0.]
+ [9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 2. 1. 0. 0. 1.]]
+Pebble #6 has updated digits [[ 0.  6.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [10.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0.  2.  1.  0.  0.  1.]]
+Processing frame # 971
+Pebble #6 has updated digits [[ 0.  7.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [11.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0.  2.  1.  0.  1.  1.]]
+Pebble #6 has updated digits [[ 0.  8.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [12.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0.  2.  1.  0.  1.  1.]]
+Pebble #6 has updated digits [[ 0.  8.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [13.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0.  3.  1.  0.  1.  1.]]
+Processing frame # 972
+Pebble #6 has updated digits [[ 0.  8.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [14.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0.  4.  1.  0.  1.  1.]]
+Pebble #6 has updated digits [[ 0.  8.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [14.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0.  5.  1.  0.  1.  1.]]
+Processing frame # 973
+Pebble #6 has updated digits [[ 0.  9.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [15.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0.  5.  1.  0.  1.  1.]]
+Processing frame # 974
+Pebble #6 has updated digits [[ 0. 10.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [16.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0.  5.  1.  0.  1.  1.]]
+Pebble #6 has updated digits [[ 0. 10.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [17.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0.  5.  1.  0.  1.  1.]]
+Processing frame # 975
+Pebble #6 has updated digits [[ 0. 11.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [17.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  0.  0.  0.  5.  1.  0.  1.  1.]]
+Processing frame # 976
+Pebble #6 has updated digits [[ 0. 11.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [18.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  0.  0.  0.  5.  1.  0.  1.  1.]]
+Processing frame # 977
+Processing frame # 978
+Pebble #6 has updated digits [[ 0. 11.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [19.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  0.  0.  0.  5.  2.  0.  1.  1.]]
+Pebble #6 has updated digits [[ 0. 12.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [20.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  0.  0.  0.  5.  3.  0.  1.  1.]]
+Pebble #6 has updated digits [[ 0. 13.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [21.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  0.  0.  0.  5.  4.  0.  1.  1.]]
+Processing frame # 979
+Pebble #6 has updated digits [[ 0. 14.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [22.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  0.  0.  0.  5.  5.  0.  1.  1.]]
+Pebble #6 has updated digits [[ 0. 15.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [23.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  0.  0.  0.  5.  6.  0.  1.  1.]]
+Processing frame # 980
+Pebble #6 has updated digits [[ 0. 16.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [24.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 3.  0.  0.  0.  0.  5.  6.  0.  1.  1.]]
+Pebble #6 has updated digits [[ 0. 17.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [25.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 3.  0.  0.  0.  0.  5.  6.  0.  1.  1.]]
+Processing frame # 981
+Pebble #6 has updated digits [[ 0. 17.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [26.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 3.  0.  0.  0.  0.  5.  7.  0.  1.  1.]]
+Pebble #6 has updated digits [[ 0. 17.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [27.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 3.  0.  0.  0.  0.  5.  8.  0.  1.  1.]]
+Processing frame # 982
+Pebble #6 has updated digits [[ 0. 17.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [28.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 3.  0.  0.  0.  0.  5.  8.  0.  1.  1.]]
+Processing frame # 983
+Pebble #6 has updated digits [[ 0. 17.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [29.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 3.  0.  0.  0.  0.  5.  9.  0.  1.  1.]]
+Pebble #6 has updated digits [[ 0. 17.  0.  0.  2.  0.  0.  3.  0.  0.]
+ [30.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 3.  0.  0.  0.  0.  5. 10.  0.  1.  1.]]
+Pebble #6 has updated digits [[ 0. 17.  0.  0.  2.  0.  0.  3.  0.  0.]
+ [31.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 3.  0.  0.  0.  0.  5. 11.  0.  1.  1.]]
+Processing frame # 984
+Processing frame # 985
+Processing frame # 986
+Processing frame # 987
+Processing frame # 988
+Processing frame # 989
+Processing frame # 990
+Processing frame # 991
+Processing frame # 992
+Processing frame # 993
+Processing frame # 994
+Processing frame # 995
+Processing frame # 996
+Processing frame # 997
+Processing frame # 998
+Processing frame # 999
+Processing frame # 1000
+Processing frame # 1001
+Processing frame # 1002
+Processing frame # 1003
+Processing frame # 1004
+Processing frame # 1005
+Processing frame # 1006
+Processing frame # 1007
+Processing frame # 1008
+Processing frame # 1009
+Processing frame # 1010
+Processing frame # 1011
+Processing frame # 1012
+Processing frame # 1013
+Processing frame # 1014
+Processing frame # 1015
+Processing frame # 1016
+Processing frame # 1017
+Processing frame # 1018
+Processing frame # 1019
+Processing frame # 1020
+Processing frame # 1021
+Processing frame # 1022
+Processing frame # 1023
+Processing frame # 1024
+Processing frame # 1025
+Processing frame # 1026
+Processing frame # 1027
+Processing frame # 1028
+Processing frame # 1029
+Processing frame # 1030
+Processing frame # 1031
+Processing frame # 1032
+Processing frame # 1033
+Processing frame # 1034
+Processing frame # 1035
+Processing frame # 1036
+Processing frame # 1037
+Processing frame # 1038
+Processing frame # 1039
+Processing frame # 1040
+Processing frame # 1041
+Processing frame # 1042
+Processing frame # 1043
+Processing frame # 1044
+Processing frame # 1045
+Processing frame # 1046
+Processing frame # 1047
+Processing frame # 1048
+Processing frame # 1049
+Processing frame # 1050
+Processing frame # 1051
+Processing frame # 1052
+Processing frame # 1053
+Processing frame # 1054
+Processing frame # 1055
+Processing frame # 1056
+Processing frame # 1057
+Processing frame # 1058
+Processing frame # 1059
+Processing frame # 1060
+Processing frame # 1061
+Processing frame # 1062
+Processing frame # 1063
+Processing frame # 1064
+Processing frame # 1065
+Processing frame # 1066
+Processing frame # 1067
+Processing frame # 1068
+Processing frame # 1069
+Processing frame # 1070
+Processing frame # 1071
+Processing frame # 1072
+Processing frame # 1073
+Processing frame # 1074
+Processing frame # 1075
+Processing frame # 1076
+Processing frame # 1077
+Processing frame # 1078
+Processing frame # 1079
+Processing frame # 1080
+Processing frame # 1081
+Processing frame # 1082
+Processing frame # 1083
+Processing frame # 1084
+Processing frame # 1085
+Processing frame # 1086
+Processing frame # 1087
+Processing frame # 1088
+Processing frame # 1089
+Processing frame # 1090
+Processing frame # 1091
+Processing frame # 1092
+Processing frame # 1093
+Processing frame # 1094
+Processing frame # 1095
+Processing frame # 1096
+Processing frame # 1097
+Processing frame # 1098
+Processing frame # 1099
+Processing frame # 1100
+Processing frame # 1101
+Processing frame # 1102
+Processing frame # 1103
+Processing frame # 1104
+Processing frame # 1105
+Processing frame # 1106
+Processing frame # 1107
+Processing frame # 1108
+Processing frame # 1109
+Processing frame # 1110
+Processing frame # 1111
+Processing frame # 1112
+Processing frame # 1113
+Pebble #7 has been created
+Processing frame # 1114
+Processing frame # 1115
+Processing frame # 1116
+Processing frame # 1117
+Processing frame # 1118
+Processing frame # 1119
+Processing frame # 1120
+Processing frame # 1121
+Processing frame # 1122
+Processing frame # 1123
+Processing frame # 1124
+Processing frame # 1125
+Processing frame # 1126
+Pebble #7 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 1127
+Processing frame # 1128
+Processing frame # 1129
+Pebble #7 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #7 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #7 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 1130
+Processing frame # 1131
+Processing frame # 1132
+Processing frame # 1133
+Processing frame # 1134
+Processing frame # 1135
+Processing frame # 1136
+Processing frame # 1137
+Processing frame # 1138
+Processing frame # 1139
+Processing frame # 1140
+Processing frame # 1141
+Pebble #7 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 1142
+Pebble #7 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 1143
+Processing frame # 1144
+Pebble #7 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #7 has updated digits [[1. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 2. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 1. 0. 0. 0. 0. 0.]]
+Processing frame # 1145
+Processing frame # 1146
+Processing frame # 1147
+Processing frame # 1148
+Processing frame # 1149
+Pebble #7 has updated digits [[1. 1. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 3. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 1. 0. 0. 0. 0. 0.]]
+Processing frame # 1150
+Processing frame # 1151
+Processing frame # 1152
+Processing frame # 1153
+Processing frame # 1154
+Processing frame # 1155
+Processing frame # 1156
+Pebble #7 has updated digits [[1. 2. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 4. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 2. 0. 0. 0. 0. 0.]]
+Pebble #7 has updated digits [[1. 3. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 5. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 3. 0. 0. 0. 0. 0.]]
+Processing frame # 1157
+Processing frame # 1158
+Pebble #7 has updated digits [[1. 4. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 6. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 4. 0. 0. 0. 0. 0.]]
+Processing frame # 1159
+Processing frame # 1160
+Processing frame # 1161
+Pebble #7 has updated digits [[1. 4. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 7. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 5. 0. 0. 0. 0. 0.]]
+Processing frame # 1162
+Processing frame # 1163
+Processing frame # 1164
+Processing frame # 1165
+Processing frame # 1166
+Processing frame # 1167
+Processing frame # 1168
+Processing frame # 1169
+Processing frame # 1170
+Processing frame # 1171
+Processing frame # 1172
+Processing frame # 1173
+Processing frame # 1174
+Pebble #7 has updated digits [[1. 4. 1. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 7. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 5. 0. 0. 0. 0. 0.]]
+Processing frame # 1175
+Processing frame # 1176
+Processing frame # 1177
+Processing frame # 1178
+Processing frame # 1179
+Processing frame # 1180
+Processing frame # 1181
+Processing frame # 1182
+Processing frame # 1183
+Pebble #7 has updated digits [[1. 4. 1. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 7. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 5. 0. 0. 0. 0. 0.]]
+Processing frame # 1184
+Processing frame # 1185
+Pebble #7 has updated digits [[1. 4. 1. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 8. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 1. 5. 0. 0. 0. 0. 0.]]
+Pebble #7 has updated digits [[1. 4. 1. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 9. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 1. 5. 0. 0. 0. 0. 0.]]
+Processing frame # 1186
+Processing frame # 1187
+Processing frame # 1188
+Processing frame # 1189
+Processing frame # 1190
+Processing frame # 1191
+Processing frame # 1192
+Processing frame # 1193
+Processing frame # 1194
+Processing frame # 1195
+Processing frame # 1196
+Processing frame # 1197
+Processing frame # 1198
+Pebble #7 has updated digits [[1. 4. 1. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 9. 1. 0. 1. 0. 0. 0. 0.]
+ [0. 1. 0. 1. 5. 0. 0. 0. 0. 0.]]
+Processing frame # 1199
+Processing frame # 1200
+Processing frame # 1201
+Processing frame # 1202
+Pebble #7 has updated digits [[ 1.  4.  1.  0.  0.  0.  0.  1.  0.  0.]
+ [ 0.  0. 10.  1.  0.  1.  0.  0.  0.  0.]
+ [ 0.  1.  1.  1.  5.  0.  0.  0.  0.  0.]]
+Processing frame # 1203
+Processing frame # 1204
+Pebble #7 has updated digits [[ 1.  4.  1.  0.  0.  0.  0.  1.  0.  0.]
+ [ 0.  0. 10.  1.  0.  1.  0.  0.  0.  0.]
+ [ 0.  2.  1.  1.  5.  0.  0.  0.  0.  0.]]
+Processing frame # 1205
+Processing frame # 1206
+Processing frame # 1207
+Processing frame # 1208
+Processing frame # 1209
+Processing frame # 1210
+Processing frame # 1211
+Processing frame # 1212
+Processing frame # 1213
+Pebble #7 has updated digits [[ 1.  4.  1.  0.  0.  0.  0.  2.  0.  0.]
+ [ 0.  0. 10.  1.  0.  1.  0.  0.  0.  0.]
+ [ 0.  2.  1.  1.  5.  0.  0.  0.  0.  0.]]
+Pebble #7 has updated digits [[ 1.  5.  1.  0.  0.  0.  0.  2.  0.  0.]
+ [ 0.  0. 11.  1.  0.  1.  0.  0.  0.  0.]
+ [ 0.  2.  1.  1.  5.  0.  0.  0.  0.  0.]]
+Processing frame # 1214
+Processing frame # 1215
+Pebble #7 has updated digits [[ 1.  5.  1.  0.  0.  0.  0.  3.  0.  0.]
+ [ 0.  0. 11.  1.  0.  1.  0.  0.  0.  0.]
+ [ 0.  2.  1.  1.  6.  0.  0.  0.  0.  0.]]
+Processing frame # 1216
+Processing frame # 1217
+Processing frame # 1218
+Processing frame # 1219
+Pebble #7 has updated digits [[ 1.  6.  1.  0.  0.  0.  0.  3.  0.  0.]
+ [ 0.  0. 12.  1.  0.  1.  0.  0.  0.  0.]
+ [ 0.  2.  1.  1.  6.  0.  0.  0.  0.  0.]]
+Pebble #7 has updated digits [[ 1.  6.  1.  0.  0.  0.  0.  3.  0.  0.]
+ [ 0.  0. 12.  1.  0.  1.  0.  0.  0.  0.]
+ [ 0.  2.  1.  1.  6.  0.  0.  0.  0.  0.]]
+Processing frame # 1220
+Processing frame # 1221
+Processing frame # 1222
+Processing frame # 1223
+Processing frame # 1224
+Processing frame # 1225
+Processing frame # 1226
+Processing frame # 1227
+Processing frame # 1228
+Processing frame # 1229
+Processing frame # 1230
+Processing frame # 1231
+Processing frame # 1232
+Processing frame # 1233
+Processing frame # 1234
+Processing frame # 1235
+Processing frame # 1236
+Processing frame # 1237
+Processing frame # 1238
+Processing frame # 1239
+Processing frame # 1240
+Processing frame # 1241
+Processing frame # 1242
+Processing frame # 1243
+Processing frame # 1244
+Processing frame # 1245
+Processing frame # 1246
+Processing frame # 1247
+Processing frame # 1248
+Processing frame # 1249
+Processing frame # 1250
+Processing frame # 1251
+Processing frame # 1252
+Processing frame # 1253
+Processing frame # 1254
+Processing frame # 1255
+Processing frame # 1256
+Processing frame # 1257
+Processing frame # 1258
+Processing frame # 1259
+Processing frame # 1260
+Processing frame # 1261
+Processing frame # 1262
+Processing frame # 1263
+Processing frame # 1264
+Processing frame # 1265
+Processing frame # 1266
+Processing frame # 1267
+Processing frame # 1268
+Processing frame # 1269
+Processing frame # 1270
+Processing frame # 1271
+Processing frame # 1272
+Processing frame # 1273
+Processing frame # 1274
+Processing frame # 1275
+Processing frame # 1276
+Processing frame # 1277
+Processing frame # 1278
+Processing frame # 1279
+Processing frame # 1280
+Processing frame # 1281
+Processing frame # 1282
+Processing frame # 1283
+Processing frame # 1284
+Processing frame # 1285
+Processing frame # 1286
+Processing frame # 1287
+Processing frame # 1288
+Processing frame # 1289
+Processing frame # 1290
+Processing frame # 1291
+Processing frame # 1292
+Processing frame # 1293
+Processing frame # 1294
+Processing frame # 1295
+Processing frame # 1296
+Processing frame # 1297
+Processing frame # 1298
+Processing frame # 1299
+Processing frame # 1300
+Processing frame # 1301
+Pebble #8 has been created
+Processing frame # 1302
+Processing frame # 1303
+Processing frame # 1304
+Processing frame # 1305
+Processing frame # 1306
+Processing frame # 1307
+Processing frame # 1308
+Processing frame # 1309
+Processing frame # 1310
+Processing frame # 1311
+Processing frame # 1312
+Processing frame # 1313
+Pebble #8 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]]
+Pebble #8 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 0. 0. 0. 0.]]
+Pebble #8 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 0. 0. 0. 0.]]
+Pebble #8 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 0. 0. 0. 0.]]
+Processing frame # 1314
+Pebble #8 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 2. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 3. 0. 0. 0. 0.]]
+Pebble #8 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 3. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 4. 0. 0. 0. 0.]]
+Processing frame # 1315
+Pebble #8 has updated digits [[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 3. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 5. 0. 0. 0. 0.]]
+Pebble #8 has updated digits [[0. 0. 0. 2. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 4. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 6. 0. 0. 0. 0.]]
+Processing frame # 1316
+Pebble #8 has updated digits [[0. 0. 0. 3. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 4. 2. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 6. 0. 0. 0. 0.]]
+Pebble #8 has updated digits [[0. 0. 0. 4. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 4. 2. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 7. 0. 0. 0. 0.]]
+Processing frame # 1317
+Pebble #8 has updated digits [[0. 0. 0. 5. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 4. 3. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 8. 0. 0. 0. 0.]]
+Pebble #8 has updated digits [[0. 0. 0. 6. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 5. 3. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 9. 0. 0. 0. 0.]]
+Pebble #8 has updated digits [[0. 0. 0. 6. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 6. 3. 0. 0. 0.]
+ [0. 0. 1. 1. 0. 9. 0. 0. 0. 0.]]
+Processing frame # 1318
+Pebble #8 has updated digits [[0. 0. 0. 7. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 7. 3. 0. 0. 0.]
+ [0. 0. 1. 1. 0. 9. 0. 0. 0. 0.]]
+Pebble #8 has updated digits [[0. 0. 0. 7. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 2. 0. 8. 3. 0. 0. 0.]
+ [0. 0. 1. 1. 0. 9. 0. 0. 0. 0.]]
+Processing frame # 1319
+Processing frame # 1320
+Processing frame # 1321
+Processing frame # 1322
+Processing frame # 1323
+Processing frame # 1324
+Processing frame # 1325
+Processing frame # 1326
+Processing frame # 1327
+Processing frame # 1328
+Processing frame # 1329
+Processing frame # 1330
+Processing frame # 1331
+Pebble #8 has updated digits [[ 0.  0.  0.  7.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0.  0.  2.  0.  8.  3.  0.  0.  0.]
+ [ 0.  0.  1.  1.  0. 10.  0.  0.  0.  0.]]
+Processing frame # 1332
+Pebble #8 has updated digits [[ 0.  0.  0.  7.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0.  0.  2.  0.  8.  3.  0.  0.  0.]
+ [ 0.  0.  1.  1.  0. 11.  0.  0.  0.  0.]]
+Processing frame # 1333
+Pebble #8 has updated digits [[ 0.  0.  0.  7.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0.  0.  2.  0.  8.  4.  0.  0.  0.]
+ [ 0.  0.  1.  2.  0. 11.  0.  0.  0.  0.]]
+Pebble #8 has updated digits [[ 1.  0.  0.  7.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0.  0.  2.  0.  9.  4.  0.  0.  0.]
+ [ 0.  0.  1.  3.  0. 11.  0.  0.  0.  0.]]
+Processing frame # 1334
+Pebble #8 has updated digits [[ 1.  0.  0.  8.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0.  0.  2.  0.  9.  5.  0.  0.  0.]
+ [ 0.  0.  1.  3.  0. 12.  0.  0.  0.  0.]]
+Pebble #8 has updated digits [[ 2.  0.  0.  8.  0.  1.  0.  0.  0.  0.]
+ [ 1.  0.  0.  2.  0.  9.  5.  0.  0.  0.]
+ [ 0.  0.  1.  4.  0. 12.  0.  0.  0.  0.]]
+Processing frame # 1335
+Pebble #8 has updated digits [[ 2.  0.  0.  9.  0.  1.  0.  0.  0.  0.]
+ [ 1.  0.  0.  2.  0.  9.  6.  0.  0.  0.]
+ [ 0.  0.  1.  4.  0. 13.  0.  0.  0.  0.]]
+Pebble #8 has updated digits [[ 2.  0.  0. 10.  0.  1.  0.  0.  0.  0.]
+ [ 1.  0.  0.  2.  0. 10.  6.  0.  0.  0.]
+ [ 0.  0.  1.  4.  0. 14.  0.  0.  0.  0.]]
+Processing frame # 1336
+Processing frame # 1337
+Processing frame # 1338
+Processing frame # 1339
+Processing frame # 1340
+Processing frame # 1341
+Processing frame # 1342
+Processing frame # 1343
+Processing frame # 1344
+Processing frame # 1345
+Processing frame # 1346
+Processing frame # 1347
+Processing frame # 1348
+Processing frame # 1349
+Processing frame # 1350
+Processing frame # 1351
+Processing frame # 1352
+Processing frame # 1353
+Processing frame # 1354
+Processing frame # 1355
+Processing frame # 1356
+Processing frame # 1357
+Processing frame # 1358
+Processing frame # 1359
+Processing frame # 1360
+Processing frame # 1361
+Processing frame # 1362
+Processing frame # 1363
+Processing frame # 1364
+Processing frame # 1365
+Processing frame # 1366
+Processing frame # 1367
+Processing frame # 1368
+Processing frame # 1369
+Processing frame # 1370
+Processing frame # 1371
+Processing frame # 1372
+Processing frame # 1373
+Processing frame # 1374
+Processing frame # 1375
+Processing frame # 1376
+Processing frame # 1377
+Processing frame # 1378
+Processing frame # 1379
+Processing frame # 1380
+Processing frame # 1381
+Processing frame # 1382
+Processing frame # 1383
+Processing frame # 1384
+Processing frame # 1385
+Processing frame # 1386
+Processing frame # 1387
+Processing frame # 1388
+Processing frame # 1389
+Processing frame # 1390
+Processing frame # 1391
+Processing frame # 1392
+Processing frame # 1393
+Processing frame # 1394
+Processing frame # 1395
+Processing frame # 1396
+Processing frame # 1397
+Processing frame # 1398
+Processing frame # 1399
+Processing frame # 1400
+Processing frame # 1401
+Processing frame # 1402
+Processing frame # 1403
+Processing frame # 1404
+Processing frame # 1405
+Processing frame # 1406
+Processing frame # 1407
+Processing frame # 1408
+Processing frame # 1409
+Processing frame # 1410
+Processing frame # 1411
+Processing frame # 1412
+Processing frame # 1413
+Processing frame # 1414
+Processing frame # 1415
+Processing frame # 1416
+Processing frame # 1417
+Processing frame # 1418
+Processing frame # 1419
+Processing frame # 1420
+Processing frame # 1421
+Processing frame # 1422
+Processing frame # 1423
+Processing frame # 1424
+Processing frame # 1425
+Processing frame # 1426
+Processing frame # 1427
+Processing frame # 1428
+Processing frame # 1429
+Processing frame # 1430
+Processing frame # 1431
+Processing frame # 1432
+Processing frame # 1433
+Processing frame # 1434
+Processing frame # 1435
+Processing frame # 1436
+Processing frame # 1437
+Processing frame # 1438
+Processing frame # 1439
+Processing frame # 1440
+Processing frame # 1441
+Processing frame # 1442
+Processing frame # 1443
+Processing frame # 1444
+Processing frame # 1445
+Processing frame # 1446
+Processing frame # 1447
+Processing frame # 1448
+Processing frame # 1449
+Processing frame # 1450
+Processing frame # 1451
+Processing frame # 1452
+Processing frame # 1453
+Processing frame # 1454
+Processing frame # 1455
+Processing frame # 1456
+Processing frame # 1457
+Processing frame # 1458
+Processing frame # 1459
+Processing frame # 1460
+Processing frame # 1461
+Processing frame # 1462
+Processing frame # 1463
+Processing frame # 1464
+Processing frame # 1465
+Processing frame # 1466
+Processing frame # 1467
+Processing frame # 1468
+Processing frame # 1469
+Processing frame # 1470
+Processing frame # 1471
+Processing frame # 1472
+Processing frame # 1473
+Processing frame # 1474
+Processing frame # 1475
+Processing frame # 1476
+Processing frame # 1477
+Processing frame # 1478
+Processing frame # 1479
+Processing frame # 1480
+Processing frame # 1481
+Processing frame # 1482
+Processing frame # 1483
+Processing frame # 1484
+Processing frame # 1485
+Processing frame # 1486
+Processing frame # 1487
+Processing frame # 1488
+Processing frame # 1489
+Processing frame # 1490
+Processing frame # 1491
+Processing frame # 1492
+Processing frame # 1493
+Processing frame # 1494
+Processing frame # 1495
+Processing frame # 1496
+Processing frame # 1497
+Processing frame # 1498
+Processing frame # 1499
+Processing frame # 1500
+Processing frame # 1501
+Processing frame # 1502
+Processing frame # 1503
+Processing frame # 1504
+Processing frame # 1505
+Processing frame # 1506
+Processing frame # 1507
+Processing frame # 1508
+Processing frame # 1509
+Processing frame # 1510
+Processing frame # 1511
+Processing frame # 1512
+Processing frame # 1513
+Processing frame # 1514
+Processing frame # 1515
+Processing frame # 1516
+Processing frame # 1517
+Processing frame # 1518
+Processing frame # 1519
+Processing frame # 1520
+Processing frame # 1521
+Processing frame # 1522
+Processing frame # 1523
+Processing frame # 1524
+Processing frame # 1525
+Processing frame # 1526
+Processing frame # 1527
+Processing frame # 1528
+Processing frame # 1529
+Processing frame # 1530
+Processing frame # 1531
+Processing frame # 1532
+Processing frame # 1533
+Processing frame # 1534
+Processing frame # 1535
+Processing frame # 1536
+Processing frame # 1537
+Processing frame # 1538
+Processing frame # 1539
+Processing frame # 1540
+Processing frame # 1541
+Processing frame # 1542
+Processing frame # 1543
+Processing frame # 1544
+Processing frame # 1545
+Processing frame # 1546
+Processing frame # 1547
+Processing frame # 1548
+Processing frame # 1549
+Processing frame # 1550
+Processing frame # 1551
+Processing frame # 1552
+Processing frame # 1553
+Processing frame # 1554
+Processing frame # 1555
+Processing frame # 1556
+Processing frame # 1557
+Processing frame # 1558
+Processing frame # 1559
+Processing frame # 1560
+Processing frame # 1561
+Processing frame # 1562
+Processing frame # 1563
+Processing frame # 1564
+Processing frame # 1565
+Processing frame # 1566
+Processing frame # 1567
+Processing frame # 1568
+Processing frame # 1569
+Processing frame # 1570
+Processing frame # 1571
+Processing frame # 1572
+Processing frame # 1573
+Processing frame # 1574
+Processing frame # 1575
+Processing frame # 1576
+Processing frame # 1577
+Processing frame # 1578
+Processing frame # 1579
+Processing frame # 1580
+Processing frame # 1581
+Processing frame # 1582
+Processing frame # 1583
+Processing frame # 1584
+Processing frame # 1585
+Processing frame # 1586
+Processing frame # 1587
+Processing frame # 1588
+Processing frame # 1589
+Processing frame # 1590
+Processing frame # 1591
+Processing frame # 1592
+Processing frame # 1593
+Processing frame # 1594
+Processing frame # 1595
+Processing frame # 1596
+Processing frame # 1597
+Processing frame # 1598
+Processing frame # 1599
+Processing frame # 1600
+Processing frame # 1601
+Processing frame # 1602
+Processing frame # 1603
+Processing frame # 1604
+Processing frame # 1605
+Processing frame # 1606
+Processing frame # 1607
+Processing frame # 1608
+Processing frame # 1609
+Processing frame # 1610
+Processing frame # 1611
+Processing frame # 1612
+Processing frame # 1613
+Processing frame # 1614
+Processing frame # 1615
+Processing frame # 1616
+Processing frame # 1617
+Processing frame # 1618
+Processing frame # 1619
+Processing frame # 1620
+Processing frame # 1621
+Processing frame # 1622
+Processing frame # 1623
+Processing frame # 1624
+Processing frame # 1625
+Processing frame # 1626
+Processing frame # 1627
+Processing frame # 1628
+Processing frame # 1629
+Processing frame # 1630
+Processing frame # 1631
+Processing frame # 1632
+Processing frame # 1633
+Processing frame # 1634
+Processing frame # 1635
+Processing frame # 1636
+Processing frame # 1637
+Processing frame # 1638
+Processing frame # 1639
+Processing frame # 1640
+Processing frame # 1641
+Processing frame # 1642
+Processing frame # 1643
+Processing frame # 1644
+Processing frame # 1645
+Processing frame # 1646
+Processing frame # 1647
+Processing frame # 1648
+Processing frame # 1649
+Processing frame # 1650
+Processing frame # 1651
+Processing frame # 1652
+Processing frame # 1653
+Processing frame # 1654
+Processing frame # 1655
+Processing frame # 1656
+Processing frame # 1657
+Processing frame # 1658
+Processing frame # 1659
+Processing frame # 1660
+Processing frame # 1661
+Processing frame # 1662
+Processing frame # 1663
+Processing frame # 1664
+Processing frame # 1665
+Processing frame # 1666
+Processing frame # 1667
+Processing frame # 1668
+Processing frame # 1669
+Processing frame # 1670
+Processing frame # 1671
+Processing frame # 1672
+Processing frame # 1673
+Processing frame # 1674
+Processing frame # 1675
+Processing frame # 1676
+Processing frame # 1677
+Processing frame # 1678
+Processing frame # 1679
+Processing frame # 1680
+Processing frame # 1681
+Processing frame # 1682
+Processing frame # 1683
+Processing frame # 1684
+Processing frame # 1685
+Processing frame # 1686
+Processing frame # 1687
+Processing frame # 1688
+Processing frame # 1689
+Processing frame # 1690
+Processing frame # 1691
+Processing frame # 1692
+Processing frame # 1693
+Processing frame # 1694
+Processing frame # 1695
+Processing frame # 1696
+Processing frame # 1697
+Processing frame # 1698
+Processing frame # 1699
+Processing frame # 1700
+Processing frame # 1701
+Processing frame # 1702
+Processing frame # 1703
+Processing frame # 1704
+Processing frame # 1705
+Processing frame # 1706
+Processing frame # 1707
+Processing frame # 1708
+Processing frame # 1709
+Processing frame # 1710
+Processing frame # 1711
+Processing frame # 1712
+Processing frame # 1713
+Processing frame # 1714
+Processing frame # 1715
+Processing frame # 1716
+Processing frame # 1717
+Processing frame # 1718
+Processing frame # 1719
+Processing frame # 1720
+Processing frame # 1721
+Processing frame # 1722
+Processing frame # 1723
+Processing frame # 1724
+Processing frame # 1725
+Processing frame # 1726
+Processing frame # 1727
+Processing frame # 1728
+Processing frame # 1729
+Processing frame # 1730
+Processing frame # 1731
+Processing frame # 1732
+Processing frame # 1733
+Processing frame # 1734
+Processing frame # 1735
+Processing frame # 1736
+Processing frame # 1737
+Processing frame # 1738
+Processing frame # 1739
+Processing frame # 1740
+Processing frame # 1741
+Processing frame # 1742
+Processing frame # 1743
+Processing frame # 1744
+Processing frame # 1745
+Processing frame # 1746
+Processing frame # 1747
+Processing frame # 1748
+Processing frame # 1749
+Processing frame # 1750
+Processing frame # 1751
+Processing frame # 1752
+Processing frame # 1753
+Processing frame # 1754
+Processing frame # 1755
+Processing frame # 1756
+Processing frame # 1757
+Processing frame # 1758
+Processing frame # 1759
+Processing frame # 1760
+Processing frame # 1761
+Processing frame # 1762
+Processing frame # 1763
+Processing frame # 1764
+Processing frame # 1765
+Processing frame # 1766
+Processing frame # 1767
+Processing frame # 1768
+Processing frame # 1769
+Processing frame # 1770
+Pebble #9 has been created
+Processing frame # 1771
+Processing frame # 1772
+Processing frame # 1773
+Processing frame # 1774
+Processing frame # 1775
+Processing frame # 1776
+Processing frame # 1777
+Processing frame # 1778
+Processing frame # 1779
+Processing frame # 1780
+Processing frame # 1781
+Pebble #9 has updated digits [[0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]]
+Pebble #9 has updated digits [[0. 2. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 1. 0. 0. 0. 0.]]
+Processing frame # 1782
+Pebble #9 has updated digits [[0. 3. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 2. 0. 0. 0. 0.]]
+Pebble #9 has updated digits [[0. 4. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [4. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 3. 0. 0. 0. 0.]]
+Processing frame # 1783
+Pebble #9 has updated digits [[0. 5. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [5. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 4. 0. 0. 0. 0.]]
+Pebble #9 has updated digits [[0. 6. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [6. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 5. 0. 0. 0. 0.]]
+Processing frame # 1784
+Pebble #9 has updated digits [[0. 7. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [7. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 6. 0. 0. 0. 0.]]
+Processing frame # 1785
+Pebble #9 has updated digits [[0. 8. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [8. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 7. 0. 0. 0. 0.]]
+Processing frame # 1786
+Pebble #9 has updated digits [[0. 9. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 8. 0. 0. 0. 0.]]
+Pebble #9 has updated digits [[ 0. 10.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [10.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  1.  9.  0.  0.  0.  0.]]
+Processing frame # 1787
+Pebble #9 has updated digits [[ 0. 11.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [11.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  1. 10.  0.  0.  0.  0.]]
+Pebble #9 has updated digits [[ 0. 12.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [12.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  1. 11.  0.  0.  0.  0.]]
+Processing frame # 1788
+Processing frame # 1789
+Processing frame # 1790
+Processing frame # 1791
+Processing frame # 1792
+Processing frame # 1793
+Processing frame # 1794
+Processing frame # 1795
+Processing frame # 1796
+Processing frame # 1797
+Processing frame # 1798
+Processing frame # 1799
+Processing frame # 1800
+Processing frame # 1801
+Processing frame # 1802
+Processing frame # 1803
+Processing frame # 1804
+Processing frame # 1805
+Processing frame # 1806
+Processing frame # 1807
+Processing frame # 1808
+Processing frame # 1809
+Processing frame # 1810
+Processing frame # 1811
+Processing frame # 1812
+Processing frame # 1813
+Processing frame # 1814
+Processing frame # 1815
+Processing frame # 1816
+Processing frame # 1817
+Processing frame # 1818
+Processing frame # 1819
+Processing frame # 1820
+Processing frame # 1821
+Processing frame # 1822
+Processing frame # 1823
+Processing frame # 1824
+Processing frame # 1825
+Processing frame # 1826
+Processing frame # 1827
+Processing frame # 1828
+Processing frame # 1829
+Processing frame # 1830
+Processing frame # 1831
+Processing frame # 1832
+Processing frame # 1833
+Processing frame # 1834
+Processing frame # 1835
+Processing frame # 1836
+Processing frame # 1837
+Processing frame # 1838
+Processing frame # 1839
+Processing frame # 1840
+Processing frame # 1841
+Processing frame # 1842
+Processing frame # 1843
+Processing frame # 1844
+Processing frame # 1845
+Processing frame # 1846
+Processing frame # 1847
+Processing frame # 1848
+Processing frame # 1849
+Processing frame # 1850
+Processing frame # 1851
+Processing frame # 1852
+Processing frame # 1853
+Processing frame # 1854
+Processing frame # 1855
+Processing frame # 1856
+Processing frame # 1857
+Processing frame # 1858
+Processing frame # 1859
+Processing frame # 1860
+Processing frame # 1861
+Processing frame # 1862
+Processing frame # 1863
+Processing frame # 1864
+Processing frame # 1865
+Processing frame # 1866
+Processing frame # 1867
+Processing frame # 1868
+Processing frame # 1869
+Processing frame # 1870
+Processing frame # 1871
+Processing frame # 1872
+Processing frame # 1873
+Processing frame # 1874
+Processing frame # 1875
+Processing frame # 1876
+Processing frame # 1877
+Processing frame # 1878
+Processing frame # 1879
+Processing frame # 1880
+Processing frame # 1881
+Processing frame # 1882
+Processing frame # 1883
+Processing frame # 1884
+Processing frame # 1885
+Processing frame # 1886
+Processing frame # 1887
+Processing frame # 1888
+Processing frame # 1889
+Processing frame # 1890
+Processing frame # 1891
+Processing frame # 1892
+Processing frame # 1893
+Processing frame # 1894
+Processing frame # 1895
+Processing frame # 1896
+Processing frame # 1897
+Processing frame # 1898
+Processing frame # 1899
+Processing frame # 1900
+Processing frame # 1901
+Processing frame # 1902
+Processing frame # 1903
+Processing frame # 1904
+Processing frame # 1905
+Processing frame # 1906
+Processing frame # 1907
+Processing frame # 1908
+Processing frame # 1909
+Processing frame # 1910
+Processing frame # 1911
+Processing frame # 1912
+Processing frame # 1913
+Processing frame # 1914
+Processing frame # 1915
+Processing frame # 1916
+Processing frame # 1917
+Processing frame # 1918
+Processing frame # 1919
+Processing frame # 1920
+Processing frame # 1921
+Processing frame # 1922
+Processing frame # 1923
+Processing frame # 1924
+Processing frame # 1925
+Processing frame # 1926
+Processing frame # 1927
+Processing frame # 1928
+Processing frame # 1929
+Processing frame # 1930
+Processing frame # 1931
+Processing frame # 1932
+Processing frame # 1933
+Processing frame # 1934
+Processing frame # 1935
+Processing frame # 1936
+Processing frame # 1937
+Processing frame # 1938
+Processing frame # 1939
+Processing frame # 1940
+Processing frame # 1941
+Processing frame # 1942
+Processing frame # 1943
+Processing frame # 1944
+Processing frame # 1945
+Processing frame # 1946
+Processing frame # 1947
+Processing frame # 1948
+Processing frame # 1949
+Processing frame # 1950
+Processing frame # 1951
+Processing frame # 1952
+Processing frame # 1953
+Processing frame # 1954
+Processing frame # 1955
+Processing frame # 1956
+Processing frame # 1957
+Processing frame # 1958
+Processing frame # 1959
+Processing frame # 1960
+Processing frame # 1961
+Processing frame # 1962
+Processing frame # 1963
+Processing frame # 1964
+Processing frame # 1965
+Processing frame # 1966
+Processing frame # 1967
+Processing frame # 1968
+Processing frame # 1969
+Processing frame # 1970
+Processing frame # 1971
+Processing frame # 1972
+Processing frame # 1973
+Processing frame # 1974
+Processing frame # 1975
+Processing frame # 1976
+Processing frame # 1977
+Processing frame # 1978
+Processing frame # 1979
+Processing frame # 1980
+Processing frame # 1981
+Processing frame # 1982
+Processing frame # 1983
+Processing frame # 1984
+Processing frame # 1985
+Processing frame # 1986
+Processing frame # 1987
+Processing frame # 1988
+Processing frame # 1989
+Pebble #10 has been created
+Processing frame # 1990
+Processing frame # 1991
+Processing frame # 1992
+Processing frame # 1993
+Processing frame # 1994
+Processing frame # 1995
+Processing frame # 1996
+Processing frame # 1997
+Processing frame # 1998
+Processing frame # 1999
+Processing frame # 2000
+Pebble #10 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]]
+Processing frame # 2001
+Pebble #10 has updated digits [[2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 0. 0. 0. 0.]]
+Pebble #10 has updated digits [[3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 3. 0. 0. 0. 0.]]
+Processing frame # 2002
+Pebble #10 has updated digits [[4. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [4. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 4. 0. 0. 0. 0.]]
+Pebble #10 has updated digits [[5. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [5. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 5. 0. 0. 0. 0.]]
+Processing frame # 2003
+Pebble #10 has updated digits [[6. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [6. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 6. 0. 0. 0. 0.]]
+Pebble #10 has updated digits [[7. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [7. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 7. 0. 0. 0. 0.]]
+Processing frame # 2004
+Pebble #10 has updated digits [[8. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [8. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 8. 0. 0. 0. 0.]]
+Pebble #10 has updated digits [[9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 9. 0. 0. 0. 0.]]
+Processing frame # 2005
+Pebble #10 has updated digits [[10.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [10.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 10.  0.  0.  0.  0.]]
+Pebble #10 has updated digits [[11.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [11.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 11.  0.  0.  0.  0.]]
+Processing frame # 2006
+Processing frame # 2007
+Processing frame # 2008
+Processing frame # 2009
+Processing frame # 2010
+Processing frame # 2011
+Processing frame # 2012
+Processing frame # 2013
+Processing frame # 2014
+Processing frame # 2015
+Processing frame # 2016
+Processing frame # 2017
+Processing frame # 2018
+Processing frame # 2019
+Processing frame # 2020
+Processing frame # 2021
+Processing frame # 2022
+Processing frame # 2023
+Processing frame # 2024
+Processing frame # 2025
+Processing frame # 2026
+Processing frame # 2027
+Processing frame # 2028
+Processing frame # 2029
+Processing frame # 2030
+Processing frame # 2031
+Processing frame # 2032
+Processing frame # 2033
+Processing frame # 2034
+Processing frame # 2035
+Processing frame # 2036
+Processing frame # 2037
+Processing frame # 2038
+Processing frame # 2039
+Processing frame # 2040
+Processing frame # 2041
+Processing frame # 2042
+Processing frame # 2043
+Processing frame # 2044
+Processing frame # 2045
+Processing frame # 2046
+Processing frame # 2047
+Processing frame # 2048
+Processing frame # 2049
+Processing frame # 2050
+Processing frame # 2051
+Processing frame # 2052
+Processing frame # 2053
+Processing frame # 2054
+Processing frame # 2055
+Processing frame # 2056
+Processing frame # 2057
+Processing frame # 2058
+Processing frame # 2059
+Processing frame # 2060
+Processing frame # 2061
+Processing frame # 2062
+Processing frame # 2063
+Processing frame # 2064
+Processing frame # 2065
+Processing frame # 2066
+Processing frame # 2067
+Processing frame # 2068
+Processing frame # 2069
+Processing frame # 2070
+Processing frame # 2071
+Processing frame # 2072
+Processing frame # 2073
+Processing frame # 2074
+Processing frame # 2075
+Processing frame # 2076
+Processing frame # 2077
+Processing frame # 2078
+Processing frame # 2079
+Processing frame # 2080
+Processing frame # 2081
+Processing frame # 2082
+Processing frame # 2083
+Processing frame # 2084
+Processing frame # 2085
+Processing frame # 2086
+Processing frame # 2087
+Processing frame # 2088
+Processing frame # 2089
+Processing frame # 2090
+Processing frame # 2091
+Processing frame # 2092
+Processing frame # 2093
+Processing frame # 2094
+Processing frame # 2095
+Processing frame # 2096
+Processing frame # 2097
+Processing frame # 2098
+Processing frame # 2099
+Processing frame # 2100
+Processing frame # 2101
+Processing frame # 2102
+Processing frame # 2103
+Processing frame # 2104
+Processing frame # 2105
+Processing frame # 2106
+Processing frame # 2107
+Processing frame # 2108
+Processing frame # 2109
+Processing frame # 2110
+Processing frame # 2111
+Processing frame # 2112
+Pebble #11 has been created
+Processing frame # 2113
+Processing frame # 2114
+Processing frame # 2115
+Processing frame # 2116
+Processing frame # 2117
+Processing frame # 2118
+Processing frame # 2119
+Processing frame # 2120
+Processing frame # 2121
+Processing frame # 2122
+Processing frame # 2123
+Processing frame # 2124
+Processing frame # 2125
+Processing frame # 2126
+Processing frame # 2127
+Pebble #11 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 2128
+Pebble #11 has updated digits [[2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 2. 0. 0.]
+ [0. 0. 0. 2. 0. 0. 0. 0. 0. 0.]]
+Pebble #11 has updated digits [[3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 3. 0. 0.]
+ [0. 0. 0. 2. 0. 1. 0. 0. 0. 0.]]
+Pebble #11 has updated digits [[4. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 3. 0. 0.]
+ [0. 0. 0. 2. 0. 2. 0. 0. 0. 0.]]
+Processing frame # 2129
+Pebble #11 has updated digits [[5. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 4. 0. 0.]
+ [0. 0. 0. 3. 0. 2. 0. 0. 0. 0.]]
+Pebble #11 has updated digits [[6. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 2. 0. 0. 0. 0. 0. 4. 0. 0.]
+ [0. 0. 0. 3. 0. 3. 0. 0. 0. 0.]]
+Processing frame # 2130
+Pebble #11 has updated digits [[7. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 2. 0. 0. 0. 0. 0. 5. 0. 0.]
+ [0. 0. 0. 3. 0. 4. 0. 0. 0. 0.]]
+Pebble #11 has updated digits [[8. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 3. 0. 0. 0. 0. 0. 5. 0. 0.]
+ [0. 0. 0. 3. 0. 5. 0. 0. 0. 0.]]
+Processing frame # 2131
+Pebble #11 has updated digits [[9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 3. 0. 0. 0. 0. 0. 6. 0. 0.]
+ [0. 0. 0. 3. 0. 6. 0. 0. 0. 0.]]
+Processing frame # 2132
+Pebble #11 has updated digits [[10.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  3.  0.  0.  0.  0.  0.  7.  0.  0.]
+ [ 0.  0.  0.  3.  0.  7.  0.  0.  0.  0.]]
+Processing frame # 2133
+Processing frame # 2134
+Processing frame # 2135
+Pebble #11 has updated digits [[11.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  3.  0.  0.  0.  0.  0.  8.  0.  0.]
+ [ 0.  0.  0.  3.  0.  8.  0.  0.  0.  0.]]
+Pebble #11 has updated digits [[12.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  3.  0.  0.  0.  0.  0.  8.  0.  0.]
+ [ 1.  0.  0.  3.  0.  8.  0.  0.  0.  0.]]
+Processing frame # 2136
+Pebble #11 has updated digits [[12.  1.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  3.  0.  0.  0.  0.  0.  8.  0.  0.]
+ [ 2.  0.  0.  3.  0.  8.  0.  0.  0.  0.]]
+Processing frame # 2137
+Pebble #11 has updated digits [[12.  1.  0.  0.  0.  1.  0.  0.  0.  0.]
+ [ 0.  3.  0.  0.  0.  0.  0.  8.  0.  0.]
+ [ 2.  1.  0.  3.  0.  8.  0.  0.  0.  0.]]
+Pebble #11 has updated digits [[12.  1.  0.  0.  0.  1.  0.  0.  0.  0.]
+ [ 0.  4.  0.  0.  0.  0.  0.  8.  0.  0.]
+ [ 2.  1.  0.  3.  0.  8.  0.  0.  0.  0.]]
+Processing frame # 2138
+Pebble #11 has updated digits [[12.  1.  0.  0.  0.  1.  0.  0.  0.  0.]
+ [ 0.  4.  0.  0.  0.  0.  0.  9.  0.  0.]
+ [ 2.  1.  0.  3.  0.  9.  0.  0.  0.  0.]]
+Processing frame # 2139
+Pebble #11 has updated digits [[13.  1.  0.  0.  0.  1.  0.  0.  0.  0.]
+ [ 0.  4.  0.  0.  0.  0.  0. 10.  0.  0.]
+ [ 2.  1.  0.  3.  0. 10.  0.  0.  0.  0.]]
+Pebble #11 has updated digits [[13.  1.  0.  0.  0.  2.  0.  0.  0.  0.]
+ [ 0.  4.  0.  0.  0.  0.  0. 10.  0.  0.]
+ [ 3.  1.  0.  3.  0. 10.  0.  0.  0.  0.]]
+Processing frame # 2140
+Processing frame # 2141
+Processing frame # 2142
+Processing frame # 2143
+Processing frame # 2144
+Processing frame # 2145
+Processing frame # 2146
+Processing frame # 2147
+Processing frame # 2148
+Processing frame # 2149
+Processing frame # 2150
+Processing frame # 2151
+Processing frame # 2152
+Processing frame # 2153
+Processing frame # 2154
+Processing frame # 2155
+Processing frame # 2156
+Processing frame # 2157
+Processing frame # 2158
+Processing frame # 2159
+Processing frame # 2160
+Processing frame # 2161
+Processing frame # 2162
+Processing frame # 2163
+Processing frame # 2164
+Processing frame # 2165
+Processing frame # 2166
+Processing frame # 2167
+Processing frame # 2168
+Processing frame # 2169
+Processing frame # 2170
+Processing frame # 2171
+Processing frame # 2172
+Processing frame # 2173
+Processing frame # 2174
+Processing frame # 2175
+Processing frame # 2176
+Processing frame # 2177
+Processing frame # 2178
+Processing frame # 2179
+Processing frame # 2180
+Processing frame # 2181
+Processing frame # 2182
+Processing frame # 2183
+Processing frame # 2184
+Processing frame # 2185
+Processing frame # 2186
+Processing frame # 2187
+Processing frame # 2188
+Processing frame # 2189
+Processing frame # 2190
+Processing frame # 2191
+Processing frame # 2192
+Processing frame # 2193
+Processing frame # 2194
+Processing frame # 2195
+Processing frame # 2196
+Processing frame # 2197
+Processing frame # 2198
+Processing frame # 2199
+Processing frame # 2200
+Processing frame # 2201
+Processing frame # 2202
+Processing frame # 2203
+Processing frame # 2204
+Processing frame # 2205
+Processing frame # 2206
+Processing frame # 2207
+Processing frame # 2208
+Processing frame # 2209
+Processing frame # 2210
+Processing frame # 2211
+Processing frame # 2212
+Processing frame # 2213
+Processing frame # 2214
+Processing frame # 2215
+Processing frame # 2216
+Processing frame # 2217
+Processing frame # 2218
+Processing frame # 2219
+Processing frame # 2220
+Processing frame # 2221
+Processing frame # 2222
+Processing frame # 2223
+Processing frame # 2224
+Processing frame # 2225
+Processing frame # 2226
+Processing frame # 2227
+Processing frame # 2228
+Processing frame # 2229
+Processing frame # 2230
+Processing frame # 2231
+Processing frame # 2232
+Processing frame # 2233
+Processing frame # 2234
+Processing frame # 2235
+Processing frame # 2236
+Processing frame # 2237
+Processing frame # 2238
+Processing frame # 2239
+Processing frame # 2240
+Processing frame # 2241
+Processing frame # 2242
+Processing frame # 2243
+Processing frame # 2244
+Processing frame # 2245
+Processing frame # 2246
+Processing frame # 2247
+Processing frame # 2248
+Processing frame # 2249
+Processing frame # 2250
+Processing frame # 2251
+Processing frame # 2252
+Processing frame # 2253
+Processing frame # 2254
+Processing frame # 2255
+Processing frame # 2256
+Processing frame # 2257
+Processing frame # 2258
+Processing frame # 2259
+Processing frame # 2260
+Processing frame # 2261
+Processing frame # 2262
+Processing frame # 2263
+Processing frame # 2264
+Processing frame # 2265
+Pebble #12 has been created
+Processing frame # 2266
+Processing frame # 2267
+Processing frame # 2268
+Processing frame # 2269
+Processing frame # 2270
+Processing frame # 2271
+Processing frame # 2272
+Processing frame # 2273
+Processing frame # 2274
+Processing frame # 2275
+Processing frame # 2276
+Pebble #12 has updated digits [[0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #12 has updated digits [[0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 2277
+Pebble #12 has updated digits [[0. 1. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 2. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #12 has updated digits [[0. 2. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 3. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 2. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #12 has updated digits [[0. 2. 0. 0. 1. 0. 0. 1. 0. 0.]
+ [0. 3. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 2. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 2278
+Pebble #12 has updated digits [[0. 3. 0. 0. 1. 0. 0. 1. 0. 0.]
+ [0. 4. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 2. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #12 has updated digits [[0. 4. 0. 0. 1. 0. 0. 1. 0. 0.]
+ [0. 5. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 3. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 2279
+Pebble #12 has updated digits [[0. 4. 0. 0. 1. 0. 0. 1. 0. 0.]
+ [0. 5. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 4. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #12 has updated digits [[0. 5. 0. 0. 1. 0. 0. 1. 0. 0.]
+ [0. 6. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [0. 5. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #12 has updated digits [[0. 6. 0. 0. 1. 0. 0. 1. 0. 0.]
+ [0. 6. 0. 0. 0. 0. 0. 2. 0. 0.]
+ [0. 6. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 2280
+Pebble #12 has updated digits [[0. 6. 0. 0. 1. 0. 0. 2. 0. 0.]
+ [0. 6. 0. 0. 0. 0. 0. 3. 0. 0.]
+ [0. 6. 0. 0. 0. 0. 0. 1. 0. 0.]]
+Pebble #12 has updated digits [[0. 7. 0. 0. 1. 0. 0. 2. 0. 0.]
+ [0. 7. 0. 0. 0. 0. 0. 3. 0. 0.]
+ [0. 7. 0. 0. 0. 0. 0. 1. 0. 0.]]
+Processing frame # 2281
+Pebble #12 has updated digits [[0. 8. 0. 0. 1. 0. 0. 2. 0. 0.]
+ [0. 7. 0. 0. 0. 0. 0. 3. 0. 0.]
+ [0. 8. 0. 0. 0. 0. 0. 1. 0. 0.]]
+Pebble #12 has updated digits [[0. 9. 0. 0. 1. 0. 0. 2. 0. 0.]
+ [0. 8. 0. 0. 0. 0. 0. 3. 0. 0.]
+ [0. 9. 0. 0. 0. 0. 0. 1. 0. 0.]]
+Processing frame # 2282
+Pebble #12 has updated digits [[0. 9. 0. 0. 1. 0. 0. 2. 0. 0.]
+ [0. 8. 0. 0. 0. 0. 0. 4. 0. 0.]
+ [0. 9. 0. 0. 0. 0. 0. 1. 0. 0.]]
+Pebble #12 has updated digits [[ 0. 10.  0.  0.  1.  0.  0.  2.  0.  0.]
+ [ 0.  9.  0.  0.  0.  0.  0.  4.  0.  0.]
+ [ 0. 10.  0.  0.  0.  0.  0.  1.  0.  0.]]
+Processing frame # 2283
+Pebble #12 has updated digits [[ 0. 10.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [ 0.  9.  0.  0.  0.  0.  0.  5.  0.  0.]
+ [ 0. 10.  0.  0.  0.  0.  0.  1.  0.  0.]]
+Pebble #12 has updated digits [[ 0. 11.  0.  0.  1.  0.  0.  3.  0.  0.]
+ [ 0. 10.  0.  0.  0.  0.  0.  5.  0.  0.]
+ [ 0. 11.  0.  0.  0.  0.  0.  1.  0.  0.]]
+Processing frame # 2284
+Processing frame # 2285
+Processing frame # 2286
+Processing frame # 2287
+Processing frame # 2288
+Processing frame # 2289
+Processing frame # 2290
+Processing frame # 2291
+Processing frame # 2292
+Processing frame # 2293
+Processing frame # 2294
+Processing frame # 2295
+Processing frame # 2296
+Processing frame # 2297
+Processing frame # 2298
+Processing frame # 2299
+Processing frame # 2300
+Processing frame # 2301
+Processing frame # 2302
+Processing frame # 2303
+Processing frame # 2304
+Processing frame # 2305
+Processing frame # 2306
+Processing frame # 2307
+Processing frame # 2308
+Processing frame # 2309
+Processing frame # 2310
+Processing frame # 2311
+Processing frame # 2312
+Processing frame # 2313
+Processing frame # 2314
+Processing frame # 2315
+Processing frame # 2316
+Processing frame # 2317
+Processing frame # 2318
+Processing frame # 2319
+Processing frame # 2320
+Processing frame # 2321
+Processing frame # 2322
+Processing frame # 2323
+Processing frame # 2324
+Processing frame # 2325
+Processing frame # 2326
+Processing frame # 2327
+Processing frame # 2328
+Processing frame # 2329
+Processing frame # 2330
+Processing frame # 2331
+Processing frame # 2332
+Processing frame # 2333
+Processing frame # 2334
+Processing frame # 2335
+Processing frame # 2336
+Processing frame # 2337
+Processing frame # 2338
+Processing frame # 2339
+Processing frame # 2340
+Processing frame # 2341
+Processing frame # 2342
+Processing frame # 2343
+Processing frame # 2344
+Processing frame # 2345
+Processing frame # 2346
+Processing frame # 2347
+Processing frame # 2348
+Processing frame # 2349
+Processing frame # 2350
+Processing frame # 2351
+Processing frame # 2352
+Processing frame # 2353
+Processing frame # 2354
+Processing frame # 2355
+Processing frame # 2356
+Processing frame # 2357
+Processing frame # 2358
+Processing frame # 2359
+Processing frame # 2360
+Processing frame # 2361
+Processing frame # 2362
+Processing frame # 2363
+Processing frame # 2364
+Processing frame # 2365
+Processing frame # 2366
+Processing frame # 2367
+Processing frame # 2368
+Processing frame # 2369
+Processing frame # 2370
+Processing frame # 2371
+Processing frame # 2372
+Processing frame # 2373
+Processing frame # 2374
+Processing frame # 2375
+Processing frame # 2376
+Processing frame # 2377
+Processing frame # 2378
+Processing frame # 2379
+Processing frame # 2380
+Processing frame # 2381
+Processing frame # 2382
+Processing frame # 2383
+Processing frame # 2384
+Processing frame # 2385
+Processing frame # 2386
+Processing frame # 2387
+Processing frame # 2388
+Processing frame # 2389
+Processing frame # 2390
+Processing frame # 2391
+Processing frame # 2392
+Processing frame # 2393
+Processing frame # 2394
+Processing frame # 2395
+Processing frame # 2396
+Processing frame # 2397
+Processing frame # 2398
+Processing frame # 2399
+Processing frame # 2400
+Processing frame # 2401
+Processing frame # 2402
+Processing frame # 2403
+Processing frame # 2404
+Processing frame # 2405
+Processing frame # 2406
+Processing frame # 2407
+Processing frame # 2408
+Processing frame # 2409
+Processing frame # 2410
+Processing frame # 2411
+Processing frame # 2412
+Processing frame # 2413
+Processing frame # 2414
+Processing frame # 2415
+Processing frame # 2416
+Processing frame # 2417
+Processing frame # 2418
+Processing frame # 2419
+Processing frame # 2420
+Processing frame # 2421
+Processing frame # 2422
+Processing frame # 2423
+Processing frame # 2424
+Processing frame # 2425
+Processing frame # 2426
+Processing frame # 2427
+Processing frame # 2428
+Processing frame # 2429
+Processing frame # 2430
+Processing frame # 2431
+Processing frame # 2432
+Processing frame # 2433
+Processing frame # 2434
+Processing frame # 2435
+Processing frame # 2436
+Processing frame # 2437
+Processing frame # 2438
+Processing frame # 2439
+Processing frame # 2440
+Processing frame # 2441
+Processing frame # 2442
+Processing frame # 2443
+Processing frame # 2444
+Processing frame # 2445
+Processing frame # 2446
+Pebble #13 has been created
+Processing frame # 2447
+Processing frame # 2448
+Processing frame # 2449
+Processing frame # 2450
+Processing frame # 2451
+Processing frame # 2452
+Processing frame # 2453
+Processing frame # 2454
+Processing frame # 2455
+Processing frame # 2456
+Processing frame # 2457
+Processing frame # 2458
+Processing frame # 2459
+Pebble #13 has updated digits [[0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 2460
+Processing frame # 2461
+Processing frame # 2462
+Processing frame # 2463
+Pebble #13 has updated digits [[0. 1. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]]
+Processing frame # 2464
+Pebble #13 has updated digits [[0. 2. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 2. 0. 0.]]
+Pebble #13 has updated digits [[0. 3. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 0. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 2. 0. 0.]]
+Processing frame # 2465
+Processing frame # 2466
+Processing frame # 2467
+Processing frame # 2468
+Processing frame # 2469
+Processing frame # 2470
+Pebble #13 has updated digits [[0. 3. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 0. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 2. 0. 0.]]
+Processing frame # 2471
+Processing frame # 2472
+Pebble #13 has updated digits [[0. 4. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 0. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 3. 0. 0.]]
+Pebble #13 has updated digits [[0. 5. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 0. 2. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 3. 0. 0.]]
+Processing frame # 2473
+Processing frame # 2474
+Processing frame # 2475
+Processing frame # 2476
+Pebble #13 has updated digits [[0. 5. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 1. 2. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 4. 0. 0.]]
+Processing frame # 2477
+Pebble #13 has updated digits [[0. 6. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 1. 3. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 5. 0. 0.]]
+Processing frame # 2478
+Pebble #13 has updated digits [[0. 6. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 1. 4. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 6. 0. 0.]]
+Processing frame # 2479
+Processing frame # 2480
+Pebble #13 has updated digits [[0. 6. 1. 0. 0. 1. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 1. 4. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 6. 0. 0.]]
+Pebble #13 has updated digits [[0. 6. 1. 0. 0. 1. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 1. 5. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 7. 0. 0.]]
+Processing frame # 2481
+Pebble #13 has updated digits [[0. 6. 1. 0. 0. 1. 0. 0. 0. 0.]
+ [2. 0. 0. 1. 0. 1. 5. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 7. 0. 0.]]
+Pebble #13 has updated digits [[0. 6. 1. 0. 0. 1. 0. 0. 0. 0.]
+ [2. 0. 0. 1. 0. 1. 6. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 8. 0. 0.]]
+Pebble #13 has updated digits [[0. 6. 1. 0. 0. 1. 0. 0. 0. 0.]
+ [2. 0. 0. 1. 0. 1. 7. 0. 0. 0.]
+ [0. 2. 0. 0. 0. 0. 0. 8. 0. 0.]]
+Processing frame # 2482
+Pebble #13 has updated digits [[0. 7. 1. 0. 0. 1. 0. 0. 0. 0.]
+ [2. 0. 0. 1. 0. 1. 8. 0. 0. 0.]
+ [0. 3. 0. 0. 0. 0. 0. 8. 0. 0.]]
+Processing frame # 2483
+Pebble #13 has updated digits [[0. 8. 1. 0. 0. 1. 0. 0. 0. 0.]
+ [2. 0. 0. 1. 0. 1. 9. 0. 0. 0.]
+ [0. 3. 0. 0. 0. 0. 0. 8. 0. 0.]]
+Processing frame # 2484
+Pebble #13 has updated digits [[ 0.  9.  1.  0.  0.  1.  0.  0.  0.  0.]
+ [ 2.  0.  0.  1.  0.  1. 10.  0.  0.  0.]
+ [ 0.  3.  0.  0.  0.  0.  0.  8.  0.  0.]]
+Processing frame # 2485
+Processing frame # 2486
+Pebble #13 has updated digits [[ 0. 10.  1.  0.  0.  1.  0.  0.  0.  0.]
+ [ 2.  0.  0.  1.  0.  1. 11.  0.  0.  0.]
+ [ 0.  3.  0.  0.  0.  0.  0.  9.  0.  0.]]
+Pebble #13 has updated digits [[ 0. 10.  2.  0.  0.  1.  0.  0.  0.  0.]
+ [ 2.  0.  0.  1.  0.  1. 11.  0.  0.  0.]
+ [ 0.  4.  0.  0.  0.  0.  0.  9.  0.  0.]]
+Pebble #13 has updated digits [[ 0. 10.  3.  0.  0.  1.  0.  0.  0.  0.]
+ [ 2.  0.  0.  1.  0.  1. 11.  0.  0.  1.]
+ [ 0.  5.  0.  0.  0.  0.  0.  9.  0.  0.]]
+Processing frame # 2487
+Processing frame # 2488
+Pebble #13 has updated digits [[ 0. 11.  3.  0.  0.  1.  0.  0.  0.  0.]
+ [ 2.  0.  0.  1.  0.  1. 12.  0.  0.  1.]
+ [ 0.  5.  0.  0.  0.  0.  0. 10.  0.  0.]]
+Pebble #13 has updated digits [[ 0. 11.  3.  0.  0.  1.  0.  0.  0.  0.]
+ [ 2.  0.  0.  1.  0.  2. 12.  0.  0.  1.]
+ [ 0.  5.  0.  0.  0.  0.  0. 11.  0.  0.]]
+Processing frame # 2489
+Processing frame # 2490
+Processing frame # 2491
+Processing frame # 2492
+Processing frame # 2493
+Processing frame # 2494
+Processing frame # 2495
+Processing frame # 2496
+Processing frame # 2497
+Processing frame # 2498
+Processing frame # 2499
+Processing frame # 2500
+Processing frame # 2501
+Processing frame # 2502
+Processing frame # 2503
+Processing frame # 2504
+Processing frame # 2505
+Processing frame # 2506
+Processing frame # 2507
+Processing frame # 2508
+Processing frame # 2509
+Processing frame # 2510
+Processing frame # 2511
+Processing frame # 2512
+Processing frame # 2513
+Processing frame # 2514
+Processing frame # 2515
+Processing frame # 2516
+Processing frame # 2517
+Processing frame # 2518
+Processing frame # 2519
+Processing frame # 2520
+Processing frame # 2521
+Processing frame # 2522
+Processing frame # 2523
+Processing frame # 2524
+Processing frame # 2525
+Processing frame # 2526
+Processing frame # 2527
+Processing frame # 2528
+Processing frame # 2529
+Processing frame # 2530
+Processing frame # 2531
+Processing frame # 2532
+Processing frame # 2533
+Processing frame # 2534
+Processing frame # 2535
+Processing frame # 2536
+Processing frame # 2537
+Processing frame # 2538
+Processing frame # 2539
+Processing frame # 2540
+Processing frame # 2541
+Processing frame # 2542
+Processing frame # 2543
+Processing frame # 2544
+Processing frame # 2545
+Processing frame # 2546
+Processing frame # 2547
+Processing frame # 2548
+Processing frame # 2549
+Processing frame # 2550
+Processing frame # 2551
+Processing frame # 2552
+Processing frame # 2553
+Processing frame # 2554
+Processing frame # 2555
+Processing frame # 2556
+Processing frame # 2557
+Processing frame # 2558
+Processing frame # 2559
+Processing frame # 2560
+Processing frame # 2561
+Processing frame # 2562
+Processing frame # 2563
+Processing frame # 2564
+Processing frame # 2565
+Processing frame # 2566
+Processing frame # 2567
+Processing frame # 2568
+Processing frame # 2569
+Processing frame # 2570
+Processing frame # 2571
+Processing frame # 2572
+Processing frame # 2573
+Processing frame # 2574
+Processing frame # 2575
+Processing frame # 2576
+Processing frame # 2577
+Processing frame # 2578
+Processing frame # 2579
+Processing frame # 2580
+Processing frame # 2581
+Processing frame # 2582
+Processing frame # 2583
+Processing frame # 2584
+Processing frame # 2585
+Processing frame # 2586
+Processing frame # 2587
+Processing frame # 2588
+Processing frame # 2589
+Processing frame # 2590
+Processing frame # 2591
+Processing frame # 2592
+Processing frame # 2593
+Processing frame # 2594
+Processing frame # 2595
+Processing frame # 2596
+Processing frame # 2597
+Processing frame # 2598
+Processing frame # 2599
+Processing frame # 2600
+Processing frame # 2601
+Processing frame # 2602
+Processing frame # 2603
+Processing frame # 2604
+Processing frame # 2605
+Processing frame # 2606
+Processing frame # 2607
+Processing frame # 2608
+Processing frame # 2609
+Processing frame # 2610
+Processing frame # 2611
+Processing frame # 2612
+Processing frame # 2613
+Processing frame # 2614
+Processing frame # 2615
+Processing frame # 2616
+Processing frame # 2617
+Processing frame # 2618
+Processing frame # 2619
+Processing frame # 2620
+Processing frame # 2621
+Processing frame # 2622
+Processing frame # 2623
+Processing frame # 2624
+Processing frame # 2625
+Processing frame # 2626
+Processing frame # 2627
+Processing frame # 2628
+Processing frame # 2629
+Processing frame # 2630
+Processing frame # 2631
+Processing frame # 2632
+Processing frame # 2633
+Processing frame # 2634
+Processing frame # 2635
+Processing frame # 2636
+Processing frame # 2637
+Processing frame # 2638
+Processing frame # 2639
+Processing frame # 2640
+Processing frame # 2641
+Processing frame # 2642
+Processing frame # 2643
+Processing frame # 2644
+Processing frame # 2645
+Processing frame # 2646
+Processing frame # 2647
+Processing frame # 2648
+Processing frame # 2649
+Processing frame # 2650
+Processing frame # 2651
+Processing frame # 2652
+Pebble #14 has been created
+Processing frame # 2653
+Processing frame # 2654
+Processing frame # 2655
+Processing frame # 2656
+Processing frame # 2657
+Processing frame # 2658
+Processing frame # 2659
+Processing frame # 2660
+Processing frame # 2661
+Processing frame # 2662
+Processing frame # 2663
+Processing frame # 2664
+Processing frame # 2665
+Processing frame # 2666
+Processing frame # 2667
+Processing frame # 2668
+Processing frame # 2669
+Processing frame # 2670
+Processing frame # 2671
+Processing frame # 2672
+Pebble #14 has updated digits [[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #14 has updated digits [[0. 0. 0. 2. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 2673
+Processing frame # 2674
+Processing frame # 2675
+Processing frame # 2676
+Processing frame # 2677
+Processing frame # 2678
+Processing frame # 2679
+Pebble #14 has updated digits [[0. 0. 0. 2. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 2680
+Processing frame # 2681
+Processing frame # 2682
+Processing frame # 2683
+Processing frame # 2684
+Pebble #14 has updated digits [[0. 0. 0. 3. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 2. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]]
+Processing frame # 2685
+Pebble #14 has updated digits [[0. 0. 0. 4. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 3. 0. 0.]
+ [0. 0. 0. 0. 2. 0. 0. 0. 0. 0.]]
+Processing frame # 2686
+Processing frame # 2687
+Processing frame # 2688
+Processing frame # 2689
+Processing frame # 2690
+Pebble #14 has updated digits [[0. 0. 0. 5. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 3. 0. 0.]
+ [0. 0. 0. 0. 2. 0. 0. 0. 0. 0.]]
+Pebble #14 has updated digits [[0. 0. 0. 6. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 3. 0. 0.]
+ [0. 0. 0. 0. 3. 0. 0. 0. 0. 0.]]
+Processing frame # 2691
+Pebble #14 has updated digits [[0. 0. 0. 6. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 3. 0. 0.]
+ [0. 0. 0. 0. 3. 0. 0. 0. 0. 0.]]
+Pebble #14 has updated digits [[0. 0. 0. 6. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 3. 0. 0.]
+ [0. 0. 0. 0. 4. 0. 0. 0. 0. 0.]]
+Processing frame # 2692
+Pebble #14 has updated digits [[0. 0. 0. 6. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 4. 0. 0.]
+ [0. 0. 0. 0. 5. 0. 0. 0. 0. 0.]]
+Pebble #14 has updated digits [[0. 0. 0. 6. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 5. 0. 0.]
+ [0. 0. 0. 0. 6. 0. 0. 0. 0. 0.]]
+Processing frame # 2693
+Pebble #14 has updated digits [[0. 0. 0. 6. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 6. 0. 0.]
+ [0. 0. 0. 0. 7. 0. 0. 0. 0. 0.]]
+Pebble #14 has updated digits [[0. 0. 0. 7. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 7. 0. 0.]
+ [0. 0. 0. 0. 8. 0. 0. 0. 0. 0.]]
+Processing frame # 2694
+Pebble #14 has updated digits [[0. 0. 0. 7. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 7. 0. 0.]
+ [0. 0. 0. 0. 8. 0. 0. 0. 0. 0.]]
+Pebble #14 has updated digits [[0. 0. 1. 7. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 7. 0. 0.]
+ [0. 0. 0. 0. 9. 0. 0. 0. 0. 0.]]
+Processing frame # 2695
+Pebble #14 has updated digits [[0. 0. 1. 7. 0. 1. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 7. 0. 0.]
+ [0. 0. 0. 0. 9. 0. 0. 0. 0. 0.]]
+Pebble #14 has updated digits [[0. 1. 1. 7. 0. 1. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 7. 0. 0.]
+ [0. 0. 0. 0. 9. 0. 0. 0. 0. 0.]]
+Processing frame # 2696
+Processing frame # 2697
+Pebble #14 has updated digits [[0. 1. 1. 8. 0. 1. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 7. 0. 0.]
+ [0. 0. 0. 0. 9. 0. 0. 0. 0. 0.]]
+Pebble #14 has updated digits [[0. 1. 2. 8. 0. 1. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 7. 0. 0.]
+ [0. 0. 0. 0. 9. 0. 0. 0. 0. 0.]]
+Processing frame # 2698
+Pebble #14 has updated digits [[0. 1. 2. 8. 0. 1. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 7. 0. 0.]
+ [0. 0. 0. 0. 9. 0. 0. 0. 0. 0.]]
+Processing frame # 2699
+Processing frame # 2700
+Processing frame # 2701
+Processing frame # 2702
+Processing frame # 2703
+Processing frame # 2704
+Pebble #14 has updated digits [[0. 1. 2. 8. 0. 1. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 7. 0. 0.]
+ [0. 0. 0. 0. 9. 0. 0. 0. 0. 0.]]
+Pebble #14 has updated digits [[0. 1. 2. 9. 0. 1. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 8. 0. 0.]
+ [0. 0. 0. 0. 9. 0. 0. 0. 0. 0.]]
+Processing frame # 2705
+Pebble #14 has updated digits [[0. 1. 2. 9. 0. 1. 0. 1. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 8. 0. 0.]
+ [0. 0. 0. 0. 9. 0. 0. 0. 0. 0.]]
+Pebble #14 has updated digits [[ 0.  1.  2.  9.  0.  1.  0.  1.  0.  0.]
+ [ 0.  0.  0.  0.  0.  1.  0.  9.  0.  0.]
+ [ 0.  0.  0.  0. 10.  0.  0.  0.  0.  0.]]
+Processing frame # 2706
+Processing frame # 2707
+Processing frame # 2708
+Processing frame # 2709
+Processing frame # 2710
+Pebble #14 has updated digits [[ 0.  1.  2.  9.  1.  1.  0.  1.  0.  0.]
+ [ 0.  0.  0.  0.  0.  1.  0.  9.  0.  0.]
+ [ 0.  0.  0.  0. 11.  0.  0.  0.  0.  0.]]
+Processing frame # 2711
+Processing frame # 2712
+Processing frame # 2713
+Processing frame # 2714
+Pebble #14 has updated digits [[ 0.  1.  2. 10.  1.  1.  0.  1.  0.  0.]
+ [ 0.  0.  0.  0.  0.  1.  0.  9.  0.  0.]
+ [ 0.  0.  0.  0. 11.  0.  0.  1.  0.  0.]]
+Pebble #14 has updated digits [[ 0.  1.  2. 10.  1.  1.  0.  1.  0.  0.]
+ [ 0.  0.  0.  0.  0.  1.  0.  9.  0.  0.]
+ [ 0.  1.  0.  0. 11.  0.  0.  1.  0.  0.]]
+Processing frame # 2715
+Processing frame # 2716
+Processing frame # 2717
+Processing frame # 2718
+Processing frame # 2719
+Processing frame # 2720
+Processing frame # 2721
+Processing frame # 2722
+Processing frame # 2723
+Processing frame # 2724
+Processing frame # 2725
+Processing frame # 2726
+Processing frame # 2727
+Processing frame # 2728
+Processing frame # 2729
+Processing frame # 2730
+Processing frame # 2731
+Processing frame # 2732
+Processing frame # 2733
+Processing frame # 2734
+Processing frame # 2735
+Processing frame # 2736
+Processing frame # 2737
+Processing frame # 2738
+Processing frame # 2739
+Processing frame # 2740
+Processing frame # 2741
+Processing frame # 2742
+Processing frame # 2743
+Processing frame # 2744
+Processing frame # 2745
+Processing frame # 2746
+Processing frame # 2747
+Processing frame # 2748
+Processing frame # 2749
+Processing frame # 2750
+Processing frame # 2751
+Processing frame # 2752
+Processing frame # 2753
+Processing frame # 2754
+Processing frame # 2755
+Processing frame # 2756
+Processing frame # 2757
+Processing frame # 2758
+Processing frame # 2759
+Processing frame # 2760
+Processing frame # 2761
+Processing frame # 2762
+Processing frame # 2763
+Processing frame # 2764
+Processing frame # 2765
+Processing frame # 2766
+Processing frame # 2767
+Processing frame # 2768
+Processing frame # 2769
+Processing frame # 2770
+Processing frame # 2771
+Processing frame # 2772
+Processing frame # 2773
+Processing frame # 2774
+Processing frame # 2775
+Processing frame # 2776
+Pebble #15 has been created
+Processing frame # 2777
+Processing frame # 2778
+Processing frame # 2779
+Processing frame # 2780
+Processing frame # 2781
+Processing frame # 2782
+Processing frame # 2783
+Processing frame # 2784
+Processing frame # 2785
+Processing frame # 2786
+Pebble #15 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 2787
+Processing frame # 2788
+Processing frame # 2789
+Processing frame # 2790
+Pebble #15 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0.]]
+Pebble #15 has updated digits [[2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 1. 0. 0.]]
+Processing frame # 2791
+Pebble #15 has updated digits [[2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 2. 0. 0. 0. 0. 0. 1. 0. 0.]]
+Processing frame # 2792
+Pebble #15 has updated digits [[2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 2. 0. 0. 0. 0. 0. 1. 0. 0.]]
+Processing frame # 2793
+Processing frame # 2794
+Processing frame # 2795
+Pebble #15 has updated digits [[2. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 2. 0. 0. 0. 0. 0. 1. 0. 0.]]
+Processing frame # 2796
+Processing frame # 2797
+Processing frame # 2798
+Pebble #15 has updated digits [[2. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 2. 0. 0. 0. 0. 0. 2. 0. 0.]]
+Processing frame # 2799
+Pebble #15 has updated digits [[2. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 2. 0. 0. 0. 0. 0. 2. 0. 0.]]
+Processing frame # 2800
+Pebble #15 has updated digits [[2. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 2. 0. 0. 0. 0. 0.]
+ [0. 3. 0. 0. 0. 0. 0. 2. 0. 0.]]
+Processing frame # 2801
+Processing frame # 2802
+Processing frame # 2803
+Processing frame # 2804
+Processing frame # 2805
+Pebble #15 has updated digits [[3. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 3. 0. 0. 0. 0. 0.]
+ [0. 3. 0. 0. 1. 0. 0. 2. 0. 0.]]
+Processing frame # 2806
+Pebble #15 has updated digits [[4. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 4. 0. 0. 0. 0. 0.]
+ [0. 3. 0. 0. 1. 0. 0. 2. 0. 0.]]
+Pebble #15 has updated digits [[5. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 5. 0. 0. 0. 0. 0.]
+ [0. 3. 0. 0. 1. 0. 0. 2. 0. 0.]]
+Processing frame # 2807
+Pebble #15 has updated digits [[6. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 6. 0. 0. 0. 0. 0.]
+ [0. 4. 0. 0. 1. 0. 0. 2. 0. 0.]]
+Pebble #15 has updated digits [[7. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 7. 0. 0. 0. 0. 0.]
+ [0. 4. 0. 0. 1. 0. 0. 2. 0. 0.]]
+Processing frame # 2808
+Pebble #15 has updated digits [[8. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 8. 0. 0. 0. 0. 0.]
+ [0. 5. 0. 0. 1. 0. 0. 2. 0. 0.]]
+Pebble #15 has updated digits [[9. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 9. 0. 0. 0. 0. 0.]
+ [0. 6. 0. 0. 1. 0. 0. 2. 0. 0.]]
+Processing frame # 2809
+Pebble #15 has updated digits [[10.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  2.  0.  0.  9.  0.  0.  0.  0.  0.]
+ [ 0.  7.  0.  0.  1.  0.  0.  2.  0.  0.]]
+Processing frame # 2810
+Pebble #15 has updated digits [[11.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  2.  0.  0. 10.  0.  0.  0.  0.  0.]
+ [ 0.  7.  0.  0.  1.  0.  0.  2.  0.  0.]]
+Processing frame # 2811
+Pebble #15 has updated digits [[11.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  2.  0.  0. 11.  0.  0.  0.  0.  0.]
+ [ 0.  7.  0.  0.  1.  0.  0.  2.  0.  0.]]
+Pebble #15 has updated digits [[11.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  2.  0.  0. 12.  0.  0.  0.  0.  0.]
+ [ 0.  7.  0.  0.  1.  0.  0.  2.  0.  0.]]
+Processing frame # 2812
+Pebble #15 has updated digits [[12.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  2.  0.  0. 13.  0.  0.  0.  0.  0.]
+ [ 0.  7.  0.  0.  1.  0.  0.  2.  0.  0.]]
+Processing frame # 2813
+Processing frame # 2814
+Pebble #15 has updated digits [[12.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  2.  0.  0. 13.  0.  0.  0.  0.  0.]
+ [ 0.  7.  0.  0.  1.  0.  0.  2.  0.  0.]]
+Pebble #15 has updated digits [[12.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  2.  0.  0. 13.  0.  0.  0.  0.  0.]
+ [ 0.  7.  0.  0.  1.  0.  0.  2.  0.  0.]]
+Processing frame # 2815
+Pebble #15 has updated digits [[13.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  2.  0.  0. 14.  0.  0.  0.  0.  0.]
+ [ 0.  7.  0.  0.  1.  0.  0.  2.  0.  0.]]
+Processing frame # 2816
+Processing frame # 2817
+Processing frame # 2818
+Processing frame # 2819
+Processing frame # 2820
+Processing frame # 2821
+Processing frame # 2822
+Processing frame # 2823
+Processing frame # 2824
+Processing frame # 2825
+Pebble #15 has updated digits [[13.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  2.  0.  0. 15.  0.  0.  0.  0.  0.]
+ [ 0.  8.  0.  0.  1.  0.  0.  2.  0.  0.]]
+Pebble #15 has updated digits [[13.  0.  1.  0.  0.  1.  0.  0.  0.  0.]
+ [ 0.  2.  0.  0. 16.  0.  0.  0.  0.  0.]
+ [ 0.  8.  0.  0.  1.  0.  0.  3.  0.  0.]]
+Processing frame # 2826
+Pebble #15 has updated digits [[13.  0.  1.  0.  0.  2.  0.  0.  0.  0.]
+ [ 0.  2.  0.  0. 16.  0.  0.  0.  0.  0.]
+ [ 0.  8.  0.  0.  1.  0.  0.  4.  0.  0.]]
+Pebble #15 has updated digits [[13.  0.  1.  0.  0.  3.  0.  0.  0.  0.]
+ [ 0.  2.  0.  0. 17.  0.  0.  0.  0.  0.]
+ [ 0.  9.  0.  0.  1.  0.  0.  4.  0.  0.]]
+Processing frame # 2827
+Pebble #15 has updated digits [[13.  0.  1.  0.  0.  3.  0.  0.  0.  0.]
+ [ 0.  2.  0.  0. 17.  0.  0.  0.  0.  0.]
+ [ 0.  9.  0.  0.  1.  0.  0.  5.  0.  0.]]
+Pebble #15 has updated digits [[13.  0.  1.  0.  0.  3.  0.  0.  0.  0.]
+ [ 0.  2.  0.  0. 18.  0.  0.  0.  0.  0.]
+ [ 0. 10.  0.  0.  1.  0.  0.  5.  0.  0.]]
+Processing frame # 2828
+Processing frame # 2829
+Processing frame # 2830
+Processing frame # 2831
+Processing frame # 2832
+Processing frame # 2833
+Processing frame # 2834
+Processing frame # 2835
+Processing frame # 2836
+Processing frame # 2837
+Processing frame # 2838
+Processing frame # 2839
+Processing frame # 2840
+Processing frame # 2841
+Processing frame # 2842
+Processing frame # 2843
+Processing frame # 2844
+Processing frame # 2845
+Processing frame # 2846
+Processing frame # 2847
+Processing frame # 2848
+Processing frame # 2849
+Processing frame # 2850
+Processing frame # 2851
+Processing frame # 2852
+Processing frame # 2853
+Processing frame # 2854
+Processing frame # 2855
+Processing frame # 2856
+Processing frame # 2857
+Processing frame # 2858
+Processing frame # 2859
+Processing frame # 2860
+Processing frame # 2861
+Processing frame # 2862
+Processing frame # 2863
+Processing frame # 2864
+Processing frame # 2865
+Processing frame # 2866
+Processing frame # 2867
+Processing frame # 2868
+Processing frame # 2869
+Processing frame # 2870
+Processing frame # 2871
+Processing frame # 2872
+Processing frame # 2873
+Processing frame # 2874
+Processing frame # 2875
+Processing frame # 2876
+Processing frame # 2877
+Processing frame # 2878
+Processing frame # 2879
+Processing frame # 2880
+Processing frame # 2881
+Processing frame # 2882
+Processing frame # 2883
+Processing frame # 2884
+Processing frame # 2885
+Processing frame # 2886
+Processing frame # 2887
+Processing frame # 2888
+Processing frame # 2889
+Processing frame # 2890
+Processing frame # 2891
+Processing frame # 2892
+Processing frame # 2893
+Processing frame # 2894
+Processing frame # 2895
+Processing frame # 2896
+Processing frame # 2897
+Processing frame # 2898
+Processing frame # 2899
+Processing frame # 2900
+Processing frame # 2901
+Processing frame # 2902
+Processing frame # 2903
+Processing frame # 2904
+Processing frame # 2905
+Processing frame # 2906
+Processing frame # 2907
+Processing frame # 2908
+Processing frame # 2909
+Processing frame # 2910
+Processing frame # 2911
+Processing frame # 2912
+Processing frame # 2913
+Processing frame # 2914
+Processing frame # 2915
+Processing frame # 2916
+Processing frame # 2917
+Processing frame # 2918
+Processing frame # 2919
+Processing frame # 2920
+Processing frame # 2921
+Processing frame # 2922
+Processing frame # 2923
+Processing frame # 2924
+Processing frame # 2925
+Processing frame # 2926
+Processing frame # 2927
+Processing frame # 2928
+Processing frame # 2929
+Processing frame # 2930
+Processing frame # 2931
+Processing frame # 2932
+Processing frame # 2933
+Processing frame # 2934
+Processing frame # 2935
+Processing frame # 2936
+Processing frame # 2937
+Processing frame # 2938
+Processing frame # 2939
+Processing frame # 2940
+Processing frame # 2941
+Processing frame # 2942
+Processing frame # 2943
+Processing frame # 2944
+Processing frame # 2945
+Processing frame # 2946
+Processing frame # 2947
+Processing frame # 2948
+Processing frame # 2949
+Processing frame # 2950
+Processing frame # 2951
+Processing frame # 2952
+Processing frame # 2953
+Processing frame # 2954
+Processing frame # 2955
+Processing frame # 2956
+Processing frame # 2957
+Processing frame # 2958
+Processing frame # 2959
+Processing frame # 2960
+Processing frame # 2961
+Processing frame # 2962
+Processing frame # 2963
+Processing frame # 2964
+Processing frame # 2965
+Processing frame # 2966
+Processing frame # 2967
+Processing frame # 2968
+Processing frame # 2969
+Processing frame # 2970
+Processing frame # 2971
+Processing frame # 2972
+Processing frame # 2973
+Processing frame # 2974
+Processing frame # 2975
+Processing frame # 2976
+Processing frame # 2977
+Processing frame # 2978
+Processing frame # 2979
+Processing frame # 2980
+Processing frame # 2981
+Processing frame # 2982
+Processing frame # 2983
+Processing frame # 2984
+Processing frame # 2985
+Processing frame # 2986
+Processing frame # 2987
+Processing frame # 2988
+Processing frame # 2989
+Processing frame # 2990
+Processing frame # 2991
+Processing frame # 2992
+Processing frame # 2993
+Processing frame # 2994
+Processing frame # 2995
+Processing frame # 2996
+Processing frame # 2997
+Processing frame # 2998
+Processing frame # 2999
+Processing frame # 3000
+Processing frame # 3001
+Processing frame # 3002
+Processing frame # 3003
+Processing frame # 3004
+Processing frame # 3005
+Processing frame # 3006
+Processing frame # 3007
+Processing frame # 3008
+Processing frame # 3009
+Processing frame # 3010
+Processing frame # 3011
+Processing frame # 3012
+Processing frame # 3013
+Processing frame # 3014
+Processing frame # 3015
+Processing frame # 3016
+Processing frame # 3017
+Pebble #16 has been created
+Processing frame # 3018
+Processing frame # 3019
+Processing frame # 3020
+Processing frame # 3021
+Processing frame # 3022
+Processing frame # 3023
+Processing frame # 3024
+Processing frame # 3025
+Processing frame # 3026
+Processing frame # 3027
+Processing frame # 3028
+Processing frame # 3029
+Pebble #16 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3030
+Pebble #16 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #16 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3031
+Pebble #16 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #16 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #16 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3032
+Pebble #16 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 0. 0. 0. 1.]
+ [3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #16 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 0. 0. 0. 2.]
+ [3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3033
+Pebble #16 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 0. 0. 0. 2.]
+ [4. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #16 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 0. 0. 0. 2.]
+ [5. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #16 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 0. 0. 0. 3.]
+ [5. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #16 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 0. 0. 0. 4.]
+ [5. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3034
+Pebble #16 has updated digits [[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 3. 0. 0. 0. 4.]
+ [6. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #16 has updated digits [[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 4. 0. 0. 0. 4.]
+ [7. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #16 has updated digits [[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 4. 0. 0. 0. 4.]
+ [8. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3035
+Pebble #16 has updated digits [[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 5. 0. 0. 0. 4.]
+ [9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #16 has updated digits [[ 0.  0.  0.  1.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  6.  0.  0.  0.  4.]
+ [10.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Pebble #16 has updated digits [[ 0.  0.  1.  1.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  6.  0.  0.  0.  4.]
+ [10.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3036
+Pebble #16 has updated digits [[ 0.  0.  1.  2.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  7.  0.  0.  0.  4.]
+ [11.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Pebble #16 has updated digits [[ 0.  0.  1.  3.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  8.  0.  0.  0.  4.]
+ [12.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Pebble #16 has updated digits [[ 0.  0.  2.  3.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  8.  0.  0.  0.  4.]
+ [12.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3037
+Pebble #16 has updated digits [[ 0.  0.  2.  3.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  9.  0.  0.  0.  4.]
+ [13.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Pebble #16 has updated digits [[ 0.  0.  2.  4.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  9.  0.  0.  0.  4.]
+ [14.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3038
+Pebble #16 has updated digits [[ 0.  0.  2.  5.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 10.  0.  0.  0.  4.]
+ [15.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Pebble #16 has updated digits [[ 0.  0.  2.  5.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 10.  0.  0.  0.  4.]
+ [15.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3039
+Pebble #16 has updated digits [[ 0.  0.  2.  5.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 11.  0.  0.  0.  4.]
+ [16.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Pebble #16 has updated digits [[ 0.  0.  2.  6.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 12.  0.  0.  0.  4.]
+ [17.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Pebble #16 has updated digits [[ 0.  0.  3.  6.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 12.  0.  0.  0.  4.]
+ [18.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3040
+Pebble #16 has updated digits [[ 0.  0.  3.  7.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 13.  0.  0.  0.  4.]
+ [19.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Pebble #16 has updated digits [[ 0.  0.  3.  8.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0. 13.  0.  0.  0.  4.]
+ [19.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3041
+Pebble #16 has updated digits [[ 0.  0.  3.  9.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0. 14.  0.  0.  0.  4.]
+ [20.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Pebble #16 has updated digits [[ 0.  0.  4.  9.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0. 15.  0.  0.  0.  4.]
+ [20.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3042
+Pebble #16 has updated digits [[ 0.  0.  5.  9.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0. 16.  0.  0.  0.  4.]
+ [20.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Pebble #16 has updated digits [[ 0.  0.  6.  9.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0. 17.  0.  0.  0.  4.]
+ [20.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Pebble #16 has updated digits [[ 0.  0.  6.  9.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0. 18.  0.  0.  0.  4.]
+ [20.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3043
+Pebble #16 has updated digits [[ 0.  0.  6. 10.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0. 19.  0.  0.  0.  4.]
+ [20.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Pebble #16 has updated digits [[ 0.  0.  6. 11.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  0. 20.  0.  0.  0.  4.]
+ [20.  0.  0.  0.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3044
+Processing frame # 3045
+Processing frame # 3046
+Processing frame # 3047
+Processing frame # 3048
+Processing frame # 3049
+Processing frame # 3050
+Processing frame # 3051
+Processing frame # 3052
+Processing frame # 3053
+Processing frame # 3054
+Processing frame # 3055
+Processing frame # 3056
+Processing frame # 3057
+Processing frame # 3058
+Processing frame # 3059
+Processing frame # 3060
+Processing frame # 3061
+Processing frame # 3062
+Processing frame # 3063
+Processing frame # 3064
+Processing frame # 3065
+Processing frame # 3066
+Processing frame # 3067
+Processing frame # 3068
+Processing frame # 3069
+Processing frame # 3070
+Processing frame # 3071
+Processing frame # 3072
+Processing frame # 3073
+Processing frame # 3074
+Processing frame # 3075
+Processing frame # 3076
+Processing frame # 3077
+Processing frame # 3078
+Processing frame # 3079
+Processing frame # 3080
+Processing frame # 3081
+Processing frame # 3082
+Processing frame # 3083
+Processing frame # 3084
+Processing frame # 3085
+Processing frame # 3086
+Processing frame # 3087
+Processing frame # 3088
+Processing frame # 3089
+Processing frame # 3090
+Processing frame # 3091
+Processing frame # 3092
+Processing frame # 3093
+Processing frame # 3094
+Processing frame # 3095
+Processing frame # 3096
+Processing frame # 3097
+Processing frame # 3098
+Processing frame # 3099
+Processing frame # 3100
+Processing frame # 3101
+Processing frame # 3102
+Processing frame # 3103
+Processing frame # 3104
+Processing frame # 3105
+Processing frame # 3106
+Processing frame # 3107
+Processing frame # 3108
+Processing frame # 3109
+Processing frame # 3110
+Processing frame # 3111
+Processing frame # 3112
+Processing frame # 3113
+Processing frame # 3114
+Processing frame # 3115
+Processing frame # 3116
+Processing frame # 3117
+Processing frame # 3118
+Processing frame # 3119
+Processing frame # 3120
+Processing frame # 3121
+Processing frame # 3122
+Processing frame # 3123
+Processing frame # 3124
+Processing frame # 3125
+Processing frame # 3126
+Processing frame # 3127
+Processing frame # 3128
+Processing frame # 3129
+Processing frame # 3130
+Processing frame # 3131
+Processing frame # 3132
+Processing frame # 3133
+Processing frame # 3134
+Processing frame # 3135
+Processing frame # 3136
+Processing frame # 3137
+Processing frame # 3138
+Processing frame # 3139
+Processing frame # 3140
+Processing frame # 3141
+Processing frame # 3142
+Processing frame # 3143
+Processing frame # 3144
+Processing frame # 3145
+Processing frame # 3146
+Pebble #17 has been created
+Processing frame # 3147
+Processing frame # 3148
+Processing frame # 3149
+Processing frame # 3150
+Processing frame # 3151
+Processing frame # 3152
+Processing frame # 3153
+Processing frame # 3154
+Processing frame # 3155
+Processing frame # 3156
+Processing frame # 3157
+Pebble #17 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #17 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3158
+Pebble #17 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #17 has updated digits [[0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3159
+Pebble #17 has updated digits [[0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #17 has updated digits [[0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #17 has updated digits [[0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3160
+Pebble #17 has updated digits [[0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1.]]
+Pebble #17 has updated digits [[1. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [4. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 1.]]
+Processing frame # 3161
+Pebble #17 has updated digits [[1. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [5. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 2.]]
+Pebble #17 has updated digits [[1. 1. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [6. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 3.]]
+Processing frame # 3162
+Pebble #17 has updated digits [[1. 2. 0. 0. 0. 0. 0. 1. 0. 0.]
+ [7. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 4.]]
+Pebble #17 has updated digits [[1. 2. 0. 0. 0. 0. 0. 2. 0. 0.]
+ [8. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 5.]]
+Processing frame # 3163
+Pebble #17 has updated digits [[1. 3. 0. 0. 0. 0. 0. 2. 0. 0.]
+ [9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 5.]]
+Pebble #17 has updated digits [[ 1.  3.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [10.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  1.  0.  0.  0.  0.  6.]]
+Processing frame # 3164
+Pebble #17 has updated digits [[ 1.  4.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [11.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  1.  0.  0.  0.  0.  6.]]
+Pebble #17 has updated digits [[ 1.  4.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [12.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  1.  0.  0.  0.  0.  6.]]
+Processing frame # 3165
+Pebble #17 has updated digits [[ 1.  5.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [13.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  1.  0.  0.  0.  0.  6.]]
+Pebble #17 has updated digits [[ 1.  6.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [14.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  1.  0.  0.  0.  0.  6.]]
+Processing frame # 3166
+Pebble #17 has updated digits [[ 1.  7.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [15.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  1.  0.  0.  0.  0.  6.]]
+Pebble #17 has updated digits [[ 1.  8.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [15.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  1.  0.  0.  0.  0.  6.]]
+Processing frame # 3167
+Processing frame # 3168
+Pebble #17 has updated digits [[ 1.  8.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [15.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  0.  0.  1.  0.  0.  0.  0.  6.]]
+Processing frame # 3169
+Pebble #17 has updated digits [[ 1.  9.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [15.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  0.  0.  1.  0.  0.  0.  0.  6.]]
+Processing frame # 3170
+Pebble #17 has updated digits [[ 1. 10.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [16.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 3.  0.  0.  0.  1.  0.  0.  0.  0.  6.]]
+Processing frame # 3171
+Pebble #17 has updated digits [[ 1. 11.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [17.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 3.  0.  0.  0.  1.  0.  0.  0.  0.  7.]]
+Processing frame # 3172
+Pebble #17 has updated digits [[ 2. 11.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [17.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 3.  0.  0.  0.  1.  0.  0.  0.  0.  8.]]
+Pebble #17 has updated digits [[ 2. 11.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [18.  0.  1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 3.  0.  0.  0.  1.  0.  0.  0.  0.  9.]]
+Processing frame # 3173
+Processing frame # 3174
+Pebble #17 has updated digits [[ 2. 11.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [18.  0.  2.  0.  0.  0.  0.  0.  0.  0.]
+ [ 3.  0.  0.  0.  1.  0.  0.  0.  0.  9.]]
+Pebble #17 has updated digits [[ 2. 12.  0.  0.  0.  0.  0.  3.  0.  0.]
+ [19.  0.  2.  0.  0.  0.  0.  0.  0.  0.]
+ [ 3.  0.  0.  0.  1.  0.  0.  0.  0. 10.]]
+Processing frame # 3175
+Processing frame # 3176
+Processing frame # 3177
+Processing frame # 3178
+Processing frame # 3179
+Processing frame # 3180
+Processing frame # 3181
+Processing frame # 3182
+Processing frame # 3183
+Processing frame # 3184
+Processing frame # 3185
+Processing frame # 3186
+Processing frame # 3187
+Processing frame # 3188
+Processing frame # 3189
+Processing frame # 3190
+Processing frame # 3191
+Processing frame # 3192
+Processing frame # 3193
+Processing frame # 3194
+Processing frame # 3195
+Processing frame # 3196
+Processing frame # 3197
+Processing frame # 3198
+Processing frame # 3199
+Processing frame # 3200
+Processing frame # 3201
+Processing frame # 3202
+Processing frame # 3203
+Processing frame # 3204
+Processing frame # 3205
+Processing frame # 3206
+Processing frame # 3207
+Processing frame # 3208
+Processing frame # 3209
+Processing frame # 3210
+Processing frame # 3211
+Processing frame # 3212
+Processing frame # 3213
+Processing frame # 3214
+Processing frame # 3215
+Processing frame # 3216
+Processing frame # 3217
+Processing frame # 3218
+Processing frame # 3219
+Processing frame # 3220
+Processing frame # 3221
+Processing frame # 3222
+Processing frame # 3223
+Processing frame # 3224
+Processing frame # 3225
+Processing frame # 3226
+Processing frame # 3227
+Processing frame # 3228
+Processing frame # 3229
+Processing frame # 3230
+Processing frame # 3231
+Processing frame # 3232
+Processing frame # 3233
+Processing frame # 3234
+Processing frame # 3235
+Processing frame # 3236
+Processing frame # 3237
+Processing frame # 3238
+Processing frame # 3239
+Processing frame # 3240
+Processing frame # 3241
+Processing frame # 3242
+Processing frame # 3243
+Processing frame # 3244
+Processing frame # 3245
+Processing frame # 3246
+Processing frame # 3247
+Processing frame # 3248
+Processing frame # 3249
+Processing frame # 3250
+Processing frame # 3251
+Processing frame # 3252
+Processing frame # 3253
+Processing frame # 3254
+Processing frame # 3255
+Processing frame # 3256
+Processing frame # 3257
+Processing frame # 3258
+Processing frame # 3259
+Processing frame # 3260
+Processing frame # 3261
+Processing frame # 3262
+Processing frame # 3263
+Processing frame # 3264
+Processing frame # 3265
+Processing frame # 3266
+Processing frame # 3267
+Processing frame # 3268
+Processing frame # 3269
+Processing frame # 3270
+Processing frame # 3271
+Processing frame # 3272
+Processing frame # 3273
+Processing frame # 3274
+Processing frame # 3275
+Processing frame # 3276
+Processing frame # 3277
+Processing frame # 3278
+Processing frame # 3279
+Processing frame # 3280
+Pebble #18 has been created
+Processing frame # 3281
+Processing frame # 3282
+Processing frame # 3283
+Processing frame # 3284
+Processing frame # 3285
+Processing frame # 3286
+Processing frame # 3287
+Processing frame # 3288
+Processing frame # 3289
+Processing frame # 3290
+Processing frame # 3291
+Processing frame # 3292
+Processing frame # 3293
+Processing frame # 3294
+Pebble #18 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #18 has updated digits [[2. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 2. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3295
+Pebble #18 has updated digits [[3. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 3. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 2. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #18 has updated digits [[4. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 4. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 3. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3296
+Pebble #18 has updated digits [[5. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 5. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 4. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #18 has updated digits [[6. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 6. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 5. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #18 has updated digits [[7. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 7. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 5. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3297
+Pebble #18 has updated digits [[8. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 8. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 6. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #18 has updated digits [[9. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 9. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 7. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #18 has updated digits [[10.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0. 10.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  7.  0.  0.  0.  0.  0.  1.  0.  0.]]
+Processing frame # 3298
+Pebble #18 has updated digits [[11.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0. 11.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  7.  0.  0.  0.  0.  0.  1.  0.  0.]]
+Processing frame # 3299
+Processing frame # 3300
+Processing frame # 3301
+Processing frame # 3302
+Processing frame # 3303
+Processing frame # 3304
+Processing frame # 3305
+Pebble #18 has updated digits [[11.  0.  0.  0.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0. 12.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  8.  0.  0.  0.  0.  0.  1.  0.  0.]]
+Processing frame # 3306
+Pebble #18 has updated digits [[11.  0.  0.  0.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0. 13.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  9.  0.  0.  0.  0.  0.  1.  0.  0.]]
+Pebble #18 has updated digits [[11.  0.  0.  0.  0.  2.  0.  0.  0.  0.]
+ [ 0.  0. 14.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0. 10.  0.  0.  0.  0.  0.  1.  0.  0.]]
+Processing frame # 3307
+Processing frame # 3308
+Processing frame # 3309
+Processing frame # 3310
+Processing frame # 3311
+Processing frame # 3312
+Processing frame # 3313
+Processing frame # 3314
+Processing frame # 3315
+Processing frame # 3316
+Processing frame # 3317
+Processing frame # 3318
+Processing frame # 3319
+Processing frame # 3320
+Processing frame # 3321
+Processing frame # 3322
+Processing frame # 3323
+Processing frame # 3324
+Processing frame # 3325
+Processing frame # 3326
+Processing frame # 3327
+Processing frame # 3328
+Processing frame # 3329
+Processing frame # 3330
+Processing frame # 3331
+Processing frame # 3332
+Processing frame # 3333
+Processing frame # 3334
+Processing frame # 3335
+Processing frame # 3336
+Processing frame # 3337
+Processing frame # 3338
+Processing frame # 3339
+Processing frame # 3340
+Processing frame # 3341
+Processing frame # 3342
+Processing frame # 3343
+Processing frame # 3344
+Processing frame # 3345
+Processing frame # 3346
+Processing frame # 3347
+Processing frame # 3348
+Processing frame # 3349
+Processing frame # 3350
+Processing frame # 3351
+Processing frame # 3352
+Processing frame # 3353
+Processing frame # 3354
+Processing frame # 3355
+Processing frame # 3356
+Processing frame # 3357
+Processing frame # 3358
+Processing frame # 3359
+Processing frame # 3360
+Processing frame # 3361
+Processing frame # 3362
+Processing frame # 3363
+Processing frame # 3364
+Processing frame # 3365
+Processing frame # 3366
+Processing frame # 3367
+Processing frame # 3368
+Processing frame # 3369
+Processing frame # 3370
+Processing frame # 3371
+Processing frame # 3372
+Processing frame # 3373
+Processing frame # 3374
+Processing frame # 3375
+Processing frame # 3376
+Processing frame # 3377
+Processing frame # 3378
+Processing frame # 3379
+Processing frame # 3380
+Processing frame # 3381
+Processing frame # 3382
+Processing frame # 3383
+Processing frame # 3384
+Processing frame # 3385
+Processing frame # 3386
+Processing frame # 3387
+Processing frame # 3388
+Processing frame # 3389
+Processing frame # 3390
+Processing frame # 3391
+Processing frame # 3392
+Processing frame # 3393
+Processing frame # 3394
+Processing frame # 3395
+Processing frame # 3396
+Processing frame # 3397
+Processing frame # 3398
+Processing frame # 3399
+Processing frame # 3400
+Processing frame # 3401
+Processing frame # 3402
+Processing frame # 3403
+Processing frame # 3404
+Processing frame # 3405
+Processing frame # 3406
+Processing frame # 3407
+Processing frame # 3408
+Processing frame # 3409
+Processing frame # 3410
+Processing frame # 3411
+Processing frame # 3412
+Processing frame # 3413
+Processing frame # 3414
+Processing frame # 3415
+Processing frame # 3416
+Processing frame # 3417
+Processing frame # 3418
+Processing frame # 3419
+Processing frame # 3420
+Processing frame # 3421
+Processing frame # 3422
+Processing frame # 3423
+Processing frame # 3424
+Processing frame # 3425
+Processing frame # 3426
+Processing frame # 3427
+Processing frame # 3428
+Processing frame # 3429
+Processing frame # 3430
+Processing frame # 3431
+Processing frame # 3432
+Processing frame # 3433
+Processing frame # 3434
+Processing frame # 3435
+Processing frame # 3436
+Processing frame # 3437
+Processing frame # 3438
+Processing frame # 3439
+Processing frame # 3440
+Processing frame # 3441
+Processing frame # 3442
+Processing frame # 3443
+Processing frame # 3444
+Pebble #19 has been created
+Processing frame # 3445
+Processing frame # 3446
+Processing frame # 3447
+Processing frame # 3448
+Processing frame # 3449
+Processing frame # 3450
+Processing frame # 3451
+Processing frame # 3452
+Processing frame # 3453
+Processing frame # 3454
+Processing frame # 3455
+Processing frame # 3456
+Pebble #19 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3457
+Processing frame # 3458
+Processing frame # 3459
+Processing frame # 3460
+Processing frame # 3461
+Processing frame # 3462
+Processing frame # 3463
+Processing frame # 3464
+Processing frame # 3465
+Processing frame # 3466
+Processing frame # 3467
+Processing frame # 3468
+Processing frame # 3469
+Processing frame # 3470
+Processing frame # 3471
+Processing frame # 3472
+Processing frame # 3473
+Processing frame # 3474
+Processing frame # 3475
+Processing frame # 3476
+Processing frame # 3477
+Processing frame # 3478
+Pebble #19 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3479
+Pebble #19 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 0. 0. 0. 0. 0. 0.]
+ [2. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+Pebble #19 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 2. 0. 0. 0. 0. 0. 0.]
+ [3. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3480
+Pebble #19 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 2. 0. 0. 0. 0. 0. 0.]
+ [4. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+Pebble #19 has updated digits [[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 3. 0. 0. 0. 0. 0. 0.]
+ [5. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+Pebble #19 has updated digits [[0. 0. 0. 2. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 3. 0. 0. 0. 0. 0. 0.]
+ [6. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3481
+Pebble #19 has updated digits [[0. 0. 0. 3. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 4. 0. 0. 0. 0. 0. 0.]
+ [7. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+Pebble #19 has updated digits [[0. 0. 0. 4. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 5. 0. 0. 0. 0. 0. 0.]
+ [8. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3482
+Pebble #19 has updated digits [[0. 0. 0. 5. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 6. 0. 0. 0. 0. 0. 0.]
+ [9. 0. 0. 1. 0. 0. 0. 0. 0. 0.]]
+Pebble #19 has updated digits [[ 0.  0.  0.  6.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  1.  7.  0.  0.  0.  0.  0.  0.]
+ [10.  0.  0.  1.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3483
+Pebble #19 has updated digits [[ 0.  0.  0.  7.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  1.  7.  0.  0.  0.  0.  0.  0.]
+ [11.  0.  0.  1.  0.  0.  0.  0.  0.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0.  8.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  1.  7.  0.  0.  0.  0.  0.  0.]
+ [12.  0.  0.  1.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3484
+Pebble #19 has updated digits [[ 0.  0.  0.  9.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  1.  7.  0.  0.  0.  0.  0.  0.]
+ [13.  0.  0.  1.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3485
+Processing frame # 3486
+Processing frame # 3487
+Processing frame # 3488
+Processing frame # 3489
+Pebble #19 has updated digits [[ 0.  0.  0. 10.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  1.  7.  0.  0.  0.  0.  0.  0.]
+ [14.  0.  0.  1.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3490
+Pebble #19 has updated digits [[ 0.  0.  0. 11.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  1.  7.  0.  0.  0.  0.  0.  0.]
+ [15.  0.  0.  1.  0.  0.  0.  0.  0.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0. 12.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  1.  7.  0.  0.  0.  0.  0.  0.]
+ [16.  0.  0.  1.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3491
+Processing frame # 3492
+Processing frame # 3493
+Pebble #19 has updated digits [[ 0.  0.  0. 12.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  1.  7.  0.  0.  0.  0.  0.  0.]
+ [16.  0.  0.  1.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3494
+Processing frame # 3495
+Pebble #19 has updated digits [[ 0.  0.  0. 12.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  1.  7.  0.  0.  0.  0.  0.  0.]
+ [17.  0.  0.  1.  0.  0.  0.  0.  0.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0. 12.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  1.  7.  0.  0.  0.  0.  0.  0.]
+ [18.  0.  0.  1.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3496
+Pebble #19 has updated digits [[ 0.  0.  0. 12.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  0.  0.  0.  0.  0.  0.]
+ [18.  0.  0.  1.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3497
+Pebble #19 has updated digits [[ 0.  0.  0. 13.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  0.  0.  0.  0.  1.  0.]
+ [19.  0.  0.  1.  0.  0.  0.  0.  0.  0.]]
+Processing frame # 3498
+Processing frame # 3499
+Processing frame # 3500
+Pebble #19 has updated digits [[ 0.  0.  0. 14.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  0.  0.  0.  0.  1.  0.]
+ [19.  0.  0.  1.  0.  0.  0.  0.  0.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0. 15.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  0.  0.  0.  0.  1.  0.]
+ [19.  0.  0.  1.  0.  0.  0.  0.  0.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0. 16.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  0.  0.  0.  0.  1.  0.]
+ [19.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Processing frame # 3501
+Pebble #19 has updated digits [[ 0.  0.  0. 16.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  0.  0.  0.  0.  1.  0.]
+ [19.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0. 17.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  0.  0.  0.  0.  1.  0.]
+ [19.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Processing frame # 3502
+Pebble #19 has updated digits [[ 0.  0.  0. 18.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  0.  0.  0.  0.  1.  0.]
+ [20.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0. 19.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  0.  0.  0.  0.  2.  0.]
+ [21.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Processing frame # 3503
+Processing frame # 3504
+Processing frame # 3505
+Processing frame # 3506
+Processing frame # 3507
+Pebble #19 has updated digits [[ 0.  0.  0. 20.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  0.  0.  0.  0.  3.  0.]
+ [22.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0. 20.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  0.  0.  0.  0.  4.  0.]
+ [23.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0. 20.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  1.  0.  0.  0.  4.  0.]
+ [23.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Processing frame # 3508
+Pebble #19 has updated digits [[ 0.  0.  0. 21.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  1.  0.  0.  0.  5.  0.]
+ [24.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0. 22.  0.  0.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  1.  0.  0.  0.  5.  0.]
+ [25.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Processing frame # 3509
+Pebble #19 has updated digits [[ 0.  0.  0. 22.  0.  1.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  1.  0.  0.  0.  6.  0.]
+ [26.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0. 23.  0.  1.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  1.  0.  0.  0.  7.  0.]
+ [27.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0. 24.  0.  1.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  1.  0.  0.  0.  7.  0.]
+ [28.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Processing frame # 3510
+Pebble #19 has updated digits [[ 0.  0.  0. 25.  0.  1.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  1.  0.  0.  0.  8.  0.]
+ [29.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0. 26.  0.  1.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  1.  0.  0.  0.  9.  0.]
+ [30.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Processing frame # 3511
+Pebble #19 has updated digits [[ 0.  0.  0. 26.  0.  2.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  1.  0.  0.  0. 10.  0.]
+ [30.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0. 27.  0.  2.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  1.  0.  0.  0. 11.  0.]
+ [31.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Pebble #19 has updated digits [[ 0.  0.  0. 28.  0.  2.  0.  0.  0.  0.]
+ [ 2.  0.  1.  7.  1.  0.  0.  0. 12.  0.]
+ [32.  0.  0.  1.  0.  0.  0.  0.  1.  0.]]
+Processing frame # 3512
+Processing frame # 3513
+Processing frame # 3514
+Processing frame # 3515
+Processing frame # 3516
+Processing frame # 3517
+Processing frame # 3518
+Processing frame # 3519
+Processing frame # 3520
+Processing frame # 3521
+Processing frame # 3522
+Processing frame # 3523
+Processing frame # 3524
+Processing frame # 3525
+Processing frame # 3526
+Processing frame # 3527
+Processing frame # 3528
+Processing frame # 3529
+Processing frame # 3530
+Processing frame # 3531
+Processing frame # 3532
+Processing frame # 3533
+Processing frame # 3534
+Processing frame # 3535
+Processing frame # 3536
+Processing frame # 3537
+Processing frame # 3538
+Processing frame # 3539
+Processing frame # 3540
+Processing frame # 3541
+Processing frame # 3542
+Processing frame # 3543
+Processing frame # 3544
+Processing frame # 3545
+Processing frame # 3546
+Processing frame # 3547
+Processing frame # 3548
+Processing frame # 3549
+Processing frame # 3550
+Processing frame # 3551
+Processing frame # 3552
+Processing frame # 3553
+Processing frame # 3554
+Processing frame # 3555
+Processing frame # 3556
+Processing frame # 3557
+Processing frame # 3558
+Processing frame # 3559
+Processing frame # 3560
+Processing frame # 3561
+Processing frame # 3562
+Processing frame # 3563
+Processing frame # 3564
+Processing frame # 3565
+Processing frame # 3566
+Processing frame # 3567
+Processing frame # 3568
+Processing frame # 3569
+Processing frame # 3570
+Processing frame # 3571
+Processing frame # 3572
+Processing frame # 3573
+Processing frame # 3574
+Processing frame # 3575
+Processing frame # 3576
+Processing frame # 3577
+Processing frame # 3578
+Processing frame # 3579
+Processing frame # 3580
+Processing frame # 3581
+Processing frame # 3582
+Processing frame # 3583
+Processing frame # 3584
+Processing frame # 3585
+Processing frame # 3586
+Processing frame # 3587
+Processing frame # 3588
+Processing frame # 3589
+Processing frame # 3590
+Processing frame # 3591
+Processing frame # 3592
+Processing frame # 3593
+Processing frame # 3594
+Processing frame # 3595
+Processing frame # 3596
+Processing frame # 3597
+Processing frame # 3598
+Processing frame # 3599
+Processing frame # 3600
+Processing frame # 3601
+Processing frame # 3602
+Processing frame # 3603
+Processing frame # 3604
+Processing frame # 3605
+Processing frame # 3606
+Processing frame # 3607
+Processing frame # 3608
+Processing frame # 3609
+Processing frame # 3610
+Processing frame # 3611
+Processing frame # 3612
+Processing frame # 3613
+Processing frame # 3614
+Processing frame # 3615
+Processing frame # 3616
+Processing frame # 3617
+Processing frame # 3618
+Processing frame # 3619
+Processing frame # 3620
+Processing frame # 3621
+Processing frame # 3622
+Processing frame # 3623
+Processing frame # 3624
+Processing frame # 3625
+Processing frame # 3626
+Processing frame # 3627
+Processing frame # 3628
+Processing frame # 3629
+Processing frame # 3630
+Processing frame # 3631
+Pebble #20 has been created
+Processing frame # 3632
+Processing frame # 3633
+Processing frame # 3634
+Processing frame # 3635
+Processing frame # 3636
+Processing frame # 3637
+Processing frame # 3638
+Processing frame # 3639
+Processing frame # 3640
+Processing frame # 3641
+Pebble #20 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 1. 0.]]
+Pebble #20 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 2. 0.]]
+Pebble #20 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 3. 0.]]
+Processing frame # 3642
+Processing frame # 3643
+Processing frame # 3644
+Processing frame # 3645
+Processing frame # 3646
+Pebble #20 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 3. 1.]]
+Pebble #20 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 2. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 3. 2.]]
+Processing frame # 3647
+Pebble #20 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 3. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 3. 3.]]
+Pebble #20 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [1. 0. 3. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 4. 3.]]
+Processing frame # 3648
+Pebble #20 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [1. 0. 4. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 1. 0. 4. 3.]]
+Pebble #20 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [1. 0. 4. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 2. 0. 4. 3.]]
+Processing frame # 3649
+Pebble #20 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [1. 0. 5. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 2. 0. 4. 3.]]
+Pebble #20 has updated digits [[1. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [1. 0. 5. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 2. 0. 4. 3.]]
+Processing frame # 3650
+Processing frame # 3651
+Processing frame # 3652
+Pebble #20 has updated digits [[2. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [1. 0. 6. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 2. 0. 4. 3.]]
+Pebble #20 has updated digits [[3. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [1. 0. 6. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0. 0. 2. 0. 4. 3.]]
+Processing frame # 3653
+Pebble #20 has updated digits [[4. 0. 0. 0. 0. 0. 0. 0. 0. 1.]
+ [1. 0. 7. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0. 0. 2. 0. 4. 3.]]
+Pebble #20 has updated digits [[4. 0. 0. 0. 0. 0. 1. 0. 0. 1.]
+ [1. 0. 8. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0. 0. 2. 0. 4. 3.]]
+Pebble #20 has updated digits [[4. 0. 0. 0. 0. 0. 2. 0. 0. 1.]
+ [1. 0. 9. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0. 0. 2. 0. 4. 3.]]
+Processing frame # 3654
+Pebble #20 has updated digits [[ 4.  0.  0.  0.  0.  0.  3.  0.  0.  1.]
+ [ 1.  0. 10.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  1.  0.  0.  0.  2.  0.  4.  3.]]
+Pebble #20 has updated digits [[ 4.  0.  0.  0.  0.  0.  3.  0.  0.  1.]
+ [ 1.  0. 11.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  1.  0.  0.  0.  2.  0.  4.  3.]]
+Processing frame # 3655
+Processing frame # 3656
+Pebble #20 has updated digits [[ 5.  0.  0.  0.  0.  0.  3.  0.  0.  1.]
+ [ 1.  0. 12.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  1.  0.  0.  0.  2.  0.  4.  4.]]
+Pebble #20 has updated digits [[ 6.  0.  0.  0.  0.  0.  3.  0.  0.  1.]
+ [ 1.  0. 13.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  1.  0.  0.  0.  2.  0.  4.  5.]]
+Processing frame # 3657
+Pebble #20 has updated digits [[ 7.  0.  0.  0.  0.  0.  3.  0.  0.  1.]
+ [ 1.  0. 14.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  1.  0.  0.  0.  2.  0.  4.  6.]]
+Pebble #20 has updated digits [[ 8.  0.  0.  0.  0.  0.  3.  0.  0.  1.]
+ [ 1.  0. 14.  0.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  1.  0.  0.  0.  2.  0.  4.  6.]]
+Processing frame # 3658
+Pebble #20 has updated digits [[ 9.  0.  0.  0.  0.  0.  3.  0.  0.  1.]
+ [ 2.  0. 14.  0.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  1.  0.  0.  0.  2.  0.  4.  7.]]
+Pebble #20 has updated digits [[10.  0.  0.  0.  0.  0.  3.  0.  0.  1.]
+ [ 3.  0. 14.  0.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  1.  0.  0.  0.  2.  0.  4.  8.]]
+Processing frame # 3659
+Processing frame # 3660
+Processing frame # 3661
+Processing frame # 3662
+Processing frame # 3663
+Processing frame # 3664
+Pebble #20 has updated digits [[10.  0.  0.  0.  0.  0.  4.  0.  0.  1.]
+ [ 3.  0. 14.  0.  0.  0.  0.  0.  0.  0.]
+ [ 1.  0.  1.  0.  0.  0.  2.  0.  4.  8.]]
+Processing frame # 3665
+Pebble #20 has updated digits [[10.  0.  0.  0.  0.  0.  5.  0.  0.  1.]
+ [ 3.  0. 14.  0.  0.  1.  0.  0.  0.  0.]
+ [ 1.  0.  2.  0.  0.  0.  2.  0.  4.  8.]]
+Pebble #20 has updated digits [[10.  0.  0.  0.  0.  0.  6.  0.  0.  1.]
+ [ 3.  0. 15.  0.  0.  1.  0.  0.  0.  0.]
+ [ 1.  0.  2.  0.  0.  0.  2.  0.  4.  8.]]
+Processing frame # 3666
+Pebble #20 has updated digits [[10.  0.  0.  0.  0.  0.  7.  0.  0.  1.]
+ [ 3.  0. 16.  0.  0.  1.  0.  0.  0.  0.]
+ [ 1.  0.  2.  0.  0.  0.  2.  0.  4.  8.]]
+Processing frame # 3667
+Processing frame # 3668
+Processing frame # 3669
+Processing frame # 3670
+Processing frame # 3671
+Processing frame # 3672
+Processing frame # 3673
+Processing frame # 3674
+Processing frame # 3675
+Pebble #20 has updated digits [[10.  0.  0.  0.  0.  0.  7.  0.  0.  1.]
+ [ 3.  0. 17.  0.  0.  1.  0.  0.  0.  0.]
+ [ 1.  0.  2.  1.  0.  0.  2.  0.  4.  8.]]
+Processing frame # 3676
+Processing frame # 3677
+Pebble #20 has updated digits [[10.  0.  0.  0.  0.  0.  7.  0.  0.  1.]
+ [ 3.  0. 18.  0.  0.  1.  0.  0.  0.  0.]
+ [ 1.  0.  2.  1.  0.  0.  2.  0.  4.  9.]]
+Pebble #20 has updated digits [[10.  0.  0.  0.  0.  0.  7.  0.  0.  1.]
+ [ 3.  0. 19.  0.  0.  1.  0.  0.  0.  0.]
+ [ 1.  0.  2.  1.  0.  0.  2.  0.  4. 10.]]
+Processing frame # 3678
+Processing frame # 3679
+Processing frame # 3680
+Processing frame # 3681
+Processing frame # 3682
+Processing frame # 3683
+Processing frame # 3684
+Processing frame # 3685
+Processing frame # 3686
+Processing frame # 3687
+Processing frame # 3688
+Processing frame # 3689
+Processing frame # 3690
+Processing frame # 3691
+Processing frame # 3692
+Processing frame # 3693
+Processing frame # 3694
+Processing frame # 3695
+Processing frame # 3696
+Processing frame # 3697
+Processing frame # 3698
+Processing frame # 3699
+Processing frame # 3700
+Processing frame # 3701
+Processing frame # 3702
+Processing frame # 3703
+Processing frame # 3704
+Processing frame # 3705
+Processing frame # 3706
+Processing frame # 3707
+Processing frame # 3708
+Processing frame # 3709
+Processing frame # 3710
+Processing frame # 3711
+Processing frame # 3712
+Processing frame # 3713
+Processing frame # 3714
+Processing frame # 3715
+Processing frame # 3716
+Processing frame # 3717
+Processing frame # 3718
+Processing frame # 3719
+Processing frame # 3720
+Processing frame # 3721
+Processing frame # 3722
+Processing frame # 3723
+Processing frame # 3724
+Processing frame # 3725
+Processing frame # 3726
+Processing frame # 3727
+Processing frame # 3728
+Processing frame # 3729
+Processing frame # 3730
+Processing frame # 3731
+Processing frame # 3732
+Processing frame # 3733
+Processing frame # 3734
+Processing frame # 3735
+Processing frame # 3736
+Processing frame # 3737
+Processing frame # 3738
+Processing frame # 3739
+Processing frame # 3740
+Processing frame # 3741
+Processing frame # 3742
+Processing frame # 3743
+Processing frame # 3744
+Processing frame # 3745
+Processing frame # 3746
+Processing frame # 3747
+Processing frame # 3748
+Processing frame # 3749
+Processing frame # 3750
+Processing frame # 3751
+Processing frame # 3752
+Processing frame # 3753
+Processing frame # 3754
+Processing frame # 3755
+Processing frame # 3756
+Processing frame # 3757
+Processing frame # 3758
+Processing frame # 3759
+Pebble #21 has been created
+Processing frame # 3760
+Processing frame # 3761
+Processing frame # 3762
+Processing frame # 3763
+Processing frame # 3764
+Processing frame # 3765
+Processing frame # 3766
+Processing frame # 3767
+Processing frame # 3768
+Processing frame # 3769
+Processing frame # 3770
+Processing frame # 3771
+Processing frame # 3772
+Processing frame # 3773
+Processing frame # 3774
+Processing frame # 3775
+Processing frame # 3776
+Processing frame # 3777
+Pebble #21 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3778
+Processing frame # 3779
+Processing frame # 3780
+Processing frame # 3781
+Processing frame # 3782
+Processing frame # 3783
+Processing frame # 3784
+Processing frame # 3785
+Processing frame # 3786
+Processing frame # 3787
+Processing frame # 3788
+Processing frame # 3789
+Processing frame # 3790
+Processing frame # 3791
+Processing frame # 3792
+Pebble #21 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #21 has updated digits [[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Processing frame # 3793
+Pebble #21 has updated digits [[0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 2. 0. 0. 0. 0.]
+ [1. 0. 1. 0. 0. 0. 0. 0. 0. 0.]]
+Pebble #21 has updated digits [[1. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 3. 0. 0. 0. 0.]
+ [1. 0. 1. 0. 0. 1. 0. 0. 0. 0.]]
+Processing frame # 3794
+Pebble #21 has updated digits [[2. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 3. 0. 0. 0. 0.]
+ [1. 0. 1. 0. 0. 1. 0. 0. 0. 0.]]
+Processing frame # 3795
+Pebble #21 has updated digits [[2. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 3. 0. 0. 0. 0.]
+ [1. 0. 1. 0. 0. 1. 0. 0. 0. 0.]]
+Processing frame # 3796
+Processing frame # 3797
+Processing frame # 3798
+Processing frame # 3799
+Pebble #21 has updated digits [[3. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 4. 0. 0. 0. 0.]
+ [1. 0. 1. 1. 0. 1. 0. 0. 0. 0.]]
+Pebble #21 has updated digits [[3. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 5. 0. 0. 0. 0.]
+ [1. 0. 2. 1. 0. 1. 0. 0. 0. 0.]]
+Processing frame # 3800
+Pebble #21 has updated digits [[3. 1. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 6. 0. 0. 0. 0.]
+ [1. 0. 2. 1. 0. 1. 0. 0. 0. 0.]]
+Processing frame # 3801
+Processing frame # 3802
+Pebble #21 has updated digits [[4. 1. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 7. 0. 0. 0. 0.]
+ [1. 0. 2. 2. 0. 1. 0. 0. 0. 0.]]
+Processing frame # 3803
+Processing frame # 3804
+Pebble #21 has updated digits [[5. 1. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 8. 0. 0. 0. 0.]
+ [1. 0. 2. 2. 1. 1. 0. 0. 0. 0.]]
+Pebble #21 has updated digits [[5. 1. 0. 0. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 9. 0. 0. 0. 0.]
+ [2. 0. 2. 2. 1. 1. 0. 0. 0. 0.]]
+Pebble #21 has updated digits [[ 5.  1.  0.  1.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 10.  0.  0.  0.  0.]
+ [ 3.  0.  2.  2.  1.  1.  0.  0.  0.  0.]]
+Processing frame # 3805
+Pebble #21 has updated digits [[ 6.  1.  0.  1.  0.  1.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 10.  0.  0.  0.  0.]
+ [ 3.  0.  2.  2.  1.  2.  0.  0.  0.  0.]]
+Pebble #21 has updated digits [[ 6.  1.  0.  1.  0.  2.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 10.  0.  0.  0.  0.]
+ [ 3.  0.  2.  2.  1.  2.  0.  0.  0.  0.]]
+Pebble #21 has updated digits [[ 6.  1.  0.  1.  0.  2.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 11.  0.  0.  0.  0.]
+ [ 4.  0.  2.  2.  1.  2.  0.  0.  0.  0.]]
+Processing frame # 3806
+Processing frame # 3807
+Processing frame # 3808
+Processing frame # 3809
+Processing frame # 3810
+Processing frame # 3811
+Processing frame # 3812
+Processing frame # 3813
+Processing frame # 3814
+Processing frame # 3815
+Processing frame # 3816
+Processing frame # 3817
+Pebble #21 has updated digits [[ 6.  1.  0.  2.  0.  2.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 11.  0.  0.  0.  0.]
+ [ 4.  0.  2.  2.  1.  2.  0.  0.  0.  0.]]
+Pebble #21 has updated digits [[ 6.  1.  0.  2.  0.  2.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 11.  0.  0.  0.  0.]
+ [ 4.  0.  2.  2.  1.  2.  0.  0.  0.  0.]]
+Processing frame # 3818
+Processing frame # 3819
+Processing frame # 3820
+Processing frame # 3821
+Processing frame # 3822
+Processing frame # 3823
+Processing frame # 3824
+Processing frame # 3825
+Pebble #21 has updated digits [[ 7.  1.  0.  2.  0.  2.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 12.  0.  0.  0.  0.]
+ [ 4.  0.  2.  3.  1.  2.  0.  0.  0.  0.]]
+Processing frame # 3826
+Processing frame # 3827
+Processing frame # 3828
+Pebble #21 has updated digits [[ 7.  1.  0.  2.  0.  2.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 13.  0.  0.  0.  0.]
+ [ 4.  0.  2.  4.  1.  2.  0.  0.  0.  0.]]
+Pebble #21 has updated digits [[ 7.  1.  0.  2.  0.  2.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 14.  0.  0.  0.  0.]
+ [ 4.  0.  2.  5.  1.  2.  0.  0.  0.  0.]]
+Pebble #21 has updated digits [[ 7.  1.  0.  2.  0.  2.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 15.  0.  0.  0.  0.]
+ [ 4.  0.  2.  6.  1.  2.  0.  0.  0.  0.]]
+Processing frame # 3829
+Pebble #21 has updated digits [[ 7.  1.  0.  2.  0.  2.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 16.  0.  0.  0.  0.]
+ [ 4.  0.  2.  7.  1.  2.  0.  0.  0.  0.]]
+Processing frame # 3830
+Pebble #21 has updated digits [[ 7.  1.  1.  2.  0.  2.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 17.  0.  0.  0.  0.]
+ [ 4.  0.  3.  7.  1.  2.  0.  0.  0.  0.]]
+Pebble #21 has updated digits [[ 8.  1.  1.  2.  0.  2.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. 18.  0.  0.  0.  0.]
+ [ 4.  0.  3.  7.  1.  2.  0.  0.  0.  0.]]
+Processing frame # 3831
+Pebble #21 has updated digits [[ 8.  1.  1.  2.  0.  2.  0.  1.  0.  0.]
+ [ 0.  0.  0.  0.  0. 19.  0.  0.  0.  0.]
+ [ 4.  0.  3.  7.  1.  2.  0.  0.  0.  0.]]
+Pebble #21 has updated digits [[ 9.  1.  1.  2.  0.  2.  0.  1.  0.  0.]
+ [ 0.  0.  0.  0.  0. 20.  0.  0.  0.  0.]
+ [ 4.  0.  3.  7.  1.  2.  0.  0.  0.  0.]]
+Processing frame # 3832
+Pebble #21 has updated digits [[10.  1.  1.  2.  0.  2.  0.  1.  0.  0.]
+ [ 0.  0.  0.  0.  0. 21.  0.  0.  0.  0.]
+ [ 4.  0.  3.  7.  1.  2.  0.  0.  0.  0.]]
+Processing frame # 3833
+Pebble #21 has updated digits [[11.  1.  1.  2.  0.  2.  0.  1.  0.  0.]
+ [ 0.  0.  0.  0.  0. 22.  0.  0.  0.  0.]
+ [ 4.  0.  3.  7.  2.  2.  0.  0.  0.  0.]]
+Processing frame # 3834
+Processing frame # 3835
+Processing frame # 3836
+Processing frame # 3837
+Processing frame # 3838
+Processing frame # 3839
+Processing frame # 3840
+Processing frame # 3841
+Processing frame # 3842
+Processing frame # 3843
+Processing frame # 3844
+Processing frame # 3845
+Processing frame # 3846
+Processing frame # 3847
+Processing frame # 3848
+Processing frame # 3849
+Processing frame # 3850
+Processing frame # 3851
+Processing frame # 3852
+Processing frame # 3853
+Processing frame # 3854
+Processing frame # 3855
+Processing frame # 3856
+Processing frame # 3857
+Processing frame # 3858
+Processing frame # 3859
+Processing frame # 3860
+Processing frame # 3861
+Processing frame # 3862
+Processing frame # 3863
+Processing frame # 3864
+Processing frame # 3865
+Processing frame # 3866
+Processing frame # 3867
+Processing frame # 3868
+Processing frame # 3869
+Total time elapsed: 3504.361986875534
