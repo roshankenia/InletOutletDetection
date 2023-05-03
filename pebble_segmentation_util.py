@@ -121,11 +121,11 @@ def pebble_segmentation(img, confidence=0.98):
     masks = masks[pred_t]
     pred_boxes = pred_boxes[pred_t]
     pred_class = pred_class[pred_t]
-    make_mask_image(annImg, masks, pred_boxes, pred_class)
+    # make_mask_image(annImg, masks, pred_boxes, pred_class)
     return masks, pred_boxes, pred_class
 
 
-pebNum = 0
+pebNum = 10000
 
 
 def make_mask_image(img, masks, boxes, pred_cls, rect_th=2, text_size=2, text_th=2):
