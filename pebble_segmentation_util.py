@@ -91,7 +91,7 @@ def pebble_segmentation(img, confidence=0.98):
           ie: eg. segment of cat is made 1 and rest of the image is made 0
 
     """
-
+    annImg = img.copy()
     # adjust brightness of image
     # img = adjust_contrast_brightness(img, contrast=1.0, brightness=200)
     transform = VT.Compose([VT.ToTensor()])
@@ -118,7 +118,7 @@ def pebble_segmentation(img, confidence=0.98):
     masks = masks[pred_t]
     pred_boxes = pred_boxes[pred_t]
     pred_class = pred_class[pred_t]
-    make_mask_image(img, masks, pred_boxes, pred_class)
+    make_mask_image(annImg, masks, pred_boxes, pred_class)
     return masks, pred_boxes, pred_class
 
 
