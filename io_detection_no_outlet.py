@@ -106,7 +106,7 @@ class Video():
     def processNextFrame(self, frame, frameNumber, videoTime, inletSavedPebbles=None):
         og_frame = frame.copy()
         # check if image has a pebble with confidence
-        masks, boxes = pebble_segmentation(frame)
+        masks, boxes, pebble_pred_class = pebble_segmentation(frame)
         if masks is not None:
             # iterate through each pebble detected and update accordingly
             for p in range(len(masks)):

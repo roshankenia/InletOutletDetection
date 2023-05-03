@@ -23,9 +23,9 @@ else:
 
 # set to evaluation mode
 pebble_segmentation_model = torch.load(
-    './saved_models/mask-rcnn-pebble-full-100.pt')
+    './saved_models/mask-rcnn-pebble-with-neg.pt')
 pebble_segmentation_model.eval()
-CLASS_NAMES = ['__background__', 'pebble']
+CLASS_NAMES = ['__background__', 'not pebble', 'pebble']
 device = torch.device(
     'cuda') if torch.cuda.is_available() else torch.device('cpu')
 pebble_segmentation_model.to(device)
@@ -107,18 +107,25 @@ def pebble_segmentation(img, confidence=0.98):
     pred_score = list(pred[0]['scores'].detach().cpu().numpy())
     pred_t = [pred_score.index(x) for x in pred_score if x > confidence]
     if len(pred_t) == 0:
-        return None, None
+        return None, None, None
     masks = (pred[0]['masks'] > 0.5).detach().cpu().numpy()
     masks = masks.reshape(-1, *masks.shape[-2:])
     # print(pred[0]['labels'].numpy().max())
+    pred_class = np.array([CLASS_NAMES[i]
+                           for i in list(pred[0]['labels'].cpu().numpy())])
     pred_boxes = np.array([[(int(i[0]), int(i[1])), (int(i[2]), int(i[3]))]
                            for i in list(pred[0]['boxes'].detach().cpu().numpy())])
     masks = masks[pred_t]
     pred_boxes = pred_boxes[pred_t]
-    return masks, pred_boxes
+    pred_class = pred_class[pred_t]
+    make_mask_image(img, masks, pred_boxes, pred_class)
+    return masks, pred_boxes, pred_class
 
 
-def make_mask_image(img, masks, boxes, pred_cls, ind, rect_th=2, text_size=2, text_th=2):
+pebNum = 0
+
+
+def make_mask_image(img, masks, boxes, pred_cls, rect_th=2, text_size=2, text_th=2):
     for i in range(len(masks)):
         rgb_mask = get_coloured_mask(masks[i])
         img = cv2.addWeighted(img, 1, rgb_mask, 0.5, 0)
@@ -127,7 +134,13 @@ def make_mask_image(img, masks, boxes, pred_cls, ind, rect_th=2, text_size=2, te
         cv2.putText(img, pred_cls[i], boxes[i][0], cv2.FONT_HERSHEY_SIMPLEX,
                     text_size, (0, 255, 0), thickness=text_th)
     # save frame as JPG file
-    # cv2.imwrite("./ceramicimages/image"+str(ind) + "_mask.jpg", img)
+    folder = f"./io_results/PebbleDetectionTest/"
+    if not os.path.isdir(folder):
+        os.mkdir(folder)
+    global pebNum
+    cv2.imwrite("./io_results/PebbleDetectionTest/image" +
+                str(pebNum) + "_mask.jpg", img)
+    pebNum += 1
 
 
 def create_full_frame_crop(img, mask):
