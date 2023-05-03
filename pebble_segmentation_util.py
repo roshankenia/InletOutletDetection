@@ -39,9 +39,9 @@ def get_coloured_mask(mask, pred_c):
       method:
         - the masks of each predicted object is given random colour for visualization
     """
-    colour = [[0, 0, 255]]
+    colour = [0, 0, 255]
     if pred_c == 'not pebble':
-        colour = [[255, 0, 0]]
+        colour = [255, 0, 0]
     # colours = [[0, 255, 0], [0, 0, 255], [255, 0, 0], [0, 255, 255], [255, 255, 0], [
     #     255, 0, 255], [80, 70, 180], [250, 80, 190], [245, 145, 50], [70, 150, 250], [50, 190, 190]]
     r = np.zeros_like(mask).astype(np.uint8)
