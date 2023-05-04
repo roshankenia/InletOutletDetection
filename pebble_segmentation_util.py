@@ -131,7 +131,7 @@ pebNum = 0
 
 def make_mask_image(img, masks, boxes, pred_cls, rect_th=2, text_size=2, text_th=2):
     for i in range(len(masks)):
-        if pred_cls[i] == 'not_pebble':
+        if pred_cls[i] == 'not pebble':
             rgb_mask = get_coloured_mask(masks[i], pred_cls[i])
             img = cv2.addWeighted(img, 1, rgb_mask, 0.5, 0)
             cv2.rectangle(img, boxes[i][0], boxes[i][1],
