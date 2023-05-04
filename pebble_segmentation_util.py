@@ -122,21 +122,22 @@ def pebble_segmentation(img, confidence=0.98):
     masks = masks[pred_t]
     pred_boxes = pred_boxes[pred_t]
     pred_class = pred_class[pred_t]
-    # make_mask_image(annImg, masks, pred_boxes, pred_class)
+    make_mask_image(annImg, masks, pred_boxes, pred_class)
     return masks, pred_boxes, pred_class
 
 
-pebNum = 10000
+pebNum = 0
 
 
 def make_mask_image(img, masks, boxes, pred_cls, rect_th=2, text_size=2, text_th=2):
     for i in range(len(masks)):
-        rgb_mask = get_coloured_mask(masks[i], pred_cls[i])
-        img = cv2.addWeighted(img, 1, rgb_mask, 0.5, 0)
-        cv2.rectangle(img, boxes[i][0], boxes[i][1],
-                      color=(0, 255, 0), thickness=rect_th)
-        cv2.putText(img, pred_cls[i], boxes[i][0], cv2.FONT_HERSHEY_SIMPLEX,
-                    text_size, (0, 255, 0), thickness=text_th)
+        if pred_cls[i] == 'not_pebble':
+            rgb_mask = get_coloured_mask(masks[i], pred_cls[i])
+            img = cv2.addWeighted(img, 1, rgb_mask, 0.5, 0)
+            cv2.rectangle(img, boxes[i][0], boxes[i][1],
+                        color=(0, 255, 0), thickness=rect_th)
+            cv2.putText(img, pred_cls[i], boxes[i][0], cv2.FONT_HERSHEY_SIMPLEX,
+                        text_size, (0, 255, 0), thickness=text_th)
     # save frame as JPG file
     folder = f"./io_results/PebbleDetectionTest/"
     if not os.path.isdir(folder):
