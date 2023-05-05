@@ -75,21 +75,19 @@ def digit_segmentation(img):
     scores = prediction[0]['scores'].detach().cpu().numpy()
     # print(bboxes)
     goodBBoxes = []
+    # create digit crops
+    digitCrops = []
     for i in range(len(scores)):
         if scores[i] >= 0.98:
-            goodBBoxes.append(bboxes[i].astype(int))
+            bbox = bboxes[i].astype(int)
+            goodBBoxes.append(bbox)
+            digits_crop = img[bbox[1]:bbox[3], bbox[0]:bbox[2]]
+            digitCrops.append(digits_crop)
         else:
             # scores already sorted
             break
 
     # draw boxes if they exist
     if (len(goodBBoxes) != 0):
-        # create digit crops
-        digitCrops = []
-        for i in range(len(goodBBoxes)):
-            bbox = goodBBoxes[i]
-            digits_crop = img[round(bbox[1]):round(
-                bbox[3]), round(bbox[0]):round(bbox[2])]
-            digitCrops.append(digits_crop)
         return digitCrops, goodBBoxes
     return None, None
