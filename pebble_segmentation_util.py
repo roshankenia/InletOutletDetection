@@ -107,7 +107,7 @@ def pebble_segmentation(img, confidence=0.98):
 
     img = img.to(device)
     pred = pebble_segmentation_model([img])
-    print('PRED:', pred)
+    # print('PRED:', pred)
     pred_score = list(pred[0]['scores'].detach().cpu().numpy())
     pred_t = [pred_score.index(x) for x in pred_score if x > confidence]
     if len(pred_t) == 0:
