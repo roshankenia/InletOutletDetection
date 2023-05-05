@@ -26,6 +26,7 @@ device = torch.device(
 digit_segmentation_model = torch.load(
     r'./saved_models/group_digit_detector.pkl')
 digit_segmentation_model.to(device)
+digit_segmentation_model.eval()
 
 
 def normalize(arr):
@@ -53,7 +54,6 @@ def digit_segmentation(img):
     image_array = np.array(normalize(image_array), dtype=np.float32)
     img = torch.from_numpy(image_array)
 
-    digit_segmentation_model.eval()
     with torch.no_grad():
         '''
         prediction is in the following format:
