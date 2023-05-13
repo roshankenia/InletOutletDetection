@@ -89,7 +89,7 @@ class Video():
         # remove all inactive pebbles
         pebblesToKeep = []
         for pebble in self.activePebbles:
-            if frameNumber - pebble.lastSeen <= 10:
+            if frameNumber - pebble.lastSeen <= 20:
                 pebblesToKeep.append(pebble)
             else:
                 # save pebble to match between inlet and outlet
