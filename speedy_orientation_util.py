@@ -269,7 +269,7 @@ def segment_and_fix_image_range(img, og_img, confidence=0.9, rect_th=2, text_siz
     """
     annImg = img.copy()
     masks, boxes, pred_cls, pred_score = get_prediction(img, confidence)
-    fixedImages = None
+    fixedImages = []
     errorRange = [-5, 0, 5]
     if masks is None:
         cv2.putText(annImg, 'no detection', (50, 50), cv2.FONT_HERSHEY_SIMPLEX,

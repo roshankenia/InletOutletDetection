@@ -126,17 +126,16 @@ class Video():
                 for i in range(len(pebbleDigitsCrops)):
                     annImg, fixedImages = segment_and_fix_image_range(
                         pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
-                    if len(fixedImages) != 0:
-                        for f in range(len(fixedImages)):
-                            # prediciton
-                            predImg, predlabels, predScores = showbox_no_bottomY(
-                                fixedImages[f])
-                            if predImg is not None:
-                                cv2.imwrite(os.path.join(self.imgFolder, "img_" +
-                                            str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
-                                # update digits
-                                currentPebble.addDigits(
-                                    predlabels, predScores)
+                    for f in range(len(fixedImages)):
+                        # prediciton
+                        predImg, predlabels, predScores = showbox_no_bottomY(
+                            fixedImages[f])
+                        if predImg is not None:
+                            cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                        str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
+                            # update digits
+                            currentPebble.addDigits(
+                                predlabels, predScores)
         # create frame based on current active pebbles
         if inletSavedPebbles is not None:
             frameWithData = addToFrame(
