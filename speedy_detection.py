@@ -254,7 +254,7 @@ while inletHasFrames:
     # check if we are currently processing
     if len(inletVideo.activePebbles) == 0:
         # skip four frames
-        for i in range(4):
+        for i in range(9):
             inletHasFrames, inletFrame = inletVideo.vidcap.read()
             frameNumber += 1
     inletHasFrames, inletFrame = inletVideo.vidcap.read()
