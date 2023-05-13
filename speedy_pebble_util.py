@@ -42,8 +42,10 @@ class Pebble():
 
     def addDigits(self, labels, scores):
         for l in range(len(labels)):
-            # only add if score is greater than 0.7
-            if scores[l] >= 0.7:
+            # only add if score is greater than 0.8
+            if scores[l] >= 0.8:
+                self.digits[l][labels[l]] += 1
+            if scores[l] >= 0.98:
                 self.digits[l][labels[l]] += 1
             # self.digits[l][labels[l]] += scores[l]
         print('Pebble #'+str(self.number) +

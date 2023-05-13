@@ -124,35 +124,19 @@ class Video():
             if not currentPebble.check_converge():
                 # save orientation bar prediction
                 for i in range(len(pebbleDigitsCrops)):
-                    annImg, fixedImage1, fixedImage2, fixedImage3 = segment_and_fix_image_range(
+                    annImg, fixedImages = segment_and_fix_image_range(
                         pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
-
-                    if fixedImage1 is not None:
-                        # prediciton
-                        predImg1, predlabels1, predScores1 = showbox_no_bottomY(
-                            fixedImage1)
-                        if predImg1 is not None:
-                            cv2.imwrite(os.path.join(self.imgFolder, "img_" +
-                                        str(frameNumber) + "_pred_1"+str(i)+".jpg"), predImg1)
-                            # update digits
-                            currentPebble.addDigits(predlabels1, predScores1)
-
-                        # prediciton
-                        predImg2, predlabels2, predScores2 = showbox_no_bottomY(
-                            fixedImage2)
-                        if predImg2 is not None:
-                            cv2.imwrite(os.path.join(self.imgFolder, "img_" +
-                                        str(frameNumber) + "_pred_2"+str(i)+".jpg"), predImg2)
-                            # update digits
-                            currentPebble.addDigits(predlabels2, predScores2)
-                        # prediciton
-                        predImg3, predlabels3, predScores3 = showbox_no_bottomY(
-                            fixedImage3)
-                        if predImg3 is not None:
-                            cv2.imwrite(os.path.join(self.imgFolder, "img_" +
-                                        str(frameNumber) + "_pred_3"+str(i)+".jpg"), predImg3)
-                            # update digits
-                            currentPebble.addDigits(predlabels3, predScores3)
+                    if len(fixedImages) != 0:
+                        for f in range(len(fixedImages)):
+                            # prediciton
+                            predImg, predlabels, predScores = showbox_no_bottomY(
+                                fixedImages[f])
+                            if predImg is not None:
+                                cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                            str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
+                                # update digits
+                                currentPebble.addDigits(
+                                    predlabels, predScores)
         # create frame based on current active pebbles
         if inletSavedPebbles is not None:
             frameWithData = addToFrame(
@@ -254,7 +238,7 @@ while inletHasFrames:
     # check if we are currently processing
     if len(inletVideo.activePebbles) == 0:
         # skip four frames
-        for i in range(9):
+        for i in range(4):
             inletHasFrames, inletFrame = inletVideo.vidcap.read()
             frameNumber += 1
     inletHasFrames, inletFrame = inletVideo.vidcap.read()

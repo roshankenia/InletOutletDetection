@@ -269,9 +269,8 @@ def segment_and_fix_image_range(img, og_img, confidence=0.9, rect_th=2, text_siz
     """
     annImg = img.copy()
     masks, boxes, pred_cls, pred_score = get_prediction(img, confidence)
-    fixedImage1 = None
-    fixedImage2 = None
-    fixedImage3 = None
+    fixedImages = None
+    errorRange = [-5, 0, 5]
     if masks is None:
         cv2.putText(annImg, 'no detection', (50, 50), cv2.FONT_HERSHEY_SIMPLEX,
                     text_size, (0, 0, 255), thickness=text_th)
@@ -290,9 +289,9 @@ def segment_and_fix_image_range(img, og_img, confidence=0.9, rect_th=2, text_siz
                 angle = getAngle(picCenter, barCenter, basePoint)
 
                 # get the fixed image
-                fixedImage1 = rotate_im(og_img.copy(), -1*(angle-5))
-                fixedImage2 = rotate_im(og_img.copy(), -1*(angle))
-                fixedImage3 = rotate_im(og_img.copy(), -1*(angle+5))
+                for errorVal in errorRange:
+                    fixedImages.append(
+                        rotate_im(og_img.copy(), -1*(angle + errorVal)))
                 cv2.putText(annImg, 'Angle:' + str(round(angle, 2)), (50, 50), cv2.FONT_HERSHEY_SIMPLEX,
                             1, (255, 255, 0), thickness=text_th)
                 # print('Horizontal not found')
@@ -309,4 +308,4 @@ def segment_and_fix_image_range(img, og_img, confidence=0.9, rect_th=2, text_siz
 
                 break
 
-    return annImg, fixedImage1, fixedImage2, fixedImage3
+    return annImg, fixedImages
