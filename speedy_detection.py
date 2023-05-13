@@ -243,18 +243,22 @@ FPS = inletVideo.fps
 
 start = time.time()
 
-
-for frameNumber in range(num_frames):
+frameNumber = 0
+inletHasFrames, inletFrame = inletVideo.vidcap.read()
+while inletHasFrames:
     print('Processing frame #', frameNumber)
     videoTime = frameNumber/FPS
-    inletHasFrames, inletFrame = inletVideo.vidcap.read()
-    if inletHasFrames:
-        # process inlet frame
-        inletVideo.processNextFrame(inletFrame, frameNumber, videoTime)
-    else:
-        break
-
+    # process inlet frame
+    inletVideo.processNextFrame(inletFrame, frameNumber, videoTime)
     inletVideo.removeInactive(frameNumber)
+    # check if we are currently processing
+    if len(inletVideo.activePebbles) == 0:
+        # skip four frames
+        for i in range(4):
+            inletHasFrames, inletFrame = inletVideo.vidcap.read()
+            frameNumber += 1
+    inletHasFrames, inletFrame = inletVideo.vidcap.read()
+    frameNumber += 1
 
 end = time.time()
 print('Total time elapsed:', (end-start))
