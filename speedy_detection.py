@@ -115,7 +115,7 @@ class Video():
             # update pebble location based on first pebble digit crop
             # tag and update pebble data
             currentPebble, self.activePebbles, self.numOfPebbles = updatePebbleLocation(
-                pebbleDigitBoxes[i], self.activePebbles, self.distThreshold, self.numOfPebbles, frameNumber, videoTime)
+                pebbleDigitBoxes[0], self.activePebbles, self.distThreshold, self.numOfPebbles, frameNumber, videoTime)
 
             # update boxes
             currentPebble.addDigitBoxes(pebbleDigitBoxes)
