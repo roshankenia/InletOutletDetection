@@ -121,7 +121,7 @@ class Video():
             currentPebble.addDigitBoxes(pebbleDigitBoxes)
 
             # check if converged already
-            if not currentPebble.check_converge():
+            if not currentPebble.isConverged:
                 # save orientation bar prediction
                 for i in range(len(pebbleDigitsCrops)):
                     annImg, fixedImages = segment_and_fix_image_range(
@@ -235,9 +235,20 @@ while inletHasFrames:
     inletVideo.processNextFrame(inletFrame, frameNumber, videoTime)
     inletVideo.removeInactive(frameNumber)
     # check if we are currently processing
-    if len(inletVideo.activePebbles) == 0:
+    # if all converged can skip
+    convergedNum = 0
+    for actPebble in inletVideo.activePebbles:
+        if actPebble.isConverged:
+            convergedNum += 1
+    if convergedNum == len(inletVideo.activePebbles):
         # skip four frames
         for i in range(4):
+            inletHasFrames, inletFrame = inletVideo.vidcap.read()
+            frameNumber += 1
+    # if none in frame can skip
+    elif len(inletVideo.activePebbles) == 0:
+        # skip nine frames
+        for i in range(9):
             inletHasFrames, inletFrame = inletVideo.vidcap.read()
             frameNumber += 1
     inletHasFrames, inletFrame = inletVideo.vidcap.read()

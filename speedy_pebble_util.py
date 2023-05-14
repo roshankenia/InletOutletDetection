@@ -30,6 +30,8 @@ class Pebble():
         self.digits = np.zeros((3, 10))
         self.currentPebbleBox = None
         self.currentDigitBoxes = None
+        self.isConverged = False
+        self.ConvergedClassification = '???'
 
         print('Pebble #'+str(self.number)+' has been created')
 
@@ -51,12 +53,6 @@ class Pebble():
         print('Pebble #'+str(self.number) +
               ' has updated digits '+str(self.digits))
 
-    def check_converge(self):
-        for position in range(len(self.digits)):
-            if np.max(self.digits[position]) < 10:
-                return False
-        return True
-
     def addDigitBoxes(self, boxes):
         self.currentDigitBoxes = boxes
         self.currentPebbleBox = boxes[0]
@@ -66,19 +62,28 @@ class Pebble():
         self.currentDigitBoxes = None
 
     def obtainFinalClassification(self):
+        if self.isConverged:
+            return self.ConvergedClassification
         # check if no good prediction
         if np.sum(self.digits) == 0:
             return '???'
         # obtain top prediction for each digit position
         classification = ''
+        converged = True
         for d in range(len(self.digits)):
             # take argmax of each position
             maxPos = np.argmax(self.digits[d])
             if self.digits[d][maxPos] == 0:
                 # no maximum for this position
                 return '???'
+            elif self.digits[d][maxPos] < 10:
+                converged = False
             classification += str(maxPos)
 
+        # check if digits have converged
+        if converged:
+            self.isConverged = True
+            self.ConvergedClassification = classification
         return classification
 
 
