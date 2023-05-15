@@ -218,7 +218,7 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
 
 
 # create inlet video
-inletVideo = Video('Outlet Video')
+inletVideo = Video('S1040002 - Balls with ceramic paint')
 
 # set frames count and fps
 num_frames = inletVideo.frame_count
