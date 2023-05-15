@@ -69,15 +69,15 @@ class Video():
         self.height = int(self.vidcap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         print('video dimensions width:', self.width, 'height:', self.height)
 
-        folder = f"./speedy_results/{filename}/"
+        folder = f"./speedy_timing_results/{filename}/"
         if not os.path.isdir(folder):
             os.mkdir(folder)
 
         # create demo video
-        self.processed_video = cv2.VideoWriter(f'./speedy_results/{filename}/processed_video.avi',
+        self.processed_video = cv2.VideoWriter(f'./speedy_timing_results/{filename}/processed_video.avi',
                                                cv2.VideoWriter_fourcc(*'mp4v'), self.vidcap.get(cv2.CAP_PROP_FPS), (self.width, self.height))
 
-        self.imgFolder = f"./speedy_results/{filename}/Images/"
+        self.imgFolder = f"./speedy_timing_results/{filename}/Images/"
         if not os.path.isdir(self.imgFolder):
             os.mkdir(self.imgFolder)
 
