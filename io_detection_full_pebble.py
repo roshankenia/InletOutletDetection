@@ -238,7 +238,7 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
 
 
 # create inlet video
-inletVideo = Video('S1060001In')
+inletVideo = Video('Outlet Video')
 
 # set frames count and fps
 num_frames = inletVideo.frame_count
@@ -274,6 +274,7 @@ while inletHasFrames:
                 frameNumber += 1
     inletHasFrames, inletFrame = inletVideo.vidcap.read()
     frameNumber += 1
+    print()
 
 end = time.time()
 print('Total time elapsed:', (end-start))
