@@ -18,6 +18,7 @@ from speedy_orientation_util import segment_and_fix_image_range
 from speedy_detection_util import showbox_no_bottomY
 from speedy_crop_util import digit_segmentation
 from speedy_pebble_util import updatePebbleLocation
+from pebble_segmentation_util import pebble_segmentation, create_full_frame_crop
 # ensure we are running on the correct gpu
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "6"  # (xxxx is your specific GPU ID)
@@ -105,37 +106,53 @@ class Video():
 
     def processNextFrame(self, frame, frameNumber, videoTime, inletSavedPebbles=None):
         og_frame = frame.copy()
-        # check if image has digits with confidence
-        pebbleDigitsCrops, pebbleDigitBoxes, pebbleDigitScores, goodPredictions, goodMasks, originalDigitCrops = digit_segmentation(
-            frame)
+        # check if image has a pebble with confidence
+        pebbleMasks, pebbleBoxes, pebbleClasses = pebble_segmentation(frame)
+        if pebbleMasks is not None:
+            # iterate through each pebble detected and update accordingly
+            for p in range(len(pebbleMasks)):
+                if pebbleClasses[p] == 'pebble':
+                    pebbleMask = pebbleMasks[p]
+                    pebbleBox = [pebbleBoxes[p][0][0], pebbleBoxes[p][0]
+                                 [1], pebbleBoxes[p][1][0], pebbleBoxes[p][1][1]]
 
-        # see if digits were detected
-        if pebbleDigitsCrops is not None:
-            print('Frame with digits:', str(frameNumber))
-            # update pebble location based on first pebble digit crop
-            # tag and update pebble data
-            currentPebble, self.activePebbles, self.numOfPebbles = updatePebbleLocation(
-                pebbleDigitBoxes[0], self.activePebbles, self.distThreshold, self.numOfPebbles, frameNumber, videoTime)
+                    # tag and update pebble data
+                    currentPebble, self.activePebbles, self.numOfPebbles = updatePebbleLocation(
+                        pebbleBox, self.activePebbles, self.distThreshold, self.numOfPebbles, frameNumber, videoTime)
 
-            # update boxes
-            currentPebble.addDigitBoxes(pebbleDigitBoxes)
+                    # update pebble box
+                    currentPebble.addPebbleBox(pebbleBox)
 
-            # check if converged already
-            if not currentPebble.isConverged:
-                # save orientation bar prediction
-                for i in range(len(pebbleDigitsCrops)):
-                    annImg, fixedImages = segment_and_fix_image_range(
-                        pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
-                    for f in range(len(fixedImages)):
-                        # prediciton
-                        predImg, predlabels, predScores = showbox_no_bottomY(
-                            fixedImages[f])
-                        if predImg is not None:
-                            cv2.imwrite(os.path.join(self.imgFolder, "img_" +
-                                        str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
-                            # update digits
-                            currentPebble.addDigits(
-                                predlabels, predScores)
+                    # check if converged already
+                    if not currentPebble.check_converge():
+                        # focus on pebble area in video
+                        pebbleDetectionCrop = create_full_frame_crop(
+                            frame, pebbleMask)
+
+                        # check if image has digits with confidence
+                        pebbleDigitsCrops, pebbleDigitBoxes, pebbleDigitScores, goodPredictions, goodMasks, originalDigitCrops = digit_segmentation(
+                            frame)
+
+                        # see if digits were detected
+                        if pebbleDigitsCrops is not None:
+                            print('Frame with digits:', str(frameNumber))
+                            # update boxes
+                            currentPebble.addDigitBoxes(pebbleDigitBoxes)
+
+                            # save orientation bar prediction
+                            for i in range(len(pebbleDigitsCrops)):
+                                annImg, fixedImages = segment_and_fix_image_range(
+                                    pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
+                                for f in range(len(fixedImages)):
+                                    # prediciton
+                                    predImg, predlabels, predScores = showbox_no_bottomY(
+                                        fixedImages[f])
+                                    if predImg is not None:
+                                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                                    str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
+                                        # update digits
+                                        currentPebble.addDigits(
+                                            predlabels, predScores)
         # create frame based on current active pebbles
         if inletSavedPebbles is not None:
             frameWithData = addToFrame(
@@ -179,6 +196,9 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                         maxCord = (digitBox[2], digitBox[3])
                         cv2.rectangle(frame, minCord, maxCord,
                                       color=(0, 255, 255), thickness=3)
+                        # put predicted class
+                        cv2.putText(
+                            frame, 'digits', minCord, cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), thickness=2)
                 # reset current boxes
                 pebble.resetBoxes()
     if inletSavedPebbles is not None:
