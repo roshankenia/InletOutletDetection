@@ -17,7 +17,6 @@ from combine_pebble_util import updatePebbleLocation
 from speedy_orientation_util import segment_and_fix_image_range
 from speedy_detection_util import showbox_no_bottomY
 from speedy_crop_util import digit_segmentation
-from speedy_pebble_util import updatePebbleLocation
 from pebble_segmentation_util import pebble_segmentation, create_full_frame_crop
 # ensure we are running on the correct gpu
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
