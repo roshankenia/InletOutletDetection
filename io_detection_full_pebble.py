@@ -124,7 +124,7 @@ class Video():
                     currentPebble.addPebbleBox(pebbleBox)
 
                     # check if converged already
-                    if not currentPebble.check_converge():
+                    if not currentPebble.isConverged:
                         # focus on pebble area in video
                         pebbleDetectionCrop = create_full_frame_crop(
                             frame, pebbleMask)
