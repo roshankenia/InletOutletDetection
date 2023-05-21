@@ -13,11 +13,11 @@ import train_utils.transforms as T
 import math
 import time
 
-from pebble_segmentation_util import pebble_segmentation, create_full_frame_crop
 from pebble_util import updatePebbleLocation
-from digit_segmentation_util import digit_segmentation
-from crop_orientation_util import find_usable_crops
-from digit_detection_util import individual_digit_detection
+from speedy_orientation_util import segment_and_fix_image_range
+from speedy_detection_util import showbox_no_bottomY
+from speedy_crop_util import digit_segmentation
+from speedy_pebble_util import updatePebbleLocation
 # ensure we are running on the correct gpu
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "6"  # (xxxx is your specific GPU ID)
@@ -69,15 +69,15 @@ class Video():
         self.height = int(self.vidcap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         print('video dimensions width:', self.width, 'height:', self.height)
 
-        folder = f"./io_results/{filename}/"
+        folder = f"./combine_results/{filename}/"
         if not os.path.isdir(folder):
             os.mkdir(folder)
 
         # create demo video
-        self.processed_video = cv2.VideoWriter(f'./io_results/{filename}/processed_video.avi',
+        self.processed_video = cv2.VideoWriter(f'./combine_results/{filename}/processed_video.avi',
                                                cv2.VideoWriter_fourcc(*'mp4v'), self.vidcap.get(cv2.CAP_PROP_FPS), (self.width, self.height))
 
-        self.imgFolder = f"./io_results/{filename}/Images/"
+        self.imgFolder = f"./combine_results/{filename}/Images/"
         if not os.path.isdir(self.imgFolder):
             os.mkdir(self.imgFolder)
 
@@ -89,7 +89,7 @@ class Video():
         # remove all inactive pebbles
         pebblesToKeep = []
         for pebble in self.activePebbles:
-            if frameNumber - pebble.lastSeen <= 3:
+            if frameNumber - pebble.lastSeen <= 20:
                 pebblesToKeep.append(pebble)
             else:
                 # save pebble to match between inlet and outlet
@@ -105,55 +105,37 @@ class Video():
 
     def processNextFrame(self, frame, frameNumber, videoTime, inletSavedPebbles=None):
         og_frame = frame.copy()
-        # check if image has a pebble with confidence
-        masks, boxes, pebble_pred_class = pebble_segmentation(frame)
-        if masks is not None:
-            # iterate through each pebble detected and update accordingly
-            for p in range(len(masks)):
-                if pebble_pred_class[p] == 'pebble':
-                    pebbleMask = masks[p]
-                    pebbleBox = [boxes[p][0][0], boxes[p][0]
-                                 [1], boxes[p][1][0], boxes[p][1][1]]
+        # check if image has digits with confidence
+        pebbleDigitsCrops, pebbleDigitBoxes, pebbleDigitScores, goodPredictions, goodMasks, originalDigitCrops = digit_segmentation(
+            frame)
 
-                    # tag and update pebble data
-                    currentPebble, self.activePebbles, self.numOfPebbles = updatePebbleLocation(
-                        pebbleBox, self.activePebbles, self.distThreshold, self.numOfPebbles, frameNumber, videoTime)
+        # see if digits were detected
+        if pebbleDigitsCrops is not None:
+            print('Frame with digits:', str(frameNumber))
+            # update pebble location based on first pebble digit crop
+            # tag and update pebble data
+            currentPebble, self.activePebbles, self.numOfPebbles = updatePebbleLocation(
+                pebbleDigitBoxes[0], self.activePebbles, self.distThreshold, self.numOfPebbles, frameNumber, videoTime)
 
-                    # update pebble box
-                    currentPebble.addPebbleBox(pebbleBox)
+            # update boxes
+            currentPebble.addDigitBoxes(pebbleDigitBoxes)
 
-                    # check if converged already
-                    if not currentPebble.check_converge():
-                        # focus on pebble area in video
-                        pebbleDetectionCrop = create_full_frame_crop(
-                            frame, pebbleMask)
-
-                        # # save img
-                        # save_frame_and_mask(og_frame)
-                        # cv2.imwrite(self.imgFolder + "pebble_" +
-                        #             str(frameNumber) + ".jpg", pebbleDetectionCrop)
-
-                        # create into PIL image
-                        pebbleDetectionCrop = Image.fromarray(
-                            pebbleDetectionCrop)
-                        pebbleDetectionCrop, _ = self.transform(
-                            pebbleDetectionCrop, None)
-
-                        # now try to obtain digit crop
-                        pebbleDigitsCrops, pebbleDigitBoxes = digit_segmentation(
-                            pebbleDetectionCrop)
-
-                        # see if digits were detected
-                        if pebbleDigitsCrops is not None:
-                            # add first box
-                            currentPebble.addDigitBoxes(pebbleDigitBoxes)
-                            # rotate crops and only save usable ones
-                            usablePebbleDigitsCrops = find_usable_crops(
-                                pebbleDigitsCrops, frameNumber, self.imgFolder)
-
-                            # now we try to predict on the usable digit crops
-                            individual_digit_detection(
-                                usablePebbleDigitsCrops, self.imgFolder, self.transform, currentPebble)
+            # check if converged already
+            if not currentPebble.isConverged:
+                # save orientation bar prediction
+                for i in range(len(pebbleDigitsCrops)):
+                    annImg, fixedImages = segment_and_fix_image_range(
+                        pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
+                    for f in range(len(fixedImages)):
+                        # prediciton
+                        predImg, predlabels, predScores = showbox_no_bottomY(
+                            fixedImages[f])
+                        if predImg is not None:
+                            cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                        str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
+                            # update digits
+                            currentPebble.addDigits(
+                                predlabels, predScores)
         # create frame based on current active pebbles
         if inletSavedPebbles is not None:
             frameWithData = addToFrame(
@@ -197,9 +179,6 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                         maxCord = (digitBox[2], digitBox[3])
                         cv2.rectangle(frame, minCord, maxCord,
                                       color=(0, 255, 255), thickness=3)
-                        # put predicted class
-                        cv2.putText(
-                            frame, 'digits', minCord, cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), thickness=2)
                 # reset current boxes
                 pebble.resetBoxes()
     if inletSavedPebbles is not None:
@@ -239,7 +218,7 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
 
 
 # create inlet video
-inletVideo = Video('S1060001In')
+inletVideo = Video('S1040002 - Balls with ceramic paint')
 
 # set frames count and fps
 num_frames = inletVideo.frame_count
@@ -247,18 +226,34 @@ FPS = inletVideo.fps
 
 start = time.time()
 
-
-for frameNumber in range(num_frames):
+frameNumber = 0
+inletHasFrames, inletFrame = inletVideo.vidcap.read()
+while inletHasFrames:
     print('Processing frame #', frameNumber)
     videoTime = frameNumber/FPS
-    inletHasFrames, inletFrame = inletVideo.vidcap.read()
-    if inletHasFrames:
-        # process inlet frame
-        inletVideo.processNextFrame(inletFrame, frameNumber, videoTime)
-    else:
-        break
-
+    # process inlet frame
+    inletVideo.processNextFrame(inletFrame, frameNumber, videoTime)
     inletVideo.removeInactive(frameNumber)
+    # check if we are currently processing
+    # if none in frame can skip
+    if len(inletVideo.activePebbles) == 0:
+        # skip four frames
+        for i in range(4):
+            inletHasFrames, inletFrame = inletVideo.vidcap.read()
+            frameNumber += 1
+    else:
+        # if all converged can skip
+        convergedNum = 0
+        for actPebble in inletVideo.activePebbles:
+            if actPebble.isConverged:
+                convergedNum += 1
+        if convergedNum == len(inletVideo.activePebbles):
+            # skip four frames
+            for i in range(4):
+                inletHasFrames, inletFrame = inletVideo.vidcap.read()
+                frameNumber += 1
+    inletHasFrames, inletFrame = inletVideo.vidcap.read()
+    frameNumber += 1
 
 end = time.time()
 print('Total time elapsed:', (end-start))
