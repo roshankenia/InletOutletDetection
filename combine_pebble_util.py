@@ -33,7 +33,7 @@ class Pebble():
         self.isConverged = False
         self.ConvergedClassification = '???'
 
-        print('Pebble #'+str(self.number)+' has been created')
+        print('Combine Pebble #'+str(self.number)+' has been created')
 
     def addLocation(self, location, frameNumber, videoTime):
         self.actualLocations.append(location)
