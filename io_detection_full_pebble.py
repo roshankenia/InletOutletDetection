@@ -112,6 +112,7 @@ class Video():
             # iterate through each pebble detected and update accordingly
             for p in range(len(pebbleMasks)):
                 if pebbleClasses[p] == 'pebble':
+                    print('Frame with pebble:', str(frameNumber), '#1', str(p))
                     pebbleMask = pebbleMasks[p]
                     pebbleBox = [pebbleBoxes[p][0][0], pebbleBoxes[p][0]
                                  [1], pebbleBoxes[p][1][0], pebbleBoxes[p][1][1]]
@@ -131,7 +132,7 @@ class Video():
 
                         # check if image has digits with confidence
                         pebbleDigitsCrops, pebbleDigitBoxes, pebbleDigitScores, goodPredictions, goodMasks, originalDigitCrops = digit_segmentation(
-                            frame)
+                            pebbleDetectionCrop)
 
                         # see if digits were detected
                         if pebbleDigitsCrops is not None:
@@ -238,7 +239,7 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
 
 
 # create inlet video
-inletVideo = Video('S1040002 - Balls with ceramic paint')
+inletVideo = Video('S1060001In')
 
 # set frames count and fps
 num_frames = inletVideo.frame_count
