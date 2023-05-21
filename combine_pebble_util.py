@@ -58,7 +58,6 @@ class Pebble():
 
     def addDigitBoxes(self, boxes):
         self.currentDigitBoxes = boxes
-        self.currentPebbleBox = boxes[0]
 
     def resetBoxes(self):
         self.currentPebbleBox = None
@@ -82,7 +81,6 @@ class Pebble():
             elif self.digits[d][maxPos] < 10:
                 converged = False
             classification += str(maxPos)
-
         # check if digits have converged
         if converged:
             self.isConverged = True
