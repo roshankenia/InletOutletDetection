@@ -82,14 +82,14 @@ class Video():
             os.mkdir(self.imgFolder)
 
         # calculate distance threshold based on 25% of max video dimension
-        self.distThreshold = int(0.25*max(self.width, self.height))
+        self.distThreshold = int(0.15*max(self.width, self.height))
         print('distThresh is:', self.distThreshold)
 
     def removeInactive(self, frameNumber):
         # remove all inactive pebbles
         pebblesToKeep = []
         for pebble in self.activePebbles:
-            if frameNumber - pebble.lastSeen <= 20:
+            if frameNumber - pebble.lastSeen <= 10:
                 pebblesToKeep.append(pebble)
             else:
                 # save pebble to match between inlet and outlet
@@ -238,7 +238,7 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
 
 
 # create inlet video
-inletVideo = Video('Inlet Video')
+inletVideo = Video('Outlet Video')
 
 # set frames count and fps
 num_frames = inletVideo.frame_count
