@@ -81,7 +81,7 @@ class Video():
             os.mkdir(self.imgFolder)
 
         # calculate distance threshold based on 25% of max video dimension
-        self.distThreshold = int(0.4*max(self.width, self.height))
+        self.distThreshold = int(0.5*max(self.width, self.height))
         print('distThresh is:', self.distThreshold)
 
     def removeInactive(self, frameNumber):
