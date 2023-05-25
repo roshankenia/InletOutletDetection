@@ -13,7 +13,6 @@ import train_utils.transforms as T
 import math
 import time
 
-from pebble_util import updatePebbleLocation
 from speedy_orientation_util import segment_and_fix_image_range
 from speedy_detection_util import showbox_no_bottomY
 from speedy_crop_util import digit_segmentation
