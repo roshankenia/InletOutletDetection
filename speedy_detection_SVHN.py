@@ -103,16 +103,6 @@ class Video():
         # set active pebbles
         self.activePebbles = pebblesToKeep
 
-    def downsize_image(img):
-        scale_percent = 30 # percent of original size
-        width = int(img.shape[1] * scale_percent / 100) 
-        height = int(img.shape[0] * scale_percent / 100) 
-        dim = (width, height) 
-
-        resized = cv2.resize(img, dim, interpolation = cv2.INTER_AREA) 
-
-        return resized
-
     def processNextFrame(self, frame, frameNumber, videoTime, inletSavedPebbles=None):
         og_frame = frame.copy()
         # check if image has digits with confidence
@@ -138,8 +128,13 @@ class Video():
                         pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
                     for f in range(len(fixedImages)):
                         #downsize image
-                        print(fixedImages[f])
-                        downsizedImage = self.downsize_image(fixedImages[f])
+                        downsizedImage = fixedImages[f]
+                        scale_percent = 30 # percent of original size
+                        width = int(downsizedImage.shape[1] * scale_percent / 100) 
+                        height = int(downsizedImage.shape[0] * scale_percent / 100) 
+                        dim = (width, height) 
+
+                        downsizedImage = cv2.resize(downsizedImage, dim, interpolation = cv2.INTER_AREA) 
                         # prediciton
                         predImg, predlabels, predScores = showbox_no_bottomY(downsizedImage)
                         if predImg is not None:
