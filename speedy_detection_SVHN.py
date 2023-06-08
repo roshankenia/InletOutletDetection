@@ -138,6 +138,7 @@ class Video():
                         pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
                     for f in range(len(fixedImages)):
                         #downsize image
+                        print(fixedImages[f])
                         downsizedImage = self.downsize_image(fixedImages[f])
                         # prediciton
                         predImg, predlabels, predScores = showbox_no_bottomY(downsizedImage)
