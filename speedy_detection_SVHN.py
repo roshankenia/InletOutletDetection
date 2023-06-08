@@ -59,8 +59,8 @@ class Video():
         self.savedPebbles = []
         self.transform = T.Compose([T.PILToTensor()])
 
-        filename = filename+'_SVHN'
         self.vidcap = cv2.VideoCapture(f'./videos/{filename}.MP4')
+        filename = filename+'_SVHN'
         self.frame_count = int(self.vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
         self.fps = self.vidcap.get(cv2.CAP_PROP_FPS)
         print(f'video {filename} has', str(
