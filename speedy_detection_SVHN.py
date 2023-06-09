@@ -129,7 +129,7 @@ class Video():
                     for f in range(len(fixedImages)):
                         #downsize image
                         downsizedImage = fixedImages[f]
-                        scale_percent = 30 # percent of original size
+                        scale_percent = 20 # percent of original size
                         width = int(downsizedImage.shape[1] * scale_percent / 100) 
                         height = int(downsizedImage.shape[0] * scale_percent / 100) 
                         dim = (width, height) 
