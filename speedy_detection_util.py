@@ -135,8 +135,8 @@ def normalize(arr):
 
 def fig_num(img, number):
     # put number in top left corner of image
-    cv2.putText(img, number, (0, 50), cv2.FONT_HERSHEY_SIMPLEX,
-                2, (255, 255, 255), thickness=2)
+    cv2.putText(img, number, (0, 100), cv2.FONT_HERSHEY_SIMPLEX,
+                4, (255, 255, 255), thickness=3)
 
 
 def fig_draw(img, box, label, score):
@@ -151,54 +151,54 @@ def fig_draw(img, box, label, score):
 
     if label == 0:  # start with background as 0
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (255, 0, 0), thickness=1)
+                      (255, 0, 0),  thickness=2)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5, (255, 0, 0), thickness=2)
+                    1, (255, 0, 0), thickness=2)
     elif label == 1:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (0, 255, 0), thickness=1)
+                      (0, 255, 0),  thickness=2)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5, (0, 255, 0), thickness=2)
+                    1, (0, 255, 0), thickness=2)
     elif label == 2:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (0, 0, 255), thickness=1)
+                      (0, 0, 255),  thickness=2)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5, (0, 0, 255), thickness=2)
+                    1, (0, 0, 255), thickness=2)
     elif label == 3:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (0, 100, 255), thickness=1)
+                      (0, 100, 255),  thickness=2)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5, (0, 100, 255), thickness=2)
+                    1, (0, 100, 255), thickness=2)
     elif label == 4:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (255, 100, 100), thickness=1)
+                      (255, 100, 100),  thickness=2)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5, (255, 100, 100), thickness=2)
+                    1, (255, 100, 100), thickness=2)
     elif label == 5:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (255, 0, 255), thickness=1)
+                      (255, 0, 255),  thickness=2)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5, (255, 0, 255), thickness=2)
+                    1, (255, 0, 255), thickness=2)
     elif label == 6:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (0, 255, 255), thickness=1)
+                      (0, 255, 255),  thickness=2)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5, (0, 255, 255), thickness=2)
+                    1, (0, 255, 255), thickness=2)
     elif label == 7:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (255, 255, 0), thickness=1)
+                      (255, 255, 0),  thickness=2)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5, (255, 255, 0), thickness=2)
+                    1, (255, 255, 0), thickness=2)
     elif label == 8:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (100, 0, 0), thickness=1)
+                      (100, 0, 0),  thickness=2)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5, (100, 0, 0), thickness=2)
+                    1, (100, 0, 0), thickness=2)
     elif label == 9:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (0, 0, 100), thickness=1)
+                      (0, 0, 100),  thickness=2)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    0.5, (0, 0, 100), thickness=2)
+                    1, (0, 0, 100), thickness=2)
 
 
 def get_number_prediction(model, img, bottomY):
