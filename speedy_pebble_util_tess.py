@@ -45,6 +45,7 @@ class Pebble():
     def addDigits(self, tessPred, tessScore):
         # split into individual digits
         labels = tessPred.split()
+        print(labels, tessScore)
         if len(labels) == 3:
             for l in range(len(labels)):
                 if label.isdigit():
