@@ -147,58 +147,58 @@ def fig_draw(img, box, label, score):
     xmax = round(box[2])
     ymax = round(box[3])
 
-    predText = '' + str(label) + ':' + str(round(score, 2))
+    predText = '' + str(label) + ':' + str(round(score, 4))
 
     if label == 0:  # start with background as 0
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (255, 0, 0),  thickness=2)
+                      (255, 0, 0), thickness=3)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    1, (255, 0, 0), thickness=2)
+                    2, (255, 0, 0),thickness=3)
     elif label == 1:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (0, 255, 0),  thickness=2)
+                      (0, 255, 0), thickness=3)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    1, (0, 255, 0), thickness=2)
+                    2, (0, 255, 0),thickness=3)
     elif label == 2:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (0, 0, 255),  thickness=2)
+                      (0, 0, 255), thickness=3)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    1, (0, 0, 255), thickness=2)
+                    2, (0, 0, 255),thickness=3)
     elif label == 3:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (0, 100, 255),  thickness=2)
+                      (0, 100, 255), thickness=3)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    1, (0, 100, 255), thickness=2)
+                    2, (0, 100, 255),thickness=3)
     elif label == 4:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (255, 100, 100),  thickness=2)
+                      (255, 100, 100), thickness=3)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    1, (255, 100, 100), thickness=2)
+                    2, (255, 100, 100),thickness=3)
     elif label == 5:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (255, 0, 255),  thickness=2)
+                      (255, 0, 255), thickness=3)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    1, (255, 0, 255), thickness=2)
+                    2, (255, 0, 255),thickness=3)
     elif label == 6:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (0, 255, 255),  thickness=2)
+                      (0, 255, 255), thickness=3)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    1, (0, 255, 255), thickness=2)
+                    2, (0, 255, 255),thickness=3)
     elif label == 7:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (255, 255, 0),  thickness=2)
+                      (255, 255, 0), thickness=3)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    1, (255, 255, 0), thickness=2)
+                    2, (255, 255, 0),thickness=3)
     elif label == 8:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (100, 0, 0),  thickness=2)
+                      (100, 0, 0), thickness=3)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    1, (100, 0, 0), thickness=2)
+                    2, (100, 0, 0),thickness=3)
     elif label == 9:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (0, 0, 100),  thickness=2)
+                      (0, 0, 100), thickness=3)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    1, (0, 0, 100), thickness=2)
+                    2, (0, 0, 100),thickness=3)
 
 
 def get_number_prediction(model, img, bottomY):
