@@ -225,7 +225,7 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
 
 
 # create inlet video
-inletVideo = Video('Moving Pebbles with Carving Surface - With light adjuster')
+inletVideo = Video('Outlet - Slow discharge rate - Trim')
 
 # set frames count and fps
 num_frames = inletVideo.frame_count
