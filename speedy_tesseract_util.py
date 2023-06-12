@@ -59,7 +59,7 @@ def tesseract_prediction(img):
     if not had_pred:
         cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
                     4, (0, 0, 255), thickness=10)
-
+        print('NONE with:', pred, score)
         return img, pred, score
 
     return img, pred, score
