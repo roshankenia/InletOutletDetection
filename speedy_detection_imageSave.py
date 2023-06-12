@@ -128,9 +128,9 @@ class Video():
                     # make detection image in original frame
                     digitAreaDetFrame = og_frame.copy()
                     cv2.rectangle(digitAreaDetFrame, (pebbleDigitBoxes[i][0], pebbleDigitBoxes[i][1]), (pebbleDigitBoxes[i][2], pebbleDigitBoxes[i][3]),
-                                  color=(0, 255, 0), thickness=10)
-                    cv2.putText(digitAreaDetFrame, "digit area: "+str(round(pebbleDigitScores[i],2)), (
-                        pebbleDigitBoxes[i][0]-20, pebbleDigitBoxes[i][1]-10), cv2.FONT_HERSHEY_SIMPLEX, 3, (0, 255, 0), thickness=3)
+                                  color=(0, 255, 0), thickness=20)
+                    cv2.putText(digitAreaDetFrame, "digit area: "+str(round(pebbleDigitScores[i],4)), (
+                        pebbleDigitBoxes[i][0]-30, pebbleDigitBoxes[i][1]-20), cv2.FONT_HERSHEY_SIMPLEX, 3, (0, 255, 0), thickness=3)
                     cv2.imwrite(os.path.join(self.imgFolder, "frameDet_" +
                                 str(frameNumber) + "_num_"+str(i)+".jpg"), digitAreaDetFrame)
                     cv2.imwrite(os.path.join(self.imgFolder, "pebDigCrop_" +
