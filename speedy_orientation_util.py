@@ -293,7 +293,7 @@ def segment_and_fix_image_range(img, og_img, confidence=0.9, rect_th=2, text_siz
                     fixedImages.append(
                         rotate_im(og_img.copy(), -1*(angle + errorVal)))
                 cv2.putText(annImg, 'Angle:' + str(round(angle, 2)), (50, 50), cv2.FONT_HERSHEY_SIMPLEX,
-                            2, (255, 255, 0), thickness=text_th)
+                            3, (255, 255, 0), thickness=3)
                 # print('Horizontal not found')
                 cv2.line(annImg, tuple(map(round, barCenter)), tuple(
                     map(round, picCenter)), (255, 255, 255), 10)
