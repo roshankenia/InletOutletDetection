@@ -47,6 +47,7 @@ def tesseract_prediction(img):
     for i in range(n_boxes):
         text = "".join(d["text"][i]).strip()
         conf = int(d["conf"][i])
+        print('DIG with:', text, conf)
         if conf > score:
             pred = text
             had_pred = True
@@ -61,6 +62,7 @@ def tesseract_prediction(img):
                     4, (0, 0, 255), thickness=10)
         print('NONE with:', pred, score)
         return img, pred, score
+    print("XXX")
 
     return img, pred, score
 
