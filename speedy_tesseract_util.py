@@ -48,6 +48,7 @@ def tesseract_prediction(img):
         text = "".join(d["text"][i]).strip()
         conf = int(d["conf"][i])
         if conf > 0.95:
+            print(pred, score)
             if not had_pred:
                 pred = text
                 had_pred = True
