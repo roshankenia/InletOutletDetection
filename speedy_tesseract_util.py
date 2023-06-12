@@ -49,7 +49,6 @@ def tesseract_prediction(img):
         text = "".join(d["text"][i]).strip()
         conf = int(d["conf"][i])
         if conf > score:
-            print('DIG with:', text, conf)
             pred = text
             had_pred = True
             score = conf
@@ -58,14 +57,12 @@ def tesseract_prediction(img):
     if not had_pred:
         cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
                     4, (0, 0, 255), thickness=10)
-        print('NONE with:', pred, score)
     else:
         (x, y, w, h) = (d['left'][ind], d['top']
                         [ind], d['width'][ind], d['height'][ind])
         cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 1)
         cv2.putText(img, str(text), (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
                     4, (0, 255, 0), thickness=10)
-    print("XXX")
 
     return img, pred, score
 
