@@ -42,26 +42,29 @@ def tesseract_prediction(img):
     had_pred = False
     pred = None
     score = 0
-    # convert back to RGB
+    ind = -1
+    # convert back to RGB and find best prediction
     img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
     for i in range(n_boxes):
         text = "".join(d["text"][i]).strip()
         conf = int(d["conf"][i])
-        print('DIG with:', text, conf)
         if conf > score:
+            print('DIG with:', text, conf)
             pred = text
             had_pred = True
             score = conf
-        (x, y, w, h) = (d['left'][i], d['top']
-                        [i], d['width'][i], d['height'][i])
-        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 1)
-        cv2.putText(img, str(text), (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
-                    4, (0, 255, 0), thickness=10)
+            ind = i
+
     if not had_pred:
         cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
                     4, (0, 0, 255), thickness=10)
         print('NONE with:', pred, score)
-        return img, pred, score
+    else:
+        (x, y, w, h) = (d['left'][ind], d['top']
+                        [ind], d['width'][ind], d['height'][ind])
+        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 1)
+        cv2.putText(img, str(text), (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
+                    4, (0, 255, 0), thickness=10)
     print("XXX")
 
     return img, pred, score
