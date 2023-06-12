@@ -48,7 +48,7 @@ class Pebble():
         print(labels, tessScore)
         if len(labels) == 3:
             for l in range(len(labels)):
-                if label.isdigit():
+                if labels[l].isdigit():
                     # convert label to int
                     label = int(labels[l])
                     # only add if score is greater than 0.8
