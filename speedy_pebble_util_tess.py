@@ -44,7 +44,7 @@ class Pebble():
 
     def addDigits(self, tessPred, tessScore):
         # split into individual digits
-        labels = tessPred.split()
+        labels = [ch for ch in tessPred]
         print(labels, tessScore)
         if len(labels) == 3:
             for l in range(len(labels)):
@@ -52,9 +52,9 @@ class Pebble():
                     # convert label to int
                     label = int(labels[l])
                     # only add if score is greater than 0.8
-                    if tessScore >= 0.8:
+                    if tessScore >= 40:
                         self.digits[l][label] += 1
-                    if tessScore >= 0.98:
+                    if tessScore >= 80:
                         self.digits[l][label] += 1
                     # self.digits[l][labels[l]] += scores[l]
             print('Pebble #'+str(self.number) +
