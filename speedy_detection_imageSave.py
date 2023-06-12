@@ -129,8 +129,10 @@ class Video():
                     digitAreaDetFrame = og_frame.copy()
                     cv2.rectangle(digitAreaDetFrame, (pebbleDigitBoxes[i][0], pebbleDigitBoxes[i][1]), (pebbleDigitBoxes[i][2], pebbleDigitBoxes[i][3]),
                                   color=(0, 255, 0), thickness=4)
-                    cv2.putText(annImg, "digit area: "+str(pebbleDigitScores[i]), (
+                    cv2.putText(digitAreaDetFrame, "digit area: "+str(pebbleDigitScores[i]), (
                         pebbleDigitBoxes[i][0], pebbleDigitBoxes[i][1]-10), cv2.FONT_HERSHEY_SIMPLEX, 3, (0, 255, 0), thickness=3)
+                    cv2.imwrite(os.path.join(self.imgFolder, "frameDet_" +
+                                str(frameNumber) + "_num_"+str(i)+".jpg"), digitAreaDetFrame)
                     cv2.imwrite(os.path.join(self.imgFolder, "pebDigCrop_" +
                                 str(frameNumber) + "_num_"+str(i)+".jpg"), pebbleDigitsCrops[i])
                     cv2.imwrite(os.path.join(self.imgFolder, "orgDigCrop_" +
