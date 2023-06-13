@@ -134,9 +134,10 @@ def normalize(arr):
 
 
 def fig_num(img, number):
-    # put number in top left corner of image
-    cv2.putText(img, number, (0, 100), cv2.FONT_HERSHEY_SIMPLEX,
-                4, (255, 255, 255), thickness=5)
+    # put number in bottom left corner of image
+    h, w = img.shape[:2]
+    cv2.putText(img, number, (5, h-150), cv2.FONT_HERSHEY_SIMPLEX,
+                6, (255, 255, 255), thickness=5)
 
 
 def fig_draw(img, box, label, score):
