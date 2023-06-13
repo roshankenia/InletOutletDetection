@@ -147,7 +147,7 @@ def fig_draw(img, box, label, score):
     xmax = round(box[2])
     ymax = round(box[3])
 
-    predText = '' + str(label) + ':' + str('%.2f' % (score))
+    predText = '' + str(label) + ':' + str(int(score*10)/10).lstrip('0')
 
     if label == 0:  # start with background as 0
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
