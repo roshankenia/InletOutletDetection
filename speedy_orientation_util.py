@@ -303,9 +303,19 @@ def segment_and_fix_image_range(img, og_img, confidence=0.9, rect_th=2, text_siz
                 annImg = cv2.addWeighted(annImg, 1, rgb_mask, 0.5, 0)
                 cv2.rectangle(annImg, box[0], box[1],
                               color=(0, 255, 0), thickness=3)
-                cv2.putText(annImg, pred+": "+str(round(pred_score[i],4)), (box[0][0], box[0][1]-10), cv2.FONT_HERSHEY_SIMPLEX,
+                cv2.putText(annImg, pred+": "+str(round(pred_score[i], 4)), (box[0][0], box[0][1]-10), cv2.FONT_HERSHEY_SIMPLEX,
                             text_size, (0, 255, 0), thickness=text_th)
 
                 break
 
     return annImg, fixedImages
+
+
+def rotateWithSlightError(img):
+    errorRange = [-5, 0, 5]
+    fixedImages = []
+    # get the fixed image
+    for errorVal in errorRange:
+        fixedImages.append(rotate_im(img.copy(), errorVal))
+
+    return fixedImages
