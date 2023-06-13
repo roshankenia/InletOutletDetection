@@ -141,10 +141,9 @@ def fig_num(img, number):
     textsize = cv2.getTextSize(number, font, 7, 7)[0]
 
     # get coords based on boundary
-    textX = (img.shape[1] - textsize[0]) / 2
-    textY = (img.shape[0] + textsize[1]) / 2
-    h, w = img.shape[:2]
-    cv2.putText(img, number, (textX, h-25), cv2.FONT_HERSHEY_SIMPLEX,
+    textX = int((img.shape[1] - textsize[0]) / 2)
+    textY = int((img.shape[0] + textsize[1]) / 2)
+    cv2.putText(img, number, (textX, img.shape[0]-25), cv2.FONT_HERSHEY_SIMPLEX,
                 7, (255, 255, 255), thickness=7)
 
 
