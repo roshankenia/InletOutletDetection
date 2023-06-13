@@ -141,8 +141,8 @@ class Video():
                         predImg, predlabels, predScores = showbox_no_bottomY(
                             downsizedImage)
                         if predImg is not None:
-                            cv2.imwrite(os.path.join(self.imgFolder, "img_" +
-                                        str(frameNumber) + +"digit_crop_"+str(i)+"_pred_"+str(f)+".jpg"), predImg)
+                            cv2.imwrite(os.path.join(self.imgFolder, "img_" + str(
+                                frameNumber) + "digit_crop_"+str(i)+"_pred_"+str(f)+".jpg"), predImg)
                             # update digits
                             currentPebble.addDigits(
                                 predlabels, predScores)
