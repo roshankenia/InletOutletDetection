@@ -135,9 +135,17 @@ def normalize(arr):
 
 def fig_num(img, number):
     # put number in bottom left corner of image
+    # setup text
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    # get boundary of this text
+    textsize = cv2.getTextSize(number, font, 7, 7)[0]
+
+    # get coords based on boundary
+    textX = (img.shape[1] - textsize[0]) / 2
+    textY = (img.shape[0] + textsize[1]) / 2
     h, w = img.shape[:2]
-    cv2.putText(img, number, (5, h-25), cv2.FONT_HERSHEY_SIMPLEX,
-                8, (255, 255, 255), thickness=7)
+    cv2.putText(img, number, (textX, h-25), cv2.FONT_HERSHEY_SIMPLEX,
+                7, (255, 255, 255), thickness=7)
 
 
 def fig_draw(img, box, label, score):
