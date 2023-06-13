@@ -147,13 +147,13 @@ def fig_draw(img, box, label, score):
     xmax = round(box[2])
     ymax = round(box[3])
 
-    predText = '' + str(label) + ':' + str(round(score, 4))
+    predText = '' + str(label) + ':' + str('%.2f' % (score))
 
     if label == 0:  # start with background as 0
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (255, 0, 0), thickness=3)
+                      (181, 252, 131), thickness=3)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (255, 0, 0),thickness=3)
+                    2, (181, 252, 131),thickness=3)
     elif label == 1:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
                       (0, 255, 0), thickness=3)
@@ -171,9 +171,9 @@ def fig_draw(img, box, label, score):
                     2, (0, 100, 255),thickness=3)
     elif label == 4:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (255, 100, 100), thickness=3)
+                      (255, 142, 142), thickness=3)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (255, 100, 100),thickness=3)
+                    2, (255, 142, 142),thickness=3)
     elif label == 5:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
                       (255, 0, 255), thickness=3)
@@ -191,14 +191,14 @@ def fig_draw(img, box, label, score):
                     2, (255, 255, 0),thickness=3)
     elif label == 8:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (100, 0, 0), thickness=3)
+                      (121, 252, 206), thickness=3)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (100, 0, 0),thickness=3)
+                    2, (121, 252, 206),thickness=3)
     elif label == 9:
         cv2.rectangle(img, (xmin, ymin), (xmax, ymax),
-                      (0, 0, 100), thickness=3)
+                      (119, 118, 193), thickness=3)
         cv2.putText(img, predText, (xmin, ymin), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (0, 0, 100),thickness=3)
+                    2, (119, 118, 193),thickness=3)
 
 
 def get_number_prediction(model, img, bottomY):
