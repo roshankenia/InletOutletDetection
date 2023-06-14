@@ -252,6 +252,65 @@ def segment_and_fix_image(img, confidence=0.9, rect_th=2, text_size=2, text_th=2
     return annImg, fixedImage
 
 
+def segment_and_fix_frame_range(frame, confidence=0.9, rect_th=2, text_size=2, text_th=2):
+    """
+    segment_bar_instance
+      parameters:
+        - img_path - path to input image
+        - confidence- confidence to keep the prediction or not
+        - rect_th - rect thickness
+        - text_size
+        - text_th - text thickness
+      method:
+        - prediction is obtained by get_prediction
+        - each mask is given random color
+        - each mask is added to the image in the ration 1:0.8 with opencv
+        - final output is displayed
+    """
+    annImg = frame.copy()
+    masks, boxes, pred_cls, pred_score = get_prediction(frame, confidence)
+    fixedImages = []
+    errorRange = [-5, 0, 5]
+    if masks is None:
+        cv2.putText(annImg, 'no detection', (50, 50), cv2.FONT_HERSHEY_SIMPLEX,
+                    text_size, (0, 0, 255), thickness=text_th)
+    else:
+        for i in range(len(pred_cls)):
+            pred = pred_cls[i]
+            if pred == 'bar':
+                mask = masks[i]
+                box = boxes[i]
+
+                # get center of bar and image
+                barCenter, picCenter, basePoint = getCenters(
+                    box[0], box[1], frame)
+
+                # get angle between points
+                angle = getAngle(picCenter, barCenter, basePoint)
+
+                # get the fixed image
+                for errorVal in errorRange:
+                    fixedImages.append(
+                        rotate_im(frame.copy(), -1*(angle + errorVal)))
+                cv2.putText(annImg, 'Angle:' + str(round(angle, 2)), (50, 75), cv2.FONT_HERSHEY_SIMPLEX,
+                            3, (255, 255, 0), thickness=3)
+                # print('Horizontal not found')
+                cv2.line(annImg, tuple(map(round, barCenter)), tuple(
+                    map(round, picCenter)), (255, 255, 255), 10)
+                cv2.line(annImg, tuple(map(round, picCenter)), tuple(
+                    map(round, basePoint)), (255, 255, 255), 10)
+                rgb_mask = get_coloured_mask(mask, pred)
+                annImg = cv2.addWeighted(annImg, 1, rgb_mask, 0.5, 0)
+                cv2.rectangle(annImg, box[0], box[1],
+                              color=(0, 255, 0), thickness=3)
+                cv2.putText(annImg, pred+": "+str(round(pred_score[i], 4)), (box[0][0], box[0][1]-10), cv2.FONT_HERSHEY_SIMPLEX,
+                            text_size, (0, 255, 0), thickness=text_th)
+
+                break
+
+    return annImg, fixedImages
+
+
 def segment_and_fix_image_range(img, og_img, confidence=0.9, rect_th=2, text_size=2, text_th=2):
     """
     segment_bar_instance
