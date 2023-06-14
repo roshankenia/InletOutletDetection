@@ -14,7 +14,7 @@ import math
 import time
 
 from speedy_orientation_util import segment_and_fix_frame_range
-from speedy_detection_util_SVHN import showbox_no_bottomY
+from speedy_detection_util import showbox_no_bottomY
 
 # ensure we are running on the correct gpu
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
@@ -109,20 +109,10 @@ class Video():
         cv2.imwrite(os.path.join(self.imgFolder, "ann_" +
                     str(frameNumber)+".jpg"), annImg)
         for f in range(len(fixedImages)):
-            # downsize image
-            downsizedImage = fixedImages[f]
-            scale_percent = 25  # percent of original size
-            width = int(
-                downsizedImage.shape[1] * scale_percent / 100)
-            height = int(
-                downsizedImage.shape[0] * scale_percent / 100)
-            dim = (width, height)
-
-            downsizedImage = cv2.resize(
-                downsizedImage, dim, interpolation=cv2.INTER_AREA)
             # prediciton
-            predImg, predlabels, predScores = showbox_no_bottomY(
-                downsizedImage)
+            cv2.imwrite(os.path.join(self.imgFolder, "fixed_" + str(
+                    frameNumber) + "_pred_"+str(f)+".jpg"), fixedImages[f])
+            predImg, predlabels, predScores = showbox_no_bottomY(fixedImages[f])
             if predImg is not None:
                 cv2.imwrite(os.path.join(self.imgFolder, "img_" + str(
                     frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
