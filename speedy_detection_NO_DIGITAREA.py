@@ -110,9 +110,20 @@ class Video():
                     str(frameNumber)+".jpg"), annImg)
         for f in range(len(fixedImages)):
             # prediciton
+            # downsize image
+            downsizedImage = fixedImages[f]
+            scale_percent = 50  # percent of original size
+            width = int(
+                downsizedImage.shape[1] * scale_percent / 100)
+            height = int(
+                downsizedImage.shape[0] * scale_percent / 100)
+            dim = (width, height)
+
+            downsizedImage = cv2.resize(
+                downsizedImage, dim, interpolation=cv2.INTER_AREA)
             cv2.imwrite(os.path.join(self.imgFolder, "fixed_" + str(
-                    frameNumber) + "_pred_"+str(f)+".jpg"), fixedImages[f])
-            predImg, predlabels, predScores = showbox_no_bottomY(fixedImages[f])
+                    frameNumber) + "_pred_"+str(f)+".jpg"), downsizedImage)
+            predImg, predlabels, predScores = showbox_no_bottomY(downsizedImage)
             if predImg is not None:
                 cv2.imwrite(os.path.join(self.imgFolder, "img_" + str(
                     frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
