@@ -14,7 +14,7 @@ import math
 import time
 
 from speedy_orientation_util import segment_and_fix_image_range
-from speedy_detection_util import showbox_no_bottomY
+from speedy_detection_util import showbox_with_accuracy
 from speedy_crop_util import digit_segmentation
 from speedy_pebble_util import updatePebbleLocation
 # ensure we are running on the correct gpu
@@ -59,7 +59,8 @@ class Video():
         self.savedPebbles = []
         self.transform = T.Compose([T.PILToTensor()])
 
-        self.vidcap = cv2.VideoCapture(f'./videos/{filename}.MP4')
+        self.vidcap = cv2.VideoCapture(
+            f'./videos/Outlet Individual Pebble Videos/{filename}.MP4')
         self.frame_count = int(self.vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
         self.fps = self.vidcap.get(cv2.CAP_PROP_FPS)
         print(f'video {filename} has', str(
@@ -102,7 +103,7 @@ class Video():
         # set active pebbles
         self.activePebbles = pebblesToKeep
 
-    def processNextFrame(self, frame, frameNumber, videoTime, inletSavedPebbles=None):
+    def processNextFrame(self, frame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy, inletSavedPebbles=None):
         og_frame = frame.copy()
         # check if image has digits with confidence
         pebbleDigitsCrops, pebbleDigitBoxes, pebbleDigitScores, goodPredictions, goodMasks, originalDigitCrops = digit_segmentation(
@@ -127,8 +128,8 @@ class Video():
                         pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
                     for f in range(len(fixedImages)):
                         # prediciton
-                        predImg, predlabels, predScores = showbox_no_bottomY(
-                            fixedImages[f])
+                        predImg, predlabels, predScores, digitAccuracy = showbox_with_accuracy(
+                            fixedImages[f], pebbleActualNumber, digitAccuracy)
                         if predImg is not None:
                             cv2.imwrite(os.path.join(self.imgFolder, "img_" +
                                         str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
@@ -217,8 +218,9 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
 
 
 # create inlet video
-inletVideo = Video('Outlet - Slow discharge rate - Trim')
-
+inletVideo = Video('215')
+pebbleActualNumber = [2, 1, 5]
+digitAccuracy = np.zeros(8)
 # set frames count and fps
 num_frames = inletVideo.frame_count
 FPS = inletVideo.fps
@@ -231,7 +233,8 @@ while inletHasFrames:
     print('Processing frame #', frameNumber)
     videoTime = frameNumber/FPS
     # process inlet frame
-    inletVideo.processNextFrame(inletFrame, frameNumber, videoTime)
+    inletVideo.processNextFrame(
+        inletFrame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy)
     inletVideo.removeInactive(frameNumber)
     # check if we are currently processing
     # if none in frame can skip
@@ -256,6 +259,7 @@ while inletHasFrames:
 
 end = time.time()
 print('Total time elapsed:', (end-start))
+print('Digit Accuracy:', digitAccuracy)
 
 # When everything done, release the capture
 inletVideo.vidcap.release()
