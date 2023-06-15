@@ -85,28 +85,12 @@ class Video():
         self.distThreshold = int(0.5*max(self.width, self.height))
         print('distThresh is:', self.distThreshold)
 
-    def removeInactive(self, frameNumber):
-        # remove all inactive pebbles
-        pebblesToKeep = []
-        for pebble in self.activePebbles:
-            if frameNumber - pebble.lastSeen <= 60:
-                pebblesToKeep.append(pebble)
-            else:
-                # save pebble to match between inlet and outlet
-                finalClassification = pebble.obtainFinalClassification()
-                # save if only strong final classification
-                if finalClassification != '???':
-                    print('Pebble classification:', finalClassification)
-                    savePebble = (finalClassification, str(
-                        round(pebble.lastSeenTime, 3)))
-                    self.savedPebbles.append(savePebble)
-
-        # set active pebbles
-        self.activePebbles = pebblesToKeep
-
     def print_final_classification(self):
+        finClass = ''
         for pebble in self.activePebbles:
             print('Pebble classification:', pebble.obtainFinalClassification())
+            finClass += pebble.obtainFinalClassification()
+        return finClass
 
     def processNextFrame(self, frame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy, inletSavedPebbles=None):
         og_frame = frame.copy()
@@ -225,6 +209,8 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
 # obtain filenames from directory
 videonames = list(
     sorted(os.listdir('./videos/Outlet Individual Pebble Videos/')))
+accuracies = []
+classifications = []
 for videoname in videonames:
     # create inlet video
     videoname = videoname[:videoname.index('.')]
@@ -247,7 +233,6 @@ for videoname in videonames:
         # process inlet frame
         inletVideo.processNextFrame(
             inletFrame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy)
-        inletVideo.removeInactive(frameNumber)
         # check if we are currently processing
         # if none in frame can skip
         if len(inletVideo.activePebbles) == 0:
@@ -272,9 +257,19 @@ for videoname in videonames:
     end = time.time()
     print('Total time elapsed:', (end-start))
     print('Digit Accuracy:', digitAccuracy)
-    inletVideo.print_final_classification()
+    print("Videoname: ", videoname)
+    finalClass = inletVideo.print_final_classification()
+    classifications.append((pebbleNum, finalClass))
+    accuracies.append(digitAccuracy)
 
     # When everything done, release the capture
     inletVideo.vidcap.release()
     inletVideo.processed_video.release()
     cv2.destroyAllWindows()
+
+    print()
+    print()
+
+print('Final Results:')
+print(classifications)
+print(accuracies)
