@@ -47,7 +47,7 @@ def tesseract_prediction(img):
     img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
     for i in range(n_boxes):
         text = "".join(d["text"][i]).strip()
-        conf = int(d["conf"][i])
+        conf = float(d["conf"][i])
         if conf > score:
             pred = text
             had_pred = True
@@ -61,8 +61,8 @@ def tesseract_prediction(img):
         (x, y, w, h) = (d['left'][ind], d['top']
                         [ind], d['width'][ind], d['height'][ind])
         cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 1)
-        cv2.putText(img, str(text), (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
-                    4, (0, 255, 0), thickness=10)
+        cv2.putText(img, str(text)+":"+str(score), (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
+                    3, (0, 255, 0), thickness=10)
 
     return img, pred, score
 
