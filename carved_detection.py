@@ -71,10 +71,9 @@ for filename in filenames:
                     cv2.imwrite(os.path.join(vis_tgt_path, str(
                         i)+str(f)+filename), fixedImages[f])
             if len(fixedImages) == 0:
-                cv2.putText(originalDigitCrops[i], 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
-                            2, (0, 0, 255), thickness=5)
-                cv2.imwrite(os.path.join(vis_tgt_path, str(
-                    i)+"_X_"+filename), originalDigitCrops[i])
+                cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
+                    2, (0, 0, 255), thickness=5)
+                cv2.imwrite(os.path.join(vis_tgt_path, filename), img)
     else:
         cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
                     2, (0, 0, 255), thickness=5)
