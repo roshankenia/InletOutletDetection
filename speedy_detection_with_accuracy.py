@@ -69,15 +69,15 @@ class Video():
         self.height = int(self.vidcap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         print('video dimensions width:', self.width, 'height:', self.height)
 
-        folder = f"./Individual Outlet/{filename}/"
+        folder = f"./Individual Outlet Results/{filename}/"
         if not os.path.isdir(folder):
             os.mkdir(folder)
 
         # create demo video
-        self.processed_video = cv2.VideoWriter(f'./Individual Outlet/{filename}/processed_video.avi',
+        self.processed_video = cv2.VideoWriter(f'./Individual Outlet Results/{filename}/processed_video.avi',
                                                cv2.VideoWriter_fourcc(*'mp4v'), self.vidcap.get(cv2.CAP_PROP_FPS), (self.width, self.height))
 
-        self.imgFolder = f"./Individual Outlet/{filename}/Images/"
+        self.imgFolder = f"./Individual Outlet Results/{filename}/Images/"
         if not os.path.isdir(self.imgFolder):
             os.mkdir(self.imgFolder)
 
@@ -205,6 +205,10 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                 2, (255, 255, 255), thickness=3)
     return frame
 
+
+save_folder = f"./Individual Outlet Results/"
+if not os.path.isdir(save_folder):
+    os.mkdir(save_folder)
 
 # obtain filenames from directory
 videonames = list(
