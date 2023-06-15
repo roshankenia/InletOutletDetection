@@ -96,12 +96,17 @@ class Video():
                 finalClassification = pebble.obtainFinalClassification()
                 # save if only strong final classification
                 if finalClassification != '???':
+                    print('Pebble classification:', finalClassification)
                     savePebble = (finalClassification, str(
                         round(pebble.lastSeenTime, 3)))
                     self.savedPebbles.append(savePebble)
 
         # set active pebbles
         self.activePebbles = pebblesToKeep
+
+    def print_final_classification(self):
+        for pebble in self.activePebbles:
+            print('Pebble classification:', pebble.obtainFinalClassification())
 
     def processNextFrame(self, frame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy, inletSavedPebbles=None):
         og_frame = frame.copy()
@@ -260,6 +265,7 @@ while inletHasFrames:
 end = time.time()
 print('Total time elapsed:', (end-start))
 print('Digit Accuracy:', digitAccuracy)
+inletVideo.print_final_classification()
 
 # When everything done, release the capture
 inletVideo.vidcap.release()
