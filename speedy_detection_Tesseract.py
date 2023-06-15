@@ -142,11 +142,12 @@ class Video():
                         predImg, tessPred, tessScore = tesseract_prediction(
                             downsizedImage)
                         if predImg is not None:
-                            cv2.imwrite(os.path.join(self.imgFolder, "img_" +
-                                        str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
                             if tessPred is not None:
                                 # update digits
                                 currentPebble.addDigits(tessPred, tessScore)
+                                cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                            str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
+                            
         # create frame based on current active pebbles
         if inletSavedPebbles is not None:
             frameWithData = addToFrame(

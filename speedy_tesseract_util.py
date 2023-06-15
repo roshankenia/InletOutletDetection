@@ -47,7 +47,7 @@ def tesseract_prediction(img):
     img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
     for i in range(n_boxes):
         text = "".join(d["text"][i]).strip()
-        conf = float(d["conf"][i])
+        conf = int(d["conf"][i])
         if conf > score:
             pred = text
             had_pred = True
