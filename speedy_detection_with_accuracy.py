@@ -226,9 +226,9 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
 videonames = list(
     sorted(os.listdir('./videos/Outlet Individual Pebble Videos/')))
 for videoname in videonames:
-    print("VIDEO: ", videoname)
     # create inlet video
     pebbleNum = ''.join(filter(lambda i: i.isdigit(), videoname))
+    print("VIDEO: ", pebbleNum)
     inletVideo = Video(pebbleNum)
     pebbleActualNumber = [int(dig) for dig in pebbleNum]
     digitAccuracy = np.zeros(8)
