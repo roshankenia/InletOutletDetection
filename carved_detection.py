@@ -41,7 +41,7 @@ for filename in filenames:
         './Carved Pebbles/', filename))
 
     # downsize image
-    scale_percent = 50  # percent of original size
+    scale_percent = 25  # percent of original size
     width = int(img.shape[1] * scale_percent / 100)
     height = int(img.shape[0] * scale_percent / 100)
     dim = (width, height)
@@ -63,4 +63,8 @@ for filename in filenames:
                 predImg, predlabels, predScores = showbox_no_bottomY(
                     fixedImages[f])
                 if predImg is not None:
-                    cv2.imwrite(os.path.join(vis_tgt_path, filename), predImg)
+                    cv2.imwrite(os.path.join(vis_tgt_path, str(i)+str(f)+filename), predImg)
+                else:
+                    cv2.putText(fixedImages[f], 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
+                                4, (0, 0, 255), thickness=10)
+                    cv2.imwrite(os.path.join(vis_tgt_path, str(i)+str(f)+filename), fixedImages[f])
