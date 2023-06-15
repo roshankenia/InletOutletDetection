@@ -74,7 +74,7 @@ class Video():
             os.mkdir(folder)
 
         # create demo video
-        self.processed_video = cv2.VideoWriter(f'./speedy_results/{filename}/processed_video.avi',
+        self.processed_video = cv2.VideoWriter(f'./Individual Outlet/{filename}/processed_video.avi',
                                                cv2.VideoWriter_fourcc(*'mp4v'), self.vidcap.get(cv2.CAP_PROP_FPS), (self.width, self.height))
 
         self.imgFolder = f"./Individual Outlet/{filename}/Images/"
