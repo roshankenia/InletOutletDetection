@@ -227,6 +227,7 @@ videonames = list(
     sorted(os.listdir('./videos/Outlet Individual Pebble Videos/')))
 for videoname in videonames:
     # create inlet video
+    videoname = videoname[:videoname.index('.')]
     pebbleNum = ''.join(filter(lambda i: i.isdigit(), videoname))
     print("VIDEO: ", pebbleNum)
     inletVideo = Video(pebbleNum)
