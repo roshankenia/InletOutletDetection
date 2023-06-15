@@ -138,13 +138,13 @@ def fig_num(img, number):
     # setup text
     font = cv2.FONT_HERSHEY_SIMPLEX
     # get boundary of this text
-    textsize = cv2.getTextSize(number, font, 2, 2)[0]
+    textsize = cv2.getTextSize(number, font, 1, 2)[0]
 
     # get coords based on boundary
     textX = int((img.shape[1] - textsize[0]) / 2)
     textY = int((img.shape[0] + textsize[1]) / 2)
     cv2.putText(img, number, (textX, img.shape[0]-25), cv2.FONT_HERSHEY_SIMPLEX,
-                2, (255, 255, 255), thickness=2)
+                1, (255, 255, 255), thickness=2)
 
 
 def fig_draw(img, box, label, score):
@@ -400,13 +400,13 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, predLabels, predScores, 
     # setup text
     font = cv2.FONT_HERSHEY_SIMPLEX
     # get boundary of this text
-    textsize = cv2.getTextSize(scoring, font, 2, 2)[0]
+    textsize = cv2.getTextSize(scoring, font, 1, 2)[0]
 
     # get coords based on boundary
     textX = int((img.shape[1] - textsize[0]) / 2)
     textY = int((img.shape[0] + textsize[1]) / 2)
     cv2.putText(img, scoring, (textX, img.shape[0]-75), cv2.FONT_HERSHEY_SIMPLEX,
-                2, (255, 255, 255), thickness=2)
+                1, (255, 255, 255), thickness=2)
 
     return digitAccuracy, img
 
