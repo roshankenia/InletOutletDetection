@@ -405,7 +405,7 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, predLabels, predScores, 
     # get coords based on boundary
     textX = int((img.shape[1] - textsize[0]) / 2)
     textY = int((img.shape[0] + textsize[1]) / 2)
-    cv2.putText(img, scoring, (textX, img.shape[0]-60), cv2.FONT_HERSHEY_SIMPLEX,
+    cv2.putText(img, scoring, (textX, img.shape[0]-75), cv2.FONT_HERSHEY_SIMPLEX,
                 2, (255, 255, 255), thickness=2)
 
     return digitAccuracy, img

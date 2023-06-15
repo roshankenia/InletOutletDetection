@@ -117,9 +117,20 @@ class Video():
                     annImg, fixedImages = segment_and_fix_image_range(
                         pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
                     for f in range(len(fixedImages)):
+                        # downsize image
+                        downsizedImage = fixedImages[f]
+                        scale_percent = 25  # percent of original size
+                        width = int(
+                            downsizedImage.shape[1] * scale_percent / 100)
+                        height = int(
+                            downsizedImage.shape[0] * scale_percent / 100)
+                        dim = (width, height)
+
+                        downsizedImage = cv2.resize(
+                            downsizedImage, dim, interpolation=cv2.INTER_AREA)
                         # prediciton
                         predImg, predlabels, predScores, digitAccuracy = showbox_with_accuracy(
-                            fixedImages[f], pebbleActualNumber, digitAccuracy)
+                            downsizedImage, pebbleActualNumber, digitAccuracy)
                         if predImg is not None:
                             cv2.imwrite(os.path.join(self.imgFolder, "img_" +
                                         str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
