@@ -345,6 +345,113 @@ def get_number_from_pred_no_bottomY(boxes, labels, scores, maxDim):
     return number, boxes, labels, scores
 
 
+def updateAccuracies(pebbleActualNumber, digitAccuracy, predLabels, predScores, img):
+    numberIsIncorrect = False
+    scoreCode = ''
+    for a in range(len(predLabels)):
+        actualDigit = pebbleActualNumber[a]
+        predDigit = predLabels[a]
+        predScore = predScores[a]
+        if predDigit == 10:
+            predDigit = 0
+
+        # check if digit is correct
+        if actualDigit == predDigit:
+            # now update accordingly
+            if predScore < 0.8:
+                digitAccuracy[1] += 1
+                scoreCode += '2'
+            elif predScore >= 0.8 and predScore < 0.98:
+                digitAccuracy[3] += 1
+                scoreCode += '4'
+            else:
+                digitAccuracy[5] += 1
+                scoreCode += '6'
+        else:
+            numberIsIncorrect = True
+            # now update accordingly
+            if predScore < 0.8:
+                digitAccuracy[0] += 1
+                scoreCode += '1'
+            elif predScore >= 0.8 and predScore < 0.98:
+                digitAccuracy[2] += 1
+                scoreCode += '3'
+            else:
+                digitAccuracy[4] += 1
+                scoreCode += '5'
+
+    if numberIsIncorrect:
+        digitAccuracy[6] += 1
+        scoreCode += '7'
+    else:
+        digitAccuracy[7] += 1
+        scoreCode += '8'
+
+    # put actual number in image
+    scoring = str(pebbleActualNumber[0]) + str(pebbleActualNumber[1]
+                                               ) + str(pebbleActualNumber[2]) + ":" + scoreCode
+    # setup text
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    # get boundary of this text
+    textsize = cv2.getTextSize(scoring, font, 3, 6)[0]
+
+    # get coords based on boundary
+    textX = int((img.shape[1] - textsize[0]) / 2)
+    textY = int((img.shape[0] + textsize[1]) / 2)
+    cv2.putText(img, scoring, (textX, img.shape[0]-125), cv2.FONT_HERSHEY_SIMPLEX,
+                3, (255, 255, 255), thickness=6)
+
+    return digitAccuracy, img
+
+
+def showbox_with_accuracy(img, pebbleActualNumber, digitAccuracy):
+    annImg = img.copy()
+    maxDim = max(annImg.shape[0], annImg.shape[1])
+    # the input images are tensors with values in [0, 1]
+    # print("input image shape...:", type(img))
+    transform = T.Compose([T.ToTensor()])
+
+    img = transform(img)
+
+    img = np.array(normalize(img.numpy()), dtype=np.float32)
+    img = torch.from_numpy(img)
+
+    with torch.no_grad():
+        '''
+        prediction is in the following format:
+        [{'boxes': tensor([[1492.6672,  238.4670, 1765.5385,  315.0320],
+        [ 887.1390,  256.8106, 1154.6687,  330.2953]], device='cuda:0'), 
+        'labels': tensor([1, 1], device='cuda:0'), 
+        'scores': tensor([1.0000, 1.0000], device='cuda:0')}]
+        '''
+
+        prediction = digit_detection_model([img.to(device)])
+
+    boxes = prediction[0]['boxes'].detach().cpu().numpy()
+    labels = prediction[0]['labels'].detach().cpu().numpy()
+    scores = prediction[0]['scores'].detach().cpu().numpy()
+    # print(prediction)
+    number, boxes, labels, scores = get_number_from_pred_no_bottomY(
+        boxes, labels, scores, maxDim)
+
+    if number is not None:
+        # img = img.permute(1, 2, 0)  # C,H,W -> H,W,C
+        # img = (img * 255).byte().data.cpu()  # [0, 1] -> [0, 255]
+        # img = np.array(img)  # tensor -> ndarray
+
+        # check if we have confusing digits
+        # crop_confusing_digits(img, boxes, labels, scores)
+
+        for i in range(len(boxes)):
+            fig_draw(annImg, boxes[i], labels[i], scores[i])
+
+        fig_num(annImg, number)
+
+        return annImg, labels, scores
+
+    return None, None, None
+
+
 def showbox_no_bottomY(img):
     annImg = img.copy()
     maxDim = max(annImg.shape[0], annImg.shape[1])
