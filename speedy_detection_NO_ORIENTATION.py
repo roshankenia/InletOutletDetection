@@ -13,7 +13,8 @@ import train_utils.transforms as T
 import math
 import time
 
-from speedy_detection_util_SVHN import showbox_no_bottomY
+# from speedy_detection_util_SVHN import showbox_no_bottomY
+from speedy_detection_util import showbox_no_bottomY
 from speedy_crop_util import digit_segmentation
 from speedy_pebble_util import updatePebbleLocation
 from speedy_orientation_util import rotateWithSlightError
@@ -126,20 +127,20 @@ class Video():
                 for i in range(len(pebbleDigitsCrops)):
                     fixedImages = rotateWithSlightError(originalDigitCrops[i])
                     for f in range(len(fixedImages)):
-                        # downsize image
-                        downsizedImage = fixedImages[f]
-                        scale_percent = 25  # percent of original size
-                        width = int(
-                            downsizedImage.shape[1] * scale_percent / 100)
-                        height = int(
-                            downsizedImage.shape[0] * scale_percent / 100)
-                        dim = (width, height)
+                        # # downsize image
+                        # downsizedImage = fixedImages[f]
+                        # scale_percent = 25  # percent of original size
+                        # width = int(
+                        #     downsizedImage.shape[1] * scale_percent / 100)
+                        # height = int(
+                        #     downsizedImage.shape[0] * scale_percent / 100)
+                        # dim = (width, height)
 
-                        downsizedImage = cv2.resize(
-                            downsizedImage, dim, interpolation=cv2.INTER_AREA)
+                        # downsizedImage = cv2.resize(
+                        #     downsizedImage, dim, interpolation=cv2.INTER_AREA)
                         # prediciton
                         predImg, predlabels, predScores = showbox_no_bottomY(
-                            downsizedImage)
+                            fixedImages[f])
                         if predImg is not None:
                             cv2.imwrite(os.path.join(self.imgFolder, "img_" + str(
                                 frameNumber) + "digit_crop_"+str(i)+"_pred_"+str(f)+".jpg"), predImg)
