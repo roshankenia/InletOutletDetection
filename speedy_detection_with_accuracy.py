@@ -69,7 +69,7 @@ class Video():
         self.height = int(self.vidcap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         print('video dimensions width:', self.width, 'height:', self.height)
 
-        folder = f"./speedy_results/{filename}/"
+        folder = f"./Individual Outlet/{filename}/"
         if not os.path.isdir(folder):
             os.mkdir(folder)
 
@@ -77,7 +77,7 @@ class Video():
         self.processed_video = cv2.VideoWriter(f'./speedy_results/{filename}/processed_video.avi',
                                                cv2.VideoWriter_fourcc(*'mp4v'), self.vidcap.get(cv2.CAP_PROP_FPS), (self.width, self.height))
 
-        self.imgFolder = f"./speedy_results/{filename}/Images/"
+        self.imgFolder = f"./Individual Outlet/{filename}/Images/"
         if not os.path.isdir(self.imgFolder):
             os.mkdir(self.imgFolder)
 
@@ -222,52 +222,58 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
     return frame
 
 
-# create inlet video
-inletVideo = Video('215')
-pebbleActualNumber = [2, 1, 5]
-digitAccuracy = np.zeros(8)
-# set frames count and fps
-num_frames = inletVideo.frame_count
-FPS = inletVideo.fps
+# obtain filenames from directory
+videonames = list(
+    sorted(os.listdir('./videos/Outlet Individual Pebble Videos/')))
+for videoname in videonames:
+    print("VIDEO: ", videoname)
+    # create inlet video
+    pebbleNum = ''.join(filter(lambda i: i.isdigit(), videoname))
+    inletVideo = Video(pebbleNum)
+    pebbleActualNumber = [int(dig) for dig in pebbleNum]
+    digitAccuracy = np.zeros(8)
+    # set frames count and fps
+    num_frames = inletVideo.frame_count
+    FPS = inletVideo.fps
 
-start = time.time()
+    start = time.time()
 
-frameNumber = 0
-inletHasFrames, inletFrame = inletVideo.vidcap.read()
-while inletHasFrames:
-    print('Processing frame #', frameNumber)
-    videoTime = frameNumber/FPS
-    # process inlet frame
-    inletVideo.processNextFrame(
-        inletFrame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy)
-    inletVideo.removeInactive(frameNumber)
-    # check if we are currently processing
-    # if none in frame can skip
-    if len(inletVideo.activePebbles) == 0:
-        # skip four frames
-        for i in range(4):
-            inletHasFrames, inletFrame = inletVideo.vidcap.read()
-            frameNumber += 1
-    else:
-        # if all converged can skip
-        convergedNum = 0
-        for actPebble in inletVideo.activePebbles:
-            if actPebble.isConverged:
-                convergedNum += 1
-        if convergedNum == len(inletVideo.activePebbles):
+    frameNumber = 0
+    inletHasFrames, inletFrame = inletVideo.vidcap.read()
+    while inletHasFrames:
+        print('Processing frame #', frameNumber)
+        videoTime = frameNumber/FPS
+        # process inlet frame
+        inletVideo.processNextFrame(
+            inletFrame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy)
+        inletVideo.removeInactive(frameNumber)
+        # check if we are currently processing
+        # if none in frame can skip
+        if len(inletVideo.activePebbles) == 0:
             # skip four frames
             for i in range(4):
                 inletHasFrames, inletFrame = inletVideo.vidcap.read()
                 frameNumber += 1
-    inletHasFrames, inletFrame = inletVideo.vidcap.read()
-    frameNumber += 1
+        else:
+            # if all converged can skip
+            convergedNum = 0
+            for actPebble in inletVideo.activePebbles:
+                if actPebble.isConverged:
+                    convergedNum += 1
+            if convergedNum == len(inletVideo.activePebbles):
+                # skip four frames
+                for i in range(4):
+                    inletHasFrames, inletFrame = inletVideo.vidcap.read()
+                    frameNumber += 1
+        inletHasFrames, inletFrame = inletVideo.vidcap.read()
+        frameNumber += 1
 
-end = time.time()
-print('Total time elapsed:', (end-start))
-print('Digit Accuracy:', digitAccuracy)
-inletVideo.print_final_classification()
+    end = time.time()
+    print('Total time elapsed:', (end-start))
+    print('Digit Accuracy:', digitAccuracy)
+    inletVideo.print_final_classification()
 
-# When everything done, release the capture
-inletVideo.vidcap.release()
-inletVideo.processed_video.release()
-cv2.destroyAllWindows()
+    # When everything done, release the capture
+    inletVideo.vidcap.release()
+    inletVideo.processed_video.release()
+    cv2.destroyAllWindows()
