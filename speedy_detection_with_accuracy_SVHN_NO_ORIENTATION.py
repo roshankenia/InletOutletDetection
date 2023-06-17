@@ -13,10 +13,10 @@ import train_utils.transforms as T
 import math
 import time
 
-from speedy_orientation_util import segment_and_fix_image_range
 from speedy_detection_util_SVHN import showbox_with_accuracy
 from speedy_crop_util import digit_segmentation
 from speedy_pebble_util import updatePebbleLocation
+from speedy_orientation_util import rotateWithSlightError
 # ensure we are running on the correct gpu
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "6"  # (xxxx is your specific GPU ID)
@@ -114,8 +114,7 @@ class Video():
             if not currentPebble.isConverged:
                 # save orientation bar prediction
                 for i in range(len(pebbleDigitsCrops)):
-                    annImg, fixedImages = segment_and_fix_image_range(
-                        pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
+                    fixedImages = rotateWithSlightError(originalDigitCrops[i])
                     for f in range(len(fixedImages)):
                         # downsize image
                         downsizedImage = fixedImages[f]
@@ -132,8 +131,8 @@ class Video():
                         predImg, predlabels, predScores, digitAccuracy = showbox_with_accuracy(
                             downsizedImage, pebbleActualNumber, digitAccuracy)
                         if predImg is not None:
-                            cv2.imwrite(os.path.join(self.imgFolder, "img_" +
-                                        str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
+                            cv2.imwrite(os.path.join(self.imgFolder, "img_" + str(
+                                frameNumber) + "digit_crop_"+str(i)+"_pred_"+str(f)+".jpg"), predImg)
                             # update digits
                             currentPebble.addDigits(
                                 predlabels, predScores)
