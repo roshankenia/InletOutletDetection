@@ -14,9 +14,9 @@ import math
 import time
 
 from speedy_orientation_util import segment_and_fix_image_range
-from speedy_detection_util import showbox_with_accuracy
 from speedy_crop_util import digit_segmentation
-from speedy_pebble_util import updatePebbleLocation
+from speedy_pebble_util_tess import updatePebbleLocation
+from speedy_tesseract_util import tesseract_prediction_with_accuracy
 # ensure we are running on the correct gpu
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "6"  # (xxxx is your specific GPU ID)
@@ -61,6 +61,7 @@ class Video():
 
         self.vidcap = cv2.VideoCapture(
             f'./videos/Inlet Individual Pebble Videos/{filename}.MP4')
+        filename = filename+'_Tess'
         self.frame_count = int(self.vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
         self.fps = self.vidcap.get(cv2.CAP_PROP_FPS)
         print(f'video {filename} has', str(
@@ -116,15 +117,26 @@ class Video():
                     annImg, fixedImages = segment_and_fix_image_range(
                         pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
                     for f in range(len(fixedImages)):
+                        # downsize image
+                        downsizedImage = fixedImages[f]
+                        scale_percent = 30  # percent of original size
+                        width = int(
+                            downsizedImage.shape[1] * scale_percent / 100)
+                        height = int(
+                            downsizedImage.shape[0] * scale_percent / 100)
+                        dim = (width, height)
+
+                        downsizedImage = cv2.resize(
+                            downsizedImage, dim, interpolation=cv2.INTER_AREA)
                         # prediciton
-                        predImg, predlabels, predScores, digitAccuracy = showbox_with_accuracy(
-                            fixedImages[f], pebbleActualNumber, digitAccuracy)
-                        if predImg is not None:
+                        predImg, tessPred, tessScore = tesseract_prediction_with_accuracy(
+                            downsizedImage, pebbleActualNumber, digitAccuracy)
+                        if tessPred is not None:
+                            # update digits
+                            currentPebble.addDigits(tessPred, tessScore)
                             cv2.imwrite(os.path.join(self.imgFolder, "img_" +
                                         str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
-                            # update digits
-                            currentPebble.addDigits(
-                                predlabels, predScores)
+
         # create frame based on current active pebbles
         if inletSavedPebbles is not None:
             frameWithData = addToFrame(
