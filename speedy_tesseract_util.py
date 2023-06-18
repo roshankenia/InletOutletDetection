@@ -31,6 +31,7 @@ def preprocess(img):
 
 
 def updateAccuracies(pebbleActualNumber, digitAccuracy, predLabels, predScores, img):
+    print('labels:', predLabels, 'scores:', predScores)
     numberIsIncorrect = False
     scoreCode = ''
     for a in range(len(predLabels)):
@@ -155,7 +156,6 @@ def tesseract_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy):
         # split into individual digits
         labels = [ch for ch in pred]
         scores = np.full(len(labels), score)
-        print('labels:', labels, 'scores:', scores)
         (x, y, w, h) = (d['left'][ind], d['top']
                         [ind], d['width'][ind], d['height'][ind])
         cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 1)
@@ -171,9 +171,10 @@ def tesseract_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy):
         cv2.putText(img, predText, (textX, img.shape[0]-25), cv2.FONT_HERSHEY_SIMPLEX,
                     1, (255, 255, 255), thickness=2)
 
-        #add in scoringe
-        updateAccuracies(pebbleActualNumber, digitAccuracy,
-                         labels, scores, img)
+        #add in scoring
+        if len(labels) == 3:
+            updateAccuracies(pebbleActualNumber, digitAccuracy,
+                             labels, scores, img)
 
     return img, pred, score, digitAccuracy
 

@@ -129,7 +129,7 @@ class Video():
                         downsizedImage = cv2.resize(
                             downsizedImage, dim, interpolation=cv2.INTER_AREA)
                         # prediciton
-                        predImg, tessPred, tessScore = tesseract_prediction_with_accuracy(
+                        predImg, tessPred, tessScore, digitAccuracy = tesseract_prediction_with_accuracy(
                             downsizedImage, pebbleActualNumber, digitAccuracy)
                         if tessPred is not None:
                             # update digits
