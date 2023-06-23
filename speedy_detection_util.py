@@ -354,7 +354,7 @@ def get_number_from_pred_no_bottomY(boxes, labels, scores, maxDim):
 # function to check if correct or not
 
 
-def updateAccuracies(pebbleActualNumber, digitAccuracy, predLabels, predScores, img):
+def updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix, predLabels, predScores, img):
     numberIsIncorrect = False
     scoreCode = ''
     for a in range(len(predLabels)):
@@ -376,6 +376,7 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, predLabels, predScores, 
             else:
                 digitAccuracy[5] += 1
                 scoreCode += '6'
+                confusionMatrix[actualDigit][predDigit] += 1
         else:
             numberIsIncorrect = True
             # now update accordingly
@@ -388,6 +389,7 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, predLabels, predScores, 
             else:
                 digitAccuracy[4] += 1
                 scoreCode += '5'
+                confusionMatrix[actualDigit][predDigit] += 1
 
     if numberIsIncorrect:
         digitAccuracy[6] += 1
@@ -410,10 +412,10 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, predLabels, predScores, 
     cv2.putText(img, scoring, (textX, img.shape[0]-125), cv2.FONT_HERSHEY_SIMPLEX,
                 3, (255, 255, 255), thickness=6)
 
-    return digitAccuracy, img
+    return digitAccuracy, confusionMatrix, img
 
 
-def showbox_with_accuracy(img, pebbleActualNumber, digitAccuracy):
+def showbox_with_accuracy(img, pebbleActualNumber, digitAccuracy, confusionMatrix):
     annImg = img.copy()
     maxDim = max(annImg.shape[0], annImg.shape[1])
     # the input images are tensors with values in [0, 1]
@@ -457,11 +459,12 @@ def showbox_with_accuracy(img, pebbleActualNumber, digitAccuracy):
         fig_num(annImg, number)
 
         #add in scoringe
-        updateAccuracies(pebbleActualNumber, digitAccuracy, labels, scores, annImg)
+        updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix,
+                         labels, scores, annImg)
 
-        return annImg, labels, scores, digitAccuracy
+        return annImg, labels, scores, digitAccuracy, confusionMatrix
 
-    return None, None, None, digitAccuracy
+    return None, None, None, digitAccuracy, confusionMatrix
 
 
 def showbox_no_bottomY(img):
