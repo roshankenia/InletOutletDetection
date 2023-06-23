@@ -30,7 +30,7 @@ def preprocess(img):
     return img
 
 
-def updateAccuracies(pebbleActualNumber, digitAccuracy, predLabels, predScores, img):
+def updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix, predLabels, predScores, img):
     print('labels:', predLabels, 'scores:', predScores)
     numberIsIncorrect = False
     scoreCode = ''
@@ -52,6 +52,7 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, predLabels, predScores, 
                 else:
                     digitAccuracy[5] += 1
                     scoreCode += '6'
+                    confusionMatrix[actualDigit][predDigit] += 1
             else:
                 numberIsIncorrect = True
                 # now update accordingly
@@ -64,6 +65,7 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, predLabels, predScores, 
                 else:
                     digitAccuracy[4] += 1
                     scoreCode += '5'
+                    confusionMatrix[actualDigit][predDigit] += 1
 
     if numberIsIncorrect:
         digitAccuracy[6] += 1
@@ -86,7 +88,7 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, predLabels, predScores, 
     cv2.putText(img, scoring, (textX, img.shape[0]-75), cv2.FONT_HERSHEY_SIMPLEX,
                 1, (255, 255, 255), thickness=2)
 
-    return digitAccuracy, img
+    return digitAccuracy, confusionMatrix, img
 # read through each image and predict
 
 
@@ -126,7 +128,7 @@ def tesseract_prediction(img):
     return img, pred, score
 
 
-def tesseract_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy):
+def tesseract_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confusionMatrix):
     config = r'--oem 3 --psm 11 digits'
     img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     # img = cv2.resize(cv2.bitwise_not(img), (100, 100))
@@ -173,10 +175,10 @@ def tesseract_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy):
 
         #add in scoring
         if len(labels) == 3:
-            updateAccuracies(pebbleActualNumber, digitAccuracy,
+            updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix,
                              labels, scores, img)
 
-    return img, pred, score, digitAccuracy
+    return img, pred, score, digitAccuracy, confusionMatrix
 
     # [1, 1, 0, 4, 1, 4, 1, 3, 1, 0, 2, 2, 3, 3, 1, 7, 5, 11, 5, 7, 6, 2, 5, 3, 10, 3, 1, 1, 1, 2, 3, 4, 7, 5, 4, 3, 7, 6, 6, 5, 4, 8, 6, 5]
 
