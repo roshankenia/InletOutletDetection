@@ -231,7 +231,7 @@ accuracies = []
 classifications = []
 confusionMatrix = np.zeros((10, 10))
 for videoname in videonames:
-    if videoname == '340.MP4':
+    if videoname == '211.MP4' or videoname == '213.MP4':
         # create inlet video
         videoname = videoname[:videoname.index('.')]
         pebbleNum = ''.join(filter(lambda i: i.isdigit(), videoname))
