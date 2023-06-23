@@ -116,6 +116,8 @@ class Video():
                 for i in range(len(pebbleDigitsCrops)):
                     annImg, fixedImages = segment_and_fix_image_range(
                         pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
+                    cv2.imwrite(os.path.join(self.imgFolder, "orgDigCrop_" +
+                                str(frameNumber) + "_num_"+str(i)+".jpg"), originalDigitCrops[i])
                     for f in range(len(fixedImages)):
                         # downsize image
                         downsizedImage = fixedImages[f]
