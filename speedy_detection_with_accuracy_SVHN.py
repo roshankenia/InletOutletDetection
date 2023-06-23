@@ -60,7 +60,7 @@ class Video():
         self.transform = T.Compose([T.PILToTensor()])
 
         self.vidcap = cv2.VideoCapture(
-            f'./videos/Inlet Individual Pebble Videos/{filename}.MP4')
+            f'./videos/Outlet Individual Pebble Videos/{filename}.MP4')
         filename = filename + '_SVHN'
         self.frame_count = int(self.vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
         self.fps = self.vidcap.get(cv2.CAP_PROP_FPS)
@@ -70,15 +70,15 @@ class Video():
         self.height = int(self.vidcap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         print('video dimensions width:', self.width, 'height:', self.height)
 
-        folder = f"./Individual Inlet Results/{filename}/"
+        folder = f"./Individual Outlet Results/{filename}/"
         if not os.path.isdir(folder):
             os.mkdir(folder)
 
         # create demo video
-        self.processed_video = cv2.VideoWriter(f'./Individual Inlet Results/{filename}/processed_video.avi',
+        self.processed_video = cv2.VideoWriter(f'./Individual Outlet Results/{filename}/processed_video.avi',
                                                cv2.VideoWriter_fourcc(*'mp4v'), self.vidcap.get(cv2.CAP_PROP_FPS), (self.width, self.height))
 
-        self.imgFolder = f"./Individual Inlet Results/{filename}/Images/"
+        self.imgFolder = f"./Individual Outlet Results/{filename}/Images/"
         if not os.path.isdir(self.imgFolder):
             os.mkdir(self.imgFolder)
 
@@ -218,13 +218,13 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
     return frame
 
 
-save_folder = f"./Individual Inlet Results/"
+save_folder = f"./Individual Outlet Results/"
 if not os.path.isdir(save_folder):
     os.mkdir(save_folder)
 
 # obtain filenames from directory
 videonames = list(
-    sorted(os.listdir('./videos/Inlet Individual Pebble Videos/')))
+    sorted(os.listdir('./videos/Outlet Individual Pebble Videos/')))
 accuracies = []
 classifications = []
 confusionMatrix = np.zeros((10, 10))
