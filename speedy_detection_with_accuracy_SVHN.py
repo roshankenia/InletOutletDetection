@@ -129,8 +129,7 @@ class Video():
                         downsizedImage = cv2.resize(
                             downsizedImage, dim, interpolation=cv2.INTER_AREA)
                         # prediciton
-                        predImg, predlabels, predScores, digitAccuracy, confusionMatrix = showbox_with_accuracy(
-                            fixedImages[f], pebbleActualNumber, digitAccuracy, confusionMatrix)
+                        predImg, predlabels, predScores, digitAccuracy, confusionMatrix = showbox_with_accuracy(downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
                         if predImg is not None:
                             cv2.imwrite(os.path.join(self.imgFolder, "img_" +
                                         str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
