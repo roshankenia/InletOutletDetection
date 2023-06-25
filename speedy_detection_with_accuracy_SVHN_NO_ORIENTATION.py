@@ -60,8 +60,8 @@ class Video():
         self.transform = T.Compose([T.PILToTensor()])
 
         self.vidcap = cv2.VideoCapture(
-            f'./videos/Outlet Individual Pebble Videos/{filename}.MP4')
-        filename = filename + '_SNO'
+            f'./videos/Inlet Individual Pebble Videos/{filename}.MP4')
+        filename = filename + '_SNO_NSC'
         self.frame_count = int(self.vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
         self.fps = self.vidcap.get(cv2.CAP_PROP_FPS)
         print(f'video {filename} has', str(
@@ -70,15 +70,15 @@ class Video():
         self.height = int(self.vidcap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         print('video dimensions width:', self.width, 'height:', self.height)
 
-        folder = f"./Individual Outlet Results/{filename}/"
+        folder = f"./Individual Inlet Results/{filename}/"
         if not os.path.isdir(folder):
             os.mkdir(folder)
 
         # create demo video
-        self.processed_video = cv2.VideoWriter(f'./Individual Outlet Results/{filename}/processed_video.avi',
+        self.processed_video = cv2.VideoWriter(f'./Individual Inlet Results/{filename}/processed_video.avi',
                                                cv2.VideoWriter_fourcc(*'mp4v'), self.vidcap.get(cv2.CAP_PROP_FPS), (self.width, self.height))
 
-        self.imgFolder = f"./Individual Outlet Results/{filename}/Images/"
+        self.imgFolder = f"./Individual Inlet Results/{filename}/Images/"
         if not os.path.isdir(self.imgFolder):
             os.mkdir(self.imgFolder)
 
@@ -93,7 +93,7 @@ class Video():
             finClass += pebble.obtainFinalClassification()
         return finClass
 
-    def processNextFrame(self, frame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy, inletSavedPebbles=None):
+    def processNextFrame(self, frame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy, confusionMatrix, inletSavedPebbles=None):
         og_frame = frame.copy()
         # check if image has digits with confidence
         pebbleDigitsCrops, pebbleDigitBoxes, pebbleDigitScores, goodPredictions, goodMasks, originalDigitCrops = digit_segmentation(
@@ -128,8 +128,8 @@ class Video():
                         downsizedImage = cv2.resize(
                             downsizedImage, dim, interpolation=cv2.INTER_AREA)
                         # prediciton
-                        predImg, predlabels, predScores, digitAccuracy = showbox_with_accuracy(
-                            downsizedImage, pebbleActualNumber, digitAccuracy)
+                        predImg, predlabels, predScores, digitAccuracy, confusionMatrix = showbox_with_accuracy(
+                            downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
                         if predImg is not None:
                             cv2.imwrite(os.path.join(self.imgFolder, "img_" + str(
                                 frameNumber) + "digit_crop_"+str(i)+"_pred_"+str(f)+".jpg"), predImg)
@@ -217,15 +217,16 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
     return frame
 
 
-save_folder = f"./Individual Outlet Results/"
+save_folder = f"./Individual Inlet Results/"
 if not os.path.isdir(save_folder):
     os.mkdir(save_folder)
 
 # obtain filenames from directory
 videonames = list(
-    sorted(os.listdir('./videos/Outlet Individual Pebble Videos/')))
+    sorted(os.listdir('./videos/Inlet Individual Pebble Videos/')))
 accuracies = []
 classifications = []
+confusionMatrix = np.zeros((10, 10))
 for videoname in videonames:
     # create inlet video
     videoname = videoname[:videoname.index('.')]
@@ -247,7 +248,7 @@ for videoname in videonames:
         videoTime = frameNumber/FPS
         # process inlet frame
         inletVideo.processNextFrame(
-            inletFrame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy)
+            inletFrame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy, confusionMatrix)
         # check if we are currently processing
         # if none in frame can skip
         if len(inletVideo.activePebbles) == 0:
@@ -273,6 +274,7 @@ for videoname in videonames:
     print('Total time elapsed:', (end-start))
     print('Digit Accuracy:', digitAccuracy)
     print("Videoname: ", videoname)
+    print("Current Confusion Matrix:", confusionMatrix)
     finalClass = inletVideo.print_final_classification()
     classifications.append((pebbleNum, finalClass))
     accuracies.append(digitAccuracy)
@@ -288,3 +290,4 @@ for videoname in videonames:
 print('Final Results:')
 print(classifications)
 print(accuracies)
+print(confusionMatrix)

@@ -14,9 +14,9 @@ import math
 import time
 
 from speedy_orientation_util import segment_and_fix_image_range
-from speedy_detection_util import showbox_with_accuracy
 from speedy_crop_util import digit_segmentation
-from speedy_pebble_util import updatePebbleLocation
+from speedy_pebble_util_tess import updatePebbleLocation
+from speedy_tesseract_util import tesseract_prediction_with_accuracy
 # ensure we are running on the correct gpu
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "6"  # (xxxx is your specific GPU ID)
@@ -60,7 +60,8 @@ class Video():
         self.transform = T.Compose([T.PILToTensor()])
 
         self.vidcap = cv2.VideoCapture(
-            f'./videos/Inlet Individual Pebble Videos/{filename}.MP4')
+            f'./videos/Outlet Individual Pebble Videos/{filename}.MP4')
+        filename = filename+'_Tess'
         self.frame_count = int(self.vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
         self.fps = self.vidcap.get(cv2.CAP_PROP_FPS)
         print(f'video {filename} has', str(
@@ -69,15 +70,15 @@ class Video():
         self.height = int(self.vidcap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         print('video dimensions width:', self.width, 'height:', self.height)
 
-        folder = f"./Individual Inlet Results/{filename}/"
+        folder = f"./Individual Outlet Results/{filename}/"
         if not os.path.isdir(folder):
             os.mkdir(folder)
 
         # create demo video
-        self.processed_video = cv2.VideoWriter(f'./Individual Inlet Results/{filename}/processed_video.avi',
+        self.processed_video = cv2.VideoWriter(f'./Individual Outlet Results/{filename}/processed_video.avi',
                                                cv2.VideoWriter_fourcc(*'mp4v'), self.vidcap.get(cv2.CAP_PROP_FPS), (self.width, self.height))
 
-        self.imgFolder = f"./Individual Inlet Results/{filename}/Images/"
+        self.imgFolder = f"./Individual Outlet Results/{filename}/Images/"
         if not os.path.isdir(self.imgFolder):
             os.mkdir(self.imgFolder)
 
@@ -116,15 +117,26 @@ class Video():
                     annImg, fixedImages = segment_and_fix_image_range(
                         pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
                     for f in range(len(fixedImages)):
+                        # downsize image
+                        downsizedImage = fixedImages[f]
+                        scale_percent = 30  # percent of original size
+                        width = int(
+                            downsizedImage.shape[1] * scale_percent / 100)
+                        height = int(
+                            downsizedImage.shape[0] * scale_percent / 100)
+                        dim = (width, height)
+
+                        downsizedImage = cv2.resize(
+                            downsizedImage, dim, interpolation=cv2.INTER_AREA)
                         # prediciton
-                        predImg, predlabels, predScores, digitAccuracy, confusionMatrix = showbox_with_accuracy(
-                            fixedImages[f], pebbleActualNumber, digitAccuracy, confusionMatrix)
-                        if predImg is not None:
+                        predImg, tessPred, tessScore, digitAccuracy, confusionMatrix = tesseract_prediction_with_accuracy(
+                            downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
+                        if tessPred is not None:
+                            # update digits
+                            currentPebble.addDigits(tessPred, tessScore)
                             cv2.imwrite(os.path.join(self.imgFolder, "img_" +
                                         str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
-                            # update digits
-                            currentPebble.addDigits(
-                                predlabels, predScores)
+
         # create frame based on current active pebbles
         if inletSavedPebbles is not None:
             frameWithData = addToFrame(
@@ -206,13 +218,13 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
     return frame
 
 
-save_folder = f"./Individual Inlet Results/"
+save_folder = f"./Individual Outlet Results/"
 if not os.path.isdir(save_folder):
     os.mkdir(save_folder)
 
 # obtain filenames from directory
 videonames = list(
-    sorted(os.listdir('./videos/Inlet Individual Pebble Videos/')))
+    sorted(os.listdir('./videos/Outlet Individual Pebble Videos/')))
 accuracies = []
 classifications = []
 confusionMatrix = np.zeros((10, 10))

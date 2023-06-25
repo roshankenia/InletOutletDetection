@@ -60,7 +60,7 @@ class Video():
         self.transform = T.Compose([T.PILToTensor()])
 
         self.vidcap = cv2.VideoCapture(
-            f'./videos/Inlet Individual Pebble Videos/{filename}.MP4')
+            f'./videos/Outlet Individual Pebble Videos/{filename}.MP4')
         self.frame_count = int(self.vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
         self.fps = self.vidcap.get(cv2.CAP_PROP_FPS)
         print(f'video {filename} has', str(
@@ -69,15 +69,15 @@ class Video():
         self.height = int(self.vidcap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         print('video dimensions width:', self.width, 'height:', self.height)
 
-        folder = f"./Individual Inlet Results/{filename}/"
+        folder = f"./Individual Outlet Results/{filename}/"
         if not os.path.isdir(folder):
             os.mkdir(folder)
 
         # create demo video
-        self.processed_video = cv2.VideoWriter(f'./Individual Inlet Results/{filename}/processed_video.avi',
+        self.processed_video = cv2.VideoWriter(f'./Individual Outlet Results/{filename}/processed_video.avi',
                                                cv2.VideoWriter_fourcc(*'mp4v'), self.vidcap.get(cv2.CAP_PROP_FPS), (self.width, self.height))
 
-        self.imgFolder = f"./Individual Inlet Results/{filename}/Images/"
+        self.imgFolder = f"./Individual Outlet Results/{filename}/Images/"
         if not os.path.isdir(self.imgFolder):
             os.mkdir(self.imgFolder)
 
@@ -113,12 +113,28 @@ class Video():
             if not currentPebble.isConverged:
                 # save orientation bar prediction
                 for i in range(len(pebbleDigitsCrops)):
+                    # make detection image in original frame
+                    digitAreaDetFrame = og_frame.copy()
+                    cv2.rectangle(digitAreaDetFrame, (pebbleDigitBoxes[i][0], pebbleDigitBoxes[i][1]), (pebbleDigitBoxes[i][2], pebbleDigitBoxes[i][3]),
+                                  color=(0, 255, 0), thickness=20)
+                    cv2.putText(digitAreaDetFrame, "digit area: "+str(round(pebbleDigitScores[i], 4)), (
+                        pebbleDigitBoxes[i][0]-30, pebbleDigitBoxes[i][1]-20), cv2.FONT_HERSHEY_SIMPLEX, 3, (0, 255, 0), thickness=3)
+                    cv2.imwrite(os.path.join(self.imgFolder, "frameDet_" +
+                                str(frameNumber) + "_num_"+str(i)+".jpg"), digitAreaDetFrame)
+                    cv2.imwrite(os.path.join(self.imgFolder, "pebDigCrop_" +
+                                str(frameNumber) + "_num_"+str(i)+".jpg"), pebbleDigitsCrops[i])
+                    cv2.imwrite(os.path.join(self.imgFolder, "orgDigCrop_" +
+                                str(frameNumber) + "_num_"+str(i)+".jpg"), originalDigitCrops[i])
                     annImg, fixedImages = segment_and_fix_image_range(
                         pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
+                    cv2.imwrite(os.path.join(
+                        self.imgFolder, "annImg_" + str(frameNumber) + "_num_"+str(i)+".jpg"), annImg)
                     for f in range(len(fixedImages)):
                         # prediciton
                         predImg, predlabels, predScores, digitAccuracy, confusionMatrix = showbox_with_accuracy(
                             fixedImages[f], pebbleActualNumber, digitAccuracy, confusionMatrix)
+                        cv2.imwrite(os.path.join(self.imgFolder, "fixed_" +
+                                                 str(frameNumber) + "_pred_"+str(f)+".jpg"), fixedImages[f])
                         if predImg is not None:
                             cv2.imwrite(os.path.join(self.imgFolder, "img_" +
                                         str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
@@ -206,13 +222,13 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
     return frame
 
 
-save_folder = f"./Individual Inlet Results/"
+save_folder = f"./Individual Outlet Results/"
 if not os.path.isdir(save_folder):
     os.mkdir(save_folder)
 
 # obtain filenames from directory
 videonames = list(
-    sorted(os.listdir('./videos/Inlet Individual Pebble Videos/')))
+    sorted(os.listdir('./videos/Outlet Individual Pebble Videos/')))
 accuracies = []
 classifications = []
 confusionMatrix = np.zeros((10, 10))
