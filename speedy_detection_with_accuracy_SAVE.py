@@ -277,22 +277,22 @@ for videoname in videonames:
             inletHasFrames, inletFrame = inletVideo.vidcap.read()
             frameNumber += 1
 
-    end = time.time()
-    print('Total time elapsed:', (end-start))
-    print('Digit Accuracy:', digitAccuracy)
-    print("Videoname: ", videoname)
-    print("Current Confusion Matrix:", confusionMatrix)
-    finalClass = inletVideo.print_final_classification()
-    classifications.append((pebbleNum, finalClass))
-    accuracies.append(digitAccuracy)
+        end = time.time()
+        print('Total time elapsed:', (end-start))
+        print('Digit Accuracy:', digitAccuracy)
+        print("Videoname: ", videoname)
+        print("Current Confusion Matrix:", confusionMatrix)
+        finalClass = inletVideo.print_final_classification()
+        classifications.append((pebbleNum, finalClass))
+        accuracies.append(digitAccuracy)
 
-    # When everything done, release the capture
-    inletVideo.vidcap.release()
-    inletVideo.processed_video.release()
-    cv2.destroyAllWindows()
+        # When everything done, release the capture
+        inletVideo.vidcap.release()
+        inletVideo.processed_video.release()
+        cv2.destroyAllWindows()
 
-    print()
-    print()
+        print()
+        print()
 
 print('Final Results:')
 print(classifications)
