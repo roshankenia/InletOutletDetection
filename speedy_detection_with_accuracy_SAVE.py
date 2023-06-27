@@ -117,7 +117,7 @@ class Video():
                     digitAreaDetFrame = og_frame.copy()
                     cv2.rectangle(digitAreaDetFrame, (pebbleDigitBoxes[i][0], pebbleDigitBoxes[i][1]), (pebbleDigitBoxes[i][2], pebbleDigitBoxes[i][3]),
                                   color=(0, 255, 0), thickness=20)
-                    cv2.putText(digitAreaDetFrame, "digit area: "+str(round(pebbleDigitScores[i], 4)), (
+                    cv2.putText(digitAreaDetFrame, "digit area: "+str(int(pebbleDigitScores[i]*100)/100).lstrip('0'), (
                         pebbleDigitBoxes[i][0]-30, pebbleDigitBoxes[i][1]-20), cv2.FONT_HERSHEY_SIMPLEX, 3, (0, 255, 0), thickness=3)
                     cv2.imwrite(os.path.join(self.imgFolder, "frameDet_" +
                                 str(frameNumber) + "_num_"+str(i)+".jpg"), digitAreaDetFrame)
@@ -233,47 +233,48 @@ accuracies = []
 classifications = []
 confusionMatrix = np.zeros((10, 10))
 for videoname in videonames:
-    # create inlet video
-    videoname = videoname[:videoname.index('.')]
-    pebbleNum = ''.join(filter(lambda i: i.isdigit(), videoname))
-    print("VIDEO: ", pebbleNum)
-    inletVideo = Video(pebbleNum)
-    pebbleActualNumber = [int(dig) for dig in pebbleNum]
-    digitAccuracy = np.zeros(8)
-    # set frames count and fps
-    num_frames = inletVideo.frame_count
-    FPS = inletVideo.fps
+    if videoname == "228.MP4" or videoname == "216.MP4" or videoname == "179.MP4" or videoname == "176.MP4":
+        # create inlet video
+        videoname = videoname[:videoname.index('.')]
+        pebbleNum = ''.join(filter(lambda i: i.isdigit(), videoname))
+        print("VIDEO: ", pebbleNum)
+        inletVideo = Video(pebbleNum)
+        pebbleActualNumber = [int(dig) for dig in pebbleNum]
+        digitAccuracy = np.zeros(8)
+        # set frames count and fps
+        num_frames = inletVideo.frame_count
+        FPS = inletVideo.fps
 
-    start = time.time()
+        start = time.time()
 
-    frameNumber = 0
-    inletHasFrames, inletFrame = inletVideo.vidcap.read()
-    while inletHasFrames:
-        print('Processing frame #', frameNumber)
-        videoTime = frameNumber/FPS
-        # process inlet frame
-        inletVideo.processNextFrame(
-            inletFrame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy, confusionMatrix)
-        # check if we are currently processing
-        # if none in frame can skip
-        if len(inletVideo.activePebbles) == 0:
-            # skip four frames
-            for i in range(4):
-                inletHasFrames, inletFrame = inletVideo.vidcap.read()
-                frameNumber += 1
-        else:
-            # if all converged can skip
-            convergedNum = 0
-            for actPebble in inletVideo.activePebbles:
-                if actPebble.isConverged:
-                    convergedNum += 1
-            if convergedNum == len(inletVideo.activePebbles):
+        frameNumber = 0
+        inletHasFrames, inletFrame = inletVideo.vidcap.read()
+        while inletHasFrames:
+            print('Processing frame #', frameNumber)
+            videoTime = frameNumber/FPS
+            # process inlet frame
+            inletVideo.processNextFrame(
+                inletFrame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy, confusionMatrix)
+            # check if we are currently processing
+            # if none in frame can skip
+            if len(inletVideo.activePebbles) == 0:
                 # skip four frames
                 for i in range(4):
                     inletHasFrames, inletFrame = inletVideo.vidcap.read()
                     frameNumber += 1
-        inletHasFrames, inletFrame = inletVideo.vidcap.read()
-        frameNumber += 1
+            else:
+                # if all converged can skip
+                convergedNum = 0
+                for actPebble in inletVideo.activePebbles:
+                    if actPebble.isConverged:
+                        convergedNum += 1
+                if convergedNum == len(inletVideo.activePebbles):
+                    # skip four frames
+                    for i in range(4):
+                        inletHasFrames, inletFrame = inletVideo.vidcap.read()
+                        frameNumber += 1
+            inletHasFrames, inletFrame = inletVideo.vidcap.read()
+            frameNumber += 1
 
     end = time.time()
     print('Total time elapsed:', (end-start))
