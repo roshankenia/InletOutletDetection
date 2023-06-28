@@ -168,24 +168,6 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                     # # put pebble number
                     # cv2.putText(frame, 'Pebble #'+str(pebble.number), minCord, cv2.FONT_HERSHEY_SIMPLEX,
                     #             2, (0, 255, 0), thickness=2)
-
-                    # setup text
-                    predText = None
-                    if pebble.isConverged:
-                        predText = 'Final Identification: ' + \
-                            str(currentClassification)
-                    else:
-                        predText = 'Highest Confidence: ' + \
-                            str(currentClassification)
-                    font = cv2.FONT_HERSHEY_SIMPLEX
-                    # get boundary of this text
-                    textsize = cv2.getTextSize(predText, font, 8, 15)[0]
-
-                    # get coords based on boundary
-                    textX = int(width - textsize[0]) / 2
-
-                    cv2.putText(frame, predText, (int(textX), 500),
-                                cv2.FONT_HERSHEY_SIMPLEX, 8, (255, 255, 255), thickness=15)
                 # add in digit detection area
                 if pebble.currentDigitBoxes is not None:
                     for digitBox in pebble.currentDigitBoxes:
@@ -195,6 +177,26 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                                       color=(0, 255, 255), thickness=3)
                 # reset current boxes
                 pebble.resetBoxes()
+            # setup text
+            predText = None
+            color = None
+            if pebble.isConverged:
+                predText = 'Final Identification: ' + \
+                    str(currentClassification)
+                color = (6, 219, 88)
+            else:
+                predText = 'Highest Confidence: ' + \
+                    str(currentClassification)
+                color = (238, 0, 242)
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            # get boundary of this text
+            textsize = cv2.getTextSize(predText, font, 8, 15)[0]
+
+            # get coords based on boundary
+            textX = int(width - textsize[0]) / 2
+
+            cv2.putText(frame, predText, (int(textX), 300),
+                        cv2.FONT_HERSHEY_SIMPLEX, 8, (255, 255, 255), thickness=15)
 
     # add in time
     cv2.putText(frame, str(round(videoTime, 2))+'s', (width-200, height-75), cv2.FONT_HERSHEY_SIMPLEX,
