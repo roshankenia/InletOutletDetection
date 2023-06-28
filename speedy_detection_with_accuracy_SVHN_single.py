@@ -165,9 +165,9 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                         pebble.currentPebbleBox[2], pebble.currentPebbleBox[3])
                     cv2.rectangle(frame, minCord, maxCord,
                                   color=(0, 255, 0), thickness=4)
-                    # put pebble number
-                    cv2.putText(frame, 'Pebble #'+str(pebble.number), minCord, cv2.FONT_HERSHEY_SIMPLEX,
-                                2, (0, 255, 0), thickness=2)
+                    # # put pebble number
+                    # cv2.putText(frame, 'Pebble #'+str(pebble.number), minCord, cv2.FONT_HERSHEY_SIMPLEX,
+                    #             2, (0, 255, 0), thickness=2)
 
                     # setup text
                     predText = None
@@ -179,13 +179,13 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                             str(currentClassification)
                     font = cv2.FONT_HERSHEY_SIMPLEX
                     # get boundary of this text
-                    textsize = cv2.getTextSize(predText, font, 3, 6)[0]
+                    textsize = cv2.getTextSize(predText, font, 10, 15)[0]
 
                     # get coords based on boundary
-                    textX = int((maxCord[0]-minCord[0]) - textsize[0]) / 2
+                    textX = int(width - textsize[0]) / 2
 
-                    cv2.putText(frame, predText, (int(maxCord[0]+textX), int(maxCord[1]+200)),
-                                cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 255, 255), thickness=8)
+                    cv2.putText(frame, predText, (int(textX), int(minCord[1]+500)),
+                                cv2.FONT_HERSHEY_SIMPLEX, 10, (255, 255, 255), thickness=15)
                 # add in digit detection area
                 if pebble.currentDigitBoxes is not None:
                     for digitBox in pebble.currentDigitBoxes:
