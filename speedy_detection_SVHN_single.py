@@ -176,13 +176,6 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                     # put pebble number
                     cv2.putText(frame, 'Pebble #'+str(pebble.number), minCord, cv2.FONT_HERSHEY_SIMPLEX,
                                 2, (0, 255, 0), thickness=2)
-
-                    # put highest predicted digits in center
-                    bottomCenterCord = (
-                        int(((minCord[0]+maxCord[0])/2)-200), int(maxCord[1]))
-
-                    cv2.putText(frame, 'Pred: '+str(currentClassification),
-                                bottomCenterCord, cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 255, 255), thickness=3)
                 # add in digit detection area
                 if pebble.currentDigitBoxes is not None:
                     for digitBox in pebble.currentDigitBoxes:
@@ -192,39 +185,30 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                                       color=(0, 255, 255), thickness=3)
                 # reset current boxes
                 pebble.resetBoxes()
-    if inletSavedPebbles is not None:
-        # add in info about inlet saved pebbles
-        cv2.putText(frame, 'Inlet Pebbles:', (750, 50),
-                    cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), thickness=4)
-        lineNum = 0
-        for i in range(len(inletSavedPebbles)):
-            text = ''+inletSavedPebbles[i][0]+': '+inletSavedPebbles[i][1]
-            place = None
-            if i % 2 == 0:
-                place = (750, 85+35*lineNum)
+            # setup text
+            predText = None
+            color = None
+            if pebble.isConverged:
+                predText = 'Final Identification: ' + \
+                    str(currentClassification)
+                color = (6, 219, 88)
             else:
-                place = (1050, 85+35*lineNum)
-                lineNum += 1
-            cv2.putText(frame, text, place,
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), thickness=4)
-    # add in info about saved pebbles
-    cv2.putText(frame, 'Pebble Last Seen:', (50, 50),
-                cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), thickness=4)
-    lineNum = 0
-    for i in range(len(video.savedPebbles)):
-        text = ''+video.savedPebbles[i][0]+': '+video.savedPebbles[i][1]
-        place = None
-        if i % 2 == 0:
-            place = (50, 85+35*lineNum)
-        else:
-            place = (350, 85+35*lineNum)
-            lineNum += 1
-        cv2.putText(frame, text, place,
-                    cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), thickness=4)
+                predText = 'Highest Confidence: ' + \
+                    str(currentClassification)
+                color = (238, 0, 242)
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            # get boundary of this text
+            textsize = cv2.getTextSize(predText, font, 8, 15)[0]
+
+            # get coords based on boundary
+            textX = int(width - textsize[0]) / 2
+
+            cv2.putText(frame, predText, (int(textX), 300),
+                        cv2.FONT_HERSHEY_SIMPLEX, 8, color, thickness=15)
 
     # add in time
-    cv2.putText(frame, str(round(videoTime, 2))+'s', (width-200, height-75), cv2.FONT_HERSHEY_SIMPLEX,
-                2, (255, 255, 255), thickness=3)
+    cv2.putText(frame, str(round(videoTime, 2))+'s', (width-400, 125), cv2.FONT_HERSHEY_SIMPLEX,
+                5, (255, 255, 255), thickness=10)
     return frame
 
 
