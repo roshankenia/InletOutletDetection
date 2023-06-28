@@ -179,13 +179,13 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                             str(currentClassification)
                     font = cv2.FONT_HERSHEY_SIMPLEX
                     # get boundary of this text
-                    textsize = cv2.getTextSize(predText, font, 10, 15)[0]
+                    textsize = cv2.getTextSize(predText, font, 8, 15)[0]
 
                     # get coords based on boundary
                     textX = int(width - textsize[0]) / 2
 
-                    cv2.putText(frame, predText, (int(textX), int(minCord[1]+500)),
-                                cv2.FONT_HERSHEY_SIMPLEX, 10, (255, 255, 255), thickness=15)
+                    cv2.putText(frame, predText, (int(textX), 500),
+                                cv2.FONT_HERSHEY_SIMPLEX, 8, (255, 255, 255), thickness=15)
                 # add in digit detection area
                 if pebble.currentDigitBoxes is not None:
                     for digitBox in pebble.currentDigitBoxes:
