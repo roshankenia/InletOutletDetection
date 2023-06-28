@@ -207,7 +207,7 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                         cv2.FONT_HERSHEY_SIMPLEX, 8, color, thickness=15)
 
     # add in time
-    cv2.putText(frame, str(round(videoTime, 2))+'s', (width-600, 125), cv2.FONT_HERSHEY_SIMPLEX,
+    cv2.putText(frame, str(round(videoTime, 2))+'s', (50, 125), cv2.FONT_HERSHEY_SIMPLEX,
                 5, (225, 255, 0), thickness=10)
     return frame
 
