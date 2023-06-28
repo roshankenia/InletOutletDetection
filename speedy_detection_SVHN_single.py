@@ -60,7 +60,7 @@ class Video():
         self.transform = T.Compose([T.PILToTensor()])
 
         self.vidcap = cv2.VideoCapture(f'./videos/{filename}.MP4')
-        filename = filename+'_SVHN'
+        filename = filename+'_SVHN_Tog'
         self.frame_count = int(self.vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
         self.fps = self.vidcap.get(cv2.CAP_PROP_FPS)
         print(f'video {filename} has', str(
@@ -207,8 +207,8 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
                         cv2.FONT_HERSHEY_SIMPLEX, 8, color, thickness=15)
 
     # add in time
-    cv2.putText(frame, str(round(videoTime, 2))+'s', (width-400, 125), cv2.FONT_HERSHEY_SIMPLEX,
-                5, (255, 255, 255), thickness=10)
+    cv2.putText(frame, str(round(videoTime, 2))+'s', (width-600, 125), cv2.FONT_HERSHEY_SIMPLEX,
+                5, (225, 255, 0), thickness=10)
     return frame
 
 
