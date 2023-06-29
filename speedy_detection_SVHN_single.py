@@ -203,7 +203,7 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
             # get coords based on boundary
             textX = int(width - textsize[0]) / 2
 
-            cv2.putText(frame, predText, (int(textX), 300),
+            cv2.putText(frame, predText, (int(textX), 325),
                         cv2.FONT_HERSHEY_SIMPLEX, 8, color, thickness=15)
 
     # add in time
