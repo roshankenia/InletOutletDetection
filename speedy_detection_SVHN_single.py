@@ -213,7 +213,7 @@ def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
 
 
 # create inlet video
-inletVideo = Video('Inlet - Slow discharge rate - TrimFirstHalf')
+inletVideo = Video('Outlet - Slow discharge rate - Trim')
 
 # set frames count and fps
 num_frames = inletVideo.frame_count
