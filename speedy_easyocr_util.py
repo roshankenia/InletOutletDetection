@@ -99,6 +99,8 @@ def easy_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confus
             score = conf
             ind = i
 
+    score = round(score, 4)
+
     if not had_pred:
         cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
                     4, (0, 0, 255), thickness=10)
