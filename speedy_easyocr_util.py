@@ -19,15 +19,12 @@ reader = easyocr.Reader(['en'])
 
 
 def preprocess(img):
-    img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-    # img = cv2.resize(img, (0, 0), fx=2.0, fy=2.0)
+    img = cv2.resize(img, (0, 0), fx=2.0, fy=2.0)
     clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
     img = clahe.apply(img)
     img = 255-img  # invert image. tesseract prefers black text on white background
 
     ret, img = cv2.threshold(img, 127, 255, cv2.THRESH_TOZERO)
-
-    # img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
 
     return img
 
@@ -96,6 +93,8 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix, predLab
 
 def easy_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confusionMatrix):
     # predict on image
+    img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+    img = preprocess(img)
     result = reader.readtext(img)
     print(result)
     # get best prediction
