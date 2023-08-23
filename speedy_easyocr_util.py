@@ -27,7 +27,7 @@ def preprocess(img):
 
     ret, img = cv2.threshold(img, 127, 255, cv2.THRESH_TOZERO)
 
-    img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
+    # img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
 
     return img
 
