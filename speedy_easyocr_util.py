@@ -106,8 +106,8 @@ def easy_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confus
         # split into individual digits
         labels = [ch for ch in pred]
         scores = np.full(len(labels), score)
-        minx, miny = result[ind][0][0][0], result[ind][0][0][1]
-        maxx, maxy = result[ind][0][2][0], result[ind][0][2][1]
+        minx, miny = int(result[ind][0][0][0]), int(result[ind][0][0][1])
+        maxx, maxy = int(result[ind][0][2][0]), int(result[ind][0][2][1])
         cv2.rectangle(img, (minx, miny), (maxx, maxy), (255, 0, 0), 1)
 
         font = cv2.FONT_HERSHEY_SIMPLEX
