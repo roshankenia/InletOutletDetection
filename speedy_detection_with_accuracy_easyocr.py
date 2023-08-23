@@ -94,15 +94,15 @@ class Video():
                     for f in range(len(fixedImages)):
                         # downsize image
                         downsizedImage = fixedImages[f]
-                        # scale_percent = 30  # percent of original size
-                        # width = int(
-                        #     downsizedImage.shape[1] * scale_percent / 100)
-                        # height = int(
-                        #     downsizedImage.shape[0] * scale_percent / 100)
-                        # dim = (width, height)
+                        scale_percent = 30  # percent of original size
+                        width = int(
+                            downsizedImage.shape[1] * scale_percent / 100)
+                        height = int(
+                            downsizedImage.shape[0] * scale_percent / 100)
+                        dim = (width, height)
 
-                        # downsizedImage = cv2.resize(
-                        #     downsizedImage, dim, interpolation=cv2.INTER_AREA)
+                        downsizedImage = cv2.resize(
+                            downsizedImage, dim, interpolation=cv2.INTER_AREA)
                         # prediciton
                         predImg, easyPred, easyScore, digitAccuracy, confusionMatrix = easy_prediction_with_accuracy(
                             downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
