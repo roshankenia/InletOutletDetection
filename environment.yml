@@ -16,3 +16,4 @@ dependencies:
       - mat73==0.59
       - imutils==0.5.4
       - grad-cam==1.4.6
+      - easyocr==1.7.0
