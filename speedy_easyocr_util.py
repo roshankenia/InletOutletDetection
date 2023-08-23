@@ -96,7 +96,7 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix, predLab
 
 def easy_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confusionMatrix):
     # predict on image
-    result = reader.readtext(preprocess(img))
+    result = reader.readtext(img)
     print(result)
     # get best prediction
     n_boxes = len(result)
