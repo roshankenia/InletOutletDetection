@@ -73,19 +73,19 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix, predLab
         digitAccuracy[7] += 1
         scoreCode += '8'
 
-    # put actual number in image
-    scoring = str(pebbleActualNumber[0]) + str(pebbleActualNumber[1]
-                                               ) + str(pebbleActualNumber[2]) + ":" + scoreCode
-    # setup text
-    font = cv2.FONT_HERSHEY_SIMPLEX
-    # get boundary of this text
-    textsize = cv2.getTextSize(scoring, font, 1, 2)[0]
+    # # put actual number in image
+    # scoring = str(pebbleActualNumber[0]) + str(pebbleActualNumber[1]
+    #                                            ) + str(pebbleActualNumber[2]) + ":" + scoreCode
+    # # setup text
+    # font = cv2.FONT_HERSHEY_SIMPLEX
+    # # get boundary of this text
+    # textsize = cv2.getTextSize(scoring, font, 1, 2)[0]
 
-    # get coords based on boundary
-    textX = int((img.shape[1] - textsize[0]) / 2)
-    textY = int((img.shape[0] + textsize[1]) / 2)
-    cv2.putText(img, scoring, (textX, img.shape[0]-75), cv2.FONT_HERSHEY_SIMPLEX,
-                1, (255, 255, 255), thickness=2)
+    # # get coords based on boundary
+    # textX = int((img.shape[1] - textsize[0]) / 2)
+    # textY = int((img.shape[0] + textsize[1]) / 2)
+    # cv2.putText(img, scoring, (textX, img.shape[0]-75), cv2.FONT_HERSHEY_SIMPLEX,
+    #             1, (255, 255, 255), thickness=2)
 
     return digitAccuracy, confusionMatrix, img
 # read through each image and predict
@@ -113,28 +113,39 @@ def easy_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confus
             ind = i
 
     score = round(score, 4)
-    print("PRED:::", pred)
-    if pred is None:
-        cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
-                    4, (0, 0, 255), thickness=10)
+    # print("PRED:::", pred)
+    labels = [ch for ch in pred]
+    if len(labels) != 3 or not pred.isdigit():
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        # predText = str(text)+":"+str(score)
+        predText = 'None'
+        # get boundary of this text
+        textsize = cv2.getTextSize(predText, font, 4, 5)[0]
+
+        # get coords based on boundary
+        textX = int((img.shape[1] - textsize[0]) / 2)
+        textY = int((img.shape[0] + textsize[1]) / 2)
+        cv2.putText(img, predText, (textX, img.shape[0]-25), cv2.FONT_HERSHEY_SIMPLEX,
+                    4, (0, 0, 255), thickness=5)
+
     else:
         # split into individual digits
-        labels = [ch for ch in pred]
         scores = np.full(len(labels), score)
         minx, miny = int(result[ind][0][0][0]), int(result[ind][0][0][1])
         maxx, maxy = int(result[ind][0][2][0]), int(result[ind][0][2][1])
         cv2.rectangle(img, (minx, miny), (maxx, maxy), (255, 0, 0), 1)
 
         font = cv2.FONT_HERSHEY_SIMPLEX
-        predText = str(text)+":"+str(score)
+        # predText = str(text)+":"+str(score)
+        predText = str(text)
         # get boundary of this text
-        textsize = cv2.getTextSize(predText, font, 1, 2)[0]
+        textsize = cv2.getTextSize(predText, font, 4, 5)[0]
 
         # get coords based on boundary
         textX = int((img.shape[1] - textsize[0]) / 2)
         textY = int((img.shape[0] + textsize[1]) / 2)
         cv2.putText(img, predText, (textX, img.shape[0]-25), cv2.FONT_HERSHEY_SIMPLEX,
-                    1, (255, 255, 255), thickness=2)
+                    4, (0, 255, 0), thickness=5)
 
         # add in scoring
         if len(labels) == 3:
