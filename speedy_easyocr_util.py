@@ -113,6 +113,8 @@ def easy_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confus
             ind = i
 
     score = round(score, 4)
+    # convert back to RGB
+    img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
     # print("PRED:::", pred)
     if pred is None or len(pred) != 3 or not pred.isdigit():
         font = cv2.FONT_HERSHEY_SIMPLEX
