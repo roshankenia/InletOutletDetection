@@ -114,11 +114,13 @@ def easy_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confus
 
     score = round(score, 4)
     # print("PRED:::", pred)
-    labels = [ch for ch in pred]
-    if len(labels) != 3 or not pred.isdigit():
+    if pred is None or len(pred) != 3 or not pred.isdigit():
         font = cv2.FONT_HERSHEY_SIMPLEX
         # predText = str(text)+":"+str(score)
-        predText = 'None'
+        if pred is None:
+            predText = 'None'
+        else:
+            predText = pred
         # get boundary of this text
         textsize = cv2.getTextSize(predText, font, 4, 5)[0]
 
@@ -130,6 +132,7 @@ def easy_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confus
 
     else:
         # split into individual digits
+        labels = [ch for ch in pred]
         scores = np.full(len(labels), score)
         minx, miny = int(result[ind][0][0][0]), int(result[ind][0][0][1])
         maxx, maxy = int(result[ind][0][2][0]), int(result[ind][0][2][1])
