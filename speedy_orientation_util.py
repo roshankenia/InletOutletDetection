@@ -350,8 +350,6 @@ def segment_and_fix_image_range(img, og_img, confidence=0.9, rect_th=2, text_siz
                 barCenter = tuple(map(round, barCenter))
                 basePoint = tuple(map(round, basePoint))
 
-                print(picCenter, barCenter, basePoint)
-
                 # get the fixed image
                 for errorVal in errorRange:
                     fixedImages.append(
