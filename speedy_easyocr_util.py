@@ -42,10 +42,10 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix, predLab
             # check if digit is correct
             if actualDigit == predDigit:
                 # now update accordingly
-                if predScore < 0.8:
+                if predScore < 0.5:
                     digitAccuracy[1] += 1
                     scoreCode += '2'
-                elif predScore >= 0.8 and predScore < 0.98:
+                elif predScore >= 0.5 and predScore < 0.75:
                     digitAccuracy[3] += 1
                     scoreCode += '4'
                 else:
@@ -55,10 +55,10 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix, predLab
             else:
                 numberIsIncorrect = True
                 # now update accordingly
-                if predScore < 0.8:
+                if predScore < 0.5:
                     digitAccuracy[0] += 1
                     scoreCode += '1'
-                elif predScore >= 0.8 and predScore < 0.98:
+                elif predScore >= 0.5 and predScore < 0.75:
                     digitAccuracy[2] += 1
                     scoreCode += '3'
                 else:

@@ -52,9 +52,9 @@ class Pebble():
                     # convert label to int
                     label = int(labels[l])
                     # only add if score is greater than 0.8
-                    if easyScore >= 0.8:
+                    if easyScore >= 0.5:
                         self.digits[l][label] += 1
-                    if easyScore >= 0.98:
+                    if easyScore >= 0.75:
                         self.digits[l][label] += 1
                     # self.digits[l][labels[l]] += scores[l]
             print('Pebble #'+str(self.number) +
