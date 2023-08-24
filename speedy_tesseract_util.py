@@ -181,7 +181,7 @@ def tesseract_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, c
         textX = int((img.shape[1] - textsize[0]) / 2)
         textY = int((img.shape[0] + textsize[1]) / 2)
         cv2.putText(img, predText, (textX, img.shape[0]-25), cv2.FONT_HERSHEY_SIMPLEX,
-                    4, (255, 255, 255), thickness=5)
+                    4, (0, 255, 0), thickness=5)
 
         # add in scoring
         if len(labels) == 3:
