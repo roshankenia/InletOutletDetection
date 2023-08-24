@@ -346,6 +346,7 @@ def segment_and_fix_image_range(img, og_img, confidence=0.9, rect_th=2, text_siz
 
                 # get angle between points
                 angle = getAngle(picCenter, barCenter, basePoint)
+                print(picCenter, barCenter, angle)
 
                 # get the fixed image
                 for errorVal in errorRange:
