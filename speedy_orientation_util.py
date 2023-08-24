@@ -350,6 +350,8 @@ def segment_and_fix_image_range(img, og_img, confidence=0.9, rect_th=2, text_siz
                 barCenter = tuple(map(round, barCenter))
                 basePoint = tuple(map(round, basePoint))
 
+                print(picCenter, barCenter, basePoint)
+
                 # get the fixed image
                 for errorVal in errorRange:
                     fixedImages.append(
@@ -357,8 +359,8 @@ def segment_and_fix_image_range(img, og_img, confidence=0.9, rect_th=2, text_siz
                 cv2.putText(annImg, 'Angle:' + str(format(angle, '.2f')), (50, 75), cv2.FONT_HERSHEY_SIMPLEX,
                             3, (255, 255, 0), thickness=3)
                 # print('Horizontal not found')
-                cv2.line(annImg, barCenter, picCenter, (255, 255, 255), 10)
-                cv2.line(annImg, picCenter, basePoint, (255, 255, 255), 10)
+                cv2.line(annImg, (int(barCenter[0]), int(barCenter[1])), (int(picCenter[0]), int(picCenter[1])), (255, 255, 255), 10)
+                cv2.line(annImg, (int(picCenter[0]), int(picCenter[1])), (int(basePoint[0]), int(basePoint[1])), (255, 255, 255), 10)
                 rgb_mask = get_coloured_mask(mask, pred)
                 annImg = cv2.addWeighted(annImg, 1, rgb_mask, 0.5, 0)
                 cv2.rectangle(annImg, box[0], box[1],
