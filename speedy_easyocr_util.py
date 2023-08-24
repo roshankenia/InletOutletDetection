@@ -119,10 +119,7 @@ def easy_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confus
     if pred is None or len(pred) != 3 or not pred.isdigit():
         font = cv2.FONT_HERSHEY_SIMPLEX
         # predText = str(text)+":"+str(score)
-        if pred is None:
-            predText = 'None'
-        else:
-            predText = pred
+        predText = 'None'
         # get boundary of this text
         textsize = cv2.getTextSize(predText, font, 4, 5)[0]
 
