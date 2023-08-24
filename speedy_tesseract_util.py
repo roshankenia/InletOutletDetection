@@ -74,19 +74,19 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix, predLab
         digitAccuracy[7] += 1
         scoreCode += '8'
 
-    # put actual number in image
-    scoring = str(pebbleActualNumber[0]) + str(pebbleActualNumber[1]
-                                               ) + str(pebbleActualNumber[2]) + ":" + scoreCode
-    # setup text
-    font = cv2.FONT_HERSHEY_SIMPLEX
-    # get boundary of this text
-    textsize = cv2.getTextSize(scoring, font, 1, 2)[0]
+    # # put actual number in image
+    # scoring = str(pebbleActualNumber[0]) + str(pebbleActualNumber[1]
+    #                                            ) + str(pebbleActualNumber[2]) + ":" + scoreCode
+    # # setup text
+    # font = cv2.FONT_HERSHEY_SIMPLEX
+    # # get boundary of this text
+    # textsize = cv2.getTextSize(scoring, font, 1, 2)[0]
 
-    # get coords based on boundary
-    textX = int((img.shape[1] - textsize[0]) / 2)
-    textY = int((img.shape[0] + textsize[1]) / 2)
-    cv2.putText(img, scoring, (textX, img.shape[0]-75), cv2.FONT_HERSHEY_SIMPLEX,
-                1, (255, 255, 255), thickness=2)
+    # # get coords based on boundary
+    # textX = int((img.shape[1] - textsize[0]) / 2)
+    # textY = int((img.shape[0] + textsize[1]) / 2)
+    # cv2.putText(img, scoring, (textX, img.shape[0]-75), cv2.FONT_HERSHEY_SIMPLEX,
+    #             1, (255, 255, 255), thickness=2)
 
     return digitAccuracy, confusionMatrix, img
 # read through each image and predict
@@ -151,29 +151,39 @@ def tesseract_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, c
             score = conf
             ind = i
 
-    if not had_pred:
-        cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
-                    4, (0, 0, 255), thickness=10)
+    if not had_pred or len(pred) != 3 or not pred.isdigit():
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        # predText = str(text)+":"+str(score)
+        predText = 'None'
+        # get boundary of this text
+        textsize = cv2.getTextSize(predText, font, 4, 5)[0]
+
+        # get coords based on boundary
+        textX = int((img.shape[1] - textsize[0]) / 2)
+        textY = int((img.shape[0] + textsize[1]) / 2)
+        cv2.putText(img, predText, (textX, img.shape[0]-25), cv2.FONT_HERSHEY_SIMPLEX,
+                    4, (0, 0, 255), thickness=5)
     else:
         # split into individual digits
         labels = [ch for ch in pred]
         scores = np.full(len(labels), score)
         (x, y, w, h) = (d['left'][ind], d['top']
                         [ind], d['width'][ind], d['height'][ind])
-        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 1)
+        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 3)
 
         font = cv2.FONT_HERSHEY_SIMPLEX
-        predText = str(text)+":"+str(score)
+        # predText = str(text)+":"+str(score)
+        predText = str(text)
         # get boundary of this text
-        textsize = cv2.getTextSize(predText, font, 1, 2)[0]
+        textsize = cv2.getTextSize(predText, font, 4, 5)[0]
 
         # get coords based on boundary
         textX = int((img.shape[1] - textsize[0]) / 2)
         textY = int((img.shape[0] + textsize[1]) / 2)
         cv2.putText(img, predText, (textX, img.shape[0]-25), cv2.FONT_HERSHEY_SIMPLEX,
-                    1, (255, 255, 255), thickness=2)
+                    4, (255, 255, 255), thickness=5)
 
-        #add in scoring
+        # add in scoring
         if len(labels) == 3:
             updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix,
                              labels, scores, img)
