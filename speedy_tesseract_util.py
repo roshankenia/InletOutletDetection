@@ -21,11 +21,11 @@ os.environ["TESSDATA_PREFIX"] = tessdata_dir_config
 
 def preprocess(img):
     img = cv2.resize(img, (0, 0), fx=2.0, fy=2.0)
-    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-    img = clahe.apply(img)
-    img = 255-img  # invert image. tesseract prefers black text on white background
+    # clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    # img = clahe.apply(img)
+    # img = 255-img  # invert image. tesseract prefers black text on white background
 
-    ret, img = cv2.threshold(img, 127, 255, cv2.THRESH_TOZERO)
+    # ret, img = cv2.threshold(img, 127, 255, cv2.THRESH_TOZERO)
 
     return img
 
@@ -133,7 +133,7 @@ def tesseract_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, c
     # img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     # # img = cv2.resize(cv2.bitwise_not(img), (100, 100))
     # # img = cv2.resize(img, (100, 100))
-    # img = preprocess(img)
+    img = preprocess(img)
     d = pytesseract.image_to_data(img, output_type=Output.DICT, config=config)
     n_boxes = len(d['level'])
     had_pred = False
