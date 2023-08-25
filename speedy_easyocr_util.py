@@ -93,8 +93,8 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix, predLab
 
 def easy_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confusionMatrix):
     # predict on image
-    img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-    img = preprocess(img)
+    # img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+    # img = preprocess(img)
     result = reader.readtext(img)
     print(result)
     # get best prediction
@@ -114,7 +114,7 @@ def easy_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confus
 
     score = round(score, 4)
     # convert back to RGB
-    img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
+    # img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
     # print("PRED:::", pred)
     if pred is None or len(pred) != 3 or not pred.isdigit():
         font = cv2.FONT_HERSHEY_SIMPLEX
