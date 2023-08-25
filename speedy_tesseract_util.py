@@ -130,10 +130,10 @@ def tesseract_prediction(img):
 
 def tesseract_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confusionMatrix):
     config = r'--oem 3 --psm 11 digits'
-    img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-    # img = cv2.resize(cv2.bitwise_not(img), (100, 100))
-    # img = cv2.resize(img, (100, 100))
-    img = preprocess(img)
+    # img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+    # # img = cv2.resize(cv2.bitwise_not(img), (100, 100))
+    # # img = cv2.resize(img, (100, 100))
+    # img = preprocess(img)
     d = pytesseract.image_to_data(img, output_type=Output.DICT, config=config)
     n_boxes = len(d['level'])
     had_pred = False
@@ -141,7 +141,7 @@ def tesseract_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, c
     score = 0
     ind = -1
     # convert back to RGB and find best prediction
-    img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
+    # img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
     for i in range(n_boxes):
         text = "".join(d["text"][i]).strip()
         conf = int(d["conf"][i])
