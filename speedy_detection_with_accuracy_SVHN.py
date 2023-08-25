@@ -231,65 +231,64 @@ accuracies = []
 classifications = []
 confusionMatrix = np.zeros((10, 10))
 for videoname in videonames:
-    if videoname == '211.MP4' or videoname == '213.MP4':
-        # create inlet video
-        videoname = videoname[:videoname.index('.')]
-        pebbleNum = ''.join(filter(lambda i: i.isdigit(), videoname))
-        print("VIDEO: ", pebbleNum)
-        inletVideo = Video(pebbleNum)
-        pebbleActualNumber = [int(dig) for dig in pebbleNum]
-        digitAccuracy = np.zeros(8)
-        # set frames count and fps
-        num_frames = inletVideo.frame_count
-        FPS = inletVideo.fps
+    # create inlet video
+    videoname = videoname[:videoname.index('.')]
+    pebbleNum = ''.join(filter(lambda i: i.isdigit(), videoname))
+    print("VIDEO: ", pebbleNum)
+    inletVideo = Video(pebbleNum)
+    pebbleActualNumber = [int(dig) for dig in pebbleNum]
+    digitAccuracy = np.zeros(8)
+    # set frames count and fps
+    num_frames = inletVideo.frame_count
+    FPS = inletVideo.fps
 
-        start = time.time()
+    start = time.time()
 
-        frameNumber = 0
-        inletHasFrames, inletFrame = inletVideo.vidcap.read()
-        while inletHasFrames:
-            print('Processing frame #', frameNumber)
-            videoTime = frameNumber/FPS
-            # process inlet frame
-            inletVideo.processNextFrame(
-                inletFrame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy, confusionMatrix)
-            # check if we are currently processing
-            # if none in frame can skip
-            if len(inletVideo.activePebbles) == 0:
+    frameNumber = 0
+    inletHasFrames, inletFrame = inletVideo.vidcap.read()
+    while inletHasFrames:
+        print('Processing frame #', frameNumber)
+        videoTime = frameNumber/FPS
+        # process inlet frame
+        inletVideo.processNextFrame(
+            inletFrame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy, confusionMatrix)
+        # check if we are currently processing
+        # if none in frame can skip
+        if len(inletVideo.activePebbles) == 0:
+            # skip four frames
+            for i in range(4):
+                inletHasFrames, inletFrame = inletVideo.vidcap.read()
+                frameNumber += 1
+        else:
+            # if all converged can skip
+            convergedNum = 0
+            for actPebble in inletVideo.activePebbles:
+                if actPebble.isConverged:
+                    convergedNum += 1
+            if convergedNum == len(inletVideo.activePebbles):
                 # skip four frames
                 for i in range(4):
                     inletHasFrames, inletFrame = inletVideo.vidcap.read()
                     frameNumber += 1
-            else:
-                # if all converged can skip
-                convergedNum = 0
-                for actPebble in inletVideo.activePebbles:
-                    if actPebble.isConverged:
-                        convergedNum += 1
-                if convergedNum == len(inletVideo.activePebbles):
-                    # skip four frames
-                    for i in range(4):
-                        inletHasFrames, inletFrame = inletVideo.vidcap.read()
-                        frameNumber += 1
-            inletHasFrames, inletFrame = inletVideo.vidcap.read()
-            frameNumber += 1
+        inletHasFrames, inletFrame = inletVideo.vidcap.read()
+        frameNumber += 1
 
-        end = time.time()
-        print('Total time elapsed:', (end-start))
-        print('Digit Accuracy:', digitAccuracy)
-        print("Videoname: ", videoname)
-        print("Current Confusion Matrix:", confusionMatrix)
-        finalClass = inletVideo.print_final_classification()
-        classifications.append((pebbleNum, finalClass))
-        accuracies.append(digitAccuracy)
+    end = time.time()
+    print('Total time elapsed:', (end-start))
+    print('Digit Accuracy:', digitAccuracy)
+    print("Videoname: ", videoname)
+    print("Current Confusion Matrix:", confusionMatrix)
+    finalClass = inletVideo.print_final_classification()
+    classifications.append((pebbleNum, finalClass))
+    accuracies.append(digitAccuracy)
 
-        # When everything done, release the capture
-        inletVideo.vidcap.release()
-        inletVideo.processed_video.release()
-        cv2.destroyAllWindows()
+    # When everything done, release the capture
+    inletVideo.vidcap.release()
+    inletVideo.processed_video.release()
+    cv2.destroyAllWindows()
 
-        print()
-        print()
+    print()
+    print()
 
 print('Final Results:')
 print(classifications)
