@@ -41,56 +41,56 @@ for filename in filenames:
         './Carved After Images/', filename))
 
     # downsize image
-    scale_percent = 25  # percent of original size
+    scale_percent = 5  # percent of original size
     width = int(img.shape[1] * scale_percent / 100)
     height = int(img.shape[0] * scale_percent / 100)
     dim = (width, height)
 
     img = cv2.resize(img, dim, interpolation=cv2.INTER_AREA)
 
-    # check if image has digits with confidence
-    pebbleDigitsCrops, pebbleDigitBoxes, pebbleDigitScores, goodPredictions, goodMasks, originalDigitCrops = digit_segmentation(
-        img)
+    # # check if image has digits with confidence
+    # pebbleDigitsCrops, pebbleDigitBoxes, pebbleDigitScores, goodPredictions, goodMasks, originalDigitCrops = digit_segmentation(
+    #     img)
 
-    # see if digits were detected
-    if pebbleDigitsCrops is not None:
-        # save orientation bar prediction
-        for i in range(len(pebbleDigitsCrops)):
-            annImg, fixedImages = segment_and_fix_image_range(
-                pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
-            for f in range(len(fixedImages)):
-                # prediciton
-                predImg, predlabels, predScores = showbox_no_bottomY(
-                    fixedImages[f])
-                if predImg is not None:
-                    cv2.imwrite(os.path.join(vis_tgt_path, str(
-                        i)+"_"+str(f)+"_"+filename), predImg)
-                else:
-                    cv2.putText(fixedImages[f], 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
-                                2, (0, 0, 255), thickness=5)
-                    cv2.imwrite(os.path.join(vis_tgt_path, str(
-                        i)+str(f)+filename), fixedImages[f])
-            if len(fixedImages) == 0:
-                cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (0, 0, 255), thickness=5)
-                cv2.imwrite(os.path.join(vis_tgt_path, filename), img)
-    else:
-        cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (0, 0, 255), thickness=5)
-        cv2.imwrite(os.path.join(vis_tgt_path, filename), img)
-
-    # # prediciton
-    # predImg, predlabels, predScores = showbox_no_bottomY(img)
-    # if predImg is not None:
-    #     cv2.imwrite(os.path.join(vis_tgt_path, filename), predImg)
+    # # see if digits were detected
+    # if pebbleDigitsCrops is not None:
+    #     # save orientation bar prediction
+    #     for i in range(len(pebbleDigitsCrops)):
+    #         annImg, fixedImages = segment_and_fix_image_range(
+    #             pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
+    #         for f in range(len(fixedImages)):
+    #             # prediciton
+    #             predImg, predlabels, predScores = showbox_no_bottomY(
+    #                 fixedImages[f])
+    #             if predImg is not None:
+    #                 cv2.imwrite(os.path.join(vis_tgt_path, str(
+    #                     i)+"_"+str(f)+"_"+filename), predImg)
+    #             else:
+    #                 cv2.putText(fixedImages[f], 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
+    #                             2, (0, 0, 255), thickness=5)
+    #                 cv2.imwrite(os.path.join(vis_tgt_path, str(
+    #                     i)+str(f)+filename), fixedImages[f])
+    #         if len(fixedImages) == 0:
+    #             cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
+    #                 2, (0, 0, 255), thickness=5)
+    #             cv2.imwrite(os.path.join(vis_tgt_path, filename), img)
     # else:
-    #     font = cv2.FONT_HERSHEY_SIMPLEX
-    #     # get boundary of this text
-    #     textsize = cv2.getTextSize('NONE', font, 1, 3)[0]
-
-    #     # get coords based on boundary
-    #     textX = int((img.shape[1] - textsize[0]) / 2)
-    #     textY = int((img.shape[0] + textsize[1]) / 2)
-    #     cv2.putText(img, 'NONE', (textX, img.shape[0]-25), cv2.FONT_HERSHEY_SIMPLEX,
-    #                 1, (0, 0, 255), thickness=3)
+    #     cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
+    #                 2, (0, 0, 255), thickness=5)
     #     cv2.imwrite(os.path.join(vis_tgt_path, filename), img)
+
+    # prediciton
+    predImg, predlabels, predScores = showbox_no_bottomY(img)
+    if predImg is not None:
+        cv2.imwrite(os.path.join(vis_tgt_path, filename), predImg)
+    else:
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        # get boundary of this text
+        textsize = cv2.getTextSize('NONE', font, 1, 3)[0]
+
+        # get coords based on boundary
+        textX = int((img.shape[1] - textsize[0]) / 2)
+        textY = int((img.shape[0] + textsize[1]) / 2)
+        cv2.putText(img, 'NONE', (textX, img.shape[0]-25), cv2.FONT_HERSHEY_SIMPLEX,
+                    1, (0, 0, 255), thickness=3)
+        cv2.imwrite(os.path.join(vis_tgt_path, filename), img)
