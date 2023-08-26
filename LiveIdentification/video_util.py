@@ -11,8 +11,10 @@ from DR_util import digit_recognition
 from DAD_util import digit_area_detection
 from pebble_util import Pebble
 # ensure we are running on the correct gpu
+os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"] = "6"  # (xxxx is your specific GPU ID)
 if not torch.cuda.is_available() or torch.cuda.device_count() != 1:
-    print('GPU not being used, exiting')
+    print('exiting')
     sys.exit()
 else:
     print('GPU is being properly used')
