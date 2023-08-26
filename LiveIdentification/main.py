@@ -73,10 +73,9 @@ class MainProcessor:
         # When everything done, release the capture
         video.vidcap.release()
         video.processed_video.release()
-        cv2.destroyAllWindows()
 
 
-inletVideoName = 'CARVED~1'
+inletVideoName = 'CARVED~2'
 # outletVideoName = 'Outlet Example'
 
 # create main processor
