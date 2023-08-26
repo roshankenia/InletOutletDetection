@@ -84,6 +84,13 @@ for filename in filenames:
     if predImg is not None:
         cv2.imwrite(os.path.join(vis_tgt_path, filename), predImg)
     else:
-        cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (0, 0, 255), thickness=5)
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        # get boundary of this text
+        textsize = cv2.getTextSize('NONE', font, 1, 3)[0]
+
+        # get coords based on boundary
+        textX = int((img.shape[1] - textsize[0]) / 2)
+        textY = int((img.shape[0] + textsize[1]) / 2)
+        cv2.putText(img, 'NONE', (textX, img.shape[0]-25), cv2.FONT_HERSHEY_SIMPLEX,
+                    1, (0, 0, 255), thickness=3)
         cv2.imwrite(os.path.join(vis_tgt_path, filename), img)
