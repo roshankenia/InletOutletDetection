@@ -505,8 +505,8 @@ def showbox_no_bottomY(img):
         # check if we have confusing digits
         # crop_confusing_digits(img, boxes, labels, scores)
 
-        for i in range(len(boxes)):
-            fig_draw(annImg, boxes[i], labels[i], scores[i])
+        # for i in range(len(boxes)):
+        #     fig_draw(annImg, boxes[i], labels[i], scores[i])
 
         fig_num(annImg, number)
 
