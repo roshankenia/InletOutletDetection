@@ -138,13 +138,13 @@ def fig_num(img, number):
     # setup text
     font = cv2.FONT_HERSHEY_SIMPLEX
     # get boundary of this text
-    textsize = cv2.getTextSize(number, font, 4, 5)[0]
+    textsize = cv2.getTextSize(number, font, 1, 2)[0]
 
     # get coords based on boundary
     textX = int((img.shape[1] - textsize[0]) / 2)
     textY = int((img.shape[0] + textsize[1]) / 2)
     cv2.putText(img, number, (textX, img.shape[0]-25), cv2.FONT_HERSHEY_SIMPLEX,
-                4, (0, 255, 0), thickness=5)
+                1, (0, 255, 0), thickness=2)
 
 
 def fig_draw(img, box, label, score):
