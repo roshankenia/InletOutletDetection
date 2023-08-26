@@ -41,7 +41,7 @@ for filename in filenames:
         './Carved After Images/', filename))
 
     # downsize image
-    scale_percent = 15  # percent of original size
+    scale_percent = 10  # percent of original size
     width = int(img.shape[1] * scale_percent / 100)
     height = int(img.shape[0] * scale_percent / 100)
     dim = (width, height)
