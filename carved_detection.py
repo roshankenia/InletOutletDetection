@@ -41,7 +41,7 @@ for filename in filenames:
         './Carved After Images/', filename))
 
     # downsize image
-    scale_percent = 25  # percent of original size
+    scale_percent = 5  # percent of original size
     width = int(img.shape[1] * scale_percent / 100)
     height = int(img.shape[0] * scale_percent / 100)
     dim = (width, height)
@@ -86,4 +86,4 @@ for filename in filenames:
     else:
         cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
                     2, (0, 0, 255), thickness=5)
-        cv2.imwrite(os.path.join(vis_tgt_path, str(filename+'_none')), img)
+        cv2.imwrite(os.path.join(vis_tgt_path, filename), img)
