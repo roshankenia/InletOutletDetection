@@ -9,9 +9,13 @@ import training_utilities.utils as utils
 from training_utilities.coco_eval import CocoEvaluator
 from training_utilities.coco_utils import get_coco_api_from_dataset
 # ensure we are running on the correct gpu
+
 import os
+
+os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"] = "6"  # (xxxx is your specific GPU ID)
 if not torch.cuda.is_available() or torch.cuda.device_count() != 1:
-    print('GPU not being used, exiting')
+    print('exiting')
     sys.exit()
 else:
     print('GPU is being properly used')
@@ -23,7 +27,7 @@ def normalize(arr):
     http://en.wikipedia.org/wiki/Normalization_%28image_processing%29
     """
     arr = arr.astype('float')
-    #print("arr shape: ", arr.shape)
+    # print("arr shape: ", arr.shape)
     # Do not touch the alpha channel
     for i in range(3):
         minval = arr[i, :, :].min()
@@ -56,14 +60,14 @@ def train_one_epoch_MSE(model, optimizer, data_loader, device, epoch, print_freq
         images_array = np.array([normalize(img)
                                 for img in images_array], dtype=np.float32)
         images = torch.from_numpy(images_array).to(device)
-        #print("....image value:", torch.max(images[0]), torch.min(images[0]))
+        # print("....image value:", torch.max(images[0]), torch.min(images[0]))
 
         # images = list(image.to(device) for image in images)
 
-        #images_array = [img.detach().cpu().numpy() for img in images]
-        #images_array = normalize(images_array)
-        #images = torch.from_numpy(images_array)
-        #print("....image value:", torch.max(images[0]), torch.min(images[0]))
+        # images_array = [img.detach().cpu().numpy() for img in images]
+        # images_array = normalize(images_array)
+        # images = torch.from_numpy(images_array)
+        # print("....image value:", torch.max(images[0]), torch.min(images[0]))
 
         outputs = model(images)
         losses = torch.sqrt(criterion(outputs, targets.to(device)))
@@ -114,14 +118,14 @@ def train_one_epoch(model, optimizer, data_loader, device, epoch, print_freq, sc
         images_array = np.array([normalize(img)
                                 for img in images_array], dtype=np.float32)
         images = torch.from_numpy(images_array)
-        #print("....image value:", torch.max(images[0]), torch.min(images[0]))
+        # print("....image value:", torch.max(images[0]), torch.min(images[0]))
 
         images = list(image.to(device) for image in images)
 
-        #images_array = [img.detach().cpu().numpy() for img in images]
-        #images_array = normalize(images_array)
-        #images = torch.from_numpy(images_array)
-        #print("....image value:", torch.max(images[0]), torch.min(images[0]))
+        # images_array = [img.detach().cpu().numpy() for img in images]
+        # images_array = normalize(images_array)
+        # images = torch.from_numpy(images_array)
+        # print("....image value:", torch.max(images[0]), torch.min(images[0]))
 
         targets = [{k: v.to(device) for k, v in t.items()} for t in targets]
         with torch.cuda.amp.autocast(enabled=scaler is not None):
@@ -181,7 +185,7 @@ def evaluate(model, data_loader, device):
 
     coco = get_coco_api_from_dataset(data_loader.dataset)
     iou_types = _get_iou_types(model)
-    #print("...coco type:{} and iou_type: {}".format(type(coco), type(iou_types)))
+    # print("...coco type:{} and iou_type: {}".format(type(coco), type(iou_types)))
     coco_evaluator = CocoEvaluator(coco, iou_types)
 
     for images, targets in metric_logger.log_every(data_loader, 100, header):
