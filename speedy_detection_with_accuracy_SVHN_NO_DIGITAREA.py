@@ -105,6 +105,7 @@ class Video():
             # prediciton
             predImg, predlabels, predScores, digitAccuracy, confusionMatrix = showbox_with_accuracy(
                 downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
+            print(predlabels)
             if predImg is not None:
                 cv2.imwrite(os.path.join(self.imgFolder, "img_" +
                             str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
@@ -239,14 +240,12 @@ for videoname in videonames:
     print('Digit Accuracy:', digitAccuracy)
     print("Videoname: ", videoname)
     print("Current Confusion Matrix:", confusionMatrix)
-    finalClass = inletVideo.print_final_classification()
-    classifications.append((pebbleNum, finalClass))
+    # classifications.append((pebbleNum, finalClass))
     accuracies.append(digitAccuracy)
 
     # When everything done, release the capture
     inletVideo.vidcap.release()
     inletVideo.processed_video.release()
-    cv2.destroyAllWindows()
 
     print()
     print()
