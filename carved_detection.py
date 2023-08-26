@@ -79,15 +79,11 @@ for filename in filenames:
     #                 2, (0, 0, 255), thickness=5)
     #     cv2.imwrite(os.path.join(vis_tgt_path, filename), img)
 
-
     # prediciton
-    predImg, predlabels, predScores = showbox_no_bottomY(
-        fixedImages[f])
+    predImg, predlabels, predScores = showbox_no_bottomY(img)
     if predImg is not None:
-        cv2.imwrite(os.path.join(vis_tgt_path, str(
-            i)+"_"+str(f)+"_"+filename), predImg)
+        cv2.imwrite(os.path.join(vis_tgt_path, filename), predImg)
     else:
-        cv2.putText(fixedImages[f], 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
+        cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
                     2, (0, 0, 255), thickness=5)
-        cv2.imwrite(os.path.join(vis_tgt_path, str(
-            i)+str(f)+filename), fixedImages[f])
+        cv2.imwrite(os.path.join(vis_tgt_path, str(filename+'_none')), img)
