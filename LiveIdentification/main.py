@@ -74,23 +74,23 @@ class MainProcessor:
         cv2.destroyAllWindows()
 
 
-inletVideoName = 'Inlet Example'
-outletVideoName = 'Outlet Example'
+inletVideoName = 'CARVED~1'
+# outletVideoName = 'Outlet Example'
 
 # create main processor
 mp = MainProcessor()
 
 # create threads
 inletThread = threading.Thread(target=mp.identify, args=(inletVideoName, True))
-outletThread = threading.Thread(
-    target=mp.identify, args=(outletVideoName, False))
+# outletThread = threading.Thread(
+#     target=mp.identify, args=(outletVideoName, False))
 
 # start threads
 inletThread.start()
-outletThread.start()
+# outletThread.start()
 
 inletThread.join()
-outletThread.join()
+# outletThread.join()
 
 
 # display results
