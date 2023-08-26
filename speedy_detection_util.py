@@ -150,10 +150,10 @@ def fig_num(img, number):
 def fig_draw(img, box, label, score):
     # draw predicted bounding box and class label on the input image
     # draw predicted bounding box and class label on the input image
-    xmin = round(box[0])
-    ymin = round(box[1])
-    xmax = round(box[2])
-    ymax = round(box[3])
+    int(xmin = round(box[0]))
+    int(ymin = round(box[1]))
+    int(xmax = round(box[2]))
+    int(ymax = round(box[3]))
 
     predText = '' + str(label) + ':' + str(int(score*100)/100).lstrip('0')
 
