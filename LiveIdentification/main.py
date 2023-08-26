@@ -75,7 +75,7 @@ class MainProcessor:
         video.processed_video.release()
 
 
-inletVideoName = 'CARVED~2'
+inletVideoName = 'CARVED~3'
 # outletVideoName = 'Outlet Example'
 
 # create main processor
