@@ -29,16 +29,16 @@ else:
 
 # for carved testing
 filenames = list(
-    sorted(os.listdir('./Carved Pebbles/')))
+    sorted(os.listdir('./Carved After Images/')))
 # create directory to save processed images
-vis_tgt_path = "./Carved Pebbles Predictions/"
+vis_tgt_path = "./Carved After Images Predictions/"
 if not os.path.isdir(vis_tgt_path):
     os.mkdir(vis_tgt_path)
 # read through each image and predict
 for filename in filenames:
     print(filename)
     img = cv2.imread(os.path.join(
-        './Carved Pebbles/', filename))
+        './Carved After Images/', filename))
 
     # downsize image
     scale_percent = 25  # percent of original size
