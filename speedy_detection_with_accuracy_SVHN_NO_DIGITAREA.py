@@ -13,10 +13,10 @@ import train_utils.transforms as T
 import math
 import time
 
+from speedy_orientation_util import segment_and_fix_image_range
 from speedy_detection_util_SVHN import showbox_with_accuracy
 from speedy_crop_util import digit_segmentation
 from speedy_pebble_util import updatePebbleLocation
-from speedy_orientation_util import rotateWithSlightError
 # ensure we are running on the correct gpu
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "6"  # (xxxx is your specific GPU ID)
@@ -86,64 +86,28 @@ class Video():
         self.distThreshold = int(0.5*max(self.width, self.height))
         print('distThresh is:', self.distThreshold)
 
-    def print_final_classification(self):
-        finClass = ''
-        for pebble in self.activePebbles:
-            print('Pebble classification:', pebble.obtainFinalClassification())
-            finClass += pebble.obtainFinalClassification()
-        return finClass
 
     def processNextFrame(self, frame, frameNumber, videoTime, pebbleActualNumber, digitAccuracy, confusionMatrix, inletSavedPebbles=None):
         og_frame = frame.copy()
-        # check if image has digits with confidence
-        pebbleDigitsCrops, pebbleDigitBoxes, pebbleDigitScores, goodPredictions, goodMasks, originalDigitCrops = digit_segmentation(
-            frame)
+        annImg, fixedImages = segment_and_fix_image_range(frame, frame, 0.9)
+        for f in range(len(fixedImages)):
+            # downsize image
+            downsizedImage = fixedImages[f]
+            scale_percent = 20  # percent of original size
+            width = int(
+                downsizedImage.shape[1] * scale_percent / 100)
+            height = int(
+                downsizedImage.shape[0] * scale_percent / 100)
+            dim = (width, height)
 
-        # see if digits were detected
-        if pebbleDigitsCrops is not None:
-            print('Frame with digits:', str(frameNumber))
-            # update pebble location based on first pebble digit crop
-            # tag and update pebble data
-            currentPebble, self.activePebbles, self.numOfPebbles = updatePebbleLocation(
-                pebbleDigitBoxes[0], self.activePebbles, self.distThreshold, self.numOfPebbles, frameNumber, videoTime)
-
-            # update boxes
-            currentPebble.addDigitBoxes(pebbleDigitBoxes)
-
-            # check if converged already
-            if not currentPebble.isConverged:
-                # save orientation bar prediction
-                for i in range(len(pebbleDigitsCrops)):
-                    fixedImages = rotateWithSlightError(originalDigitCrops[i])
-                    for f in range(len(fixedImages)):
-                        # downsize image
-                        downsizedImage = fixedImages[f]
-                        scale_percent = 25  # percent of original size
-                        width = int(
-                            downsizedImage.shape[1] * scale_percent / 100)
-                        height = int(
-                            downsizedImage.shape[0] * scale_percent / 100)
-                        dim = (width, height)
-
-                        downsizedImage = cv2.resize(
-                            downsizedImage, dim, interpolation=cv2.INTER_AREA)
-                        # prediciton
-                        predImg, predlabels, predScores, digitAccuracy, confusionMatrix = showbox_with_accuracy(
-                            downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
-                        if predImg is not None:
-                            cv2.imwrite(os.path.join(self.imgFolder, "img_" + str(
-                                frameNumber) + "digit_crop_"+str(i)+"_pred_"+str(f)+".jpg"), predImg)
-                            # update digits
-                            currentPebble.addDigits(
-                                predlabels, predScores)
-        # create frame based on current active pebbles
-        if inletSavedPebbles is not None:
-            frameWithData = addToFrame(
-                og_frame, self, frameNumber, videoTime, inletSavedPebbles)
-        else:
-            frameWithData = addToFrame(og_frame, self, frameNumber, videoTime)
-        # put frame into video
-        self.processed_video.write(frameWithData)
+            downsizedImage = cv2.resize(
+                downsizedImage, dim, interpolation=cv2.INTER_AREA)
+            # prediciton
+            predImg, predlabels, predScores, digitAccuracy, confusionMatrix = showbox_with_accuracy(
+                downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
+            if predImg is not None:
+                cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                            str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
 
 
 def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
