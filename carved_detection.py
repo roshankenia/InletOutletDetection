@@ -48,33 +48,46 @@ for filename in filenames:
 
     img = cv2.resize(img, dim, interpolation=cv2.INTER_AREA)
 
-    # check if image has digits with confidence
-    pebbleDigitsCrops, pebbleDigitBoxes, pebbleDigitScores, goodPredictions, goodMasks, originalDigitCrops = digit_segmentation(
-        img)
+    # # check if image has digits with confidence
+    # pebbleDigitsCrops, pebbleDigitBoxes, pebbleDigitScores, goodPredictions, goodMasks, originalDigitCrops = digit_segmentation(
+    #     img)
 
-    # see if digits were detected
-    if pebbleDigitsCrops is not None:
-        # save orientation bar prediction
-        for i in range(len(pebbleDigitsCrops)):
-            annImg, fixedImages = segment_and_fix_image_range(
-                pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
-            for f in range(len(fixedImages)):
-                # prediciton
-                predImg, predlabels, predScores = showbox_no_bottomY(
-                    fixedImages[f])
-                if predImg is not None:
-                    cv2.imwrite(os.path.join(vis_tgt_path, str(
-                        i)+"_"+str(f)+"_"+filename), predImg)
-                else:
-                    cv2.putText(fixedImages[f], 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
-                                2, (0, 0, 255), thickness=5)
-                    cv2.imwrite(os.path.join(vis_tgt_path, str(
-                        i)+str(f)+filename), fixedImages[f])
-            if len(fixedImages) == 0:
-                cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
-                    2, (0, 0, 255), thickness=5)
-                cv2.imwrite(os.path.join(vis_tgt_path, filename), img)
+    # # see if digits were detected
+    # if pebbleDigitsCrops is not None:
+    #     # save orientation bar prediction
+    #     for i in range(len(pebbleDigitsCrops)):
+    #         annImg, fixedImages = segment_and_fix_image_range(
+    #             pebbleDigitsCrops[i], originalDigitCrops[i], 0.9)
+    #         for f in range(len(fixedImages)):
+    #             # prediciton
+    #             predImg, predlabels, predScores = showbox_no_bottomY(
+    #                 fixedImages[f])
+    #             if predImg is not None:
+    #                 cv2.imwrite(os.path.join(vis_tgt_path, str(
+    #                     i)+"_"+str(f)+"_"+filename), predImg)
+    #             else:
+    #                 cv2.putText(fixedImages[f], 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
+    #                             2, (0, 0, 255), thickness=5)
+    #                 cv2.imwrite(os.path.join(vis_tgt_path, str(
+    #                     i)+str(f)+filename), fixedImages[f])
+    #         if len(fixedImages) == 0:
+    #             cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
+    #                 2, (0, 0, 255), thickness=5)
+    #             cv2.imwrite(os.path.join(vis_tgt_path, filename), img)
+    # else:
+    #     cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
+    #                 2, (0, 0, 255), thickness=5)
+    #     cv2.imwrite(os.path.join(vis_tgt_path, filename), img)
+
+
+    # prediciton
+    predImg, predlabels, predScores = showbox_no_bottomY(
+        fixedImages[f])
+    if predImg is not None:
+        cv2.imwrite(os.path.join(vis_tgt_path, str(
+            i)+"_"+str(f)+"_"+filename), predImg)
     else:
-        cv2.putText(img, 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
+        cv2.putText(fixedImages[f], 'NONE', (5, 100), cv2.FONT_HERSHEY_SIMPLEX,
                     2, (0, 0, 255), thickness=5)
-        cv2.imwrite(os.path.join(vis_tgt_path, filename), img)
+        cv2.imwrite(os.path.join(vis_tgt_path, str(
+            i)+str(f)+filename), fixedImages[f])
