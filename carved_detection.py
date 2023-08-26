@@ -14,7 +14,7 @@ import math
 import time
 
 from speedy_orientation_util import segment_and_fix_image_range
-from speedy_detection_util import showbox_no_bottomY
+from speedy_detection_util_SVHN import showbox_no_bottomY
 from speedy_crop_util import digit_segmentation
 from speedy_pebble_util import updatePebbleLocation
 # ensure we are running on the correct gpu
