@@ -94,7 +94,7 @@ class Pebble():
         return classification
 
 
-def updatePebbleLocation(pebbleBox, pebbles, distThreshold, numOfPebbles, frameNumber, videoTime):
+def updatePebbleLocationEasyOCR(pebbleBox, pebbles, distThreshold, numOfPebbles, frameNumber, videoTime):
     # calculate midpoint of box
     x_center = int((pebbleBox[0]+pebbleBox[2])/2)
     y_center = int((pebbleBox[1]+pebbleBox[3])/2)
