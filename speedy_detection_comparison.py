@@ -668,7 +668,7 @@ class Video():
                     # if tessPred is not None:
                     # update digits
                     print('updating')
-                    currentPebble.addDigits(tessPred, tessScore)
+                    # currentPebble.addDigits(tessPred, tessScore)
                     cv2.imwrite(os.path.join(self.imgFolder, "img_" +
                                 str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
 
