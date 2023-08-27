@@ -665,11 +665,12 @@ class Video():
                     # prediciton
                     predImg, tessPred, tessScore, digitAccuracy, confusionMatrix = tesseract_prediction_with_accuracy(
                         downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
-                    if tessPred is not None:
-                        # update digits
-                        currentPebble.addDigits(tessPred, tessScore)
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
-                                    str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
+                    # if tessPred is not None:
+                    # update digits
+                    print('updating')
+                    currentPebble.addDigits(tessPred, tessScore)
+                    cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
 
         # create frame based on current active pebbles
         if inletSavedPebbles is not None:
