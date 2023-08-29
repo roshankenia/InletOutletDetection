@@ -78,10 +78,6 @@ class Video():
         if not os.path.isdir(folder):
             os.mkdir(folder)
 
-        # create demo video
-        self.processed_video = cv2.VideoWriter(f'./Individual Outlet Results/{filename}/processed_video.avi',
-                                               cv2.VideoWriter_fourcc(*'mp4v'), self.vidcap.get(cv2.CAP_PROP_FPS), (self.width, self.height))
-
         self.imgFolder = f"./Individual Outlet Results/{filename}/Images/"
         if not os.path.isdir(self.imgFolder):
             os.mkdir(self.imgFolder)
@@ -140,88 +136,6 @@ class Video():
                     if predImg is not None:
                         cv2.imwrite(os.path.join(self.imgFolder, "img_" +
                                     str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
-                        # update digits
-                        currentPebble.addDigits(
-                            predlabels, predScores)
-        # create frame based on current active pebbles
-        if inletSavedPebbles is not None:
-            frameWithData = addToFrame(
-                og_frame, self, frameNumber, videoTime, inletSavedPebbles)
-        else:
-            frameWithData = addToFrame(og_frame, self, frameNumber, videoTime)
-        # put frame into video
-        self.processed_video.write(frameWithData)
-
-
-def addToFrame(frame, video, frameNumber, videoTime, inletSavedPebbles=None):
-    height, width = frame.shape[:2]
-    if len(video.activePebbles) > 0:
-        # iterate through each active pebble and add their data in
-        for pebble in video.activePebbles:
-            # check if detected this frame
-            currentClassification = pebble.obtainFinalClassification()
-            if pebble.lastSeen == frameNumber and currentClassification != '???':
-                # add in pebble detection area
-                if pebble.currentPebbleBox is not None:
-                    minCord = (
-                        pebble.currentPebbleBox[0], pebble.currentPebbleBox[1])
-                    maxCord = (
-                        pebble.currentPebbleBox[2], pebble.currentPebbleBox[3])
-                    cv2.rectangle(frame, minCord, maxCord,
-                                  color=(0, 255, 0), thickness=4)
-                    # put pebble number
-                    cv2.putText(frame, 'Pebble #'+str(pebble.number), minCord, cv2.FONT_HERSHEY_SIMPLEX,
-                                2, (0, 255, 0), thickness=2)
-
-                    # put highest predicted digits in center
-                    bottomCenterCord = (
-                        int(((minCord[0]+maxCord[0])/2)-200), int(maxCord[1]))
-
-                    cv2.putText(frame, 'Pred: '+str(currentClassification),
-                                bottomCenterCord, cv2.FONT_HERSHEY_SIMPLEX, 4, (255, 255, 255), thickness=3)
-                # add in digit detection area
-                if pebble.currentDigitBoxes is not None:
-                    for digitBox in pebble.currentDigitBoxes:
-                        minCord = (digitBox[0], digitBox[1])
-                        maxCord = (digitBox[2], digitBox[3])
-                        cv2.rectangle(frame, minCord, maxCord,
-                                      color=(0, 255, 255), thickness=3)
-                # reset current boxes
-                pebble.resetBoxes()
-    if inletSavedPebbles is not None:
-        # add in info about inlet saved pebbles
-        cv2.putText(frame, 'Inlet Pebbles:', (750, 50),
-                    cv2.FONT_HERSHEY_SIMPLEX, 2, (255, 0, 255), thickness=4)
-        lineNum = 0
-        for i in range(len(inletSavedPebbles)):
-            text = ''+inletSavedPebbles[i][0]+': '+inletSavedPebbles[i][1]
-            place = None
-            if i % 2 == 0:
-                place = (750, 85+35*lineNum)
-            else:
-                place = (1050, 85+35*lineNum)
-                lineNum += 1
-            cv2.putText(frame, text, place,
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 255), thickness=4)
-    # add in info about saved pebbles
-    cv2.putText(frame, 'Pebble Last Seen:', (50, 50),
-                cv2.FONT_HERSHEY_SIMPLEX, 2, (0, 255, 255), thickness=4)
-    lineNum = 0
-    for i in range(len(video.savedPebbles)):
-        text = ''+video.savedPebbles[i][0]+': '+video.savedPebbles[i][1]
-        place = None
-        if i % 2 == 0:
-            place = (50, 85+35*lineNum)
-        else:
-            place = (350, 85+35*lineNum)
-            lineNum += 1
-        cv2.putText(frame, text, place,
-                    cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), thickness=4)
-
-    # add in time
-    cv2.putText(frame, str(round(videoTime, 2))+'s', (width-200, height-75), cv2.FONT_HERSHEY_SIMPLEX,
-                2, (255, 255, 255), thickness=3)
-    return frame
 
 
 save_folder = f"./Individual Outlet Results/"
@@ -263,17 +177,6 @@ for videoname in videonames:
             for i in range(4):
                 inletHasFrames, inletFrame = inletVideo.vidcap.read()
                 frameNumber += 1
-        # else:
-        #     # if all converged can skip
-        #     convergedNum = 0
-        #     for actPebble in inletVideo.activePebbles:
-        #         if actPebble.isConverged:
-        #             convergedNum += 1
-        #     if convergedNum == len(inletVideo.activePebbles):
-        #         # skip four frames
-        #         for i in range(4):
-        #             inletHasFrames, inletFrame = inletVideo.vidcap.read()
-        #             frameNumber += 1
         inletHasFrames, inletFrame = inletVideo.vidcap.read()
         frameNumber += 1
 
