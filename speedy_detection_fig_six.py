@@ -1,6 +1,8 @@
 from speedy_tesseract_util import tesseract_prediction_with_accuracy
+from speedy_tesseract_util import tesseract_prediction_with_accuracy_no_CLAHE
 from speedy_pebble_util_tess import updatePebbleLocationTess
 from speedy_easyocr_util import easy_prediction_with_accuracy
+from speedy_easyocr_util import easy_prediction_with_accuracy_no_CLAHE
 from speedy_pebble_util_easyocr import updatePebbleLocationEasyOCR
 import sys
 import os
@@ -132,6 +134,19 @@ class Video():
                         downsizedImage, dim, interpolation=cv2.INTER_AREA)
                     # prediciton
                     predImg, predlabels, predScores, digitAccuracy, confusionMatrix = showbox_with_accuracy(
+                        downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
+
+                    # Easy CLAHE prediciton
+                    predImg, easyPred, easyScore, digitAccuracy, confusionMatrix = easy_prediction_with_accuracy(
+                        downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
+
+                    predImg, easyPred, easyScore, digitAccuracy, confusionMatrix = easy_prediction_with_accuracy_no_CLAHE(
+                        downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
+
+                    # Tess CLAHE prediciton
+                    predImg, tessPred, tessScore, digitAccuracy, confusionMatrix = tesseract_prediction_with_accuracy(
+                        downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
+                    predImg, tessPred, tessScore, digitAccuracy, confusionMatrix = tesseract_prediction_with_accuracy_no_CLAHE(
                         downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
                     if predImg is not None:
                         cv2.imwrite(os.path.join(self.imgFolder, "img_" +

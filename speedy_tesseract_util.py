@@ -214,6 +214,7 @@ def tesseract_prediction_with_accuracy_no_CLAHE(img, pebbleActualNumber, digitAc
             score = conf
             ind = i
 
+    index = 0
     if not had_pred or len(pred) != 3 or not pred.isdigit():
         font = cv2.FONT_HERSHEY_SIMPLEX
         # predText = str(text)+":"+str(score)
@@ -248,7 +249,11 @@ def tesseract_prediction_with_accuracy_no_CLAHE(img, pebbleActualNumber, digitAc
 
         # add in scoring
         if len(labels) == 3:
-            updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix,
-                             labels, scores, img)
+            digitAccuracy, confusionMatrix, img, numberIsIncorrect = updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix,
+                                                                                      labels, scores, img)
+            if numberIsIncorrect:
+                index = 1
+            else:
+                index = 2
 
-    return img, pred, score, digitAccuracy, confusionMatrix
+    return img, pred, score, digitAccuracy, confusionMatrix, index

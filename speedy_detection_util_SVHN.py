@@ -412,7 +412,7 @@ def updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix, predLab
     # # cv2.putText(img, scoring, (textX, img.shape[0]-75), cv2.FONT_HERSHEY_SIMPLEX,
     # #             1, (255, 255, 255), thickness=2)
 
-    return digitAccuracy, confusionMatrix, img
+    return digitAccuracy, confusionMatrix, img, numberIsIncorrect
 
 
 def showbox_with_accuracy(img, pebbleActualNumber, digitAccuracy, confusionMatrix):
@@ -444,7 +444,7 @@ def showbox_with_accuracy(img, pebbleActualNumber, digitAccuracy, confusionMatri
     # print(prediction)
     number, boxes, labels, scores = get_number_from_pred_no_bottomY(
         boxes, labels, scores, maxDim)
-
+    index = 0
     if number is not None:
         # img = img.permute(1, 2, 0)  # C,H,W -> H,W,C
         # img = (img * 255).byte().data.cpu()  # [0, 1] -> [0, 255]
@@ -458,13 +458,17 @@ def showbox_with_accuracy(img, pebbleActualNumber, digitAccuracy, confusionMatri
 
         fig_num(annImg, number)
 
-        #add in scoringe
-        updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix,
-                         labels, scores, annImg)
+        # add in scoringe
+        digitAccuracy, confusionMatrix, img, numberIsIncorrect = updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix,
+                                                                                  labels, scores, annImg)
+        if numberIsIncorrect:
+            index = 1
+        else:
+            index = 2
 
-        return annImg, labels, scores, digitAccuracy, confusionMatrix
+        return annImg, labels, scores, digitAccuracy, confusionMatrix, index
 
-    return None, None, None, digitAccuracy, confusionMatrix
+    return None, None, None, digitAccuracy, confusionMatrix, index
 
 
 def showbox_no_bottomY(img):

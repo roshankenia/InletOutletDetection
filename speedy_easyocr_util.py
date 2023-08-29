@@ -117,7 +117,7 @@ def easy_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confus
     img = cv2.cvtColor(img, cv2.COLOR_GRAY2RGB)
     # print("PRED:::", pred)
     index = 0
-    if pred is None or len(pred) != 3 or not pred.isdigit():
+    if not had_pred or len(pred) != 3 or not pred.isdigit():
         font = cv2.FONT_HERSHEY_SIMPLEX
         # predText = str(text)+":"+str(score)
         predText = 'None'
@@ -185,7 +185,8 @@ def easy_prediction_with_accuracy_no_CLAHE(img, pebbleActualNumber, digitAccurac
     score = round(score, 4)
     # convert back to RGB
     # print("PRED:::", pred)
-    if pred is None or len(pred) != 3 or not pred.isdigit():
+    index = 0
+    if not had_pred or len(pred) != 3 or not pred.isdigit():
         font = cv2.FONT_HERSHEY_SIMPLEX
         # predText = str(text)+":"+str(score)
         predText = 'None'
@@ -220,7 +221,11 @@ def easy_prediction_with_accuracy_no_CLAHE(img, pebbleActualNumber, digitAccurac
 
         # add in scoring
         if len(labels) == 3:
-            updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix,
-                             labels, scores, img)
+            digitAccuracy, confusionMatrix, img, numberIsIncorrect = updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix,
+                                                                                      labels, scores, img)
+            if numberIsIncorrect:
+                index = 1
+            else:
+                index = 2
 
-    return img, pred, score, digitAccuracy, confusionMatrix
+    return img, pred, score, digitAccuracy, confusionMatrix, index
