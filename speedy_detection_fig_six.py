@@ -161,6 +161,31 @@ class Video():
                                     str(frameNumber) + "_pred_"+str(f)+"_TessCLAHE.jpg"), predImgTessCLAHE)
                         cv2.imwrite(os.path.join(self.imgFolder, "img_" +
                                     str(frameNumber) + "_pred_"+str(f)+"_TessNoCLAHE.jpg"), predImgTessNoCLAHE)
+                    elif indexReg == 2 and indexEasyCLAHE == 1 and indexEasyNoCLAHE == 0 and indexTessCLAHE == 0 and indexTessNoCLAHE == 0:
+                        # save images
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                    str(frameNumber) + "_pred_"+str(f)+"_REG.jpg"), predImg)
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                    str(frameNumber) + "_pred_"+str(f)+"_EasyCLAHE.jpg"), predImgEasyCLAHE)
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                    str(frameNumber) + "_pred_"+str(f)+"_EasyNoCLAHE.jpg"), predImgEasyNoCLAHE)
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                    str(frameNumber) + "_pred_"+str(f)+"_TessCLAHE.jpg"), predImgTessCLAHE)
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                    str(frameNumber) + "_pred_"+str(f)+"_TessNoCLAHE.jpg"), predImgTessNoCLAHE)
+                    elif indexReg == 2 and indexEasyCLAHE == 0 and indexEasyNoCLAHE == 0 and indexTessCLAHE == 1 and indexTessNoCLAHE == 0:
+                        # save images
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                    str(frameNumber) + "_pred_"+str(f)+"_REG.jpg"), predImg)
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                    str(frameNumber) + "_pred_"+str(f)+"_EasyCLAHE.jpg"), predImgEasyCLAHE)
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                    str(frameNumber) + "_pred_"+str(f)+"_EasyNoCLAHE.jpg"), predImgEasyNoCLAHE)
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                    str(frameNumber) + "_pred_"+str(f)+"_TessCLAHE.jpg"), predImgTessCLAHE)
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                    str(frameNumber) + "_pred_"+str(f)+"_TessNoCLAHE.jpg"), predImgTessNoCLAHE)
+                    print()
 
 
 save_folder = f"./Individual Outlet Results/"
