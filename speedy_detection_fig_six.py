@@ -237,8 +237,6 @@ for videoname in videonames:
 
     # When everything done, release the capture
     inletVideo.vidcap.release()
-    inletVideo.processed_video.release()
-
     print()
     print()
 
