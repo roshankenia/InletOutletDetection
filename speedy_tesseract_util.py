@@ -31,7 +31,7 @@ def preprocess(img):
 
 
 def updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix, predLabels, predScores, img):
-    print('labels:', predLabels, 'scores:', predScores)
+    # print('labels:', predLabels, 'scores:', predScores)
     numberIsIncorrect = False
     scoreCode = ''
     for a in range(len(predLabels)):

@@ -30,7 +30,7 @@ def preprocess(img):
 
 
 def updateAccuracies(pebbleActualNumber, digitAccuracy, confusionMatrix, predLabels, predScores, img):
-    print('labels:', predLabels, 'scores:', predScores)
+    # print('labels:', predLabels, 'scores:', predScores)
     numberIsIncorrect = False
     scoreCode = ''
     for a in range(len(predLabels)):
@@ -96,7 +96,7 @@ def easy_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confus
     img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
     img = preprocess(img)
     result = reader.readtext(img)
-    print(result)
+    # print(result)
     # get best prediction
     n_boxes = len(result)
     had_pred = False
@@ -166,7 +166,7 @@ def easy_prediction_with_accuracy_no_CLAHE(img, pebbleActualNumber, digitAccurac
     # predict on image
     img = cv2.resize(img, (0, 0), fx=2.0, fy=2.0)
     result = reader.readtext(img)
-    print(result)
+    # print(result)
     # get best prediction
     n_boxes = len(result)
     had_pred = False
