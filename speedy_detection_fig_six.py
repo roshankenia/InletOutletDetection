@@ -67,7 +67,7 @@ class Video():
 
         self.vidcap = cv2.VideoCapture(
             f'./videos/Outlet Individual Pebble Videos/{filename}.MP4')
-        filename = filename + '_FIGSIX'
+        self.filename = filename + '_FIGSIX_'
         self.frame_count = int(self.vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
         self.fps = self.vidcap.get(cv2.CAP_PROP_FPS)
         print(f'video {filename} has', str(
@@ -75,10 +75,6 @@ class Video():
         self.width = int(self.vidcap.get(cv2.CAP_PROP_FRAME_WIDTH))
         self.height = int(self.vidcap.get(cv2.CAP_PROP_FRAME_HEIGHT))
         print('video dimensions width:', self.width, 'height:', self.height)
-
-        folder = f"./Individual Outlet Results/{filename}/"
-        if not os.path.isdir(folder):
-            os.mkdir(folder)
 
         self.imgFolder = f"./Individual Outlet Results/FigSixImages/"
         if not os.path.isdir(self.imgFolder):
@@ -151,39 +147,39 @@ class Video():
                     if indexReg == 2 and indexEasyCLAHE == 1 and indexEasyNoCLAHE == 0 and indexTessCLAHE == 1 and indexTessNoCLAHE == 0:
                         # save images
                         print('\n\nFOUND A SOLUTION\n\n')
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_REG.jpg"), predImg)
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_EasyCLAHE.jpg"), predImgEasyCLAHE)
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_EasyNoCLAHE.jpg"), predImgEasyNoCLAHE)
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_TessCLAHE.jpg"), predImgTessCLAHE)
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_TessNoCLAHE.jpg"), predImgTessNoCLAHE)
                     elif indexReg == 2 and indexEasyCLAHE == 1 and indexEasyNoCLAHE == 0 and indexTessCLAHE == 0 and indexTessNoCLAHE == 0:
                         # save images
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_REG.jpg"), predImg)
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_EasyCLAHE.jpg"), predImgEasyCLAHE)
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_EasyNoCLAHE.jpg"), predImgEasyNoCLAHE)
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_TessCLAHE.jpg"), predImgTessCLAHE)
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_TessNoCLAHE.jpg"), predImgTessNoCLAHE)
                     elif indexReg == 2 and indexEasyCLAHE == 0 and indexEasyNoCLAHE == 0 and indexTessCLAHE == 1 and indexTessNoCLAHE == 0:
                         # save images
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_REG.jpg"), predImg)
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_EasyCLAHE.jpg"), predImgEasyCLAHE)
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_EasyNoCLAHE.jpg"), predImgEasyNoCLAHE)
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_TessCLAHE.jpg"), predImgTessCLAHE)
-                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" + self.filename +
                                     str(frameNumber) + "_pred_"+str(f)+"_TessNoCLAHE.jpg"), predImgTessNoCLAHE)
                     print()
 
