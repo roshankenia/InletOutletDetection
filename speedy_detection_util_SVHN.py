@@ -466,8 +466,10 @@ def showbox_with_accuracy(img, pebbleActualNumber, digitAccuracy, confusionMatri
         else:
             index = 2
 
-        return annImg, labels, scores, digitAccuracy, confusionMatrix, index
+        print('Reg: ', number, pebbleActualNumber, 'index:', index)
 
+        return annImg, labels, scores, digitAccuracy, confusionMatrix, index
+    print('Reg: ', number, pebbleActualNumber, 'index:', index)
     return None, None, None, digitAccuracy, confusionMatrix, index
 
 

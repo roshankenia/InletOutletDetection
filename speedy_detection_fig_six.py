@@ -67,7 +67,7 @@ class Video():
 
         self.vidcap = cv2.VideoCapture(
             f'./videos/Outlet Individual Pebble Videos/{filename}.MP4')
-        filename = filename + '_SVHN_BASE'
+        filename = filename + '_FIGSIX'
         self.frame_count = int(self.vidcap.get(cv2.CAP_PROP_FRAME_COUNT))
         self.fps = self.vidcap.get(cv2.CAP_PROP_FPS)
         print(f'video {filename} has', str(
@@ -133,24 +133,34 @@ class Video():
                     downsizedImage = cv2.resize(
                         downsizedImage, dim, interpolation=cv2.INTER_AREA)
                     # prediciton
-                    predImg, predlabels, predScores, digitAccuracy, confusionMatrix = showbox_with_accuracy(
+                    predImg, predlabels, predScores, digitAccuracy, confusionMatrix, indexReg = showbox_with_accuracy(
                         downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
 
                     # Easy CLAHE prediciton
-                    predImg, easyPred, easyScore, digitAccuracy, confusionMatrix = easy_prediction_with_accuracy(
+                    predImgEasyCLAHE, easyPredEasyCLAHE, easyScoreEasyCLAHE, digitAccuracy, confusionMatrix, indexEasyCLAHE = easy_prediction_with_accuracy(
                         downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
 
-                    predImg, easyPred, easyScore, digitAccuracy, confusionMatrix = easy_prediction_with_accuracy_no_CLAHE(
+                    predImgEasyNoCLAHE, easyPredEasyNoCLAHE, easyScoreEasyNoCLAHE, digitAccuracy, confusionMatrix, indexEasyNoCLAHE = easy_prediction_with_accuracy_no_CLAHE(
                         downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
 
                     # Tess CLAHE prediciton
-                    predImg, tessPred, tessScore, digitAccuracy, confusionMatrix = tesseract_prediction_with_accuracy(
+                    predImgTessCLAHE, tessPredTessCLAHE, tessScoreTessCLAHE, digitAccuracy, confusionMatrix, indexTessCLAHE = tesseract_prediction_with_accuracy(
                         downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
-                    predImg, tessPred, tessScore, digitAccuracy, confusionMatrix = tesseract_prediction_with_accuracy_no_CLAHE(
+                    predImgTessNoCLAHE, tessPredTessNoCLAHE, tessScoreTessNoCLAHE, digitAccuracy, confusionMatrix, indexTessNoCLAHE = tesseract_prediction_with_accuracy_no_CLAHE(
                         downsizedImage, pebbleActualNumber, digitAccuracy, confusionMatrix)
-                    if predImg is not None:
+                    if indexReg == 2 and indexEasyCLAHE == 1 and indexEasyNoCLAHE == 0 and indexTessCLAHE == 1 and indexTessNoCLAHE == 0:
+                        # save images
+                        print('\n\nFOUND A SOLUTION\n\n')
                         cv2.imwrite(os.path.join(self.imgFolder, "img_" +
-                                    str(frameNumber) + "_pred_"+str(f)+".jpg"), predImg)
+                                    str(frameNumber) + "_pred_"+str(f)+"_REG.jpg"), predImg)
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                    str(frameNumber) + "_pred_"+str(f)+"_EasyCLAHE.jpg"), predImgEasyCLAHE)
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                    str(frameNumber) + "_pred_"+str(f)+"_EasyNoCLAHE.jpg"), predImgEasyNoCLAHE)
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                    str(frameNumber) + "_pred_"+str(f)+"_TessCLAHE.jpg"), predImgTessCLAHE)
+                        cv2.imwrite(os.path.join(self.imgFolder, "img_" +
+                                    str(frameNumber) + "_pred_"+str(f)+"_TessNoCLAHE.jpg"), predImgTessNoCLAHE)
 
 
 save_folder = f"./Individual Outlet Results/"

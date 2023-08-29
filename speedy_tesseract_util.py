@@ -191,7 +191,7 @@ def tesseract_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, c
                 index = 1
             else:
                 index = 2
-
+    print('TessCLAHE:', pred, pebbleActualNumber, 'index:', index)
     return img, pred, score, digitAccuracy, confusionMatrix, index
 
 
@@ -255,5 +255,5 @@ def tesseract_prediction_with_accuracy_no_CLAHE(img, pebbleActualNumber, digitAc
                 index = 1
             else:
                 index = 2
-
+    print('TessNoCLAHE:', pred, pebbleActualNumber, 'index:', index)
     return img, pred, score, digitAccuracy, confusionMatrix, index

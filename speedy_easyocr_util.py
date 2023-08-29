@@ -158,7 +158,7 @@ def easy_prediction_with_accuracy(img, pebbleActualNumber, digitAccuracy, confus
                 index = 1
             else:
                 index = 2
-
+    print('EasyCLAHE:', pred, pebbleActualNumber, 'index:', index)
     return img, pred, score, digitAccuracy, confusionMatrix, index
 
 
@@ -227,5 +227,5 @@ def easy_prediction_with_accuracy_no_CLAHE(img, pebbleActualNumber, digitAccurac
                 index = 1
             else:
                 index = 2
-
+    print('EasyNoCLAHE:', pred, pebbleActualNumber, 'index:', index)
     return img, pred, score, digitAccuracy, confusionMatrix, index
