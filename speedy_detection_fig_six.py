@@ -80,7 +80,7 @@ class Video():
         if not os.path.isdir(folder):
             os.mkdir(folder)
 
-        self.imgFolder = f"./Individual Outlet Results/{filename}/Images/"
+        self.imgFolder = f"./Individual Outlet Results/FigSixImages/"
         if not os.path.isdir(self.imgFolder):
             os.mkdir(self.imgFolder)
 
